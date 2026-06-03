@@ -1,6 +1,6 @@
 # AI Model Compare
 
-Static GitHub Pages app for comparing model routes by benchmark score, route pricing, and effective speed. Runtime data is served from the checked-in `public/data/models.json`, so the published site does not need an API server.
+Compare AI LLM intelligence per dollar. Not just token prices, but the effective cost of running real benchmarks.
 
 Disclaimer: this project was vibe coded with Codex GPT-5.5 Extra High.
 
@@ -90,9 +90,10 @@ The repository includes:
 
 Enable Pages in the GitHub repository settings and select **GitHub Actions** as the source. For a project page, the workflow sets Vite's `BASE_PATH` to `/<repo-name>/`; for a `*.github.io` user/org page, it uses `/`.
 
-Set these optional repository secrets if you want scheduled refreshes for gated sources:
+Set either of these optional repository secrets if you want scheduled refreshes for gated sources:
 
-- `ARTIFICIAL_ANALYSIS_API_KEY`
+- `ARTIFICIAL_ANALYSIS_API_KEY` (preferred)
+- `AA_API_KEY`
 
 ## Config Files
 

@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "defaultProfileId": "aa-default-cache",
+  "profiles": [
+    {
+      "id": "aa-default-cache",
+      "name": "AA default cache blend",
+      "description": "Artificial Analysis' current blended price convention: 7 cached-input, 2 fresh-input, 1 output.",
+      "tokenBlend": {
+        "cachedInput": 0.7,
+        "freshInput": 0.2,
+        "output": 0.1
+      }
+    },
+    {
+      "id": "fresh-chat",
+      "name": "Fresh chat",
+      "description": "No cache assumptions; useful for one-shot prompts and low-context comparisons.",
+      "tokenBlend": {
+        "cachedInput": 0,
+        "freshInput": 0.75,
+        "output": 0.25
+      }
+    },
+    {
+      "id": "coding-agent-warm",
+      "name": "Coding agent, warm cache",
+      "description": "Long-lived agent sessions with repeated system prompt, tool schema, conversation prefix, and files.",
+      "tokenBlend": {
+        "cachedInput": 0.82,
+        "freshInput": 0.12,
+        "output": 0.06
+      }
+    },
+    {
+      "id": "reasoning-heavy",
+      "name": "Reasoning-heavy task",
+      "description": "Higher generated-token share for tasks where hidden reasoning and long answers dominate.",
+      "tokenBlend": {
+        "cachedInput": 0.55,
+        "freshInput": 0.15,
+        "output": 0.3
+      }
+    },
+    {
+      "id": "long-context-review",
+      "name": "Long context review",
+      "description": "Large repeated context with short edits or judgments.",
+      "tokenBlend": {
+        "cachedInput": 0.9,
+        "freshInput": 0.07,
+        "output": 0.03
+      }
+    }
+  ]
+}

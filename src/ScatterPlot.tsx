@@ -205,16 +205,34 @@ export function ScatterPlot({
     const updateSize = () => {
       const rect = element.getBoundingClientRect();
       const nextWidth = clamp(Math.round(rect.width), 340, defaultWidth);
-      setPlotSize({
-        width: nextWidth,
-        height: nextWidth < 560 ? 430 : 500
-      });
+      const preferredHeight = nextWidth < 560 ? 430 : 500;
+      const minimumHeight = nextWidth < 560 ? 360 : 280;
+      const viewportHeight = window.visualViewport?.height ?? window.innerHeight;
+      const availableHeight = Math.round(viewportHeight - rect.top - 28);
+      const nextHeight =
+        window.innerWidth > 1100 ? clamp(availableHeight, minimumHeight, preferredHeight) : preferredHeight;
+
+      setPlotSize((currentSize) =>
+        currentSize.width === nextWidth && currentSize.height === nextHeight
+          ? currentSize
+          : {
+              width: nextWidth,
+              height: nextHeight
+            }
+      );
     };
 
     updateSize();
     const observer = new ResizeObserver(updateSize);
     observer.observe(element);
-    return () => observer.disconnect();
+    window.addEventListener("resize", updateSize);
+    window.visualViewport?.addEventListener("resize", updateSize);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", updateSize);
+      window.visualViewport?.removeEventListener("resize", updateSize);
+    };
   }, []);
 
   const plot = useMemo(() => {

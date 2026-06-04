@@ -86,6 +86,9 @@ async function fetchJson(url) {
 }
 
 async function loadArtificialAnalysisModels() {
+  const staticPayload = await readOptionalJson(staticPayloadPath);
+  const staticModels = previousArtificialAnalysisModels(staticPayload);
+
   if (args.refreshAa && process.env.ARTIFICIAL_ANALYSIS_API_KEY) {
     try {
       log("Fetching Artificial Analysis live data");
@@ -99,7 +102,7 @@ async function loadArtificialAnalysisModels() {
       const payload = JSON.parse(text);
       await fs.mkdir(path.dirname(args.aaCache), { recursive: true });
       await fs.writeFile(args.aaCache, `${JSON.stringify({ fetchedAt: new Date().toISOString(), payload }, null, 2)}\n`, "utf8");
-      return normalizeAaPayload(payload);
+      return mergeArtificialAnalysisModels(normalizeAaPayload(payload), staticModels);
     } catch (error) {
       if (args.strictAa) throw error;
       log(`Artificial Analysis live fetch failed: ${error instanceof Error ? error.message : String(error)}`);
@@ -109,7 +112,7 @@ async function loadArtificialAnalysisModels() {
   const cached = await readOptionalJson(args.aaCache);
   if (cached?.payload) {
     log(`Using Artificial Analysis cache at ${args.aaCache}`);
-    return normalizeAaPayload(cached.payload);
+    return mergeArtificialAnalysisModels(normalizeAaPayload(cached.payload), staticModels);
   }
 
   if (process.env.ARTIFICIAL_ANALYSIS_API_KEY) {
@@ -122,15 +125,13 @@ async function loadArtificialAnalysisModels() {
       });
       const text = await response.text();
       if (!response.ok) throw new Error(`HTTP ${response.status}: ${text.slice(0, 240)}`);
-      return normalizeAaPayload(JSON.parse(text));
+      return mergeArtificialAnalysisModels(normalizeAaPayload(JSON.parse(text)), staticModels);
     } catch (error) {
       if (args.strictAa) throw error;
       log(`Artificial Analysis live fetch failed: ${error instanceof Error ? error.message : String(error)}`);
     }
   }
 
-  const staticPayload = await readOptionalJson(staticPayloadPath);
-  const staticModels = previousArtificialAnalysisModels(staticPayload);
   if (staticModels.length) {
     log("Using Artificial Analysis models embedded in public/data/models.json");
     return staticModels;
@@ -163,6 +164,28 @@ function previousArtificialAnalysisModels(payload) {
     }
   }
   return [...modelsById.values()];
+}
+
+function mergeArtificialAnalysisModels(models, fallbackModels) {
+  if (!fallbackModels.length) return models;
+
+  const fallbackById = new Map();
+  for (const fallbackModel of fallbackModels) {
+    if (fallbackModel?.id && !fallbackById.has(fallbackModel.id)) {
+      fallbackById.set(fallbackModel.id, fallbackModel);
+    }
+  }
+
+  return models.map((model) => {
+    const fallbackModel = fallbackById.get(model.id);
+    if (!fallbackModel) return model;
+    return {
+      ...model,
+      intelligenceIndexCost: model.intelligenceIndexCost ?? fallbackModel.intelligenceIndexCost ?? null,
+      intelligenceIndexTokenCounts:
+        model.intelligenceIndexTokenCounts ?? fallbackModel.intelligenceIndexTokenCounts ?? null
+    };
+  });
 }
 
 function normalizeAaModel(model) {

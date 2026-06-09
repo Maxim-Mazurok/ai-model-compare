@@ -14,6 +14,7 @@ type TooltipContext = {
 };
 
 export type XAxisMode = "log" | "linear";
+export type ProviderMarkerShape = "circle" | "square" | "diamond" | "triangle" | "invertedTriangle" | "hexagon";
 
 type ScatterPlotProps = {
   points: ScoredVariant[];
@@ -28,6 +29,7 @@ type ScatterPlotProps = {
   formatSpeedForPoint: (point: ScoredVariant) => string;
   xAxisMode: XAxisMode;
   colorForProvider: (provider: string) => string;
+  shapeForProvider: (provider: string) => ProviderMarkerShape;
   onSelect: (id: string) => void;
 };
 
@@ -179,6 +181,48 @@ function bubbleSpeedValue(point: ScoredVariant, speedHigherIsBetter: boolean) {
   return speedHigherIsBetter ? value : 1 / value;
 }
 
+function markerPath(shape: ProviderMarkerShape, radius: number) {
+  if (shape === "square") {
+    const halfSide = radius * 0.78;
+    return `M ${-halfSide} ${-halfSide} H ${halfSide} V ${halfSide} H ${-halfSide} Z`;
+  }
+
+  if (shape === "diamond") {
+    const point = radius * 1.08;
+    return `M 0 ${-point} L ${point} 0 L 0 ${point} L ${-point} 0 Z`;
+  }
+
+  if (shape === "triangle" || shape === "invertedTriangle") {
+    const height = radius * 1.85;
+    const halfWidth = radius * 0.98;
+    const direction = shape === "triangle" ? 1 : -1;
+    return `M 0 ${-height * 0.58 * direction} L ${halfWidth} ${height * 0.42 * direction} H ${-halfWidth} Z`;
+  }
+
+  const sides = 6;
+  const points = Array.from({ length: sides }, (_, index) => {
+    const angle = -Math.PI / 2 + (index * 2 * Math.PI) / sides;
+    return `${(Math.cos(angle) * radius).toFixed(2)} ${(Math.sin(angle) * radius).toFixed(2)}`;
+  });
+  return `M ${points.join(" L ")} Z`;
+}
+
+function renderMarker(point: PlotPoint, shape: ProviderMarkerShape, selected: boolean, fill: string) {
+  const radius = selected ? point.r + 3 : point.r;
+  if (shape === "circle") {
+    return <circle cx={point.x} cy={point.y} r={radius} fill={fill} className={selected ? "point selected" : "point"} />;
+  }
+
+  return (
+    <path
+      d={markerPath(shape, radius)}
+      transform={`translate(${point.x} ${point.y})`}
+      fill={fill}
+      className={selected ? "point selected" : "point"}
+    />
+  );
+}
+
 export function ScatterPlot({
   points,
   frontier,
@@ -192,6 +236,7 @@ export function ScatterPlot({
   formatSpeedForPoint,
   xAxisMode,
   colorForProvider,
+  shapeForProvider,
   onSelect
 }: ScatterPlotProps) {
   const wrapRef = useRef<HTMLDivElement | null>(null);
@@ -394,6 +439,7 @@ export function ScatterPlot({
 
         {plot.points.map((point) => {
           const selected = point.id === selectedId;
+          const shape = shapeForProvider(point.provider);
           return (
             <g
               className="svg-hit"
@@ -413,13 +459,7 @@ export function ScatterPlot({
               }}
               aria-label={`${point.label}, ${point.provider}`}
             >
-              <circle
-                cx={point.x}
-                cy={point.y}
-                r={selected ? point.r + 3 : point.r}
-                fill={colorForProvider(point.provider)}
-                className={selected ? "point selected" : "point"}
-              />
+              {renderMarker(point, shape, selected, colorForProvider(point.provider))}
               <circle cx={point.x} cy={point.y} r={point.r + 9} fill="transparent" />
             </g>
           );

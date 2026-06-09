@@ -348,6 +348,39 @@ input[type="range"] {
   gap: 8px;
 }
 
+.provider-section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.provider-colors-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 28px;
+  padding: 0 9px;
+  color: var(--muted);
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.provider-colors-button[aria-expanded="true"] {
+  color: var(--ink);
+  border-color: rgba(33, 35, 31, 0.28);
+}
+
+.provider-colors-button:focus-visible,
+.provider-color-row input:focus-visible,
+.provider-color-row button:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
 .provider-list {
   display: flex;
   flex-wrap: wrap;
@@ -365,6 +398,68 @@ input[type="range"] {
   width: 10px;
   height: 10px;
   border-radius: 50%;
+}
+
+.provider-color-list {
+  display: grid;
+  gap: 7px;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.provider-color-row {
+  display: grid;
+  grid-template-columns: minmax(82px, 1fr) 34px minmax(82px, 96px) auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.provider-color-name {
+  overflow: hidden;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.provider-color-row input[type="color"] {
+  width: 34px;
+  height: 30px;
+  padding: 2px;
+  background: #f7f8f2;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.provider-color-row input[type="text"] {
+  min-width: 0;
+  height: 30px;
+  padding: 0 8px;
+  color: var(--ink);
+  background: #f7f8f2;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.provider-color-row button {
+  min-height: 30px;
+  padding: 0 8px;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.provider-color-row button:disabled {
+  cursor: default;
+  opacity: 0.42;
 }
 
 .overlay-actions {

@@ -6,6 +6,7 @@ import {
   Filter,
   Gauge,
   GitCompareArrows,
+  Palette,
   RefreshCw,
   Search,
   Settings2,
@@ -33,7 +34,7 @@ import {
   scoreVariants,
   valueUnitLabel
 } from "./modelMath";
-import { ScatterPlot, type XAxisMode } from "./ScatterPlot";
+import { ScatterPlot, type ProviderMarkerShape, type XAxisMode } from "./ScatterPlot";
 
 const preferredMetrics = [
   "artificial_analysis_intelligence_index",
@@ -56,6 +57,7 @@ const costModeOptions: { mode: CostMode; label: string }[] = [
 ];
 
 const OVERLAY_STORAGE_KEY = "model-routes.provider-overlays.v1";
+const PROVIDER_COLORS_STORAGE_KEY = "model-routes.provider-colors.v1";
 const RANGE_EPSILON = 0.0000001;
 const rangeFilterKeys = ["score", "price", "speed"] as const;
 
@@ -100,30 +102,78 @@ function useModels() {
   return { payload, loading, error, reload: () => load(true) };
 }
 
-const providerPalette: Record<string, string> = {
-  "Azure AI Foundry": "#2f67b1",
-  Codex: "#d14b1f",
-  "Direct API": "#8a6b12",
-  "GitHub Copilot": "#6f42c1",
-  "LLM Gateway": "#b94626",
-  OpenRouter: "#c04472"
+const accessibleProviderPalette: Record<string, string> = {
+  "Azure AI Foundry": "#0072b2",
+  Codex: "#d55e00",
+  "Direct API": "#e69f00",
+  "GitHub Copilot": "#cc79a7",
+  "LLM Gateway": "#009e73",
+  OpenRouter: "#56b4e9"
 };
 
-function providerColor(provider: string) {
-  if (providerPalette[provider]) return providerPalette[provider];
-  const palette = [
-    "#1f7a68",
-    "#b94626",
-    "#2f67b1",
-    "#8a6b12",
-    "#c04472",
-    "#507b2d",
-    "#7a4a21",
-    "#3f6d75"
-  ];
+const accessibleFallbackPalette = ["#0072b2", "#d55e00", "#009e73", "#cc79a7", "#e69f00", "#56b4e9", "#000000", "#f0e442"];
+
+const providerMarkerShapes: Record<string, ProviderMarkerShape> = {
+  "Azure AI Foundry": "circle",
+  Codex: "hexagon",
+  "Direct API": "square",
+  "GitHub Copilot": "diamond",
+  "LLM Gateway": "triangle",
+  OpenRouter: "invertedTriangle"
+};
+
+const markerShapes: ProviderMarkerShape[] = ["circle", "square", "diamond", "triangle", "invertedTriangle", "hexagon"];
+
+function hashString(value: string) {
   let hash = 0;
-  for (const char of provider) hash = (hash * 31 + char.charCodeAt(0)) >>> 0;
-  return palette[hash % palette.length];
+  for (const char of value) hash = (hash * 31 + char.charCodeAt(0)) >>> 0;
+  return hash;
+}
+
+function defaultProviderColor(provider: string) {
+  if (accessibleProviderPalette[provider]) return accessibleProviderPalette[provider];
+  const hash = hashString(provider);
+  return accessibleFallbackPalette[hash % accessibleFallbackPalette.length];
+}
+
+function providerMarkerShape(provider: string) {
+  if (providerMarkerShapes[provider]) return providerMarkerShapes[provider];
+  const hash = hashString(provider);
+  return markerShapes[hash % markerShapes.length];
+}
+
+function isHexColor(value: string) {
+  return /^#[0-9a-f]{6}$/i.test(value);
+}
+
+function normalizeHexColor(value: string) {
+  const trimmed = value.trim();
+  const withHash = trimmed.startsWith("#") ? trimmed : `#${trimmed}`;
+  return isHexColor(withHash) ? withHash.toLowerCase() : null;
+}
+
+function readStoredProviderColors() {
+  if (typeof window === "undefined") return {};
+  try {
+    const raw = window.localStorage.getItem(PROVIDER_COLORS_STORAGE_KEY);
+    if (!raw) return {};
+    const parsed = JSON.parse(raw);
+    if (!isRecord(parsed)) return {};
+    return Object.fromEntries(
+      Object.entries(parsed).flatMap(([provider, color]) => {
+        if (typeof color !== "string") return [];
+        const normalized = normalizeHexColor(color);
+        return normalized ? [[provider, normalized]] : [];
+      })
+    );
+  } catch {
+    return {};
+  }
+}
+
+function writeStoredProviderColors(providerColors: Record<string, string>) {
+  if (typeof window === "undefined") return;
+  window.localStorage.setItem(PROVIDER_COLORS_STORAGE_KEY, JSON.stringify(providerColors));
 }
 
 function clamp(value: number, minimum: number, maximum: number) {
@@ -1047,6 +1097,9 @@ function App() {
   const [rangeFilters, setRangeFilters] = useState<RangeFilters | null>(null);
   const [showFrontier, setShowFrontier] = useState(true);
   const [xAxisMode, setXAxisMode] = useState<XAxisMode>("log");
+  const [showProviderColors, setShowProviderColors] = useState(false);
+  const [providerColors, setProviderColors] = useState<Record<string, string>>(() => readStoredProviderColors());
+  const [providerColorDrafts, setProviderColorDrafts] = useState<Record<string, string>>({});
   const [selectedId, setSelectedId] = useState<string | null>(null);
 
   const overlayVariants = useMemo(() => {
@@ -1078,6 +1131,10 @@ function App() {
   useEffect(() => {
     writeStoredOverlays(overlays);
   }, [overlays]);
+
+  useEffect(() => {
+    writeStoredProviderColors(providerColors);
+  }, [providerColors]);
 
   useEffect(() => {
     if (!payload) return;
@@ -1204,6 +1261,7 @@ function App() {
   const cheapFit = cheapestViable(filtered);
   const activeCostAxisLabel = costAxisLabel(costMode);
   const activeCostSuffix = costSuffix(costMode);
+  const colorForProvider = (provider: string) => providerColors[provider] ?? defaultProviderColor(provider);
 
   function updateRangeFilter(key: RangeFilterKey, range: NumericRange) {
     setRangeFilters((existing) => ({
@@ -1220,6 +1278,38 @@ function App() {
       else next.add(provider);
       return next;
     });
+  }
+
+  function setProviderColor(provider: string, value: string) {
+    setProviderColorDrafts((existing) => ({
+      ...existing,
+      [provider]: value
+    }));
+    const normalized = normalizeHexColor(value);
+    if (!normalized) return;
+    setProviderColors((existing) => ({
+      ...existing,
+      [provider]: normalized
+    }));
+  }
+
+  function resetProviderColor(provider: string) {
+    setProviderColorDrafts((existing) => ({
+      ...existing,
+      [provider]: defaultProviderColor(provider)
+    }));
+    setProviderColors((existing) => {
+      const next = { ...existing };
+      delete next[provider];
+      return next;
+    });
+  }
+
+  function restoreProviderColorDraft(provider: string) {
+    setProviderColorDrafts((existing) => ({
+      ...existing,
+      [provider]: colorForProvider(provider)
+    }));
   }
 
   async function importOverlayFile(event: React.ChangeEvent<HTMLInputElement>) {
@@ -1350,9 +1440,20 @@ function App() {
         </div>
 
         <section className="provider-filter" aria-label="Provider filters">
-          <div className="section-label">
-            <Filter size={15} />
-            Providers
+          <div className="provider-section-head">
+            <div className="section-label">
+              <Filter size={15} />
+              Providers
+            </div>
+            <button
+              type="button"
+              className="provider-colors-button"
+              aria-expanded={showProviderColors}
+              onClick={() => setShowProviderColors((visible) => !visible)}
+            >
+              <Palette size={13} />
+              Colors
+            </button>
           </div>
           <div className="provider-list">
             {providers.map((provider) => (
@@ -1362,11 +1463,43 @@ function App() {
                   checked={activeProviders.has(provider)}
                   onChange={() => toggleProvider(provider)}
                 />
-                <span style={{ background: providerColor(provider) }} />
+                <span style={{ background: colorForProvider(provider) }} />
                 {provider}
               </label>
             ))}
           </div>
+          {showProviderColors ? (
+            <div className="provider-color-list" aria-label="Provider color customization">
+              {providers.map((provider) => {
+                const color = colorForProvider(provider);
+                const draftColor = providerColorDrafts[provider] ?? color;
+                const isCustom = Boolean(providerColors[provider]);
+                return (
+                  <div className="provider-color-row" key={provider}>
+                    <span className="provider-color-name">{provider}</span>
+                    <input
+                      aria-label={`${provider} color picker`}
+                      type="color"
+                      value={color}
+                      onChange={(event) => setProviderColor(provider, event.target.value)}
+                    />
+                    <input
+                      aria-label={`${provider} color code`}
+                      type="text"
+                      inputMode="text"
+                      pattern="#?[0-9a-fA-F]{6}"
+                      value={draftColor}
+                      onBlur={() => restoreProviderColorDraft(provider)}
+                      onChange={(event) => setProviderColor(provider, event.target.value)}
+                    />
+                    <button type="button" onClick={() => resetProviderColor(provider)} disabled={!isCustom}>
+                      Reset
+                    </button>
+                  </div>
+                );
+              })}
+            </div>
+          ) : null}
         </section>
 
         <section className="overlay-panel" aria-label="Provider overlays">
@@ -1588,7 +1721,8 @@ function App() {
             speedHigherIsBetter={costMode === "token"}
             formatSpeedForPoint={(point) => formatSpeedValue(point, costMode)}
             xAxisMode={xAxisMode}
-            colorForProvider={providerColor}
+            colorForProvider={colorForProvider}
+            shapeForProvider={providerMarkerShape}
             onSelect={setSelectedId}
           />
         </section>
@@ -1598,7 +1732,7 @@ function App() {
             {selected ? (
               <>
                 <div className="detail-title">
-                  <span style={{ background: providerColor(selected.provider) }} />
+                  <span style={{ background: colorForProvider(selected.provider) }} />
                   <div>
                     <p>{selected.provider}</p>
                     <h3>{selected.label}</h3>

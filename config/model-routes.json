@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-07T17:15:27.615Z",
+  "generatedAt": "2026-06-10T02:01:36.985Z",
   "generatedBy": "scripts/update-model-routes.mjs",
   "defaults": {
     "cachedInputMultiplier": 0.1
@@ -9,59 +9,82 @@
     {
       "id": "azure-foundry-global-standard",
       "url": "https://prices.azure.com/api/retail/prices",
-      "fetchedAt": "2026-06-07T17:15:52.677Z",
+      "fetchedAt": "2026-06-10T02:02:10.919Z",
       "status": "ok",
       "count": 5085,
-      "durationMs": 25030
+      "durationMs": 33900
     },
     {
       "id": "claude-pricing",
       "url": "https://platform.claude.com/docs/en/about-claude/pricing.md",
-      "fetchedAt": "2026-06-07T17:15:27.878Z",
+      "fetchedAt": "2026-06-10T02:01:37.187Z",
       "status": "ok",
-      "count": 7,
-      "durationMs": 241
+      "count": 9,
+      "durationMs": 178
     },
     {
       "id": "codex-credit-value",
       "url": "https://help.openai.com/en/articles/20001147-codex-credits-for-students-terms-of-service",
-      "fetchedAt": "2026-06-07T17:15:34.297Z",
-      "status": "error",
-      "warning": "codex-credit-value: Could not find a credits-to-dollar equivalence statement.",
-      "durationMs": 6651
+      "fetchedAt": "2026-06-10T02:01:39.027Z",
+      "status": "ok",
+      "count": null,
+      "durationMs": 2009
     },
     {
       "id": "codex-rate-card",
       "url": "https://help.openai.com/en/articles/20001106-codex-rate-card",
-      "fetchedAt": "2026-06-07T17:15:49.297Z",
-      "status": "error",
-      "warning": "codex-rate-card: page.waitForSelector: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('table') to be visible\n",
-      "durationMs": 21659
+      "fetchedAt": "2026-06-10T02:01:38.129Z",
+      "status": "ok",
+      "count": 6,
+      "durationMs": 1118
     },
     {
       "id": "github-copilot-pricing",
       "url": "https://raw.githubusercontent.com/github/docs/main/data/tables/copilot/models-and-pricing.yml",
-      "fetchedAt": "2026-06-07T17:15:27.856Z",
+      "fetchedAt": "2026-06-10T02:01:37.213Z",
       "status": "ok",
-      "count": 25,
-      "durationMs": 231
+      "count": 24,
+      "durationMs": 217
     },
     {
       "id": "github-models-catalog",
       "url": "https://models.github.ai/catalog/models",
-      "fetchedAt": "2026-06-07T17:15:27.889Z",
+      "fetchedAt": "2026-06-10T02:01:37.371Z",
       "status": "ok",
       "count": 37,
-      "durationMs": 264
+      "durationMs": 376
     }
   ],
-  "warnings": [
-    "codex-credit-value: Could not find a credits-to-dollar equivalence statement.",
-    "codex-rate-card: page.waitForSelector: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('table') to be visible\n",
-    "codex-rate-card: skipped Codex variants because the credit-to-dollar conversion source was unavailable.",
-    "codex-rate-card: preserved 5 existing Codex rate card variants because codex-rate-card, codex-credit-value could not be refreshed."
-  ],
+  "warnings": [],
   "variants": [
+    {
+      "id": "anthropic-claude-fable-5",
+      "label": "Claude Fable 5",
+      "modelSlug": "claude-fable-5",
+      "provider": "Anthropic",
+      "route": "anthropic-api",
+      "taskTags": [
+        "anthropic",
+        "api",
+        "claude"
+      ],
+      "options": {
+        "reasoning": "standard",
+        "effort": "standard",
+        "speed": "standard",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 10,
+        "cachedInput": 1,
+        "output": 50,
+        "cacheWrite": 12.5,
+        "cacheWrite1h": 20,
+        "unit": "usd_per_1m_tokens",
+        "source": "Anthropic Claude pricing markdown table."
+      },
+      "metadata": {}
+    },
     {
       "id": "anthropic-claude-haiku-4-5",
       "label": "Claude Haiku 4.5",
@@ -85,6 +108,34 @@
         "output": 5,
         "cacheWrite": 1.25,
         "cacheWrite1h": 2,
+        "unit": "usd_per_1m_tokens",
+        "source": "Anthropic Claude pricing markdown table."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "anthropic-claude-mythos-5-limited-availability",
+      "label": "Claude Mythos 5 (limited availability)",
+      "modelSlug": "claude-mythos-5-limited-availability",
+      "provider": "Anthropic",
+      "route": "anthropic-api",
+      "taskTags": [
+        "anthropic",
+        "api",
+        "claude"
+      ],
+      "options": {
+        "reasoning": "standard",
+        "effort": "standard",
+        "speed": "standard",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 10,
+        "cachedInput": 1,
+        "output": 50,
+        "cacheWrite": 12.5,
+        "cacheWrite1h": 20,
         "unit": "usd_per_1m_tokens",
         "source": "Anthropic Claude pricing markdown table."
       },
@@ -29564,10 +29615,7 @@
           "dollars": 100,
           "creditsPerDollar": 25,
           "dollarsPerCredit": 0.04
-        },
-        "preservedFromPriorRun": true,
-        "preservedAt": "2026-06-07T17:15:27.615Z",
-        "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
+        }
       }
     },
     {
@@ -29607,10 +29655,7 @@
           "dollars": 100,
           "creditsPerDollar": 25,
           "dollarsPerCredit": 0.04
-        },
-        "preservedFromPriorRun": true,
-        "preservedAt": "2026-06-07T17:15:27.615Z",
-        "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
+        }
       }
     },
     {
@@ -29650,10 +29695,7 @@
           "dollars": 100,
           "creditsPerDollar": 25,
           "dollarsPerCredit": 0.04
-        },
-        "preservedFromPriorRun": true,
-        "preservedAt": "2026-06-07T17:15:27.615Z",
-        "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
+        }
       }
     },
     {
@@ -29693,10 +29735,47 @@
           "dollars": 100,
           "creditsPerDollar": 25,
           "dollarsPerCredit": 0.04
+        }
+      }
+    },
+    {
+      "id": "codex-gpt-5-5-cyber",
+      "label": "GPT-5.5 Cyber",
+      "modelSlug": "gpt-5-5-cyber",
+      "provider": "Codex",
+      "route": "codex-flexible-pricing",
+      "taskTags": [
+        "agent",
+        "codex",
+        "coding",
+        "openai"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "high",
+        "speed": "standard",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 20,
+        "cachedInput": 2,
+        "output": 120,
+        "unit": "usd_per_1m_tokens",
+        "source": "OpenAI Help Center Codex rate card converted from credits to USD using 2500 credits = $100."
+      },
+      "metadata": {
+        "originalCreditRates": {
+          "input": 500,
+          "cachedInput": 50,
+          "output": 3000,
+          "unit": "credits_per_1m_tokens"
         },
-        "preservedFromPriorRun": true,
-        "preservedAt": "2026-06-07T17:15:27.615Z",
-        "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
+        "creditConversion": {
+          "credits": 2500,
+          "dollars": 100,
+          "creditsPerDollar": 25,
+          "dollarsPerCredit": 0.04
+        }
       }
     },
     {
@@ -29736,10 +29815,38 @@
           "dollars": 100,
           "creditsPerDollar": 25,
           "dollarsPerCredit": 0.04
-        },
-        "preservedFromPriorRun": true,
-        "preservedAt": "2026-06-07T17:15:27.615Z",
-        "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
+        }
+      }
+    },
+    {
+      "id": "github-copilot-anthropic-claude-fable-5",
+      "label": "Claude Fable 5",
+      "modelSlug": "claude-fable-5",
+      "provider": "GitHub Copilot",
+      "route": "github-copilot",
+      "taskTags": [
+        "anthropic",
+        "coding",
+        "copilot",
+        "powerful"
+      ],
+      "options": {
+        "reasoning": "standard",
+        "effort": "high",
+        "speed": "subscription",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 10,
+        "cachedInput": 1,
+        "output": 50,
+        "cacheWrite": 12.5,
+        "unit": "usd_per_1m_tokens",
+        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
+      },
+      "metadata": {
+        "releaseStatus": "GA",
+        "category": "Powerful"
       }
     },
     {
@@ -30178,66 +30285,6 @@
         "githubModelsCatalogUrl": "https://github.com/marketplace/models/azure-openai/gpt-5-mini",
         "contextWindow": 200000,
         "maxOutputTokens": 100000
-      }
-    },
-    {
-      "id": "github-copilot-openai-gpt-5-2-codex",
-      "label": "GPT-5.2-Codex",
-      "modelSlug": "gpt-5-2-codex",
-      "provider": "GitHub Copilot",
-      "route": "github-copilot",
-      "taskTags": [
-        "coding",
-        "copilot",
-        "openai",
-        "powerful"
-      ],
-      "options": {
-        "reasoning": "reasoning",
-        "effort": "high",
-        "speed": "subscription",
-        "speedMultiplier": 1
-      },
-      "pricing": {
-        "input": 1.75,
-        "cachedInput": 0.175,
-        "output": 14,
-        "unit": "usd_per_1m_tokens",
-        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
-      },
-      "metadata": {
-        "releaseStatus": "GA",
-        "category": "Powerful"
-      }
-    },
-    {
-      "id": "github-copilot-openai-gpt-5-2",
-      "label": "GPT-5.2",
-      "modelSlug": "gpt-5-2",
-      "provider": "GitHub Copilot",
-      "route": "github-copilot",
-      "taskTags": [
-        "coding",
-        "copilot",
-        "openai",
-        "versatile"
-      ],
-      "options": {
-        "reasoning": "reasoning",
-        "effort": "standard",
-        "speed": "subscription",
-        "speedMultiplier": 1
-      },
-      "pricing": {
-        "input": 1.75,
-        "cachedInput": 0.175,
-        "output": 14,
-        "unit": "usd_per_1m_tokens",
-        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
-      },
-      "metadata": {
-        "releaseStatus": "GA",
-        "category": "Versatile"
       }
     },
     {

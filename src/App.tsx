@@ -73,6 +73,16 @@ type NumericDomain = NumericRange & {
 };
 type RangeFilters = Record<RangeFilterKey, NumericRange>;
 type RangeDomains = Record<RangeFilterKey, NumericDomain>;
+type UrlRouteState = {
+  query?: string;
+  costMode?: CostMode;
+  profileId?: string;
+  metric?: string;
+  activeProviders?: string[];
+  rangeFilters?: Partial<RangeFilters>;
+  showFrontier?: boolean;
+  xAxisMode?: XAxisMode;
+};
 
 function useModels() {
   const [payload, setPayload] = useState<ModelsPayload | null>(null);
@@ -256,6 +266,76 @@ function constrainRange(range: NumericRange, domain: NumericDomain, changed: "mi
   const max = clamp(range.max, domain.min, domain.max);
   if (min <= max) return { min, max };
   return changed === "min" ? { min, max: min } : { min: max, max };
+}
+
+function mergeRouteRanges(routeRanges: Partial<RangeFilters> | undefined, domains: RangeDomains) {
+  const merged = rangesFromDomains(domains);
+  if (!routeRanges) return merged;
+  for (const key of rangeFilterKeys) {
+    const range = routeRanges[key];
+    if (range) merged[key] = constrainRange(range, domains[key]);
+  }
+  return merged;
+}
+
+function parseBooleanParam(value: string | null) {
+  if (value === "1" || value === "true") return true;
+  if (value === "0" || value === "false") return false;
+  return undefined;
+}
+
+function parseRangeParam(value: string | null): NumericRange | null {
+  if (!value) return null;
+  const [rawMin, rawMax] = value.split(/[,:]/);
+  const min = Number(rawMin);
+  const max = Number(rawMax);
+  if (!Number.isFinite(min) || !Number.isFinite(max)) return null;
+  return { min, max };
+}
+
+function formatRangeParam(range: NumericRange, decimals: number) {
+  return `${formatEditableNumber(range.min, decimals)},${formatEditableNumber(range.max, decimals)}`;
+}
+
+function readRouteState(search = typeof window === "undefined" ? "" : window.location.search): UrlRouteState {
+  const params = new URLSearchParams(search);
+  const providersParam = params.get("providers");
+  const rangeFilters: Partial<RangeFilters> = {};
+
+  for (const key of rangeFilterKeys) {
+    const range = parseRangeParam(params.get(key));
+    if (range) rangeFilters[key] = range;
+  }
+
+  const costMode = params.get("cost");
+  const xAxisMode = params.get("x");
+
+  return {
+    query: params.get("q") ?? undefined,
+    costMode: costMode === "task" || costMode === "token" ? costMode : undefined,
+    profileId: params.get("profile") ?? undefined,
+    metric: params.get("metric") ?? undefined,
+    activeProviders: providersParam === null ? undefined : providersParam.split(",").map(decodeRouteListItem).filter(Boolean),
+    rangeFilters: Object.keys(rangeFilters).length ? rangeFilters : undefined,
+    showFrontier: parseBooleanParam(params.get("frontier")),
+    xAxisMode: xAxisMode === "linear" || xAxisMode === "log" ? xAxisMode : undefined
+  };
+}
+
+function encodeRouteListItem(value: string) {
+  return encodeURIComponent(value).replace(/%20/g, "+");
+}
+
+function decodeRouteListItem(value: string) {
+  return decodeURIComponent(value.replace(/\+/g, "%20")).trim();
+}
+
+function setsAreEqual(first: Set<string>, second: Set<string>) {
+  if (first.size !== second.size) return false;
+  for (const value of first) {
+    if (!second.has(value)) return false;
+  }
+  return true;
 }
 
 function reconcileRange(range: NumericRange, domain: NumericDomain, previousDomain: NumericDomain | undefined) {
@@ -1082,22 +1162,29 @@ function cheapestViable(points: ScoredVariant[]) {
 }
 
 function App() {
+  const initialRouteStateRef = useRef<UrlRouteState | null>(null);
+  if (initialRouteStateRef.current === null) initialRouteStateRef.current = readRouteState();
+  const initialRouteState = initialRouteStateRef.current;
   const { payload, loading, error, reload } = useModels();
   const overlayInputRef = useRef<HTMLInputElement | null>(null);
   const knownProvidersRef = useRef<Set<string>>(new Set());
-  const providerFiltersTouchedRef = useRef(false);
+  const providerFiltersTouchedRef = useRef(Boolean(initialRouteState.activeProviders));
   const previousFilterDomainsRef = useRef<RangeDomains | null>(null);
-  const [query, setQuery] = useState("");
-  const [costMode, setCostMode] = useState<CostMode>("task");
-  const [profileId, setProfileId] = useState("");
-  const [metric, setMetric] = useState(DEFAULT_METRIC);
-  const [activeProviders, setActiveProviders] = useState<Set<string>>(new Set());
+  const initialRouteRangesRef = useRef<Partial<RangeFilters> | null>(initialRouteState.rangeFilters ?? null);
+  const [routeHydrated, setRouteHydrated] = useState(!initialRouteState.rangeFilters);
+  const [query, setQuery] = useState(initialRouteState.query ?? "");
+  const [costMode, setCostMode] = useState<CostMode>(initialRouteState.costMode ?? "task");
+  const [profileId, setProfileId] = useState(initialRouteState.profileId ?? "");
+  const [metric, setMetric] = useState(initialRouteState.metric ?? DEFAULT_METRIC);
+  const [activeProviders, setActiveProviders] = useState<Set<string>>(
+    () => new Set(initialRouteState.activeProviders ?? [])
+  );
   const [overlays, setOverlays] = useState<ProviderOverlay[]>(() => readStoredOverlays());
   const [overlayError, setOverlayError] = useState<string | null>(null);
   const [showBenchmarkDiagnostics, setShowBenchmarkDiagnostics] = useState(false);
   const [rangeFilters, setRangeFilters] = useState<RangeFilters | null>(null);
-  const [showFrontier, setShowFrontier] = useState(true);
-  const [xAxisMode, setXAxisMode] = useState<XAxisMode>("log");
+  const [showFrontier, setShowFrontier] = useState(initialRouteState.showFrontier ?? true);
+  const [xAxisMode, setXAxisMode] = useState<XAxisMode>(initialRouteState.xAxisMode ?? "log");
   const [showProviderColors, setShowProviderColors] = useState(false);
   const [providerColors, setProviderColors] = useState<Record<string, string>>(() => readStoredProviderColors());
   const [providerColorDrafts, setProviderColorDrafts] = useState<Record<string, string>>({});
@@ -1139,7 +1226,9 @@ function App() {
 
   useEffect(() => {
     if (!payload) return;
-    setProfileId((existing) => existing || payload.defaultProfileId);
+    setProfileId((existing) =>
+      payload.profiles.some((profileOption) => profileOption.id === existing) ? existing : payload.defaultProfileId
+    );
     setMetric((existing) => (payload.metricKeys.includes(existing) ? existing : DEFAULT_METRIC));
   }, [payload]);
 
@@ -1150,8 +1239,10 @@ function App() {
     setActiveProviders((existing) => {
       if (!providerFiltersTouchedRef.current && existing.size === 0) return new Set(providersNow);
       const next = new Set([...existing].filter((provider) => providersNow.has(provider)));
-      for (const provider of providersNow) {
-        if (!previouslyKnownProviders.has(provider)) next.add(provider);
+      if (!providerFiltersTouchedRef.current || previouslyKnownProviders.size > 0) {
+        for (const provider of providersNow) {
+          if (!previouslyKnownProviders.has(provider)) next.add(provider);
+        }
       }
       return next;
     });
@@ -1204,6 +1295,16 @@ function App() {
 
   useEffect(() => {
     if (!payload || !profile) return;
+    if (routeHydrated) return;
+    const initialRouteRanges = initialRouteRangesRef.current;
+    initialRouteRangesRef.current = null;
+    previousFilterDomainsRef.current = filterDomains;
+    setRangeFilters(initialRouteRanges ? mergeRouteRanges(initialRouteRanges, filterDomains) : null);
+    setRouteHydrated(true);
+  }, [filterDomains, payload, profile, routeHydrated]);
+
+  useEffect(() => {
+    if (!payload || !profile || !routeHydrated) return;
     setRangeFilters((existing) => {
       const reconciled = reconcileRangeFilters(
         existing ?? rangesFromDomains(filterDomains),
@@ -1213,11 +1314,86 @@ function App() {
       previousFilterDomainsRef.current = filterDomains;
       return reconciled;
     });
-  }, [filterDomains, payload, profile]);
+  }, [filterDomains, payload, profile, routeHydrated]);
 
   const providers = useMemo(() => {
     return Array.from(new Set(scored.map((variant) => variant.provider))).sort();
   }, [scored]);
+
+  useEffect(() => {
+    function applyRouteStateFromLocation() {
+      const routeState = readRouteState();
+      setQuery(routeState.query ?? "");
+      setCostMode(routeState.costMode ?? "task");
+      setProfileId(routeState.profileId ?? payload?.defaultProfileId ?? "");
+      setMetric((routeState.metric && payload?.metricKeys.includes(routeState.metric) ? routeState.metric : DEFAULT_METRIC));
+      setShowFrontier(routeState.showFrontier ?? true);
+      setXAxisMode(routeState.xAxisMode ?? "log");
+
+      if (routeState.activeProviders) {
+        providerFiltersTouchedRef.current = true;
+        const validProviders = new Set(providers);
+        setActiveProviders(new Set(routeState.activeProviders.filter((provider) => validProviders.has(provider))));
+      } else {
+        providerFiltersTouchedRef.current = false;
+        setActiveProviders(new Set(providers));
+      }
+
+      const routeRanges = routeState.rangeFilters;
+      if (routeRanges) {
+        setRangeFilters(mergeRouteRanges(routeRanges, filterDomains));
+      } else {
+        setRangeFilters(null);
+      }
+      setRouteHydrated(true);
+    }
+
+    window.addEventListener("popstate", applyRouteStateFromLocation);
+    return () => window.removeEventListener("popstate", applyRouteStateFromLocation);
+  }, [filterDomains, payload, providers]);
+
+  useEffect(() => {
+    if (!routeHydrated || !payload || !profile || !providers.length) return;
+
+    const params = new URLSearchParams();
+    const providerSet = new Set(providers);
+    const activeProviderList = providers.filter((provider) => activeProviders.has(provider));
+
+    if (query.trim()) params.set("q", query.trim());
+    params.set("cost", costMode);
+    if (costMode === "token") params.set("profile", profile.id);
+    if (metric !== DEFAULT_METRIC) params.set("metric", metric);
+    if (!setsAreEqual(activeProviders, providerSet)) {
+      params.set("providers", activeProviderList.map(encodeRouteListItem).join(","));
+    }
+    for (const key of rangeFilterKeys) {
+      if (!rangesAreClose(effectiveRangeFilters[key], filterDomains[key])) {
+        params.set(key, formatRangeParam(effectiveRangeFilters[key], filterDomains[key].decimals));
+      }
+    }
+    if (!showFrontier) params.set("frontier", "0");
+    if (xAxisMode !== "log") params.set("x", xAxisMode);
+
+    const nextSearch = params.toString();
+    const currentSearch = window.location.search.replace(/^\?/, "");
+    if (nextSearch === currentSearch) return;
+
+    const nextUrl = `${window.location.pathname}${nextSearch ? `?${nextSearch}` : ""}${window.location.hash}`;
+    window.history.replaceState(null, "", nextUrl);
+  }, [
+    activeProviders,
+    costMode,
+    effectiveRangeFilters,
+    filterDomains,
+    metric,
+    payload,
+    profile,
+    providers,
+    query,
+    routeHydrated,
+    showFrontier,
+    xAxisMode
+  ]);
 
   const filtered = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();

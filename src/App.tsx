@@ -58,6 +58,7 @@ const costModeOptions: { mode: CostMode; label: string }[] = [
 
 const OVERLAY_STORAGE_KEY = "model-routes.provider-overlays.v1";
 const PROVIDER_COLORS_STORAGE_KEY = "model-routes.provider-colors.v1";
+const MODELS_DATA_URL = `${import.meta.env.BASE_URL}data/models.json?v=${encodeURIComponent(__APP_RELEASE_ID__)}`;
 const RANGE_EPSILON = 0.0000001;
 const rangeFilterKeys = ["score", "price", "speed"] as const;
 
@@ -82,7 +83,7 @@ function useModels() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`${import.meta.env.BASE_URL}data/models.json`, {
+      const response = await fetch(MODELS_DATA_URL, {
         cache: refresh ? "reload" : "default"
       });
       const json = await response.json();

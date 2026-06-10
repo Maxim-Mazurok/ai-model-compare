@@ -30,6 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       BASE_PATH: ${{ github.event.repository.name == format('{0}.github.io', github.repository_owner) && '/' || format('/{0}/', github.event.repository.name) }}
+      RELEASE_ID: ${{ github.sha }}-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6

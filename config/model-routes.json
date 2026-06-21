@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-14T17:19:57.669Z",
+  "generatedAt": "2026-06-21T17:26:27.290Z",
   "generatedBy": "scripts/update-model-routes.mjs",
   "defaults": {
     "cachedInputMultiplier": 0.1
@@ -9,58 +9,53 @@
     {
       "id": "azure-foundry-global-standard",
       "url": "https://prices.azure.com/api/retail/prices",
-      "fetchedAt": "2026-06-14T17:20:25.280Z",
+      "fetchedAt": "2026-06-21T17:27:03.972Z",
       "status": "ok",
       "count": 5085,
-      "durationMs": 27578
+      "durationMs": 36653
     },
     {
       "id": "claude-pricing",
       "url": "https://platform.claude.com/docs/en/about-claude/pricing.md",
-      "fetchedAt": "2026-06-14T17:19:57.955Z",
+      "fetchedAt": "2026-06-21T17:26:27.541Z",
       "status": "ok",
       "count": 9,
-      "durationMs": 262
+      "durationMs": 232
     },
     {
       "id": "codex-credit-value",
       "url": "https://help.openai.com/en/articles/20001147-codex-credits-for-students-terms-of-service",
-      "fetchedAt": "2026-06-14T17:20:04.577Z",
-      "status": "error",
-      "warning": "codex-credit-value: Could not find a credits-to-dollar equivalence statement.",
-      "durationMs": 6876
+      "fetchedAt": "2026-06-21T17:26:29.398Z",
+      "status": "ok",
+      "count": null,
+      "durationMs": 2080
     },
     {
       "id": "codex-rate-card",
       "url": "https://help.openai.com/en/articles/20001106-codex-rate-card",
-      "fetchedAt": "2026-06-14T17:20:19.581Z",
-      "status": "error",
-      "warning": "codex-rate-card: page.waitForSelector: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('table') to be visible\n",
-      "durationMs": 21887
+      "fetchedAt": "2026-06-21T17:26:28.333Z",
+      "status": "ok",
+      "count": 6,
+      "durationMs": 1022
     },
     {
       "id": "github-copilot-pricing",
       "url": "https://raw.githubusercontent.com/github/docs/main/data/tables/copilot/models-and-pricing.yml",
-      "fetchedAt": "2026-06-14T17:19:57.882Z",
+      "fetchedAt": "2026-06-21T17:26:27.489Z",
       "status": "ok",
       "count": 24,
-      "durationMs": 202
+      "durationMs": 192
     },
     {
       "id": "github-models-catalog",
       "url": "https://models.github.ai/catalog/models",
-      "fetchedAt": "2026-06-14T17:19:58.001Z",
+      "fetchedAt": "2026-06-21T17:26:27.496Z",
       "status": "ok",
       "count": 37,
-      "durationMs": 321
+      "durationMs": 199
     }
   ],
-  "warnings": [
-    "codex-credit-value: Could not find a credits-to-dollar equivalence statement.",
-    "codex-rate-card: page.waitForSelector: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('table') to be visible\n",
-    "codex-rate-card: skipped Codex variants because the credit-to-dollar conversion source was unavailable.",
-    "codex-rate-card: preserved 6 existing Codex rate card variants because codex-rate-card, codex-credit-value could not be refreshed."
-  ],
+  "warnings": [],
   "variants": [
     {
       "id": "anthropic-claude-fable-5",
@@ -29620,10 +29615,7 @@
           "dollars": 100,
           "creditsPerDollar": 25,
           "dollarsPerCredit": 0.04
-        },
-        "preservedFromPriorRun": true,
-        "preservedAt": "2026-06-14T17:19:57.669Z",
-        "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
+        }
       }
     },
     {
@@ -29663,10 +29655,7 @@
           "dollars": 100,
           "creditsPerDollar": 25,
           "dollarsPerCredit": 0.04
-        },
-        "preservedFromPriorRun": true,
-        "preservedAt": "2026-06-14T17:19:57.669Z",
-        "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
+        }
       }
     },
     {
@@ -29706,10 +29695,7 @@
           "dollars": 100,
           "creditsPerDollar": 25,
           "dollarsPerCredit": 0.04
-        },
-        "preservedFromPriorRun": true,
-        "preservedAt": "2026-06-14T17:19:57.669Z",
-        "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
+        }
       }
     },
     {
@@ -29749,10 +29735,7 @@
           "dollars": 100,
           "creditsPerDollar": 25,
           "dollarsPerCredit": 0.04
-        },
-        "preservedFromPriorRun": true,
-        "preservedAt": "2026-06-14T17:19:57.669Z",
-        "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
+        }
       }
     },
     {
@@ -29792,10 +29775,7 @@
           "dollars": 100,
           "creditsPerDollar": 25,
           "dollarsPerCredit": 0.04
-        },
-        "preservedFromPriorRun": true,
-        "preservedAt": "2026-06-14T17:19:57.669Z",
-        "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
+        }
       }
     },
     {
@@ -29835,10 +29815,7 @@
           "dollars": 100,
           "creditsPerDollar": 25,
           "dollarsPerCredit": 0.04
-        },
-        "preservedFromPriorRun": true,
-        "preservedAt": "2026-06-14T17:19:57.669Z",
-        "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
+        }
       }
     },
     {

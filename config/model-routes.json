@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-21T17:26:27.290Z",
+  "generatedAt": "2026-06-28T17:09:51.265Z",
   "generatedBy": "scripts/update-model-routes.mjs",
   "defaults": {
     "cachedInputMultiplier": 0.1
@@ -9,50 +9,50 @@
     {
       "id": "azure-foundry-global-standard",
       "url": "https://prices.azure.com/api/retail/prices",
-      "fetchedAt": "2026-06-21T17:27:03.972Z",
+      "fetchedAt": "2026-06-28T17:10:20.546Z",
       "status": "ok",
       "count": 5085,
-      "durationMs": 36653
+      "durationMs": 29252
     },
     {
       "id": "claude-pricing",
       "url": "https://platform.claude.com/docs/en/about-claude/pricing.md",
-      "fetchedAt": "2026-06-21T17:26:27.541Z",
+      "fetchedAt": "2026-06-28T17:09:51.678Z",
       "status": "ok",
       "count": 9,
-      "durationMs": 232
+      "durationMs": 394
     },
     {
       "id": "codex-credit-value",
       "url": "https://help.openai.com/en/articles/20001147-codex-credits-for-students-terms-of-service",
-      "fetchedAt": "2026-06-21T17:26:29.398Z",
+      "fetchedAt": "2026-06-28T17:09:54.326Z",
       "status": "ok",
       "count": null,
-      "durationMs": 2080
+      "durationMs": 3033
     },
     {
       "id": "codex-rate-card",
       "url": "https://help.openai.com/en/articles/20001106-codex-rate-card",
-      "fetchedAt": "2026-06-21T17:26:28.333Z",
+      "fetchedAt": "2026-06-28T17:09:53.536Z",
       "status": "ok",
       "count": 6,
-      "durationMs": 1022
+      "durationMs": 2251
     },
     {
       "id": "github-copilot-pricing",
       "url": "https://raw.githubusercontent.com/github/docs/main/data/tables/copilot/models-and-pricing.yml",
-      "fetchedAt": "2026-06-21T17:26:27.489Z",
+      "fetchedAt": "2026-06-28T17:09:51.407Z",
       "status": "ok",
       "count": 24,
-      "durationMs": 192
+      "durationMs": 135
     },
     {
       "id": "github-models-catalog",
       "url": "https://models.github.ai/catalog/models",
-      "fetchedAt": "2026-06-21T17:26:27.496Z",
+      "fetchedAt": "2026-06-28T17:09:51.381Z",
       "status": "ok",
       "count": 37,
-      "durationMs": 199
+      "durationMs": 109
     }
   ],
   "warnings": [],
@@ -30553,7 +30553,7 @@
         "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
       },
       "metadata": {
-        "releaseStatus": "Public preview",
+        "releaseStatus": "GA",
         "category": "Versatile"
       }
     }

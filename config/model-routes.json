@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-28T17:09:51.265Z",
+  "generatedAt": "2026-07-05T17:08:07.343Z",
   "generatedBy": "scripts/update-model-routes.mjs",
   "defaults": {
     "cachedInputMultiplier": 0.1
@@ -9,53 +9,58 @@
     {
       "id": "azure-foundry-global-standard",
       "url": "https://prices.azure.com/api/retail/prices",
-      "fetchedAt": "2026-06-28T17:10:20.546Z",
+      "fetchedAt": "2026-07-05T17:08:38.264Z",
       "status": "ok",
       "count": 5085,
-      "durationMs": 29252
+      "durationMs": 30888
     },
     {
       "id": "claude-pricing",
       "url": "https://platform.claude.com/docs/en/about-claude/pricing.md",
-      "fetchedAt": "2026-06-28T17:09:51.678Z",
+      "fetchedAt": "2026-07-05T17:08:07.783Z",
       "status": "ok",
-      "count": 9,
-      "durationMs": 394
+      "count": 11,
+      "durationMs": 417
     },
     {
       "id": "codex-credit-value",
       "url": "https://help.openai.com/en/articles/20001147-codex-credits-for-students-terms-of-service",
-      "fetchedAt": "2026-06-28T17:09:54.326Z",
-      "status": "ok",
-      "count": null,
-      "durationMs": 3033
+      "fetchedAt": "2026-07-05T17:08:14.192Z",
+      "status": "error",
+      "warning": "codex-credit-value: Could not find a credits-to-dollar equivalence statement.",
+      "durationMs": 6817
     },
     {
       "id": "codex-rate-card",
       "url": "https://help.openai.com/en/articles/20001106-codex-rate-card",
-      "fetchedAt": "2026-06-28T17:09:53.536Z",
-      "status": "ok",
-      "count": 6,
-      "durationMs": 2251
+      "fetchedAt": "2026-07-05T17:08:29.206Z",
+      "status": "error",
+      "warning": "codex-rate-card: page.waitForSelector: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('table') to be visible\n",
+      "durationMs": 21838
     },
     {
       "id": "github-copilot-pricing",
       "url": "https://raw.githubusercontent.com/github/docs/main/data/tables/copilot/models-and-pricing.yml",
-      "fetchedAt": "2026-06-28T17:09:51.407Z",
+      "fetchedAt": "2026-07-05T17:08:07.565Z",
       "status": "ok",
-      "count": 24,
-      "durationMs": 135
+      "count": 27,
+      "durationMs": 214
     },
     {
       "id": "github-models-catalog",
       "url": "https://models.github.ai/catalog/models",
-      "fetchedAt": "2026-06-28T17:09:51.381Z",
+      "fetchedAt": "2026-07-05T17:08:07.628Z",
       "status": "ok",
       "count": 37,
-      "durationMs": 109
+      "durationMs": 277
     }
   ],
-  "warnings": [],
+  "warnings": [
+    "codex-credit-value: Could not find a credits-to-dollar equivalence statement.",
+    "codex-rate-card: page.waitForSelector: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('table') to be visible\n",
+    "codex-rate-card: skipped Codex variants because the credit-to-dollar conversion source was unavailable.",
+    "codex-rate-card: preserved 6 existing Codex rate card variants because codex-rate-card, codex-credit-value could not be refreshed."
+  ],
   "variants": [
     {
       "id": "anthropic-claude-fable-5",
@@ -304,6 +309,62 @@
         "output": 15,
         "cacheWrite": 3.75,
         "cacheWrite1h": 6,
+        "unit": "usd_per_1m_tokens",
+        "source": "Anthropic Claude pricing markdown table."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "anthropic-claude-sonnet-5-starting-september-1-2026",
+      "label": "Claude Sonnet 5 starting September 1, 2026",
+      "modelSlug": "claude-sonnet-5-starting-september-1-2026",
+      "provider": "Anthropic",
+      "route": "anthropic-api",
+      "taskTags": [
+        "anthropic",
+        "api",
+        "claude"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "standard",
+        "speed": "standard",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 3,
+        "cachedInput": 0.3,
+        "output": 15,
+        "cacheWrite": 3.75,
+        "cacheWrite1h": 6,
+        "unit": "usd_per_1m_tokens",
+        "source": "Anthropic Claude pricing markdown table."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "anthropic-claude-sonnet-5-through-august-31-2026",
+      "label": "Claude Sonnet 5 through August 31, 2026",
+      "modelSlug": "claude-sonnet-5-through-august-31-2026",
+      "provider": "Anthropic",
+      "route": "anthropic-api",
+      "taskTags": [
+        "anthropic",
+        "api",
+        "claude"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "standard",
+        "speed": "standard",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 2,
+        "cachedInput": 0.2,
+        "output": 10,
+        "cacheWrite": 2.5,
+        "cacheWrite1h": 4,
         "unit": "usd_per_1m_tokens",
         "source": "Anthropic Claude pricing markdown table."
       },
@@ -29615,7 +29676,10 @@
           "dollars": 100,
           "creditsPerDollar": 25,
           "dollarsPerCredit": 0.04
-        }
+        },
+        "preservedFromPriorRun": true,
+        "preservedAt": "2026-07-05T17:08:07.343Z",
+        "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
     {
@@ -29655,7 +29719,10 @@
           "dollars": 100,
           "creditsPerDollar": 25,
           "dollarsPerCredit": 0.04
-        }
+        },
+        "preservedFromPriorRun": true,
+        "preservedAt": "2026-07-05T17:08:07.343Z",
+        "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
     {
@@ -29695,7 +29762,10 @@
           "dollars": 100,
           "creditsPerDollar": 25,
           "dollarsPerCredit": 0.04
-        }
+        },
+        "preservedFromPriorRun": true,
+        "preservedAt": "2026-07-05T17:08:07.343Z",
+        "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
     {
@@ -29735,7 +29805,10 @@
           "dollars": 100,
           "creditsPerDollar": 25,
           "dollarsPerCredit": 0.04
-        }
+        },
+        "preservedFromPriorRun": true,
+        "preservedAt": "2026-07-05T17:08:07.343Z",
+        "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
     {
@@ -29775,7 +29848,10 @@
           "dollars": 100,
           "creditsPerDollar": 25,
           "dollarsPerCredit": 0.04
-        }
+        },
+        "preservedFromPriorRun": true,
+        "preservedAt": "2026-07-05T17:08:07.343Z",
+        "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
     {
@@ -29815,7 +29891,10 @@
           "dollars": 100,
           "creditsPerDollar": 25,
           "dollarsPerCredit": 0.04
-        }
+        },
+        "preservedFromPriorRun": true,
+        "preservedAt": "2026-07-05T17:08:07.343Z",
+        "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
     {
@@ -29974,6 +30053,37 @@
       }
     },
     {
+      "id": "github-copilot-anthropic-claude-opus-4-8-fast-mode-preview",
+      "label": "Claude Opus 4.8 (fast mode) (preview)",
+      "modelSlug": "claude-opus-4-8-fast-mode-preview",
+      "provider": "GitHub Copilot",
+      "route": "github-copilot",
+      "taskTags": [
+        "anthropic",
+        "coding",
+        "copilot",
+        "powerful"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "high",
+        "speed": "subscription",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 10,
+        "cachedInput": 1,
+        "output": 50,
+        "cacheWrite": 12.5,
+        "unit": "usd_per_1m_tokens",
+        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
+      },
+      "metadata": {
+        "releaseStatus": "GA",
+        "category": "Powerful"
+      }
+    },
+    {
       "id": "github-copilot-anthropic-claude-opus-4-8",
       "label": "Claude Opus 4.8",
       "modelSlug": "claude-opus-4-8",
@@ -30089,6 +30199,37 @@
         "cachedInput": 0.3,
         "output": 15,
         "cacheWrite": 3.75,
+        "unit": "usd_per_1m_tokens",
+        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
+      },
+      "metadata": {
+        "releaseStatus": "GA",
+        "category": "Versatile"
+      }
+    },
+    {
+      "id": "github-copilot-anthropic-claude-sonnet-5-sonnet-5-promo",
+      "label": "Claude Sonnet 5[^sonnet-5-promo]",
+      "modelSlug": "claude-sonnet-5-sonnet-5-promo",
+      "provider": "GitHub Copilot",
+      "route": "github-copilot",
+      "taskTags": [
+        "anthropic",
+        "coding",
+        "copilot",
+        "versatile"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "standard",
+        "speed": "subscription",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 2,
+        "cachedInput": 0.2,
+        "output": 10,
+        "cacheWrite": 2.5,
         "unit": "usd_per_1m_tokens",
         "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
       },
@@ -30495,6 +30636,36 @@
       "metadata": {
         "releaseStatus": "GA",
         "category": "Powerful"
+      }
+    },
+    {
+      "id": "github-copilot-moonshot-ai-kimi-k2-7-code",
+      "label": "Kimi K2.7 Code",
+      "modelSlug": "kimi-k2-7-code",
+      "provider": "GitHub Copilot",
+      "route": "github-copilot",
+      "taskTags": [
+        "coding",
+        "copilot",
+        "moonshot-ai",
+        "versatile"
+      ],
+      "options": {
+        "reasoning": "standard",
+        "effort": "standard",
+        "speed": "subscription",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 0.95,
+        "cachedInput": 0.19,
+        "output": 4,
+        "unit": "usd_per_1m_tokens",
+        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
+      },
+      "metadata": {
+        "releaseStatus": "GA",
+        "category": "Versatile"
       }
     },
     {

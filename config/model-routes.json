@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-05T17:08:07.343Z",
+  "generatedAt": "2026-07-12T16:57:29.718Z",
   "generatedBy": "scripts/update-model-routes.mjs",
   "defaults": {
     "cachedInputMultiplier": 0.1
@@ -9,56 +9,54 @@
     {
       "id": "azure-foundry-global-standard",
       "url": "https://prices.azure.com/api/retail/prices",
-      "fetchedAt": "2026-07-05T17:08:38.264Z",
+      "fetchedAt": "2026-07-12T16:58:03.149Z",
       "status": "ok",
-      "count": 5085,
-      "durationMs": 30888
+      "count": 5511,
+      "durationMs": 33404
     },
     {
       "id": "claude-pricing",
       "url": "https://platform.claude.com/docs/en/about-claude/pricing.md",
-      "fetchedAt": "2026-07-05T17:08:07.783Z",
+      "fetchedAt": "2026-07-12T16:57:29.943Z",
       "status": "ok",
       "count": 11,
-      "durationMs": 417
+      "durationMs": 206
     },
     {
       "id": "codex-credit-value",
       "url": "https://help.openai.com/en/articles/20001147-codex-credits-for-students-terms-of-service",
-      "fetchedAt": "2026-07-05T17:08:14.192Z",
-      "status": "error",
-      "warning": "codex-credit-value: Could not find a credits-to-dollar equivalence statement.",
-      "durationMs": 6817
+      "fetchedAt": "2026-07-12T16:57:32.178Z",
+      "status": "ok",
+      "count": null,
+      "durationMs": 2433
     },
     {
       "id": "codex-rate-card",
       "url": "https://help.openai.com/en/articles/20001106-codex-rate-card",
-      "fetchedAt": "2026-07-05T17:08:29.206Z",
+      "fetchedAt": "2026-07-12T16:57:50.873Z",
       "status": "error",
       "warning": "codex-rate-card: page.waitForSelector: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('table') to be visible\n",
-      "durationMs": 21838
+      "durationMs": 21135
     },
     {
       "id": "github-copilot-pricing",
       "url": "https://raw.githubusercontent.com/github/docs/main/data/tables/copilot/models-and-pricing.yml",
-      "fetchedAt": "2026-07-05T17:08:07.565Z",
+      "fetchedAt": "2026-07-12T16:57:29.932Z",
       "status": "ok",
-      "count": 27,
-      "durationMs": 214
+      "count": 33,
+      "durationMs": 205
     },
     {
       "id": "github-models-catalog",
       "url": "https://models.github.ai/catalog/models",
-      "fetchedAt": "2026-07-05T17:08:07.628Z",
+      "fetchedAt": "2026-07-12T16:57:30.029Z",
       "status": "ok",
       "count": 37,
-      "durationMs": 277
+      "durationMs": 302
     }
   ],
   "warnings": [
-    "codex-credit-value: Could not find a credits-to-dollar equivalence statement.",
     "codex-rate-card: page.waitForSelector: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('table') to be visible\n",
-    "codex-rate-card: skipped Codex variants because the credit-to-dollar conversion source was unavailable.",
     "codex-rate-card: preserved 6 existing Codex rate card variants because codex-rate-card, codex-credit-value could not be refreshed."
   ],
   "variants": [
@@ -1199,7 +1197,7 @@
         "cachedInput": 0.3,
         "output": 0.9,
         "unit": "usd_per_1m_tokens",
-        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 38 regions with identical rates."
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 40 regions with identical rates."
       },
       "metadata": {
         "regions": [
@@ -1216,11 +1214,13 @@
           "francecentral",
           "germanynorth",
           "germanywestcentral",
+          "indonesiacentral",
           "italynorth",
           "japaneast",
           "japanwest",
           "jioindiawest",
           "koreacentral",
+          "malaysiawest",
           "northcentralus",
           "northeurope",
           "norwayeast",
@@ -1259,6 +1259,7 @@
           "EU North",
           "EU West",
           "FR Central",
+          "ID Central",
           "IN Central",
           "IN South",
           "IN West Jio",
@@ -1266,6 +1267,7 @@
           "JA East",
           "JA West",
           "KR Central",
+          "MY West",
           "NO East",
           "PL Central",
           "QA Central",
@@ -1282,7 +1284,7 @@
           "US West Central",
           "ZA North"
         ],
-        "regionCount": 38,
+        "regionCount": 40,
         "meters": [
           {
             "region": "westus2",
@@ -1557,6 +1559,22 @@
             "effectiveStartDate": "2025-06-01T00:00:00Z"
           },
           {
+            "region": "indonesiacentral",
+            "meterName": "Codestral Inp glbl Tokens",
+            "skuName": "Codestral Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.0003,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "indonesiacentral",
+            "meterName": "Codestral Outp glbl Tokens",
+            "skuName": "Codestral Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.0009,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
             "region": "jioindiawest",
             "meterName": "Codestral Inp glbl Tokens",
             "skuName": "Codestral Inp glbl",
@@ -1573,36 +1591,20 @@
             "effectiveStartDate": "2025-06-01T00:00:00Z"
           },
           {
-            "region": "switzerlandnorth",
-            "meterName": "Codestral Outp glbl Tokens",
-            "skuName": "Codestral Outp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.0009,
-            "effectiveStartDate": "2025-06-01T00:00:00Z"
-          },
-          {
-            "region": "switzerlandnorth",
+            "region": "malaysiawest",
             "meterName": "Codestral Inp glbl Tokens",
             "skuName": "Codestral Inp glbl",
             "unitOfMeasure": "1K",
             "retailPrice": 0.0003,
-            "effectiveStartDate": "2025-06-01T00:00:00Z"
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
           },
           {
-            "region": "southcentralus",
+            "region": "malaysiawest",
             "meterName": "Codestral Outp glbl Tokens",
             "skuName": "Codestral Outp glbl",
             "unitOfMeasure": "1K",
             "retailPrice": 0.0009,
-            "effectiveStartDate": "2025-06-01T00:00:00Z"
-          },
-          {
-            "region": "southcentralus",
-            "meterName": "Codestral Inp glbl Tokens",
-            "skuName": "Codestral Inp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.0003,
-            "effectiveStartDate": "2025-06-01T00:00:00Z"
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
           }
         ]
       }
@@ -1679,9 +1681,9 @@
       }
     },
     {
-      "id": "azure-foundry-command-a-2-5-2-5-10",
-      "label": "Command A",
-      "modelSlug": "command-a",
+      "id": "azure-foundry-command-a-plus-0-8-0-8-3-2",
+      "label": "Command A Plus",
+      "modelSlug": "command-a-plus",
       "provider": "Azure AI Foundry",
       "route": "azure-foundry-global-standard",
       "taskTags": [
@@ -1696,11 +1698,11 @@
         "speedMultiplier": 1
       },
       "pricing": {
-        "input": 2.5,
-        "cachedInput": 2.5,
-        "output": 10,
+        "input": 0.8,
+        "cachedInput": 0.8,
+        "output": 3.2,
         "unit": "usd_per_1m_tokens",
-        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 37 regions with identical rates."
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 39 regions with identical rates."
       },
       "metadata": {
         "regions": [
@@ -1721,10 +1723,12 @@
           "japaneast",
           "japanwest",
           "koreacentral",
+          "malaysiawest",
           "northcentralus",
           "northeurope",
           "norwayeast",
           "polandcentral",
+          "qatarcentral",
           "southafricanorth",
           "southcentralus",
           "southeastasia",
@@ -1765,8 +1769,10 @@
           "JA East",
           "JA West",
           "KR Central",
+          "MY West",
           "NO East",
           "PL Central",
+          "QA Central",
           "SE Central",
           "UK South",
           "UK West",
@@ -1781,7 +1787,509 @@
           "US West Central",
           "ZA North"
         ],
-        "regionCount": 37,
+        "regionCount": 39,
+        "meters": [
+          {
+            "region": "switzerlandnorth",
+            "meterName": "Command A Plus Outp Glbl 1M Tokens",
+            "skuName": "Command A Plus Outp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 3.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "Command A Plus Inp Glbl 1M Tokens",
+            "skuName": "Command A Plus Inp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.8,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "Command A Plus Outp Glbl 1M Tokens",
+            "skuName": "Command A Plus Outp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 3.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "Command A Plus Inp Glbl 1M Tokens",
+            "skuName": "Command A Plus Inp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.8,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "italynorth",
+            "meterName": "Command A Plus Inp Glbl 1M Tokens",
+            "skuName": "Command A Plus Inp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.8,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "italynorth",
+            "meterName": "Command A Plus Outp Glbl 1M Tokens",
+            "skuName": "Command A Plus Outp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 3.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "denmarkeast",
+            "meterName": "Command A Plus Inp Glbl 1M Tokens",
+            "skuName": "Command A Plus Inp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.8,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "denmarkeast",
+            "meterName": "Command A Plus Outp Glbl 1M Tokens",
+            "skuName": "Command A Plus Outp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 3.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "Command A Plus Outp Glbl 1M Tokens",
+            "skuName": "Command A Plus Outp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 3.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "Command A Plus Inp Glbl 1M Tokens",
+            "skuName": "Command A Plus Inp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.8,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "Command A Plus Inp Glbl 1M Tokens",
+            "skuName": "Command A Plus Inp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.8,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "Command A Plus Outp Glbl 1M Tokens",
+            "skuName": "Command A Plus Outp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 3.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "centralindia",
+            "meterName": "Command A Plus Inp Glbl 1M Tokens",
+            "skuName": "Command A Plus Inp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.8,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "centralindia",
+            "meterName": "Command A Plus Outp Glbl 1M Tokens",
+            "skuName": "Command A Plus Outp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 3.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "australiaeast",
+            "meterName": "Command A Plus Inp Glbl 1M Tokens",
+            "skuName": "Command A Plus Inp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.8,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "australiaeast",
+            "meterName": "Command A Plus Outp Glbl 1M Tokens",
+            "skuName": "Command A Plus Outp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 3.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "Command A Plus Outp Glbl 1M Tokens",
+            "skuName": "Command A Plus Outp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 3.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "Command A Plus Inp Glbl 1M Tokens",
+            "skuName": "Command A Plus Inp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.8,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westcentralus",
+            "meterName": "Command A Plus Inp Glbl 1M Tokens",
+            "skuName": "Command A Plus Inp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.8,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westcentralus",
+            "meterName": "Command A Plus Outp Glbl 1M Tokens",
+            "skuName": "Command A Plus Outp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 3.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "northcentralus",
+            "meterName": "Command A Plus Inp Glbl 1M Tokens",
+            "skuName": "Command A Plus Inp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.8,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "northcentralus",
+            "meterName": "Command A Plus Outp Glbl 1M Tokens",
+            "skuName": "Command A Plus Outp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 3.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "Command A Plus Outp Glbl 1M Tokens",
+            "skuName": "Command A Plus Outp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 3.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "Command A Plus Inp Glbl 1M Tokens",
+            "skuName": "Command A Plus Inp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.8,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "Command A Plus Outp Glbl 1M Tokens",
+            "skuName": "Command A Plus Outp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 3.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "Command A Plus Inp Glbl 1M Tokens",
+            "skuName": "Command A Plus Inp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.8,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "Command A Plus Inp Glbl 1M Tokens",
+            "skuName": "Command A Plus Inp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.8,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "Command A Plus Outp Glbl 1M Tokens",
+            "skuName": "Command A Plus Outp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 3.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "northeurope",
+            "meterName": "Command A Plus Inp Glbl 1M Tokens",
+            "skuName": "Command A Plus Inp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.8,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "northeurope",
+            "meterName": "Command A Plus Outp Glbl 1M Tokens",
+            "skuName": "Command A Plus Outp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 3.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "qatarcentral",
+            "meterName": "Command A Plus Inp Glbl 1M Tokens",
+            "skuName": "Command A Plus Inp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.8,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "qatarcentral",
+            "meterName": "Command A Plus Outp Glbl 1M Tokens",
+            "skuName": "Command A Plus Outp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 3.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "Command A Plus Inp Glbl 1M Tokens",
+            "skuName": "Command A Plus Inp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.8,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "Command A Plus Outp Glbl 1M Tokens",
+            "skuName": "Command A Plus Outp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 3.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westus2",
+            "meterName": "Command A Plus Inp Glbl 1M Tokens",
+            "skuName": "Command A Plus Inp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.8,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westus2",
+            "meterName": "Command A Plus Outp Glbl 1M Tokens",
+            "skuName": "Command A Plus Outp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 3.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "Command A Plus Outp Glbl 1M Tokens",
+            "skuName": "Command A Plus Outp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 3.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "Command A Plus Inp Glbl 1M Tokens",
+            "skuName": "Command A Plus Inp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.8,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "japanwest",
+            "meterName": "Command A Plus Outp Glbl 1M Tokens",
+            "skuName": "Command A Plus Outp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 3.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "japanwest",
+            "meterName": "Command A Plus Inp Glbl 1M Tokens",
+            "skuName": "Command A Plus Inp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.8,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "azure-foundry-command-a-plus-1-1-4",
+      "label": "Command A Plus",
+      "modelSlug": "command-a-plus",
+      "provider": "Azure AI Foundry",
+      "route": "azure-foundry-global-standard",
+      "taskTags": [
+        "azure",
+        "foundry",
+        "global-standard"
+      ],
+      "options": {
+        "reasoning": "standard",
+        "effort": "standard",
+        "speed": "global-standard",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 1,
+        "cachedInput": 1,
+        "output": 4,
+        "unit": "usd_per_1m_tokens",
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 2 regions with identical rates."
+      },
+      "metadata": {
+        "regions": [
+          "usgovarizona",
+          "usgovvirginia"
+        ],
+        "locations": [
+          "US Gov AZ",
+          "US Gov Virginia"
+        ],
+        "regionCount": 2,
+        "meters": [
+          {
+            "region": "usgovvirginia",
+            "meterName": "Command A Plus Outp Glbl 1M Tokens",
+            "skuName": "Command A Plus Outp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 4,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "usgovvirginia",
+            "meterName": "Command A Plus Inp Glbl 1M Tokens",
+            "skuName": "Command A Plus Inp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "usgovarizona",
+            "meterName": "Command A Plus Outp Glbl 1M Tokens",
+            "skuName": "Command A Plus Outp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 4,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "usgovarizona",
+            "meterName": "Command A Plus Inp Glbl 1M Tokens",
+            "skuName": "Command A Plus Inp Glbl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "azure-foundry-command-a-2-5-2-5-10",
+      "label": "Command A",
+      "modelSlug": "command-a",
+      "provider": "Azure AI Foundry",
+      "route": "azure-foundry-global-standard",
+      "taskTags": [
+        "azure",
+        "foundry",
+        "global-standard"
+      ],
+      "options": {
+        "reasoning": "standard",
+        "effort": "standard",
+        "speed": "global-standard",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 2.5,
+        "cachedInput": 2.5,
+        "output": 10,
+        "unit": "usd_per_1m_tokens",
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 39 regions with identical rates."
+      },
+      "metadata": {
+        "regions": [
+          "australiaeast",
+          "australiasoutheast",
+          "brazilsouth",
+          "canadacentral",
+          "canadaeast",
+          "centralindia",
+          "centralus",
+          "denmarkeast",
+          "eastus",
+          "eastus2",
+          "francecentral",
+          "germanywestcentral",
+          "indonesiacentral",
+          "italynorth",
+          "japaneast",
+          "japanwest",
+          "koreacentral",
+          "malaysiawest",
+          "northcentralus",
+          "northeurope",
+          "norwayeast",
+          "polandcentral",
+          "qatarcentral",
+          "southafricanorth",
+          "southcentralus",
+          "southeastasia",
+          "southindia",
+          "spaincentral",
+          "swedencentral",
+          "switzerlandnorth",
+          "switzerlandwest",
+          "uaenorth",
+          "uksouth",
+          "ukwest",
+          "westcentralus",
+          "westeurope",
+          "westus",
+          "westus2",
+          "westus3"
+        ],
+        "locations": [
+          "AE North",
+          "AP Southeast",
+          "AU East",
+          "AU Southeast",
+          "BR South",
+          "CA Central",
+          "CA East",
+          "CH North",
+          "CH West",
+          "DE West Central",
+          "DK East",
+          "ES Central",
+          "EU North",
+          "EU West",
+          "FR Central",
+          "ID Central",
+          "IN Central",
+          "IN South",
+          "IT North",
+          "JA East",
+          "JA West",
+          "KR Central",
+          "MY West",
+          "NO East",
+          "PL Central",
+          "QA Central",
+          "SE Central",
+          "UK South",
+          "UK West",
+          "US Central",
+          "US East",
+          "US East 2",
+          "US North Central",
+          "US South Central",
+          "US West",
+          "US West 2",
+          "US West 3",
+          "US West Central",
+          "ZA North"
+        ],
+        "regionCount": 39,
         "meters": [
           {
             "region": "koreacentral",
@@ -1880,6 +2388,22 @@
             "effectiveStartDate": "2026-02-01T00:00:00Z"
           },
           {
+            "region": "qatarcentral",
+            "meterName": "Command A Outp Glbl Tokens",
+            "skuName": "Command A Outp Glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "qatarcentral",
+            "meterName": "Command A Inp Glbl Tokens",
+            "skuName": "Command A Inp Glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.0025,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
             "region": "brazilsouth",
             "meterName": "Command A Inp Glbl Tokens",
             "skuName": "Command A Inp Glbl",
@@ -2081,22 +2605,6 @@
           },
           {
             "region": "francecentral",
-            "meterName": "Command A Inp Glbl Tokens",
-            "skuName": "Command A Inp Glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.0025,
-            "effectiveStartDate": "2026-02-01T00:00:00Z"
-          },
-          {
-            "region": "norwayeast",
-            "meterName": "Command A Outp Glbl Tokens",
-            "skuName": "Command A Outp Glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.01,
-            "effectiveStartDate": "2026-02-01T00:00:00Z"
-          },
-          {
-            "region": "norwayeast",
             "meterName": "Command A Inp Glbl Tokens",
             "skuName": "Command A Inp Glbl",
             "unitOfMeasure": "1K",
@@ -2606,7 +3114,7 @@
         "cachedInput": 1.35,
         "output": 5.4,
         "unit": "usd_per_1m_tokens",
-        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 30 regions with identical rates."
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 33 regions with identical rates."
       },
       "metadata": {
         "regions": [
@@ -2623,9 +3131,12 @@
           "japaneast",
           "japanwest",
           "koreacentral",
+          "malaysiawest",
           "northcentralus",
+          "northeurope",
           "norwayeast",
           "polandcentral",
+          "qatarcentral",
           "southafricanorth",
           "southcentralus",
           "southindia",
@@ -2651,6 +3162,7 @@
           "CH West",
           "DE West Central",
           "ES Central",
+          "EU North",
           "EU West",
           "FR Central",
           "IN South",
@@ -2658,8 +3170,10 @@
           "JA East",
           "JA West",
           "KR Central",
+          "MY West",
           "NO East",
           "PL Central",
+          "QA Central",
           "SE Central",
           "UK South",
           "US Central",
@@ -2673,7 +3187,7 @@
           "US West Central",
           "ZA North"
         ],
-        "regionCount": 30,
+        "regionCount": 33,
         "meters": [
           {
             "region": "swedencentral",
@@ -2900,6 +3414,22 @@
             "effectiveStartDate": "2025-02-01T00:00:00Z"
           },
           {
+            "region": "qatarcentral",
+            "meterName": "R1 Outp glbl Tokens",
+            "skuName": "R1 Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.0054,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "qatarcentral",
+            "meterName": "R1 Inp glbl Tokens",
+            "skuName": "R1 Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00135,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
             "region": "westcentralus",
             "meterName": "R1 Inp glbl Tokens",
             "skuName": "R1 Inp glbl",
@@ -2948,6 +3478,22 @@
             "effectiveStartDate": "2025-02-01T00:00:00Z"
           },
           {
+            "region": "malaysiawest",
+            "meterName": "R1 Inp glbl Tokens",
+            "skuName": "R1 Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00135,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "R1 Outp glbl Tokens",
+            "skuName": "R1 Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.0054,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
             "region": "germanywestcentral",
             "meterName": "R1 Outp glbl Tokens",
             "skuName": "R1 Outp glbl",
@@ -2957,38 +3503,6 @@
           },
           {
             "region": "germanywestcentral",
-            "meterName": "R1 Inp glbl Tokens",
-            "skuName": "R1 Inp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.00135,
-            "effectiveStartDate": "2025-02-01T00:00:00Z"
-          },
-          {
-            "region": "australiaeast",
-            "meterName": "R1 Inp glbl Tokens",
-            "skuName": "R1 Inp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.00135,
-            "effectiveStartDate": "2025-02-01T00:00:00Z"
-          },
-          {
-            "region": "australiaeast",
-            "meterName": "R1 Outp glbl Tokens",
-            "skuName": "R1 Outp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.0054,
-            "effectiveStartDate": "2025-02-01T00:00:00Z"
-          },
-          {
-            "region": "brazilsouth",
-            "meterName": "R1 Outp glbl Tokens",
-            "skuName": "R1 Outp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.0054,
-            "effectiveStartDate": "2025-02-01T00:00:00Z"
-          },
-          {
-            "region": "brazilsouth",
             "meterName": "R1 Inp glbl Tokens",
             "skuName": "R1 Inp glbl",
             "unitOfMeasure": "1K",
@@ -3021,7 +3535,7 @@
         "cachedInput": 1.14,
         "output": 4.56,
         "unit": "usd_per_1m_tokens",
-        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 26 regions with identical rates."
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 29 regions with identical rates."
       },
       "metadata": {
         "regions": [
@@ -3037,8 +3551,11 @@
           "japaneast",
           "japanwest",
           "koreacentral",
+          "malaysiawest",
           "northcentralus",
+          "northeurope",
           "norwayeast",
+          "qatarcentral",
           "southafricanorth",
           "southcentralus",
           "swedencentral",
@@ -3060,13 +3577,16 @@
           "CH North",
           "CH West",
           "DE West Central",
+          "EU North",
           "EU West",
           "FR Central",
           "IT North",
           "JA East",
           "JA West",
           "KR Central",
+          "MY West",
           "NO East",
+          "QA Central",
           "SE Central",
           "UK South",
           "US Central",
@@ -3080,7 +3600,7 @@
           "US West Central",
           "ZA North"
         ],
-        "regionCount": 26,
+        "regionCount": 29,
         "meters": [
           {
             "region": "japanwest",
@@ -3259,6 +3779,22 @@
             "effectiveStartDate": "2025-04-01T00:00:00Z"
           },
           {
+            "region": "northeurope",
+            "meterName": "V3-0324 Outp glbl Tokens",
+            "skuName": "V3-0324 Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00456,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "northeurope",
+            "meterName": "V3-0324 Inp glbl Tokens",
+            "skuName": "V3-0324 Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00114,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
             "region": "uaenorth",
             "meterName": "V3-0324 Inp glbl Tokens",
             "skuName": "V3-0324 Inp glbl",
@@ -3289,6 +3825,22 @@
             "unitOfMeasure": "1K",
             "retailPrice": 0.00114,
             "effectiveStartDate": "2025-04-01T00:00:00Z"
+          },
+          {
+            "region": "qatarcentral",
+            "meterName": "V3-0324 Outp glbl Tokens",
+            "skuName": "V3-0324 Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00456,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "qatarcentral",
+            "meterName": "V3-0324 Inp glbl Tokens",
+            "skuName": "V3-0324 Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00114,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
           },
           {
             "region": "japaneast",
@@ -3368,38 +3920,6 @@
             "skuName": "V3-0324 Outp glbl",
             "unitOfMeasure": "1K",
             "retailPrice": 0.00456,
-            "effectiveStartDate": "2025-04-01T00:00:00Z"
-          },
-          {
-            "region": "switzerlandwest",
-            "meterName": "V3-0324 Inp glbl Tokens",
-            "skuName": "V3-0324 Inp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.00114,
-            "effectiveStartDate": "2025-04-01T00:00:00Z"
-          },
-          {
-            "region": "switzerlandwest",
-            "meterName": "V3-0324 Outp glbl Tokens",
-            "skuName": "V3-0324 Outp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.00456,
-            "effectiveStartDate": "2025-04-01T00:00:00Z"
-          },
-          {
-            "region": "southafricanorth",
-            "meterName": "V3-0324 Outp glbl Tokens",
-            "skuName": "V3-0324 Outp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.00456,
-            "effectiveStartDate": "2025-04-01T00:00:00Z"
-          },
-          {
-            "region": "southafricanorth",
-            "meterName": "V3-0324 Inp glbl Tokens",
-            "skuName": "V3-0324 Inp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.00114,
             "effectiveStartDate": "2025-04-01T00:00:00Z"
           }
         ]
@@ -3428,7 +3948,7 @@
         "cachedInput": 0.58,
         "output": 1.68,
         "unit": "usd_per_1m_tokens",
-        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 38 regions with identical rates."
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 39 regions with identical rates."
       },
       "metadata": {
         "regions": [
@@ -3450,6 +3970,7 @@
           "japanwest",
           "jioindiawest",
           "koreacentral",
+          "malaysiawest",
           "northcentralus",
           "northeurope",
           "norwayeast",
@@ -3495,6 +4016,7 @@
           "JA East",
           "JA West",
           "KR Central",
+          "MY West",
           "NO East",
           "PL Central",
           "QA Central",
@@ -3511,7 +4033,7 @@
           "US West Central",
           "ZA North"
         ],
-        "regionCount": 38,
+        "regionCount": 39,
         "meters": [
           {
             "region": "southindia",
@@ -3930,7 +4452,7 @@
         "cachedInput": 0.58,
         "output": 1.68,
         "unit": "usd_per_1m_tokens",
-        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 38 regions with identical rates."
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 39 regions with identical rates."
       },
       "metadata": {
         "regions": [
@@ -3952,6 +4474,7 @@
           "japanwest",
           "jioindiawest",
           "koreacentral",
+          "malaysiawest",
           "northcentralus",
           "northeurope",
           "norwayeast",
@@ -3997,6 +4520,7 @@
           "JA East",
           "JA West",
           "KR Central",
+          "MY West",
           "NO East",
           "PL Central",
           "QA Central",
@@ -4013,7 +4537,7 @@
           "US West Central",
           "ZA North"
         ],
-        "regionCount": 38,
+        "regionCount": 39,
         "meters": [
           {
             "region": "westus",
@@ -4096,6 +4620,22 @@
             "effectiveStartDate": "2026-05-01T00:00:00Z"
           },
           {
+            "region": "malaysiawest",
+            "meterName": "V3.2 Inp glbl Tokens",
+            "skuName": "V3.2 Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00058,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "V3.2 Outp glbl Tokens",
+            "skuName": "V3.2 Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00168,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
             "region": "southafricanorth",
             "meterName": "V3.2 Inp glbl Tokens",
             "skuName": "V3.2 Inp glbl",
@@ -4313,22 +4853,6 @@
           },
           {
             "region": "brazilsouth",
-            "meterName": "V3.2 Inp glbl Tokens",
-            "skuName": "V3.2 Inp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.00058,
-            "effectiveStartDate": "2026-05-01T00:00:00Z"
-          },
-          {
-            "region": "westus3",
-            "meterName": "V3.2 Outp glbl Tokens",
-            "skuName": "V3.2 Outp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.00168,
-            "effectiveStartDate": "2026-05-01T00:00:00Z"
-          },
-          {
-            "region": "westus3",
             "meterName": "V3.2 Inp glbl Tokens",
             "skuName": "V3.2 Inp glbl",
             "unitOfMeasure": "1K",
@@ -4839,7 +5363,7 @@
         "cachedInput": 0.19,
         "output": 0.51,
         "unit": "usd_per_1m_tokens",
-        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 38 regions with identical rates."
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 39 regions with identical rates."
       },
       "metadata": {
         "regions": [
@@ -4861,6 +5385,7 @@
           "japanwest",
           "jioindiawest",
           "koreacentral",
+          "malaysiawest",
           "northcentralus",
           "northeurope",
           "norwayeast",
@@ -4906,6 +5431,7 @@
           "JA East",
           "JA West",
           "KR Central",
+          "MY West",
           "NO East",
           "PL Central",
           "QA Central",
@@ -4922,7 +5448,7 @@
           "US West Central",
           "ZA North"
         ],
-        "regionCount": 38,
+        "regionCount": 39,
         "meters": [
           {
             "region": "spaincentral",
@@ -5341,7 +5867,7 @@
         "cachedInput": 1.74,
         "output": 3.48,
         "unit": "usd_per_1m_tokens",
-        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 38 regions with identical rates."
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 39 regions with identical rates."
       },
       "metadata": {
         "regions": [
@@ -5363,6 +5889,7 @@
           "japanwest",
           "jioindiawest",
           "koreacentral",
+          "malaysiawest",
           "northcentralus",
           "northeurope",
           "norwayeast",
@@ -5408,6 +5935,7 @@
           "JA East",
           "JA West",
           "KR Central",
+          "MY West",
           "NO East",
           "PL Central",
           "QA Central",
@@ -5424,7 +5952,7 @@
           "US West Central",
           "ZA North"
         ],
-        "regionCount": 38,
+        "regionCount": 39,
         "meters": [
           {
             "region": "australiaeast",
@@ -5731,20 +6259,20 @@
             "effectiveStartDate": "2026-05-01T00:00:00Z"
           },
           {
-            "region": "southafricanorth",
+            "region": "malaysiawest",
             "meterName": "V4 Pro Inp glbl Tokens",
             "skuName": "V4 Pro Inp glbl",
             "unitOfMeasure": "1K",
             "retailPrice": 0.00174,
-            "effectiveStartDate": "2026-05-01T00:00:00Z"
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
           },
           {
-            "region": "southafricanorth",
+            "region": "malaysiawest",
             "meterName": "V4 Pro Outp glbl Tokens",
             "skuName": "V4 Pro Outp glbl",
             "unitOfMeasure": "1K",
             "retailPrice": 0.00348,
-            "effectiveStartDate": "2026-05-01T00:00:00Z"
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
           }
         ]
       }
@@ -19289,7 +19817,7 @@
         "cachedInput": 0.15,
         "output": 0.6,
         "unit": "usd_per_1m_tokens",
-        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 36 regions with identical rates."
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 38 regions with identical rates."
       },
       "metadata": {
         "regions": [
@@ -19309,10 +19837,12 @@
           "japaneast",
           "japanwest",
           "koreacentral",
+          "malaysiawest",
           "northcentralus",
           "northeurope",
           "norwayeast",
           "polandcentral",
+          "qatarcentral",
           "southafricanorth",
           "southcentralus",
           "southeastasia",
@@ -19352,8 +19882,10 @@
           "JA East",
           "JA West",
           "KR Central",
+          "MY West",
           "NO East",
           "PL Central",
+          "QA Central",
           "SE Central",
           "UK South",
           "UK West",
@@ -19368,7 +19900,7 @@
           "US West Central",
           "ZA North"
         ],
-        "regionCount": 36,
+        "regionCount": 38,
         "meters": [
           {
             "region": "francecentral",
@@ -19435,6 +19967,22 @@
             "effectiveStartDate": "2026-03-01T00:00:00Z"
           },
           {
+            "region": "qatarcentral",
+            "meterName": "gpt-oss-120B Inp glbl Tokens",
+            "skuName": "gpt-oss-120B Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00015,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "qatarcentral",
+            "meterName": "gpt-oss-120B Outp glbl Tokens",
+            "skuName": "gpt-oss-120B Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.0006,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
             "region": "westus2",
             "meterName": "gpt-oss-120B Inp glbl Tokens",
             "skuName": "gpt-oss-120B Inp glbl",
@@ -19481,6 +20029,22 @@
             "unitOfMeasure": "1K",
             "retailPrice": 0.00015,
             "effectiveStartDate": "2026-03-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "gpt-oss-120B Outp glbl Tokens",
+            "skuName": "gpt-oss-120B Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.0006,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "gpt-oss-120B Inp glbl Tokens",
+            "skuName": "gpt-oss-120B Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00015,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
           },
           {
             "region": "australiaeast",
@@ -19656,38 +20220,6 @@
             "skuName": "gpt-oss-120B Inp glbl",
             "unitOfMeasure": "1K",
             "retailPrice": 0.00015,
-            "effectiveStartDate": "2026-03-01T00:00:00Z"
-          },
-          {
-            "region": "westcentralus",
-            "meterName": "gpt-oss-120B Inp glbl Tokens",
-            "skuName": "gpt-oss-120B Inp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.00015,
-            "effectiveStartDate": "2026-03-01T00:00:00Z"
-          },
-          {
-            "region": "westcentralus",
-            "meterName": "gpt-oss-120B Outp glbl Tokens",
-            "skuName": "gpt-oss-120B Outp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.0006,
-            "effectiveStartDate": "2026-03-01T00:00:00Z"
-          },
-          {
-            "region": "canadaeast",
-            "meterName": "gpt-oss-120B Inp glbl Tokens",
-            "skuName": "gpt-oss-120B Inp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.00015,
-            "effectiveStartDate": "2026-03-01T00:00:00Z"
-          },
-          {
-            "region": "canadaeast",
-            "meterName": "gpt-oss-120B Outp glbl Tokens",
-            "skuName": "gpt-oss-120B Outp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.0006,
             "effectiveStartDate": "2026-03-01T00:00:00Z"
           }
         ]
@@ -20775,7 +21307,7 @@
         "cachedInput": 0.2,
         "output": 0.5,
         "unit": "usd_per_1m_tokens",
-        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 37 regions with identical rates."
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 39 regions with identical rates."
       },
       "metadata": {
         "regions": [
@@ -20791,11 +21323,13 @@
           "francecentral",
           "germanynorth",
           "germanywestcentral",
+          "indonesiacentral",
           "italynorth",
           "japaneast",
           "japanwest",
           "jioindiawest",
           "koreacentral",
+          "malaysiawest",
           "northcentralus",
           "northeurope",
           "norwayeast",
@@ -20833,6 +21367,7 @@
           "EU North",
           "EU West",
           "FR Central",
+          "ID Central",
           "IN Central",
           "IN South",
           "IN West Jio",
@@ -20840,6 +21375,7 @@
           "JA East",
           "JA West",
           "KR Central",
+          "MY West",
           "NO East",
           "PL Central",
           "QA Central",
@@ -20856,7 +21392,7 @@
           "US West Central",
           "ZA North"
         ],
-        "regionCount": 37,
+        "regionCount": 39,
         "meters": [
           {
             "region": "uksouth",
@@ -20939,6 +21475,22 @@
             "effectiveStartDate": "2026-01-01T00:00:00Z"
           },
           {
+            "region": "indonesiacentral",
+            "meterName": "Grok 4.1 Outp Glbl Tokens",
+            "skuName": "Grok 4.1 Outp Glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.0005,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "indonesiacentral",
+            "meterName": "Grok 4.1 Inp Glbl Tokens",
+            "skuName": "Grok 4.1 Inp Glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.0002,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
             "region": "southindia",
             "meterName": "Grok 4.1 Inp Glbl Tokens",
             "skuName": "Grok 4.1 Inp Glbl",
@@ -21156,22 +21708,6 @@
           },
           {
             "region": "switzerlandwest",
-            "meterName": "Grok 4.1 Outp Glbl Tokens",
-            "skuName": "Grok 4.1 Outp Glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.0005,
-            "effectiveStartDate": "2026-01-01T00:00:00Z"
-          },
-          {
-            "region": "spaincentral",
-            "meterName": "Grok 4.1 Inp Glbl Tokens",
-            "skuName": "Grok 4.1 Inp Glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.0002,
-            "effectiveStartDate": "2026-01-01T00:00:00Z"
-          },
-          {
-            "region": "spaincentral",
             "meterName": "Grok 4.1 Outp Glbl Tokens",
             "skuName": "Grok 4.1 Outp Glbl",
             "unitOfMeasure": "1K",
@@ -21275,7 +21811,7 @@
         "cachedInput": 1.25,
         "output": 2.5,
         "unit": "usd_per_1m_tokens",
-        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 39 regions with identical rates."
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 41 regions with identical rates."
       },
       "metadata": {
         "regions": [
@@ -21291,11 +21827,13 @@
           "francecentral",
           "germanynorth",
           "germanywestcentral",
+          "indonesiacentral",
           "italynorth",
           "japaneast",
           "japanwest",
           "jioindiawest",
           "koreacentral",
+          "malaysiawest",
           "northcentralus",
           "northeurope",
           "norwayeast",
@@ -21335,6 +21873,7 @@
           "EU North",
           "EU West",
           "FR Central",
+          "ID Central",
           "IN Central",
           "IN South",
           "IN West Jio",
@@ -21342,6 +21881,7 @@
           "JA East",
           "JA West",
           "KR Central",
+          "MY West",
           "NO East",
           "PL Central",
           "QA Central",
@@ -21360,7 +21900,7 @@
           "US West Central",
           "ZA North"
         ],
-        "regionCount": 39,
+        "regionCount": 41,
         "meters": [
           {
             "region": "spaincentral",
@@ -21708,7 +22248,7 @@
         "cachedInput": 3,
         "output": 15,
         "unit": "usd_per_1m_tokens",
-        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 37 regions with identical rates."
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 39 regions with identical rates."
       },
       "metadata": {
         "regions": [
@@ -21724,11 +22264,13 @@
           "francecentral",
           "germanynorth",
           "germanywestcentral",
+          "indonesiacentral",
           "italynorth",
           "japaneast",
           "japanwest",
           "jioindiawest",
           "koreacentral",
+          "malaysiawest",
           "northcentralus",
           "northeurope",
           "norwayeast",
@@ -21766,6 +22308,7 @@
           "EU North",
           "EU West",
           "FR Central",
+          "ID Central",
           "IN Central",
           "IN South",
           "IN West Jio",
@@ -21773,6 +22316,7 @@
           "JA East",
           "JA West",
           "KR Central",
+          "MY West",
           "NO East",
           "PL Central",
           "QA Central",
@@ -21789,7 +22333,7 @@
           "US West Central",
           "ZA North"
         ],
-        "regionCount": 37,
+        "regionCount": 39,
         "meters": [
           {
             "region": "uksouth",
@@ -22096,20 +22640,20 @@
             "effectiveStartDate": "2026-01-01T00:00:00Z"
           },
           {
-            "region": "japaneast",
-            "meterName": "Grok-4 Outp glbl Tokens",
-            "skuName": "Grok-4 Outp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.015,
-            "effectiveStartDate": "2026-01-01T00:00:00Z"
-          },
-          {
-            "region": "japaneast",
+            "region": "indonesiacentral",
             "meterName": "Grok-4 Inp glbl Tokens",
             "skuName": "Grok-4 Inp glbl",
             "unitOfMeasure": "1K",
             "retailPrice": 0.003,
-            "effectiveStartDate": "2026-01-01T00:00:00Z"
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "indonesiacentral",
+            "meterName": "Grok-4 Outp glbl Tokens",
+            "skuName": "Grok-4 Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.015,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
           }
         ]
       }
@@ -22208,7 +22752,7 @@
         "cachedInput": 0.2,
         "output": 1.5,
         "unit": "usd_per_1m_tokens",
-        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 37 regions with identical rates."
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 39 regions with identical rates."
       },
       "metadata": {
         "regions": [
@@ -22224,11 +22768,13 @@
           "francecentral",
           "germanynorth",
           "germanywestcentral",
+          "indonesiacentral",
           "italynorth",
           "japaneast",
           "japanwest",
           "jioindiawest",
           "koreacentral",
+          "malaysiawest",
           "northcentralus",
           "northeurope",
           "norwayeast",
@@ -22266,6 +22812,7 @@
           "EU North",
           "EU West",
           "FR Central",
+          "ID Central",
           "IN Central",
           "IN South",
           "IN West Jio",
@@ -22273,6 +22820,7 @@
           "JA East",
           "JA West",
           "KR Central",
+          "MY West",
           "NO East",
           "PL Central",
           "QA Central",
@@ -22289,7 +22837,7 @@
           "US West Central",
           "ZA North"
         ],
-        "regionCount": 37,
+        "regionCount": 39,
         "meters": [
           {
             "region": "eastus",
@@ -22356,6 +22904,22 @@
             "effectiveStartDate": "2025-11-01T00:00:00Z"
           },
           {
+            "region": "malaysiawest",
+            "meterName": "Code Fast 1 Outp glbl Tokens",
+            "skuName": "Code Fast 1 Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.0015,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "Code Fast 1 Inp glbl Tokens",
+            "skuName": "Code Fast 1 Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.0002,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
             "region": "uksouth",
             "meterName": "Code Fast 1 Outp glbl Tokens",
             "skuName": "Code Fast 1 Outp glbl",
@@ -22593,22 +23157,6 @@
             "skuName": "Code Fast 1 Inp glbl",
             "unitOfMeasure": "1K",
             "retailPrice": 0.0002,
-            "effectiveStartDate": "2025-11-01T00:00:00Z"
-          },
-          {
-            "region": "qatarcentral",
-            "meterName": "Code Fast 1 Inp glbl Tokens",
-            "skuName": "Code Fast 1 Inp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.0002,
-            "effectiveStartDate": "2025-11-01T00:00:00Z"
-          },
-          {
-            "region": "qatarcentral",
-            "meterName": "Code Fast 1 Outp glbl Tokens",
-            "skuName": "Code Fast 1 Outp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.0015,
             "effectiveStartDate": "2025-11-01T00:00:00Z"
           }
         ]
@@ -23698,7 +24246,7 @@
         "cachedInput": 0.6,
         "output": 3,
         "unit": "usd_per_1m_tokens",
-        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 32 regions with identical rates."
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 35 regions with identical rates."
       },
       "metadata": {
         "regions": [
@@ -23715,9 +24263,12 @@
           "japaneast",
           "japanwest",
           "koreacentral",
+          "malaysiawest",
           "northcentralus",
+          "northeurope",
           "norwayeast",
           "polandcentral",
+          "qatarcentral",
           "southafricanorth",
           "southcentralus",
           "southeastasia",
@@ -23746,6 +24297,7 @@
           "CH West",
           "DE West Central",
           "ES Central",
+          "EU North",
           "EU West",
           "FR Central",
           "IN South",
@@ -23753,8 +24305,10 @@
           "JA East",
           "JA West",
           "KR Central",
+          "MY West",
           "NO East",
           "PL Central",
+          "QA Central",
           "SE Central",
           "UK South",
           "UK West",
@@ -23769,7 +24323,7 @@
           "US West Central",
           "ZA North"
         ],
-        "regionCount": 32,
+        "regionCount": 35,
         "meters": [
           {
             "region": "westus2",
@@ -23964,6 +24518,22 @@
             "effectiveStartDate": "2026-02-01T00:00:00Z"
           },
           {
+            "region": "malaysiawest",
+            "meterName": "K2.5 Thinking Inp glbl Tokens",
+            "skuName": "K2.5 Thinking Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.0006,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "K2.5 Thinking Outp glbl Tokens",
+            "skuName": "K2.5 Thinking Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.003,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
             "region": "australiaeast",
             "meterName": "K2.5 Thinking Outp glbl Tokens",
             "skuName": "K2.5 Thinking Outp glbl",
@@ -24012,6 +24582,22 @@
             "effectiveStartDate": "2026-02-01T00:00:00Z"
           },
           {
+            "region": "northeurope",
+            "meterName": "K2.5 Thinking Inp glbl Tokens",
+            "skuName": "K2.5 Thinking Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.0006,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "northeurope",
+            "meterName": "K2.5 Thinking Outp glbl Tokens",
+            "skuName": "K2.5 Thinking Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.003,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
             "region": "centralus",
             "meterName": "K2.5 Thinking Outp glbl Tokens",
             "skuName": "K2.5 Thinking Outp glbl",
@@ -24028,6 +24614,22 @@
             "effectiveStartDate": "2026-02-01T00:00:00Z"
           },
           {
+            "region": "qatarcentral",
+            "meterName": "K2.5 Thinking Outp glbl Tokens",
+            "skuName": "K2.5 Thinking Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.003,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "qatarcentral",
+            "meterName": "K2.5 Thinking Inp glbl Tokens",
+            "skuName": "K2.5 Thinking Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.0006,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
             "region": "southindia",
             "meterName": "K2.5 Thinking Inp glbl Tokens",
             "skuName": "K2.5 Thinking Inp glbl",
@@ -24041,54 +24643,6 @@
             "skuName": "K2.5 Thinking Outp glbl",
             "unitOfMeasure": "1K",
             "retailPrice": 0.003,
-            "effectiveStartDate": "2026-02-01T00:00:00Z"
-          },
-          {
-            "region": "japaneast",
-            "meterName": "K2.5 Thinking Outp glbl Tokens",
-            "skuName": "K2.5 Thinking Outp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.003,
-            "effectiveStartDate": "2026-02-01T00:00:00Z"
-          },
-          {
-            "region": "japaneast",
-            "meterName": "K2.5 Thinking Inp glbl Tokens",
-            "skuName": "K2.5 Thinking Inp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.0006,
-            "effectiveStartDate": "2026-02-01T00:00:00Z"
-          },
-          {
-            "region": "ukwest",
-            "meterName": "K2.5 Thinking Outp glbl Tokens",
-            "skuName": "K2.5 Thinking Outp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.003,
-            "effectiveStartDate": "2026-02-01T00:00:00Z"
-          },
-          {
-            "region": "ukwest",
-            "meterName": "K2.5 Thinking Inp glbl Tokens",
-            "skuName": "K2.5 Thinking Inp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.0006,
-            "effectiveStartDate": "2026-02-01T00:00:00Z"
-          },
-          {
-            "region": "uksouth",
-            "meterName": "K2.5 Thinking Outp glbl Tokens",
-            "skuName": "K2.5 Thinking Outp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.003,
-            "effectiveStartDate": "2026-02-01T00:00:00Z"
-          },
-          {
-            "region": "uksouth",
-            "meterName": "K2.5 Thinking Inp glbl Tokens",
-            "skuName": "K2.5 Thinking Inp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.0006,
             "effectiveStartDate": "2026-02-01T00:00:00Z"
           }
         ]
@@ -24188,7 +24742,7 @@
         "cachedInput": 0.95,
         "output": 4,
         "unit": "usd_per_1m_tokens",
-        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 32 regions with identical rates."
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 35 regions with identical rates."
       },
       "metadata": {
         "regions": [
@@ -24205,9 +24759,12 @@
           "japaneast",
           "japanwest",
           "koreacentral",
+          "malaysiawest",
           "northcentralus",
+          "northeurope",
           "norwayeast",
           "polandcentral",
+          "qatarcentral",
           "southafricanorth",
           "southcentralus",
           "southeastasia",
@@ -24236,6 +24793,7 @@
           "CH West",
           "DE West Central",
           "ES Central",
+          "EU North",
           "EU West",
           "FR Central",
           "IN South",
@@ -24243,8 +24801,10 @@
           "JA East",
           "JA West",
           "KR Central",
+          "MY West",
           "NO East",
           "PL Central",
+          "QA Central",
           "SE Central",
           "UK South",
           "UK West",
@@ -24259,7 +24819,7 @@
           "US West Central",
           "ZA North"
         ],
-        "regionCount": 32,
+        "regionCount": 35,
         "meters": [
           {
             "region": "switzerlandwest",
@@ -24342,6 +24902,22 @@
             "effectiveStartDate": "2026-05-01T00:00:00Z"
           },
           {
+            "region": "northeurope",
+            "meterName": "K2.6 Thinking Outp glbl Tokens",
+            "skuName": "K2.6 Thinking Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.004,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "northeurope",
+            "meterName": "K2.6 Thinking Inp glbl Tokens",
+            "skuName": "K2.6 Thinking Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00095,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
             "region": "westus2",
             "meterName": "K2.6 Thinking Outp glbl Tokens",
             "skuName": "K2.6 Thinking Outp glbl",
@@ -24563,22 +25139,6 @@
             "skuName": "K2.6 Thinking Inp glbl",
             "unitOfMeasure": "1K",
             "retailPrice": 0.00095,
-            "effectiveStartDate": "2026-05-01T00:00:00Z"
-          },
-          {
-            "region": "germanywestcentral",
-            "meterName": "K2.6 Thinking Inp glbl Tokens",
-            "skuName": "K2.6 Thinking Inp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.00095,
-            "effectiveStartDate": "2026-05-01T00:00:00Z"
-          },
-          {
-            "region": "germanywestcentral",
-            "meterName": "K2.6 Thinking Outp glbl Tokens",
-            "skuName": "K2.6 Thinking Outp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.004,
             "effectiveStartDate": "2026-05-01T00:00:00Z"
           }
         ]
@@ -24656,6 +25216,502 @@
       }
     },
     {
+      "id": "azure-foundry-kimi-k2-7-code-0-95-0-95-4",
+      "label": "Kimi K2.7 Code",
+      "modelSlug": "kimi-k2-7-code",
+      "provider": "Azure AI Foundry",
+      "route": "azure-foundry-global-standard",
+      "taskTags": [
+        "azure",
+        "foundry",
+        "global-standard",
+        "kimi"
+      ],
+      "options": {
+        "reasoning": "standard",
+        "effort": "standard",
+        "speed": "global-standard",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 0.95,
+        "cachedInput": 0.95,
+        "output": 4,
+        "unit": "usd_per_1m_tokens",
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 35 regions with identical rates."
+      },
+      "metadata": {
+        "regions": [
+          "australiaeast",
+          "brazilsouth",
+          "canadacentral",
+          "canadaeast",
+          "centralus",
+          "eastus",
+          "eastus2",
+          "francecentral",
+          "germanywestcentral",
+          "italynorth",
+          "japaneast",
+          "japanwest",
+          "koreacentral",
+          "malaysiawest",
+          "northcentralus",
+          "northeurope",
+          "norwayeast",
+          "polandcentral",
+          "qatarcentral",
+          "southafricanorth",
+          "southcentralus",
+          "southeastasia",
+          "southindia",
+          "spaincentral",
+          "swedencentral",
+          "switzerlandnorth",
+          "switzerlandwest",
+          "uaenorth",
+          "uksouth",
+          "ukwest",
+          "westcentralus",
+          "westeurope",
+          "westus",
+          "westus2",
+          "westus3"
+        ],
+        "locations": [
+          "AE North",
+          "AP Southeast",
+          "AU East",
+          "BR South",
+          "CA Central",
+          "CA East",
+          "CH North",
+          "CH West",
+          "DE West Central",
+          "ES Central",
+          "EU North",
+          "EU West",
+          "FR Central",
+          "IN South",
+          "IT North",
+          "JA East",
+          "JA West",
+          "KR Central",
+          "MY West",
+          "NO East",
+          "PL Central",
+          "QA Central",
+          "SE Central",
+          "UK South",
+          "UK West",
+          "US Central",
+          "US East",
+          "US East 2",
+          "US North Central",
+          "US South Central",
+          "US West",
+          "US West 2",
+          "US West 3",
+          "US West Central",
+          "ZA North"
+        ],
+        "regionCount": 35,
+        "meters": [
+          {
+            "region": "westus",
+            "meterName": "K2.7 Code Outp glbl Tokens",
+            "skuName": "K2.7 Code Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.004,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westus",
+            "meterName": "K2.7 Code Inp glbl Tokens",
+            "skuName": "K2.7 Code Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00095,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "italynorth",
+            "meterName": "K2.7 Code Inp glbl Tokens",
+            "skuName": "K2.7 Code Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00095,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "italynorth",
+            "meterName": "K2.7 Code Outp glbl Tokens",
+            "skuName": "K2.7 Code Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.004,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westus2",
+            "meterName": "K2.7 Code Inp glbl Tokens",
+            "skuName": "K2.7 Code Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00095,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westus2",
+            "meterName": "K2.7 Code Outp glbl Tokens",
+            "skuName": "K2.7 Code Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.004,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "japanwest",
+            "meterName": "K2.7 Code Outp glbl Tokens",
+            "skuName": "K2.7 Code Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.004,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "japanwest",
+            "meterName": "K2.7 Code Inp glbl Tokens",
+            "skuName": "K2.7 Code Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00095,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "K2.7 Code Inp glbl Tokens",
+            "skuName": "K2.7 Code Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00095,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "K2.7 Code Outp glbl Tokens",
+            "skuName": "K2.7 Code Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.004,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "uksouth",
+            "meterName": "K2.7 Code Inp glbl Tokens",
+            "skuName": "K2.7 Code Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00095,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "uksouth",
+            "meterName": "K2.7 Code Outp glbl Tokens",
+            "skuName": "K2.7 Code Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.004,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "canadacentral",
+            "meterName": "K2.7 Code Inp glbl Tokens",
+            "skuName": "K2.7 Code Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00095,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "canadacentral",
+            "meterName": "K2.7 Code Outp glbl Tokens",
+            "skuName": "K2.7 Code Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.004,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "polandcentral",
+            "meterName": "K2.7 Code Outp glbl Tokens",
+            "skuName": "K2.7 Code Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.004,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "polandcentral",
+            "meterName": "K2.7 Code Inp glbl Tokens",
+            "skuName": "K2.7 Code Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00095,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandwest",
+            "meterName": "K2.7 Code Outp glbl Tokens",
+            "skuName": "K2.7 Code Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.004,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandwest",
+            "meterName": "K2.7 Code Inp glbl Tokens",
+            "skuName": "K2.7 Code Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00095,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "japaneast",
+            "meterName": "K2.7 Code Outp glbl Tokens",
+            "skuName": "K2.7 Code Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.004,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "japaneast",
+            "meterName": "K2.7 Code Inp glbl Tokens",
+            "skuName": "K2.7 Code Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00095,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westcentralus",
+            "meterName": "K2.7 Code Inp glbl Tokens",
+            "skuName": "K2.7 Code Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00095,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westcentralus",
+            "meterName": "K2.7 Code Outp glbl Tokens",
+            "skuName": "K2.7 Code Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.004,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "K2.7 Code Inp glbl Tokens",
+            "skuName": "K2.7 Code Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00095,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "K2.7 Code Outp glbl Tokens",
+            "skuName": "K2.7 Code Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.004,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "qatarcentral",
+            "meterName": "K2.7 Code Outp glbl Tokens",
+            "skuName": "K2.7 Code Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.004,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "qatarcentral",
+            "meterName": "K2.7 Code Inp glbl Tokens",
+            "skuName": "K2.7 Code Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00095,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "northcentralus",
+            "meterName": "K2.7 Code Outp glbl Tokens",
+            "skuName": "K2.7 Code Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.004,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "northcentralus",
+            "meterName": "K2.7 Code Inp glbl Tokens",
+            "skuName": "K2.7 Code Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00095,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "K2.7 Code Outp glbl Tokens",
+            "skuName": "K2.7 Code Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.004,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "K2.7 Code Inp glbl Tokens",
+            "skuName": "K2.7 Code Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00095,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "K2.7 Code Inp glbl Tokens",
+            "skuName": "K2.7 Code Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00095,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "K2.7 Code Outp glbl Tokens",
+            "skuName": "K2.7 Code Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.004,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "K2.7 Code Inp glbl Tokens",
+            "skuName": "K2.7 Code Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00095,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "K2.7 Code Outp glbl Tokens",
+            "skuName": "K2.7 Code Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.004,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "ukwest",
+            "meterName": "K2.7 Code Outp glbl Tokens",
+            "skuName": "K2.7 Code Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.004,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "ukwest",
+            "meterName": "K2.7 Code Inp glbl Tokens",
+            "skuName": "K2.7 Code Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00095,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "K2.7 Code Outp glbl Tokens",
+            "skuName": "K2.7 Code Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.004,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "K2.7 Code Inp glbl Tokens",
+            "skuName": "K2.7 Code Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00095,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southafricanorth",
+            "meterName": "K2.7 Code Outp glbl Tokens",
+            "skuName": "K2.7 Code Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.004,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southafricanorth",
+            "meterName": "K2.7 Code Inp glbl Tokens",
+            "skuName": "K2.7 Code Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00095,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "azure-foundry-kimi-k2-7-code-1-188-1-188-5",
+      "label": "Kimi K2.7 Code",
+      "modelSlug": "kimi-k2-7-code",
+      "provider": "Azure AI Foundry",
+      "route": "azure-foundry-global-standard",
+      "taskTags": [
+        "azure",
+        "foundry",
+        "global-standard",
+        "kimi"
+      ],
+      "options": {
+        "reasoning": "standard",
+        "effort": "standard",
+        "speed": "global-standard",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 1.188,
+        "cachedInput": 1.188,
+        "output": 5,
+        "unit": "usd_per_1m_tokens",
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 2 regions with identical rates."
+      },
+      "metadata": {
+        "regions": [
+          "usgovarizona",
+          "usgovvirginia"
+        ],
+        "locations": [
+          "US Gov AZ",
+          "US Gov Virginia"
+        ],
+        "regionCount": 2,
+        "meters": [
+          {
+            "region": "usgovvirginia",
+            "meterName": "K2.7 Code Inp glbl Tokens",
+            "skuName": "K2.7 Code Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.001188,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "usgovvirginia",
+            "meterName": "K2.7 Code Outp glbl Tokens",
+            "skuName": "K2.7 Code Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.005,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "usgovarizona",
+            "meterName": "K2.7 Code Inp glbl Tokens",
+            "skuName": "K2.7 Code Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.001188,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "usgovarizona",
+            "meterName": "K2.7 Code Outp glbl Tokens",
+            "skuName": "K2.7 Code Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.005,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
       "id": "azure-foundry-llama-3-3-70b-0-71-0-71-0-71",
       "label": "Llama 3.3 70B",
       "modelSlug": "llama-3-3-70b",
@@ -24678,7 +25734,7 @@
         "cachedInput": 0.71,
         "output": 0.71,
         "unit": "usd_per_1m_tokens",
-        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 38 regions with identical rates."
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 40 regions with identical rates."
       },
       "metadata": {
         "regions": [
@@ -24695,11 +25751,13 @@
           "francecentral",
           "germanynorth",
           "germanywestcentral",
+          "indonesiacentral",
           "italynorth",
           "japaneast",
           "japanwest",
           "jioindiawest",
           "koreacentral",
+          "malaysiawest",
           "northcentralus",
           "northeurope",
           "norwayeast",
@@ -24738,6 +25796,7 @@
           "EU North",
           "EU West",
           "FR Central",
+          "ID Central",
           "IN Central",
           "IN South",
           "IN West Jio",
@@ -24745,6 +25804,7 @@
           "JA East",
           "JA West",
           "KR Central",
+          "MY West",
           "NO East",
           "PL Central",
           "QA Central",
@@ -24761,7 +25821,7 @@
           "US West Central",
           "ZA North"
         ],
-        "regionCount": 38,
+        "regionCount": 40,
         "meters": [
           {
             "region": "uksouth",
@@ -25020,6 +26080,22 @@
             "effectiveStartDate": "2026-01-01T00:00:00Z"
           },
           {
+            "region": "indonesiacentral",
+            "meterName": "Llama 3.3 70B Outp glbl Tokens",
+            "skuName": "Llama 3.3 70B Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00071,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "indonesiacentral",
+            "meterName": "Llama 3.3 70B Inp glbl Tokens",
+            "skuName": "Llama 3.3 70B Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00071,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
             "region": "westeurope",
             "meterName": "Llama 3.3 70B Outp glbl Tokens",
             "skuName": "Llama 3.3 70B Outp glbl",
@@ -25063,22 +26139,6 @@
             "region": "germanynorth",
             "meterName": "Llama 3.3 70B Inp glbl Tokens",
             "skuName": "Llama 3.3 70B Inp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.00071,
-            "effectiveStartDate": "2026-01-01T00:00:00Z"
-          },
-          {
-            "region": "centralus",
-            "meterName": "Llama 3.3 70B Inp glbl Tokens",
-            "skuName": "Llama 3.3 70B Inp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.00071,
-            "effectiveStartDate": "2026-01-01T00:00:00Z"
-          },
-          {
-            "region": "centralus",
-            "meterName": "Llama 3.3 70B Outp glbl Tokens",
-            "skuName": "Llama 3.3 70B Outp glbl",
             "unitOfMeasure": "1K",
             "retailPrice": 0.00071,
             "effectiveStartDate": "2026-01-01T00:00:00Z"
@@ -25180,7 +26240,7 @@
         "cachedInput": 0.25,
         "output": 1,
         "unit": "usd_per_1m_tokens",
-        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 38 regions with identical rates."
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 40 regions with identical rates."
       },
       "metadata": {
         "regions": [
@@ -25197,11 +26257,13 @@
           "francecentral",
           "germanynorth",
           "germanywestcentral",
+          "indonesiacentral",
           "italynorth",
           "japaneast",
           "japanwest",
           "jioindiawest",
           "koreacentral",
+          "malaysiawest",
           "northcentralus",
           "northeurope",
           "norwayeast",
@@ -25240,6 +26302,7 @@
           "EU North",
           "EU West",
           "FR Central",
+          "ID Central",
           "IN Central",
           "IN South",
           "IN West Jio",
@@ -25247,6 +26310,7 @@
           "JA East",
           "JA West",
           "KR Central",
+          "MY West",
           "NO East",
           "PL Central",
           "QA Central",
@@ -25263,7 +26327,7 @@
           "US West Central",
           "ZA North"
         ],
-        "regionCount": 38,
+        "regionCount": 40,
         "meters": [
           {
             "region": "belgiumcentral",
@@ -25346,6 +26410,22 @@
             "effectiveStartDate": "2025-06-01T00:00:00Z"
           },
           {
+            "region": "malaysiawest",
+            "meterName": "Llama 4 Maverick 17B Outp glbl Tokens",
+            "skuName": "Llama 4 Maverick 17B Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.001,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "Llama 4 Maverick 17B Inp glbl Tokens",
+            "skuName": "Llama 4 Maverick 17B Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.00025,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
             "region": "canadacentral",
             "meterName": "Llama 4 Maverick 17B Outp glbl Tokens",
             "skuName": "Llama 4 Maverick 17B Outp glbl",
@@ -25563,22 +26643,6 @@
           },
           {
             "region": "eastasia",
-            "meterName": "Llama 4 Maverick 17B Inp glbl Tokens",
-            "skuName": "Llama 4 Maverick 17B Inp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.00025,
-            "effectiveStartDate": "2025-06-01T00:00:00Z"
-          },
-          {
-            "region": "brazilsouth",
-            "meterName": "Llama 4 Maverick 17B Outp glbl Tokens",
-            "skuName": "Llama 4 Maverick 17B Outp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.001,
-            "effectiveStartDate": "2025-06-01T00:00:00Z"
-          },
-          {
-            "region": "brazilsouth",
             "meterName": "Llama 4 Maverick 17B Inp glbl Tokens",
             "skuName": "Llama 4 Maverick 17B Inp glbl",
             "unitOfMeasure": "1K",
@@ -25682,7 +26746,7 @@
         "cachedInput": 0.5,
         "output": 1.5,
         "unit": "usd_per_1m_tokens",
-        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 38 regions with identical rates."
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 40 regions with identical rates."
       },
       "metadata": {
         "regions": [
@@ -25699,11 +26763,13 @@
           "francecentral",
           "germanynorth",
           "germanywestcentral",
+          "indonesiacentral",
           "italynorth",
           "japaneast",
           "japanwest",
           "jioindiawest",
           "koreacentral",
+          "malaysiawest",
           "northcentralus",
           "northeurope",
           "norwayeast",
@@ -25742,6 +26808,7 @@
           "EU North",
           "EU West",
           "FR Central",
+          "ID Central",
           "IN Central",
           "IN South",
           "IN West Jio",
@@ -25749,6 +26816,7 @@
           "JA East",
           "JA West",
           "KR Central",
+          "MY West",
           "NO East",
           "PL Central",
           "QA Central",
@@ -25765,7 +26833,7 @@
           "US West Central",
           "ZA North"
         ],
-        "regionCount": 38,
+        "regionCount": 40,
         "meters": [
           {
             "region": "koreacentral",
@@ -25912,6 +26980,22 @@
             "effectiveStartDate": "2025-12-01T00:00:00Z"
           },
           {
+            "region": "indonesiacentral",
+            "meterName": "Large 3 Outp glbl Tokens",
+            "skuName": "Large 3 Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.0015,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "indonesiacentral",
+            "meterName": "Large 3 Inp glbl Tokens",
+            "skuName": "Large 3 Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.0005,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
             "region": "northcentralus",
             "meterName": "Large 3 Inp glbl Tokens",
             "skuName": "Large 3 Inp glbl",
@@ -26065,22 +27149,6 @@
           },
           {
             "region": "polandcentral",
-            "meterName": "Large 3 Outp glbl Tokens",
-            "skuName": "Large 3 Outp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.0015,
-            "effectiveStartDate": "2025-12-01T00:00:00Z"
-          },
-          {
-            "region": "swedencentral",
-            "meterName": "Large 3 Inp glbl Tokens",
-            "skuName": "Large 3 Inp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.0005,
-            "effectiveStartDate": "2025-12-01T00:00:00Z"
-          },
-          {
-            "region": "swedencentral",
             "meterName": "Large 3 Outp glbl Tokens",
             "skuName": "Large 3 Outp glbl",
             "unitOfMeasure": "1K",
@@ -26184,7 +27252,7 @@
         "cachedInput": 1.5,
         "output": 7.5,
         "unit": "usd_per_1m_tokens",
-        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 44 regions with identical rates."
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 45 regions with identical rates."
       },
       "metadata": {
         "regions": [
@@ -26209,6 +27277,7 @@
           "japanwest",
           "jioindiawest",
           "koreacentral",
+          "malaysiawest",
           "northcentralus",
           "northeurope",
           "norwayeast",
@@ -26260,6 +27329,7 @@
           "JA East",
           "JA West",
           "KR Central",
+          "MY West",
           "NO East",
           "PL Central",
           "QA Central",
@@ -26279,7 +27349,7 @@
           "US West Central",
           "ZA North"
         ],
-        "regionCount": 44,
+        "regionCount": 45,
         "meters": [
           {
             "region": "belgiumcentral",
@@ -26506,6 +27576,22 @@
             "effectiveStartDate": "2026-06-01T00:00:00Z"
           },
           {
+            "region": "malaysiawest",
+            "meterName": "MM3.5 Outp glbl Tokens",
+            "skuName": "MM3.5 Outp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.0075,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "MM3.5 Inp glbl Tokens",
+            "skuName": "MM3.5 Inp glbl",
+            "unitOfMeasure": "1K",
+            "retailPrice": 0.0015,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
             "region": "brazilsouth",
             "meterName": "MM3.5 Inp glbl Tokens",
             "skuName": "MM3.5 Inp glbl",
@@ -26579,22 +27665,6 @@
           },
           {
             "region": "westus",
-            "meterName": "MM3.5 Inp glbl Tokens",
-            "skuName": "MM3.5 Inp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.0015,
-            "effectiveStartDate": "2026-06-01T00:00:00Z"
-          },
-          {
-            "region": "usgovvirginia",
-            "meterName": "MM3.5 Outp glbl Tokens",
-            "skuName": "MM3.5 Outp glbl",
-            "unitOfMeasure": "1K",
-            "retailPrice": 0.0075,
-            "effectiveStartDate": "2026-06-01T00:00:00Z"
-          },
-          {
-            "region": "usgovvirginia",
             "meterName": "MM3.5 Inp glbl Tokens",
             "skuName": "MM3.5 Inp glbl",
             "unitOfMeasure": "1K",
@@ -29678,7 +30748,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-07-05T17:08:07.343Z",
+        "preservedAt": "2026-07-12T16:57:29.718Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -29721,7 +30791,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-07-05T17:08:07.343Z",
+        "preservedAt": "2026-07-12T16:57:29.718Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -29764,7 +30834,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-07-05T17:08:07.343Z",
+        "preservedAt": "2026-07-12T16:57:29.718Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -29807,7 +30877,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-07-05T17:08:07.343Z",
+        "preservedAt": "2026-07-12T16:57:29.718Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -29850,7 +30920,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-07-05T17:08:07.343Z",
+        "preservedAt": "2026-07-12T16:57:29.718Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -29893,7 +30963,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-07-05T17:08:07.343Z",
+        "preservedAt": "2026-07-12T16:57:29.718Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -30636,6 +31706,186 @@
       "metadata": {
         "releaseStatus": "GA",
         "category": "Powerful"
+      }
+    },
+    {
+      "id": "github-copilot-openai-gpt-5-6-luna",
+      "label": "GPT-5.6 Luna",
+      "modelSlug": "gpt-5-6-luna",
+      "provider": "GitHub Copilot",
+      "route": "github-copilot",
+      "taskTags": [
+        "coding",
+        "copilot",
+        "lightweight",
+        "openai"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "standard",
+        "speed": "subscription",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 1,
+        "cachedInput": 0.1,
+        "output": 6,
+        "unit": "usd_per_1m_tokens",
+        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
+      },
+      "metadata": {
+        "releaseStatus": "GA",
+        "category": "Lightweight"
+      }
+    },
+    {
+      "id": "github-copilot-openai-gpt-5-6-luna-2",
+      "label": "GPT-5.6 Luna",
+      "modelSlug": "gpt-5-6-luna",
+      "provider": "GitHub Copilot",
+      "route": "github-copilot",
+      "taskTags": [
+        "coding",
+        "copilot",
+        "lightweight",
+        "openai"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "standard",
+        "speed": "subscription",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 2,
+        "cachedInput": 0.2,
+        "output": 9,
+        "unit": "usd_per_1m_tokens",
+        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
+      },
+      "metadata": {
+        "releaseStatus": "GA",
+        "category": "Lightweight"
+      }
+    },
+    {
+      "id": "github-copilot-openai-gpt-5-6-sol",
+      "label": "GPT-5.6 Sol",
+      "modelSlug": "gpt-5-6-sol",
+      "provider": "GitHub Copilot",
+      "route": "github-copilot",
+      "taskTags": [
+        "coding",
+        "copilot",
+        "openai",
+        "powerful"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "high",
+        "speed": "subscription",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 5,
+        "cachedInput": 0.5,
+        "output": 30,
+        "unit": "usd_per_1m_tokens",
+        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
+      },
+      "metadata": {
+        "releaseStatus": "GA",
+        "category": "Powerful"
+      }
+    },
+    {
+      "id": "github-copilot-openai-gpt-5-6-sol-2",
+      "label": "GPT-5.6 Sol",
+      "modelSlug": "gpt-5-6-sol",
+      "provider": "GitHub Copilot",
+      "route": "github-copilot",
+      "taskTags": [
+        "coding",
+        "copilot",
+        "openai",
+        "powerful"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "high",
+        "speed": "subscription",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 10,
+        "cachedInput": 1,
+        "output": 45,
+        "unit": "usd_per_1m_tokens",
+        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
+      },
+      "metadata": {
+        "releaseStatus": "GA",
+        "category": "Powerful"
+      }
+    },
+    {
+      "id": "github-copilot-openai-gpt-5-6-terra",
+      "label": "GPT-5.6 Terra",
+      "modelSlug": "gpt-5-6-terra",
+      "provider": "GitHub Copilot",
+      "route": "github-copilot",
+      "taskTags": [
+        "coding",
+        "copilot",
+        "openai",
+        "versatile"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "standard",
+        "speed": "subscription",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 2.5,
+        "cachedInput": 0.25,
+        "output": 15,
+        "unit": "usd_per_1m_tokens",
+        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
+      },
+      "metadata": {
+        "releaseStatus": "GA",
+        "category": "Versatile"
+      }
+    },
+    {
+      "id": "github-copilot-openai-gpt-5-6-terra-2",
+      "label": "GPT-5.6 Terra",
+      "modelSlug": "gpt-5-6-terra",
+      "provider": "GitHub Copilot",
+      "route": "github-copilot",
+      "taskTags": [
+        "coding",
+        "copilot",
+        "openai",
+        "versatile"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "standard",
+        "speed": "subscription",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 5,
+        "cachedInput": 0.5,
+        "output": 22.5,
+        "unit": "usd_per_1m_tokens",
+        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
+      },
+      "metadata": {
+        "releaseStatus": "GA",
+        "category": "Versatile"
       }
     },
     {

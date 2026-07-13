@@ -397,6 +397,8 @@ function scoreWebsiteModelArray(models) {
       (model.slug ? 1 : 0) +
       (model.name ? 1 : 0) +
       (model.intelligence_index_cost || model.intelligenceIndexCost ? 5 : 0) +
+      (model.intelligence_index_cost_per_task || model.intelligenceIndexCostPerTask ? 5 : 0) +
+      (model.intelligence_index_time_per_task || model.intelligenceIndexTimePerTask ? 5 : 0) +
       (model.intelligence_index_token_counts ||
       model.intelligenceIndexTokenCounts ||
       model.canonicalIntelligenceIndexTokenCount
@@ -417,10 +419,22 @@ function normalizeWebsiteModel(model) {
     name: cleanText(model.name),
     slug: cleanText(model.slug),
     intelligenceIndexCost: normalizeIntelligenceIndexCost(model.intelligence_index_cost ?? model.intelligenceIndexCost),
+    intelligenceIndexCostPerTask: normalizeIntelligenceIndexCost(
+      model.intelligence_index_cost_per_task?.cost ??
+        model.intelligence_index_cost_per_task ??
+        model.intelligenceIndexCostPerTask?.cost ??
+        model.intelligenceIndexCostPerTask
+    ),
     intelligenceIndexTokenCounts: normalizeIntelligenceIndexTokenCounts(
       model.intelligence_index_token_counts ??
         model.intelligenceIndexTokenCounts ??
         model.canonicalIntelligenceIndexTokenCount
+    ),
+    intelligenceIndexOutputTokensPerTask: normalizeIntelligenceIndexOutputTokensPerTask(
+      model.intelligence_index_output_tokens_per_task ?? model.intelligenceIndexOutputTokensPerTask
+    ),
+    intelligenceIndexTimePerTask: numberOrNull(
+      model.intelligence_index_time_per_task ?? model.intelligenceIndexTimePerTask
     )
   };
 }
@@ -432,14 +446,21 @@ function previousArtificialAnalysisWebsiteModels(previousPayload) {
     if (
       model?.id &&
       !modelsById.has(model.id) &&
-      (model.intelligenceIndexCost || model.intelligenceIndexTokenCounts)
+      (model.intelligenceIndexCost ||
+        model.intelligenceIndexCostPerTask ||
+        model.intelligenceIndexTokenCounts ||
+        model.intelligenceIndexOutputTokensPerTask ||
+        model.intelligenceIndexTimePerTask)
     ) {
       modelsById.set(model.id, {
         id: model.id,
         name: model.name,
         slug: model.slug,
         intelligenceIndexCost: model.intelligenceIndexCost ?? null,
-        intelligenceIndexTokenCounts: model.intelligenceIndexTokenCounts ?? null
+        intelligenceIndexCostPerTask: model.intelligenceIndexCostPerTask ?? null,
+        intelligenceIndexTokenCounts: model.intelligenceIndexTokenCounts ?? null,
+        intelligenceIndexOutputTokensPerTask: model.intelligenceIndexOutputTokensPerTask ?? null,
+        intelligenceIndexTimePerTask: model.intelligenceIndexTimePerTask ?? null
       });
     }
   }
@@ -454,7 +475,15 @@ function mergeWebsiteModelData(models, websiteModels) {
     return {
       ...model,
       intelligenceIndexCost: websiteModel.intelligenceIndexCost ?? model.intelligenceIndexCost ?? null,
-      intelligenceIndexTokenCounts: websiteModel.intelligenceIndexTokenCounts ?? model.intelligenceIndexTokenCounts ?? null
+      intelligenceIndexCostPerTask:
+        websiteModel.intelligenceIndexCostPerTask ?? model.intelligenceIndexCostPerTask ?? null,
+      intelligenceIndexTokenCounts: websiteModel.intelligenceIndexTokenCounts ?? model.intelligenceIndexTokenCounts ?? null,
+      intelligenceIndexOutputTokensPerTask:
+        websiteModel.intelligenceIndexOutputTokensPerTask ??
+        model.intelligenceIndexOutputTokensPerTask ??
+        null,
+      intelligenceIndexTimePerTask:
+        websiteModel.intelligenceIndexTimePerTask ?? model.intelligenceIndexTimePerTask ?? null
     };
   });
 }
@@ -523,7 +552,10 @@ function normalizeIntelligenceIndexCost(value) {
     input: numberOrNull(value.input_cost ?? value.input),
     output: numberOrNull(value.output_cost ?? value.output),
     reasoning: numberOrNull(value.reasoning_cost ?? value.reasoning),
-    answer: numberOrNull(value.answer_cost ?? value.answer)
+    answer: numberOrNull(value.answer_cost ?? value.answer),
+    nonCacheInput: numberOrNull(value.non_cache_input_cost ?? value.nonCacheInput),
+    cacheRead: numberOrNull(value.cache_read_cost ?? value.cacheRead),
+    cacheWrite: numberOrNull(value.cache_write_cost ?? value.cacheWrite)
   };
 }
 
@@ -531,6 +563,15 @@ function normalizeIntelligenceIndexTokenCounts(value) {
   if (!isPlainObject(value)) return null;
   return {
     input: numberOrNull(value.input_tokens ?? value.input),
+    output: numberOrNull(value.output_tokens ?? value.output),
+    reasoning: numberOrNull(value.reasoning_tokens ?? value.reasoning),
+    answer: numberOrNull(value.answer_tokens ?? value.answer)
+  };
+}
+
+function normalizeIntelligenceIndexOutputTokensPerTask(value) {
+  if (!isPlainObject(value)) return null;
+  return {
     output: numberOrNull(value.output_tokens ?? value.output),
     reasoning: numberOrNull(value.reasoning_tokens ?? value.reasoning),
     answer: numberOrNull(value.answer_tokens ?? value.answer)
@@ -559,7 +600,14 @@ function normalizeAaModel(model) {
       timeToFirstAnswerTokenSeconds: numberOrNull(model.median_time_to_first_answer_token)
     },
     intelligenceIndexCost: normalizeIntelligenceIndexCost(model.intelligence_index_cost ?? pricing.intelligence_index_cost),
-    intelligenceIndexTokenCounts: normalizeIntelligenceIndexTokenCounts(model.intelligence_index_token_counts)
+    intelligenceIndexCostPerTask: normalizeIntelligenceIndexCost(
+      model.intelligence_index_cost_per_task?.cost ?? model.intelligence_index_cost_per_task
+    ),
+    intelligenceIndexTokenCounts: normalizeIntelligenceIndexTokenCounts(model.intelligence_index_token_counts),
+    intelligenceIndexOutputTokensPerTask: normalizeIntelligenceIndexOutputTokensPerTask(
+      model.intelligence_index_output_tokens_per_task
+    ),
+    intelligenceIndexTimePerTask: numberOrNull(model.intelligence_index_time_per_task)
   };
 }
 

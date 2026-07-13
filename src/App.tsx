@@ -437,7 +437,7 @@ function variantFreshness(variant: ScoredVariant, payload: ModelsPayload) {
 }
 
 function costAxisLabel(costMode: CostMode) {
-  return costMode === "task" ? "Intelligence benchmark cost" : "Blended route cost per 1M tokens";
+  return costMode === "task" ? "AA cost per Intelligence Index task" : "Blended route cost per 1M tokens";
 }
 
 function costTableLabel(costMode: CostMode) {
@@ -445,7 +445,7 @@ function costTableLabel(costMode: CostMode) {
 }
 
 function costCardSuffix(costMode: CostMode) {
-  return costMode === "task" ? "to run Intelligence Index" : "per 1M blended";
+  return costMode === "task" ? "per Intelligence Index task" : "per 1M blended";
 }
 
 function costSuffix(costMode: CostMode) {
@@ -453,12 +453,12 @@ function costSuffix(costMode: CostMode) {
 }
 
 function costValueUnit(costMode: CostMode, unit = "usd_per_1m_tokens") {
-  return costMode === "task" ? (unit === "credits_per_1m_tokens" ? "credit" : "$") : valueUnitLabel(unit);
+  return costMode === "task" ? "$" : valueUnitLabel(unit);
 }
 
 function costModeSourceNote(variant: ScoredVariant, costMode: CostMode) {
   if (costMode === "token") return variant.pricing.source;
-  return "Task cost and task time use Artificial Analysis Intelligence Index token counts; task time estimates benchmark output generation from this route's effective output speed.";
+  return "Cost is Artificial Analysis's reported weighted-average USD cost per Intelligence Index task. Task time is Artificial Analysis's reported time per Intelligence Index task.";
 }
 
 function speedRangeLabel(costMode: CostMode) {
@@ -1857,7 +1857,7 @@ function App() {
             sub={
               bestSpeed
                 ? costMode === "task"
-                  ? `${formatDuration(bestSpeed.taskCompletionSeconds)} benchmark time`
+                  ? `${formatDuration(bestSpeed.taskCompletionSeconds)} task time`
                   : `${formatNumber(bestSpeed.effectivePerformance.outputTokensPerSecond)} tok/s`
                 : costMode === "task"
                   ? "No task time data"
@@ -1942,7 +1942,7 @@ function App() {
                     <dd>{selected.options.speed}</dd>
                   </div>
                   <div>
-                    <dt>{costMode === "task" ? "Task cost" : "Blended rate"}</dt>
+                    <dt>{costMode === "task" ? "AA task cost" : "Blended rate"}</dt>
                     <dd>{formatPrice(selected.comparisonCost, selected.pricing.unit)} {activeCostSuffix}</dd>
                   </div>
                   {costMode === "task" ? (
@@ -1959,6 +1959,25 @@ function App() {
                         <dt>Reasoning cost</dt>
                         <dd>{formatPrice(selected.taskCost?.reasoning, selected.pricing.unit)}</dd>
                       </div>
+                      {selected.taskCost?.nonCacheInput !== null &&
+                      selected.taskCost?.nonCacheInput !== undefined ? (
+                        <div>
+                          <dt>Non-cache input</dt>
+                          <dd>{formatPrice(selected.taskCost.nonCacheInput)}</dd>
+                        </div>
+                      ) : null}
+                      {selected.taskCost?.cacheRead !== null && selected.taskCost?.cacheRead !== undefined ? (
+                        <div>
+                          <dt>Cache read</dt>
+                          <dd>{formatPrice(selected.taskCost.cacheRead)}</dd>
+                        </div>
+                      ) : null}
+                      {selected.taskCost?.cacheWrite !== null && selected.taskCost?.cacheWrite !== undefined ? (
+                        <div>
+                          <dt>Cache write</dt>
+                          <dd>{formatPrice(selected.taskCost.cacheWrite)}</dd>
+                        </div>
+                      ) : null}
                     </>
                   ) : (
                     <>
@@ -1977,7 +1996,7 @@ function App() {
                     </>
                   )}
                   <div>
-                    <dt>{costMode === "task" ? "Benchmark time" : "Output speed"}</dt>
+                    <dt>{costMode === "task" ? "AA task time" : "Output speed"}</dt>
                     <dd>{formatSpeedValue(selected, costMode)}</dd>
                   </div>
                 </dl>

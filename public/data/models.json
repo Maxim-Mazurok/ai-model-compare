@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-13T05:27:14.724Z",
+  "generatedAt": "2026-07-13T05:51:20.415Z",
   "artificialAnalysis": {
     "endpoint": "https://artificialanalysis.ai/api/v2/data/llms/models",
-    "fetchedAt": "2026-07-13T05:27:14.411Z",
+    "fetchedAt": "2026-07-13T05:51:20.122Z",
     "source": "live",
     "warning": null,
     "modelCount": 572,
@@ -12,7 +12,7 @@
     },
     "websiteModels": {
       "url": "https://artificialanalysis.ai/models",
-      "fetchedAt": "2026-07-13T05:27:14.704Z",
+      "fetchedAt": "2026-07-13T05:51:20.407Z",
       "source": "live",
       "warning": null,
       "modelCount": 572
@@ -219,14 +219,33 @@
           "input": 1454.391435381231,
           "output": 4176.131770275,
           "reasoning": 3668.502629025,
-          "answer": 507.62914125
+          "answer": 507.62914125,
+          "nonCacheInput": 171.796669695,
+          "cacheRead": 742.8574728702189,
+          "cacheWrite": 539.7372928160122
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 2.7498239008825984,
+          "input": 1.1990165514847535,
+          "output": 1.5508073493978443,
+          "reasoning": 1.1842275226716166,
+          "answer": 0.36657982672622763,
+          "nonCacheInput": 0.09511416853774562,
+          "cacheRead": 0.6273828830939632,
+          "cacheWrite": 0.47651949985304487
         },
         "intelligenceIndexTokenCounts": {
           "input": 820026670,
           "output": 86856045,
           "reasoning": 76307907,
           "answer": 10548138
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 33127.0472670529,
+          "reasoning": 25431.28744275464,
+          "answer": 7695.759824298257
+        },
+        "intelligenceIndexTimePerTask": 322.56080815231644
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 64.899,
@@ -306,14 +325,33 @@
           "input": 122.8408486807195,
           "output": 440.66810000000004,
           "reasoning": 402.01882500000005,
-          "answer": 38.649274999999996
+          "answer": 38.649274999999996,
+          "nonCacheInput": 13.03874,
+          "cacheRead": 20.57104685385048,
+          "cacheWrite": 89.23106182686902
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.2716109087882064,
+          "input": 0.15392344687164683,
+          "output": 0.11768746191655952,
+          "reasoning": 0.08803767257421066,
+          "answer": 0.02964978934234885,
+          "nonCacheInput": 0.007056618425483764,
+          "cacheRead": 0.02870167842292957,
+          "cacheWrite": 0.11816515002323351
         },
         "intelligenceIndexTokenCounts": {
           "input": 290134058,
           "output": 88133620,
           "reasoning": 80403765,
           "answer": 7729855
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 23537.492383311903,
+          "reasoning": 17607.534514842133,
+          "answer": 5929.95786846977
+        },
+        "intelligenceIndexTimePerTask": 171.21457467927976
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 129.403,
@@ -389,7 +427,10 @@
           "timeToFirstAnswerTokenSeconds": 0.612
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 98.02,
@@ -502,7 +543,10 @@
           "timeToFirstAnswerTokenSeconds": 1.405
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 53.656,
@@ -578,7 +622,10 @@
           "timeToFirstAnswerTokenSeconds": 11.361
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 56.54,
@@ -654,7 +701,10 @@
           "timeToFirstAnswerTokenSeconds": 1.946
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 44.316,
@@ -730,7 +780,10 @@
           "timeToFirstAnswerTokenSeconds": 17.93
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 47.534,
@@ -810,14 +863,33 @@
           "input": 1236.1138178986712,
           "output": 2501.704225,
           "reasoning": 2184.9446,
-          "answer": 316.75962499999997
+          "answer": 316.75962499999997,
+          "nonCacheInput": 87.44887500000002,
+          "cacheRead": 569.4169462696807,
+          "cacheWrite": 579.2479966289904
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 1.9733096609430143,
+          "input": 1.1866547500954012,
+          "output": 0.7866549108476135,
+          "reasoning": 0.5427368701412603,
+          "answer": 0.24391804070635303,
+          "nonCacheInput": 0.047228405896136576,
+          "cacheRead": 0.5652371768671622,
+          "cacheWrite": 0.574189167332102
         },
         "intelligenceIndexTokenCounts": {
           "input": 1249003347,
           "output": 100068169,
           "reasoning": 87397784,
           "answer": 12670385
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 31466.196433904537,
+          "reasoning": 21709.474805650414,
+          "answer": 9756.721628254125
+        },
+        "intelligenceIndexTimePerTask": 371.03663770971986
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 51.991,
@@ -893,7 +965,10 @@
           "timeToFirstAnswerTokenSeconds": 1.434
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 43.177,
@@ -973,14 +1048,33 @@
           "input": 834.1656904756285,
           "output": 2918.3805500000003,
           "reasoning": 2626.2547250000002,
-          "answer": 292.125825
+          "answer": 292.125825,
+          "nonCacheInput": 87.46856,
+          "cacheRead": 434.32935224124975,
+          "cacheWrite": 312.36777823437876
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 1.7972215258754352,
+          "input": 0.7744653411750283,
+          "output": 1.022756184700407,
+          "reasoning": 0.8116206279506174,
+          "answer": 0.21113555674978962,
+          "nonCacheInput": 0.04742450919381809,
+          "cacheRead": 0.4203530726567357,
+          "cacheWrite": 0.30668775932447445
         },
         "intelligenceIndexTokenCounts": {
           "input": 936131261,
           "output": 116735222,
           "reasoning": 105050189,
           "answer": 11685033
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 40910.24738801627,
+          "reasoning": 32464.825118024688,
+          "answer": 8445.422269991586
+        },
+        "intelligenceIndexTimePerTask": 414.27383112226835
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 58.962,
@@ -1056,7 +1150,10 @@
           "timeToFirstAnswerTokenSeconds": 1.272
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 52.793,
@@ -1136,14 +1233,33 @@
           "input": 186.08062774638807,
           "output": 946.7734500000001,
           "reasoning": 845.4071100000001,
-          "answer": 101.36634
+          "answer": 101.36634,
+          "nonCacheInput": 39.020075999999996,
+          "cacheRead": 66.70617060900973,
+          "cacheWrite": 80.35438113737835
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.41290380463528553,
+          "input": 0.17715751403584135,
+          "output": 0.23574629059944427,
+          "reasoning": 0.15747824339018823,
+          "answer": 0.07826804720925604,
+          "nonCacheInput": 0.021146087162555484,
+          "cacheRead": 0.07351996765137786,
+          "cacheWrite": 0.082491459221908
         },
         "intelligenceIndexTokenCounts": {
           "input": 256788429,
           "output": 63118230,
           "reasoning": 56360474,
           "answer": 6757756
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 15716.419373296281,
+          "reasoning": 10498.54955934588,
+          "answer": 5217.869813950402
+        },
+        "intelligenceIndexTimePerTask": 302.8699545691626
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 52.006,
@@ -1219,7 +1335,10 @@
           "timeToFirstAnswerTokenSeconds": 1.162
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 47.941,
@@ -1295,7 +1414,10 @@
           "timeToFirstAnswerTokenSeconds": 1.101
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 47.601,
@@ -1375,14 +1497,33 @@
           "input": 404.68930913649876,
           "output": 2951.1625649999996,
           "reasoning": 2801.87598,
-          "answer": 149.286585
+          "answer": 149.286585,
+          "nonCacheInput": 41.495244,
+          "cacheRead": 205.4320787924784,
+          "cacheWrite": 157.76198634402036
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 1.1355620170084484,
+          "input": 0.38037126130138377,
+          "output": 0.7551907557070645,
+          "reasoning": 0.6509368361058735,
+          "answer": 0.10425391960119107,
+          "nonCacheInput": 0.021565057427932008,
+          "cacheRead": 0.19728787824191174,
+          "cacheWrite": 0.16151832563154006
         },
         "intelligenceIndexTokenCounts": {
           "input": 740675207,
           "output": 196744171,
           "reasoning": 186791732,
           "answer": 9952439
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 50346.050380470966,
+          "reasoning": 43395.789073724896,
+          "answer": 6950.261306746072
+        },
+        "intelligenceIndexTimePerTask": 589.4463507008242
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 65.793,
@@ -3293,14 +3434,33 @@
           "input": 0,
           "output": 0,
           "reasoning": 0,
-          "answer": 0
+          "answer": 0,
+          "nonCacheInput": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0,
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "answer": 0,
+          "nonCacheInput": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0
         },
         "intelligenceIndexTokenCounts": {
           "input": 387602650,
           "output": 63167025,
           "reasoning": 56033578,
           "answer": 7133447
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 20772.993280809515,
+          "reasoning": 14571.005770784779,
+          "answer": 6201.9875100247355
+        },
+        "intelligenceIndexTimePerTask": 119.61157775203179
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 178.331,
@@ -3423,14 +3583,33 @@
           "input": 0,
           "output": 0,
           "reasoning": 0,
-          "answer": 0
+          "answer": 0,
+          "nonCacheInput": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0,
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "answer": 0,
+          "nonCacheInput": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0
         },
         "intelligenceIndexTokenCounts": {
           "input": 387602650,
           "output": 63167025,
           "reasoning": 56033578,
           "answer": 7133447
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 20772.993280809515,
+          "reasoning": 14571.005770784779,
+          "answer": 6201.9875100247355
+        },
+        "intelligenceIndexTimePerTask": 119.61157775203179
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 178.331,
@@ -3915,14 +4094,33 @@
           "input": 0,
           "output": 0,
           "reasoning": 0,
-          "answer": 0
+          "answer": 0,
+          "nonCacheInput": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0,
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "answer": 0,
+          "nonCacheInput": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0
         },
         "intelligenceIndexTokenCounts": {
           "input": 387602650,
           "output": 63167025,
           "reasoning": 56033578,
           "answer": 7133447
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 20772.993280809515,
+          "reasoning": 14571.005770784779,
+          "answer": 6201.9875100247355
+        },
+        "intelligenceIndexTimePerTask": 119.61157775203179
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 178.331,
@@ -4403,7 +4601,10 @@
           "timeToFirstAnswerTokenSeconds": 0.418
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 55.662,
@@ -4526,14 +4727,33 @@
           "input": 0,
           "output": 0,
           "reasoning": 0,
-          "answer": 0
+          "answer": 0,
+          "nonCacheInput": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0,
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "answer": 0,
+          "nonCacheInput": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0
         },
         "intelligenceIndexTokenCounts": {
           "input": 387602650,
           "output": 63167025,
           "reasoning": 56033578,
           "answer": 7133447
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 20772.993280809515,
+          "reasoning": 14571.005770784779,
+          "answer": 6201.9875100247355
+        },
+        "intelligenceIndexTimePerTask": 119.61157775203179
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 178.331,
@@ -4652,7 +4872,10 @@
           "timeToFirstAnswerTokenSeconds": 0.418
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 55.662,
@@ -5539,7 +5762,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -6013,14 +6239,33 @@
           "input": 212.47310177500003,
           "output": 203.4341232,
           "reasoning": 181.4152718,
-          "answer": 22.0188514
+          "answer": 22.0188514,
+          "nonCacheInput": 19.8575069,
+          "cacheRead": 126.67512311436332,
+          "cacheWrite": 65.94047176063671
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.24713753983015388,
+          "input": 0.17381585431759883,
+          "output": 0.07332168551255507,
+          "reasoning": 0.05800365061838551,
+          "answer": 0.01531803489416955,
+          "nonCacheInput": 0.010694773610279477,
+          "cacheRead": 0.10585538558823314,
+          "cacheWrite": 0.0572656951190862
         },
         "intelligenceIndexTokenCounts": {
           "input": 126849613,
           "output": 43283856,
           "reasoning": 38598994,
           "answer": 4684862
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 15600.358619692568,
+          "reasoning": 12341.202259230962,
+          "answer": 3259.1563604616053
+        },
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -6486,14 +6731,33 @@
           "input": 132.08877768999997,
           "output": 5.70067875,
           "reasoning": 0,
-          "answer": 5.70067875
+          "answer": 5.70067875,
+          "nonCacheInput": 14.314178439999997,
+          "cacheRead": 90.49848846660277,
+          "cacheWrite": 27.27611078339721
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.18953428564807268,
+          "input": 0.1861964116057445,
+          "output": 0.003337874042328135,
+          "reasoning": 0,
+          "answer": 0.003337874042328135,
+          "nonCacheInput": 0.0077149801965430455,
+          "cacheRead": 0.13800001712780796,
+          "cacheWrite": 0.0404814142813935
         },
         "intelligenceIndexTokenCounts": {
           "input": 110534542,
           "output": 4560543,
           "reasoning": 0,
           "answer": 4560543
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 2670.2992338625077,
+          "reasoning": 0,
+          "answer": 2670.2992338625077
+        },
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -7499,7 +7763,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -7981,12 +8248,19 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 279080933,
           "output": 62904844,
           "reasoning": 56555734,
           "answer": 6349110
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 15354.436422539819,
+          "reasoning": 8962.381259853833,
+          "answer": 6392.055162685985
+        },
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -8468,7 +8742,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -8950,7 +9227,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -9070,7 +9350,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -9190,12 +9473,19 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 279080933,
           "output": 62904844,
           "reasoning": 56555734,
           "answer": 6349110
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 15354.436422539819,
+          "reasoning": 8962.381259853833,
+          "answer": 6392.055162685985
+        },
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -9315,7 +9605,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -9435,7 +9728,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -9895,14 +10191,33 @@
           "input": 18.7785424,
           "output": 2.93760253,
           "reasoning": 0,
-          "answer": 2.93760253
+          "answer": 2.93760253,
+          "nonCacheInput": 4.743875200000001,
+          "cacheRead": 4.903687194793314,
+          "cacheWrite": 9.130980005206686
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.02540399632219767,
+          "input": 0.02338666535613554,
+          "output": 0.0020173309660621295,
+          "reasoning": 0,
+          "answer": 0.0020173309660621295,
+          "nonCacheInput": 0.002545688046902819,
+          "cacheRead": 0.007441086378064513,
+          "cacheWrite": 0.013399890931168206
         },
         "intelligenceIndexTokenCounts": {
           "input": 46946356,
           "output": 3300677,
           "reasoning": 0,
           "answer": 3300677
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 2266.6640068113816,
+          "reasoning": 0,
+          "answer": 2266.6640068113816
+        },
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -10362,14 +10677,33 @@
           "input": 132.08877768999997,
           "output": 5.70067875,
           "reasoning": 0,
-          "answer": 5.70067875
+          "answer": 5.70067875,
+          "nonCacheInput": 14.314178439999997,
+          "cacheRead": 90.49848846660277,
+          "cacheWrite": 27.27611078339721
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.18953428564807268,
+          "input": 0.1861964116057445,
+          "output": 0.003337874042328135,
+          "reasoning": 0,
+          "answer": 0.003337874042328135,
+          "nonCacheInput": 0.0077149801965430455,
+          "cacheRead": 0.13800001712780796,
+          "cacheWrite": 0.0404814142813935
         },
         "intelligenceIndexTokenCounts": {
           "input": 110534542,
           "output": 4560543,
           "reasoning": 0,
           "answer": 4560543
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 2670.2992338625077,
+          "reasoning": 0,
+          "answer": 2670.2992338625077
+        },
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -10855,14 +11189,33 @@
           "input": 8.879784436319195,
           "output": 65.43284328,
           "reasoning": 62.714646120000005,
-          "answer": 2.71819716
+          "answer": 2.71819716,
+          "nonCacheInput": 1.73830104,
+          "cacheRead": 1.8371617523200163,
+          "cacheWrite": 5.304321643999178
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.0222818336454049,
+          "input": 0.009604395083955603,
+          "output": 0.012677438561449298,
+          "reasoning": 0.009745442529604026,
+          "answer": 0.0029319960318452726,
+          "nonCacheInput": 0.0008938034761465444,
+          "cacheRead": 0.0024927649042623106,
+          "cacheWrite": 0.006217826703546748
         },
         "intelligenceIndexTokenCounts": {
           "input": 706433645,
           "output": 233688726,
           "reasoning": 223980879,
           "answer": 9707847
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 45276.566290890354,
+          "reasoning": 34805.151891442954,
+          "answer": 10471.414399447398
+        },
+        "intelligenceIndexTimePerTask": 392.95958103974016
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 105.524,
@@ -11344,7 +11697,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -11826,7 +12182,10 @@
           "timeToFirstAnswerTokenSeconds": 0.912
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 103.799,
@@ -11950,14 +12309,33 @@
           "input": 8.879784436319195,
           "output": 65.43284328,
           "reasoning": 62.714646120000005,
-          "answer": 2.71819716
+          "answer": 2.71819716,
+          "nonCacheInput": 1.73830104,
+          "cacheRead": 1.8371617523200163,
+          "cacheWrite": 5.304321643999178
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.0222818336454049,
+          "input": 0.009604395083955603,
+          "output": 0.012677438561449298,
+          "reasoning": 0.009745442529604026,
+          "answer": 0.0029319960318452726,
+          "nonCacheInput": 0.0008938034761465444,
+          "cacheRead": 0.0024927649042623106,
+          "cacheWrite": 0.006217826703546748
         },
         "intelligenceIndexTokenCounts": {
           "input": 706433645,
           "output": 233688726,
           "reasoning": 223980879,
           "answer": 9707847
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 45276.566290890354,
+          "reasoning": 34805.151891442954,
+          "answer": 10471.414399447398
+        },
+        "intelligenceIndexTimePerTask": 392.95958103974016
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 105.524,
@@ -12077,7 +12455,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -12197,7 +12578,10 @@
           "timeToFirstAnswerTokenSeconds": 0.912
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 103.799,
@@ -12683,14 +13067,33 @@
           "input": 15.6498609078,
           "output": 160.68934017000004,
           "reasoning": 153.45185715000002,
-          "answer": 7.23748302
+          "answer": 7.23748302,
+          "nonCacheInput": 5.468218395,
+          "cacheRead": 1.1771512128,
+          "cacheWrite": 9.0044913
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.044843733471261124,
+          "input": 0.012686253718118372,
+          "output": 0.032157479753142745,
+          "reasoning": 0.025855877778002877,
+          "answer": 0.006301601975139872,
+          "nonCacheInput": 0.002844427589479215,
+          "cacheRead": 0.0012177412061614523,
+          "cacheWrite": 0.008624084922477702
         },
         "intelligenceIndexTokenCounts": {
           "input": 360257045,
           "output": 184700391,
           "reasoning": 176381445,
           "answer": 8318946
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 36962.620405911206,
+          "reasoning": 29719.399744830895,
+          "answer": 7243.220661080312
+        },
+        "intelligenceIndexTimePerTask": 482.6167928976416
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 64.25,
@@ -13172,7 +13575,10 @@
           "timeToFirstAnswerTokenSeconds": 35.043
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 58.612,
@@ -13654,7 +14060,10 @@
           "timeToFirstAnswerTokenSeconds": 1.186
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 65.06,
@@ -13778,14 +14187,33 @@
           "input": 15.6498609078,
           "output": 160.68934017000004,
           "reasoning": 153.45185715000002,
-          "answer": 7.23748302
+          "answer": 7.23748302,
+          "nonCacheInput": 5.468218395,
+          "cacheRead": 1.1771512128,
+          "cacheWrite": 9.0044913
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.044843733471261124,
+          "input": 0.012686253718118372,
+          "output": 0.032157479753142745,
+          "reasoning": 0.025855877778002877,
+          "answer": 0.006301601975139872,
+          "nonCacheInput": 0.002844427589479215,
+          "cacheRead": 0.0012177412061614523,
+          "cacheWrite": 0.008624084922477702
         },
         "intelligenceIndexTokenCounts": {
           "input": 360257045,
           "output": 184700391,
           "reasoning": 176381445,
           "answer": 8318946
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 36962.620405911206,
+          "reasoning": 29719.399744830895,
+          "answer": 7243.220661080312
+        },
+        "intelligenceIndexTimePerTask": 482.6167928976416
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 64.25,
@@ -13905,7 +14333,10 @@
           "timeToFirstAnswerTokenSeconds": 35.043
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 58.612,
@@ -14025,7 +14456,10 @@
           "timeToFirstAnswerTokenSeconds": 1.186
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 65.06,
@@ -15341,14 +15775,33 @@
           "input": 66.39131800190259,
           "output": 8.2752592,
           "reasoning": 0,
-          "answer": 8.2752592
+          "answer": 8.2752592,
+          "nonCacheInput": 4.8381108,
+          "cacheRead": 34.66225506603247,
+          "cacheWrite": 26.890952135870112
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.06370503454354323,
+          "input": 0.05897370441905791,
+          "output": 0.00473133012448532,
+          "reasoning": 0,
+          "answer": 0.00473133012448532,
+          "nonCacheInput": 0.002614104813725431,
+          "cacheRead": 0.03162890456424131,
+          "cacheWrite": 0.024730695041091173
         },
         "intelligenceIndexTokenCounts": {
           "input": 425945208,
           "output": 5172037,
           "reasoning": 0,
           "answer": 5172037
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 2957.0813278033247,
+          "reasoning": 0,
+          "answer": 2957.0813278033247
+        },
+        "intelligenceIndexTimePerTask": 37.81767007416685
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 85.729,
@@ -15812,14 +16265,33 @@
           "input": 45.18142985977035,
           "output": 3.4787976,
           "reasoning": 0,
-          "answer": 3.4787976
+          "answer": 3.4787976,
+          "nonCacheInput": 1.1520740999999999,
+          "cacheRead": 22.12927484674322,
+          "cacheWrite": 21.900080913027125
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.03990804499935565,
+          "input": 0.03737722908358822,
+          "output": 0.0025308159157674316,
+          "reasoning": 0,
+          "answer": 0.0025308159157674316,
+          "nonCacheInput": 0.0006161152018109874,
+          "cacheRead": 0.01845778121761676,
+          "cacheWrite": 0.018303332664160475
         },
         "intelligenceIndexTokenCounts": {
           "input": 1115692544,
           "output": 8696994,
           "reasoning": 0,
           "answer": 8696994
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 6327.039789418577,
+          "reasoning": 0,
+          "answer": 6327.039789418577
+        },
+        "intelligenceIndexTimePerTask": 38.107994919550265
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 148.894,
@@ -16279,7 +16751,10 @@
           "timeToFirstAnswerTokenSeconds": 0.653
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 127.673,
@@ -16415,7 +16890,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -16871,7 +17349,10 @@
           "timeToFirstAnswerTokenSeconds": 0.623
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 112.814,
@@ -17327,7 +17808,10 @@
           "timeToFirstAnswerTokenSeconds": 0.567
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 115.12,
@@ -17785,7 +18269,10 @@
           "timeToFirstAnswerTokenSeconds": 0.54
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 209.707,
@@ -18243,7 +18730,10 @@
           "timeToFirstAnswerTokenSeconds": 0.567
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 115.12,
@@ -18701,7 +19191,10 @@
           "timeToFirstAnswerTokenSeconds": 0.623
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 112.814,
@@ -19159,7 +19652,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -19617,7 +20113,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -20077,7 +20576,10 @@
           "timeToFirstAnswerTokenSeconds": 0.58
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 72.154,
@@ -20952,12 +21454,19 @@
           "timeToFirstAnswerTokenSeconds": 74.735
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 168410463,
           "output": 60178727,
           "reasoning": 56916694,
           "answer": 3262033
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 11101.68761216075,
+          "reasoning": 9087.24968718294,
+          "answer": 2014.437924977808
+        },
+        "intelligenceIndexTimePerTask": 109.17292689547322
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 97.5,
@@ -21415,7 +21924,10 @@
           "timeToFirstAnswerTokenSeconds": 0.72
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 105.258,
@@ -21873,7 +22385,10 @@
           "timeToFirstAnswerTokenSeconds": 14.54
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 106.574,
@@ -22331,7 +22846,10 @@
           "timeToFirstAnswerTokenSeconds": 83.431
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 162.538,
@@ -22789,7 +23307,10 @@
           "timeToFirstAnswerTokenSeconds": 0.608
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 135.427,
@@ -23247,7 +23768,10 @@
           "timeToFirstAnswerTokenSeconds": 40.409
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 133.157,
@@ -24531,7 +25055,10 @@
           "timeToFirstAnswerTokenSeconds": 4.826
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 204.14,
@@ -24985,7 +25512,10 @@
           "timeToFirstAnswerTokenSeconds": 5.086
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 190.782,
@@ -25439,12 +25969,19 @@
           "timeToFirstAnswerTokenSeconds": 31.974
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 176928737,
           "output": 71887075,
           "reasoning": 66352785,
           "answer": 5534290
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 21704.885166172997,
+          "reasoning": 17840.91458506802,
+          "answer": 3863.970581104974
+        },
+        "intelligenceIndexTimePerTask": 208.69316025395707
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 114.331,
@@ -25898,7 +26435,10 @@
           "timeToFirstAnswerTokenSeconds": 0.701
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 111.41,
@@ -27178,7 +27718,10 @@
           "timeToFirstAnswerTokenSeconds": 1.408
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 144.086,
@@ -28043,7 +28586,10 @@
           "timeToFirstAnswerTokenSeconds": 105.898
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 80.681,
@@ -28495,7 +29041,10 @@
           "timeToFirstAnswerTokenSeconds": 0.642
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 70.585,
@@ -28947,7 +29496,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -29816,7 +30368,10 @@
           "timeToFirstAnswerTokenSeconds": 53.861
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 99.108,
@@ -30689,14 +31244,33 @@
           "input": 121.45829705343488,
           "output": 973.9703069999999,
           "reasoning": 952.0490295,
-          "answer": 21.9212775
+          "answer": 21.9212775,
+          "nonCacheInput": 8.81514675,
+          "cacheRead": 45.74112432739613,
+          "cacheWrite": 66.90202597603874
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.45222268374819774,
+          "input": 0.10067613100720277,
+          "output": 0.35154655274099506,
+          "reasoning": 0.3300396390286433,
+          "answer": 0.02150691371235167,
+          "nonCacheInput": 0.0047302123966912225,
+          "cacheRead": 0.03869381381677307,
+          "cacheWrite": 0.05725210479373846
         },
         "intelligenceIndexTokenCounts": {
           "input": 710837888,
           "output": 216437846,
           "reasoning": 211566451,
           "answer": 4871395
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 78121.45616466556,
+          "reasoning": 73342.14200636519,
+          "answer": 4779.31415830037
+        },
+        "intelligenceIndexTimePerTask": 476.8381408701979
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 170.59,
@@ -31150,7 +31724,10 @@
           "timeToFirstAnswerTokenSeconds": 6.823
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 181.011,
@@ -31604,7 +32181,10 @@
           "timeToFirstAnswerTokenSeconds": 0.608
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 166.923,
@@ -32058,12 +32638,19 @@
           "timeToFirstAnswerTokenSeconds": 2.619
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 1092774545,
           "output": 181993479,
           "reasoning": 174869960,
           "answer": 7123519
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 70686.83297032781,
+          "reasoning": 63493.96998069814,
+          "answer": 7192.862989629673
+        },
+        "intelligenceIndexTimePerTask": 413.1165596123853
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 175.767,
@@ -32517,7 +33104,10 @@
           "timeToFirstAnswerTokenSeconds": 0.535
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 170.084,
@@ -32971,7 +33561,10 @@
           "timeToFirstAnswerTokenSeconds": 3.152
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 177.646,
@@ -33840,7 +34433,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -34298,14 +34894,33 @@
           "input": 490.3601730456113,
           "output": 1641.4052100000001,
           "reasoning": 1552.897455,
-          "answer": 88.507755
+          "answer": 88.507755,
+          "nonCacheInput": 29.68895,
+          "cacheRead": 157.96204493937654,
+          "cacheWrite": 302.7091781062348
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.8868298551068886,
+          "input": 0.397021492182344,
+          "output": 0.48980836292454466,
+          "reasoning": 0.41763290874324654,
+          "answer": 0.07217545418129814,
+          "nonCacheInput": 0.01585308402087614,
+          "cacheRead": 0.1295218243162152,
+          "cacheWrite": 0.2516465838452526
         },
         "intelligenceIndexTokenCounts": {
           "input": 764807431,
           "output": 109427014,
           "reasoning": 103526497,
           "answer": 5900517
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 32653.89086163631,
+          "reasoning": 27842.193916216434,
+          "answer": 4811.696945419875
+        },
+        "intelligenceIndexTimePerTask": 193.2233473115993
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 160.921,
@@ -34759,7 +35374,10 @@
           "timeToFirstAnswerTokenSeconds": 0.632
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 111.736,
@@ -35213,7 +35831,10 @@
           "timeToFirstAnswerTokenSeconds": 1.156
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 109.994,
@@ -36499,14 +37120,33 @@
           "input": 98.82370767118633,
           "output": 714.2224199999999,
           "reasoning": 668.35943,
-          "answer": 45.86299
+          "answer": 45.86299,
+          "nonCacheInput": 15.23766375,
+          "cacheRead": 20.16078553653485,
+          "cacheWrite": 63.42525838465147
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.23800170775318213,
+          "input": 0.07933975849902687,
+          "output": 0.15866194925415525,
+          "reasoning": 0.12171040953607823,
+          "answer": 0.036951539718077055,
+          "nonCacheInput": 0.008221474081220542,
+          "cacheRead": 0.016812425759387604,
+          "cacheWrite": 0.05430585865841872
         },
         "intelligenceIndexTokenCounts": {
           "input": 224216622,
           "output": 71422242,
           "reasoning": 66835943,
           "answer": 4586299
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 15866.194925415524,
+          "reasoning": 12171.04095360782,
+          "answer": 3695.1539718077042
+        },
+        "intelligenceIndexTimePerTask": 169.22160784303583
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 101.584,
@@ -36958,7 +37598,10 @@
           "timeToFirstAnswerTokenSeconds": 40.403
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 98.891,
@@ -37410,7 +38053,10 @@
           "timeToFirstAnswerTokenSeconds": 9.517
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 83.592,
@@ -37862,7 +38508,10 @@
           "timeToFirstAnswerTokenSeconds": 0.839
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 72.79,
@@ -38314,7 +38963,10 @@
           "timeToFirstAnswerTokenSeconds": 0.505
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 175.538,
@@ -38798,14 +39450,33 @@
           "input": 43.8453252,
           "output": 52.4306988,
           "reasoning": 48.8940852,
-          "answer": 3.5366136
+          "answer": 3.5366136,
+          "nonCacheInput": 1.8105514499999997,
+          "cacheRead": 29.92352134014615,
+          "cacheWrite": 12.111252409853849
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.06067164425252872,
+          "input": 0.03929974221734161,
+          "output": 0.02137190203518711,
+          "reasoning": 0.01682907062489461,
+          "answer": 0.0045428314102924985,
+          "nonCacheInput": 0.0009778510395144515,
+          "cacheRead": 0.026735284436310798,
+          "cacheWrite": 0.011586606741516356
         },
         "intelligenceIndexTokenCounts": {
           "input": 292302168,
           "output": 87384498,
           "reasoning": 81490142,
           "answer": 5894356
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 35619.836725311856,
+          "reasoning": 28048.451041491022,
+          "answer": 7571.385683820832
+        },
+        "intelligenceIndexTimePerTask": 111.9789869603167
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 321.666,
@@ -39285,7 +39956,10 @@
           "timeToFirstAnswerTokenSeconds": 6.24
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 350.5,
@@ -39409,14 +40083,33 @@
           "input": 43.8453252,
           "output": 52.4306988,
           "reasoning": 48.8940852,
-          "answer": 3.5366136
+          "answer": 3.5366136,
+          "nonCacheInput": 1.8105514499999997,
+          "cacheRead": 29.92352134014615,
+          "cacheWrite": 12.111252409853849
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.06067164425252872,
+          "input": 0.03929974221734161,
+          "output": 0.02137190203518711,
+          "reasoning": 0.01682907062489461,
+          "answer": 0.0045428314102924985,
+          "nonCacheInput": 0.0009778510395144515,
+          "cacheRead": 0.026735284436310798,
+          "cacheWrite": 0.011586606741516356
         },
         "intelligenceIndexTokenCounts": {
           "input": 292302168,
           "output": 87384498,
           "reasoning": 81490142,
           "answer": 5894356
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 35619.836725311856,
+          "reasoning": 28048.451041491022,
+          "answer": 7571.385683820832
+        },
+        "intelligenceIndexTimePerTask": 111.9789869603167
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 321.666,
@@ -39536,7 +40229,10 @@
           "timeToFirstAnswerTokenSeconds": 6.24
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 350.5,
@@ -40008,7 +40704,10 @@
           "timeToFirstAnswerTokenSeconds": 43.02
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 47.147,
@@ -40128,7 +40827,10 @@
           "timeToFirstAnswerTokenSeconds": 43.02
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 47.147,
@@ -40600,7 +41302,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -41072,7 +41777,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -41192,7 +41900,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -41312,7 +42023,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -42765,7 +43479,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -42885,7 +43602,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -43367,7 +44087,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -43487,7 +44210,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -43965,7 +44691,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -44443,7 +45172,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -44563,7 +45295,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -44683,7 +45418,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -45151,7 +45889,10 @@
           "timeToFirstAnswerTokenSeconds": 12.569
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 170.678,
@@ -45271,7 +46012,10 @@
           "timeToFirstAnswerTokenSeconds": 12.569
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 170.678,
@@ -45745,7 +46489,10 @@
           "timeToFirstAnswerTokenSeconds": 1.185
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 45.065,
@@ -46219,7 +46966,10 @@
           "timeToFirstAnswerTokenSeconds": 61.548
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 49.106,
@@ -46339,7 +47089,10 @@
           "timeToFirstAnswerTokenSeconds": 1.185
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 45.065,
@@ -46459,7 +47212,10 @@
           "timeToFirstAnswerTokenSeconds": 61.548
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 49.106,
@@ -46933,12 +47689,19 @@
           "timeToFirstAnswerTokenSeconds": 105.264
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 541446720,
           "output": 165134126,
           "reasoning": 158886993,
           "answer": 6247133
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 38136.32526891783,
+          "reasoning": 32738.686799271964,
+          "answer": 5397.63846964587
+        },
+        "intelligenceIndexTimePerTask": 772.1872361023958
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 42.763,
@@ -47412,7 +48175,10 @@
           "timeToFirstAnswerTokenSeconds": 1.126
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 46.454,
@@ -47532,12 +48298,19 @@
           "timeToFirstAnswerTokenSeconds": 105.264
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 541446720,
           "output": 165134126,
           "reasoning": 158886993,
           "answer": 6247133
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 38136.32526891783,
+          "reasoning": 32738.686799271964,
+          "answer": 5397.63846964587
+        },
+        "intelligenceIndexTimePerTask": 772.1872361023958
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 42.763,
@@ -47657,7 +48430,10 @@
           "timeToFirstAnswerTokenSeconds": 1.126
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 46.454,
@@ -48131,12 +48907,19 @@
           "timeToFirstAnswerTokenSeconds": 49.503
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 501197711,
           "output": 103697294,
           "reasoning": 97627244,
           "answer": 6070050
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 17716.081293998985,
+          "reasoning": 12650.406068977589,
+          "answer": 5065.675225021396
+        },
+        "intelligenceIndexTimePerTask": 338.3804718881364
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 46.117,
@@ -48256,12 +49039,19 @@
           "timeToFirstAnswerTokenSeconds": 49.503
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 501197711,
           "output": 103697294,
           "reasoning": 97627244,
           "answer": 6070050
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 17716.081293998985,
+          "reasoning": 12650.406068977589,
+          "answer": 5065.675225021396
+        },
+        "intelligenceIndexTimePerTask": 338.3804718881364
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 46.117,
@@ -49801,14 +50591,33 @@
           "input": 62.611368,
           "output": 8.427153,
           "reasoning": 0,
-          "answer": 8.427153
+          "answer": 8.427153,
+          "nonCacheInput": 6.013087,
+          "cacheRead": 0,
+          "cacheWrite": 56.598281
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.05988932957210771,
+          "input": 0.05534271151963587,
+          "output": 0.004546618052471828,
+          "reasoning": 0,
+          "answer": 0.004546618052471828,
+          "nonCacheInput": 0.003271154660429305,
+          "cacheRead": 0,
+          "cacheWrite": 0.05207155685920657
         },
         "intelligenceIndexTokenCounts": {
           "input": 125222736,
           "output": 5618102,
           "reasoning": 0,
           "answer": 5618102
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 3031.0787016478853,
+          "reasoning": 0,
+          "answer": 3031.0787016478853
+        },
+        "intelligenceIndexTimePerTask": 59.22247266379583
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 62.116,
@@ -49932,14 +50741,33 @@
           "input": 62.611368,
           "output": 8.427153,
           "reasoning": 0,
-          "answer": 8.427153
+          "answer": 8.427153,
+          "nonCacheInput": 6.013087,
+          "cacheRead": 0,
+          "cacheWrite": 56.598281
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.05988932957210771,
+          "input": 0.05534271151963587,
+          "output": 0.004546618052471828,
+          "reasoning": 0,
+          "answer": 0.004546618052471828,
+          "nonCacheInput": 0.003271154660429305,
+          "cacheRead": 0,
+          "cacheWrite": 0.05207155685920657
         },
         "intelligenceIndexTokenCounts": {
           "input": 125222736,
           "output": 5618102,
           "reasoning": 0,
           "answer": 5618102
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 3031.0787016478853,
+          "reasoning": 0,
+          "answer": 3031.0787016478853
+        },
+        "intelligenceIndexTimePerTask": 59.22247266379583
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 62.116,
@@ -50850,7 +51678,10 @@
           "timeToFirstAnswerTokenSeconds": 15.829
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 139.031,
@@ -51306,7 +52137,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -51760,7 +52594,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -51922,7 +52759,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -52372,7 +53212,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -52508,7 +53351,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -52960,7 +53806,10 @@
           "timeToFirstAnswerTokenSeconds": 4.595
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 152.98,
@@ -53418,7 +54267,10 @@
           "timeToFirstAnswerTokenSeconds": 5.663
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 223.309,
@@ -53876,12 +54728,19 @@
           "timeToFirstAnswerTokenSeconds": 15.997
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 25592872,
           "output": 63154850,
           "reasoning": 55530466,
           "answer": 7624384
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 14739.362031236513,
+          "reasoning": 8841.650614807877,
+          "answer": 5897.711416428637
+        },
+        "intelligenceIndexTimePerTask": 15.174395238749005
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 237.423,
@@ -54333,7 +55192,10 @@
           "timeToFirstAnswerTokenSeconds": 64.687
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 26.142,
@@ -54789,7 +55651,10 @@
           "timeToFirstAnswerTokenSeconds": 19.206
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 192.367,
@@ -54878,7 +55743,10 @@
           "timeToFirstAnswerTokenSeconds": 105.898
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 80.681,
@@ -54967,7 +55835,10 @@
           "timeToFirstAnswerTokenSeconds": 0.642
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 70.585,
@@ -55056,7 +55927,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -55145,7 +56019,10 @@
           "timeToFirstAnswerTokenSeconds": 53.861
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 99.108,
@@ -55238,14 +56115,33 @@
           "input": 121.45829705343488,
           "output": 973.9703069999999,
           "reasoning": 952.0490295,
-          "answer": 21.9212775
+          "answer": 21.9212775,
+          "nonCacheInput": 8.81514675,
+          "cacheRead": 45.74112432739613,
+          "cacheWrite": 66.90202597603874
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.45222268374819774,
+          "input": 0.10067613100720277,
+          "output": 0.35154655274099506,
+          "reasoning": 0.3300396390286433,
+          "answer": 0.02150691371235167,
+          "nonCacheInput": 0.0047302123966912225,
+          "cacheRead": 0.03869381381677307,
+          "cacheWrite": 0.05725210479373846
         },
         "intelligenceIndexTokenCounts": {
           "input": 710837888,
           "output": 216437846,
           "reasoning": 211566451,
           "answer": 4871395
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 78121.45616466556,
+          "reasoning": 73342.14200636519,
+          "answer": 4779.31415830037
+        },
+        "intelligenceIndexTimePerTask": 476.8381408701979
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 170.59,
@@ -55334,7 +56230,10 @@
           "timeToFirstAnswerTokenSeconds": 6.823
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 181.011,
@@ -55423,7 +56322,10 @@
           "timeToFirstAnswerTokenSeconds": 0.608
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 166.923,
@@ -55516,14 +56418,33 @@
           "input": 490.3601730456113,
           "output": 1641.4052100000001,
           "reasoning": 1552.897455,
-          "answer": 88.507755
+          "answer": 88.507755,
+          "nonCacheInput": 29.68895,
+          "cacheRead": 157.96204493937654,
+          "cacheWrite": 302.7091781062348
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.8868298551068886,
+          "input": 0.397021492182344,
+          "output": 0.48980836292454466,
+          "reasoning": 0.41763290874324654,
+          "answer": 0.07217545418129814,
+          "nonCacheInput": 0.01585308402087614,
+          "cacheRead": 0.1295218243162152,
+          "cacheWrite": 0.2516465838452526
         },
         "intelligenceIndexTokenCounts": {
           "input": 764807431,
           "output": 109427014,
           "reasoning": 103526497,
           "answer": 5900517
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 32653.89086163631,
+          "reasoning": 27842.193916216434,
+          "answer": 4811.696945419875
+        },
+        "intelligenceIndexTimePerTask": 193.2233473115993
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 160.921,
@@ -55612,7 +56533,10 @@
           "timeToFirstAnswerTokenSeconds": 0.632
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 111.736,
@@ -55701,7 +56625,10 @@
           "timeToFirstAnswerTokenSeconds": 1.156
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 109.994,
@@ -55844,14 +56771,33 @@
           "input": 608.8605932109801,
           "output": 2169.05208,
           "reasoning": 2037.2752500000001,
-          "answer": 131.77683
+          "answer": 131.77683,
+          "nonCacheInput": 62.47511,
+          "cacheRead": 134.5888774210022,
+          "cacheWrite": 411.7966057899779
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.9924637781010264,
+          "input": 0.5105294976772461,
+          "output": 0.4819342804237804,
+          "reasoning": 0.37475954041009674,
+          "answer": 0.10717474001368364,
+          "nonCacheInput": 0.0318362333929463,
+          "cacheRead": 0.11809864721018444,
+          "cacheWrite": 0.3605946170741154
         },
         "intelligenceIndexTokenCounts": {
           "input": 364032098,
           "output": 72301736,
           "reasoning": 67909175,
           "answer": 4392561
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 16064.476014126014,
+          "reasoning": 12491.98468033656,
+          "answer": 3572.4913337894545
+        },
+        "intelligenceIndexTimePerTask": 215.4170709639913
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 72.007,
@@ -55944,14 +56890,33 @@
           "input": 171.33830994095118,
           "output": 203.89188000000001,
           "reasoning": 138.69840000000002,
-          "answer": 65.19348
+          "answer": 65.19348,
+          "nonCacheInput": 59.498810000000006,
+          "cacheRead": 22.541079451005423,
+          "cacheWrite": 89.29842048994576
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.21087234510039837,
+          "input": 0.14667007372905344,
+          "output": 0.06420227137134495,
+          "reasoning": 0.016734277970007316,
+          "answer": 0.047467993401337644,
+          "nonCacheInput": 0.032056295655332655,
+          "cacheRead": 0.023604847262240054,
+          "cacheWrite": 0.09100893081148073
         },
         "intelligenceIndexTokenCounts": {
           "input": 74841605,
           "output": 6796396,
           "reasoning": 4623280,
           "answer": 2173116
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 2140.075712378165,
+          "reasoning": 557.8092656669105,
+          "answer": 1582.2664467112545
+        },
+        "intelligenceIndexTimePerTask": 35.7373118659338
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 65.675,
@@ -56044,14 +57009,33 @@
           "input": 434.27267062719454,
           "output": 1284.88881,
           "reasoning": 1166.03919,
-          "answer": 118.84961999999999
+          "answer": 118.84961999999999,
+          "nonCacheInput": 62.498355,
+          "cacheRead": 86.94431826364506,
+          "cacheWrite": 284.82999736354947
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.668057792071965,
+          "input": 0.36576396776180237,
+          "output": 0.30229382431016266,
+          "reasoning": 0.20798050125698342,
+          "answer": 0.09431332305317924,
+          "nonCacheInput": 0.03167666193854673,
+          "cacheRead": 0.07872952598782859,
+          "cacheWrite": 0.2553577798354271
         },
         "intelligenceIndexTokenCounts": {
           "input": 243354307,
           "output": 42829627,
           "reasoning": 38867973,
           "answer": 3961654
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 10076.460810338755,
+          "reasoning": 6932.683375232781,
+          "answer": 3143.7774351059743
+        },
+        "intelligenceIndexTimePerTask": 131.9407010486616
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 66.314,
@@ -56144,14 +57128,33 @@
           "input": 144.982501232046,
           "output": 66.12606,
           "reasoning": 0,
-          "answer": 66.12606
+          "answer": 66.12606,
+          "nonCacheInput": 59.49731,
+          "cacheRead": 18.47954875199489,
+          "cacheWrite": 67.0056424800511
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.17101364725394147,
+          "input": 0.1234252969522245,
+          "output": 0.047588350301716965,
+          "reasoning": 0,
+          "answer": 0.047588350301716965,
+          "nonCacheInput": 0.0320902418121363,
+          "cacheRead": 0.019850490369912262,
+          "cacheWrite": 0.07148456477017594
         },
         "intelligenceIndexTokenCounts": {
           "input": 62259688,
           "output": 2204202,
           "reasoning": 0,
           "answer": 2204202
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 1586.2783433905659,
+          "reasoning": 0,
+          "answer": 1586.2783433905659
+        },
+        "intelligenceIndexTimePerTask": 26.0847271554913
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 66.722,
@@ -56244,14 +57247,33 @@
           "input": 296.7807258905204,
           "output": 638.9867700000001,
           "reasoning": 540.2006700000001,
-          "answer": 98.7861
+          "answer": 98.7861,
+          "nonCacheInput": 61.61127,
+          "cacheRead": 50.9530699010533,
+          "cacheWrite": 184.21638598946708
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.4061167899400016,
+          "input": 0.2521440877981879,
+          "output": 0.1539727021418136,
+          "reasoning": 0.07859751210021937,
+          "answer": 0.07537519004159425,
+          "nonCacheInput": 0.03226918379648743,
+          "cacheRead": 0.047958578958377754,
+          "cacheWrite": 0.17191632504332277
         },
         "intelligenceIndexTokenCounts": {
           "input": 151071671,
           "output": 21299559,
           "reasoning": 18006689,
           "answer": 3292870
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 5132.423404727121,
+          "reasoning": 2619.9170700073123,
+          "answer": 2512.506334719809
+        },
+        "intelligenceIndexTimePerTask": 80.13540241265662
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 67.823,
@@ -56340,12 +57362,19 @@
           "timeToFirstAnswerTokenSeconds": 65.08
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 735104000,
           "output": 125011185,
           "reasoning": 119164889,
           "answer": 5846296
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 18912.005257449488,
+          "reasoning": 13905.516109347798,
+          "answer": 5006.489148101688
+        },
+        "intelligenceIndexTimePerTask": 81.96375050806363
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 233.833,
@@ -56434,12 +57463,19 @@
           "timeToFirstAnswerTokenSeconds": 0.544
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 178574058,
           "output": 2357378,
           "reasoning": 0,
           "answer": 2357378
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 2110.1426382861237,
+          "reasoning": 0,
+          "answer": 2110.1426382861237
+        },
+        "intelligenceIndexTimePerTask": 10.810329008681329
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 196.79,
@@ -56528,12 +57564,19 @@
           "timeToFirstAnswerTokenSeconds": 6.418
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 275954649,
           "output": 37034644,
           "reasoning": 32869193,
           "answer": 4165451
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 8118.088141888398,
+          "reasoning": 4666.87842578119,
+          "answer": 3451.2097161072084
+        },
+        "intelligenceIndexTimePerTask": 39.56081991405704
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 208.969,
@@ -56622,12 +57665,19 @@
           "timeToFirstAnswerTokenSeconds": 31.286
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 451473364,
           "output": 66735431,
           "reasoning": 61793495,
           "answer": 4941936
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 12492.303981970428,
+          "reasoning": 8415.780006763747,
+          "answer": 4076.5239752066805
+        },
+        "intelligenceIndexTimePerTask": 59.56462167968972
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 221.548,
@@ -56716,12 +57766,19 @@
           "timeToFirstAnswerTokenSeconds": 1.585
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 125428616,
           "output": 12479860,
           "reasoning": 9679021,
           "answer": 2800839
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 3662.8758063762502,
+          "reasoning": 1360.6066676234122,
+          "answer": 2302.269138752838
+        },
+        "intelligenceIndexTimePerTask": 18.006303620417373
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 201.304,
@@ -56810,12 +57867,19 @@
           "timeToFirstAnswerTokenSeconds": 1.074
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 109194342,
           "output": 6971397,
           "reasoning": 4830848,
           "answer": 2140549
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 2297.945408709607,
+          "reasoning": 600.3001600205865,
+          "answer": 1697.6452486890205
+        },
+        "intelligenceIndexTimePerTask": 11.9541002817606
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 209.242,
@@ -56908,14 +57972,33 @@
           "input": 721.6095335690973,
           "output": 2102.57166,
           "reasoning": 1903.65387,
-          "answer": 198.91779
+          "answer": 198.91779,
+          "nonCacheInput": 60.973839999999996,
+          "cacheRead": 470.423742407035,
+          "cacheWrite": 190.21195116206226
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 1.0373301565994435,
+          "input": 0.5769395891879086,
+          "output": 0.4603905674115349,
+          "reasoning": 0.3022853845225849,
+          "answer": 0.15810518288894992,
+          "nonCacheInput": 0.032056685117526525,
+          "cacheRead": 0.37980914031185004,
+          "cacheWrite": 0.165073763758532
         },
         "intelligenceIndexTokenCounts": {
           "input": 983476165,
           "output": 70085722,
           "reasoning": 63455129,
           "answer": 6630593
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 15346.352247051163,
+          "reasoning": 10076.179484086164,
+          "answer": 5270.172762964999
+        },
+        "intelligenceIndexTimePerTask": 208.4226212537749
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 85.381,
@@ -57004,12 +58087,19 @@
           "timeToFirstAnswerTokenSeconds": 26.691
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 530833840,
           "output": 35398293,
           "reasoning": 29807525,
           "answer": 5590768
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 9940.5564010649,
+          "reasoning": 5548.763499075077,
+          "answer": 4391.792901989824
+        },
+        "intelligenceIndexTimePerTask": 144.62050732090484
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 71.097,
@@ -57098,12 +58188,19 @@
           "timeToFirstAnswerTokenSeconds": 10.187
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 340868286,
           "output": 21248736,
           "reasoning": 16679685,
           "answer": 4569051
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 6690.308555147785,
+          "reasoning": 3187.2678935872605,
+          "answer": 3503.0406615605248
+        },
+        "intelligenceIndexTimePerTask": 100.85774175448924
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 68.735,
@@ -57192,12 +58289,19 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 109764766,
           "output": 2648394,
           "reasoning": 0,
           "answer": 2648394
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 2073.895225376513,
+          "reasoning": 0,
+          "answer": 2073.895225376513
+        },
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -57286,12 +58390,19 @@
           "timeToFirstAnswerTokenSeconds": 4.41
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 186750881,
           "output": 11976871,
           "reasoning": 8440916,
           "answer": 3535955
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 4202.72143690891,
+          "reasoning": 1524.2649481908861,
+          "answer": 2678.4564887180236
+        },
+        "intelligenceIndexTimePerTask": 69.50808222818401
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 64.601,
@@ -57380,12 +58491,19 @@
           "timeToFirstAnswerTokenSeconds": 2.228
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 93508215,
           "output": 6584353,
           "reasoning": 4022472,
           "answer": 2561881
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 2507.7537132556436,
+          "reasoning": 616.3583607974504,
+          "answer": 1891.395352458193
+        },
+        "intelligenceIndexTimePerTask": 39.440733763441145
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 70.397,
@@ -57478,14 +58596,33 @@
           "input": 321.30323671871633,
           "output": 1432.639785,
           "reasoning": 1340.054355,
-          "answer": 92.58543
+          "answer": 92.58543,
+          "nonCacheInput": 48.7876975,
+          "cacheRead": 187.56417023098118,
+          "cacheWrite": 84.95136898773518
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.5544595173072254,
+          "input": 0.26391258942341755,
+          "output": 0.29054692788380787,
+          "reasoning": 0.21275887641723704,
+          "answer": 0.07778805146657078,
+          "nonCacheInput": 0.01888942270065116,
+          "cacheRead": 0.16534451881188975,
+          "cacheWrite": 0.07967864791087664
         },
         "intelligenceIndexTokenCounts": {
           "input": 796956198,
           "output": 95509319,
           "reasoning": 89336957,
           "answer": 6172362
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 19369.795192253852,
+          "reasoning": 14183.925094482469,
+          "answer": 5185.870097771384
+        },
+        "intelligenceIndexTimePerTask": 132.09091661966525
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 165.987,
@@ -57578,14 +58715,33 @@
           "input": 71.57601076963076,
           "output": 89.075805,
           "reasoning": 56.383559999999996,
-          "answer": 32.692245
+          "answer": 32.692245,
+          "nonCacheInput": 29.5821375,
+          "cacheRead": 24.058445530901672,
+          "cacheWrite": 17.935427738729086
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.10115788470701273,
+          "input": 0.06728209497870424,
+          "output": 0.0338757897283085,
+          "reasoning": 0.008767694531921923,
+          "answer": 0.025108095196386584,
+          "nonCacheInput": 0.015938583592072394,
+          "cacheRead": 0.032446751897624686,
+          "cacheWrite": 0.018896759489007157
         },
         "intelligenceIndexTokenCounts": {
           "input": 113805974,
           "output": 5938387,
           "reasoning": 3758904,
           "answer": 2179483
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 2258.385981887234,
+          "reasoning": 584.512968794795,
+          "answer": 1673.8730130924387
+        },
+        "intelligenceIndexTimePerTask": 19.623479187190053
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 127.307,
@@ -57678,14 +58834,33 @@
           "input": 194.7244721059758,
           "output": 545.48832,
           "reasoning": 466.70544,
-          "answer": 78.78288
+          "answer": 78.78288,
+          "nonCacheInput": 32.62652,
+          "cacheRead": 103.67821584948038,
+          "cacheWrite": 58.419736256495426
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.3272368361728899,
+          "input": 0.1617008978584035,
+          "output": 0.16553593831448635,
+          "reasoning": 0.1023817943539,
+          "answer": 0.06315414396058631,
+          "nonCacheInput": 0.016205361093234495,
+          "cacheRead": 0.09158455803983181,
+          "cacheWrite": 0.05391097872533722
         },
         "intelligenceIndexTokenCounts": {
           "input": 446457787,
           "output": 36365888,
           "reasoning": 31113696,
           "answer": 5252192
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 11035.729220965757,
+          "reasoning": 6825.452956926667,
+          "answer": 4210.27626403909
+        },
+        "intelligenceIndexTimePerTask": 85.103601174293
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 129.553,
@@ -57774,12 +58949,19 @@
           "timeToFirstAnswerTokenSeconds": 0.693
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 139284468,
           "output": 2575228,
           "reasoning": 0,
           "answer": 2575228
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 2153.9411612854274,
+          "reasoning": 0,
+          "answer": 2153.9411612854274
+        },
+        "intelligenceIndexTimePerTask": 18.27258031116766
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 112.729,
@@ -57872,14 +59054,33 @@
           "input": 141.2463456390539,
           "output": 354.52754999999996,
           "reasoning": 288.50906999999995,
-          "answer": 66.01848000000001
+          "answer": 66.01848000000001,
+          "nonCacheInput": 29.7497325,
+          "cacheRead": 66.69734206399531,
+          "cacheWrite": 44.79927107505862
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.23590588524864192,
+          "input": 0.11983105412350942,
+          "output": 0.11607483112513248,
+          "reasoning": 0.06341885989600403,
+          "answer": 0.052655971229128434,
+          "nonCacheInput": 0.015998302207231706,
+          "cacheRead": 0.06146348802679035,
+          "cacheWrite": 0.04236926388948736
         },
         "intelligenceIndexTokenCounts": {
           "input": 293025028,
           "output": 23635170,
           "reasoning": 19233938,
           "answer": 4401232
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 7738.32207500883,
+          "reasoning": 4227.923993066935,
+          "answer": 3510.3980819418957
+        },
+        "intelligenceIndexTimePerTask": 65.27036304466336
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 118.71,
@@ -57972,14 +59173,33 @@
           "input": 83.88736707940758,
           "output": 156.34035,
           "reasoning": 112.251045,
-          "answer": 44.089305
+          "answer": 44.089305,
+          "nonCacheInput": 29.5973875,
+          "cacheRead": 27.96191509092108,
+          "cacheWrite": 26.328064488486504
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.1276399207309507,
+          "input": 0.07110362412176216,
+          "output": 0.05653629660918855,
+          "reasoning": 0.021642154342575264,
+          "answer": 0.03489414226661329,
+          "nonCacheInput": 0.01596181809968082,
+          "cacheRead": 0.029107833264009123,
+          "cacheWrite": 0.026033972758072215
         },
         "intelligenceIndexTokenCounts": {
           "input": 132111596,
           "output": 10422690,
           "reasoning": 7483403,
           "answer": 2939287
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 3769.086440612571,
+          "reasoning": 1442.8102895050176,
+          "answer": 2326.2761511075532
+        },
+        "intelligenceIndexTimePerTask": 31.82836880582011
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 123.851,
@@ -58062,14 +59282,33 @@
           "input": 1454.391435381231,
           "output": 4176.131770275,
           "reasoning": 3668.502629025,
-          "answer": 507.62914125
+          "answer": 507.62914125,
+          "nonCacheInput": 171.796669695,
+          "cacheRead": 742.8574728702189,
+          "cacheWrite": 539.7372928160122
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 2.7498239008825984,
+          "input": 1.1990165514847535,
+          "output": 1.5508073493978443,
+          "reasoning": 1.1842275226716166,
+          "answer": 0.36657982672622763,
+          "nonCacheInput": 0.09511416853774562,
+          "cacheRead": 0.6273828830939632,
+          "cacheWrite": 0.47651949985304487
         },
         "intelligenceIndexTokenCounts": {
           "input": 820026670,
           "output": 86856045,
           "reasoning": 76307907,
           "answer": 10548138
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 33127.0472670529,
+          "reasoning": 25431.28744275464,
+          "answer": 7695.759824298257
+        },
+        "intelligenceIndexTimePerTask": 322.56080815231644
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 64.899,
@@ -58152,14 +59391,33 @@
           "input": 122.8408486807195,
           "output": 440.66810000000004,
           "reasoning": 402.01882500000005,
-          "answer": 38.649274999999996
+          "answer": 38.649274999999996,
+          "nonCacheInput": 13.03874,
+          "cacheRead": 20.57104685385048,
+          "cacheWrite": 89.23106182686902
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.2716109087882064,
+          "input": 0.15392344687164683,
+          "output": 0.11768746191655952,
+          "reasoning": 0.08803767257421066,
+          "answer": 0.02964978934234885,
+          "nonCacheInput": 0.007056618425483764,
+          "cacheRead": 0.02870167842292957,
+          "cacheWrite": 0.11816515002323351
         },
         "intelligenceIndexTokenCounts": {
           "input": 290134058,
           "output": 88133620,
           "reasoning": 80403765,
           "answer": 7729855
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 23537.492383311903,
+          "reasoning": 17607.534514842133,
+          "answer": 5929.95786846977
+        },
+        "intelligenceIndexTimePerTask": 171.21457467927976
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 129.403,
@@ -58238,7 +59496,10 @@
           "timeToFirstAnswerTokenSeconds": 0.612
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 98.02,
@@ -58317,7 +59578,10 @@
           "timeToFirstAnswerTokenSeconds": 1.405
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 53.656,
@@ -58396,7 +59660,10 @@
           "timeToFirstAnswerTokenSeconds": 11.361
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 56.54,
@@ -58475,7 +59742,10 @@
           "timeToFirstAnswerTokenSeconds": 1.946
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 44.316,
@@ -58554,7 +59824,10 @@
           "timeToFirstAnswerTokenSeconds": 17.93
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 47.534,
@@ -58637,14 +59910,33 @@
           "input": 1236.1138178986712,
           "output": 2501.704225,
           "reasoning": 2184.9446,
-          "answer": 316.75962499999997
+          "answer": 316.75962499999997,
+          "nonCacheInput": 87.44887500000002,
+          "cacheRead": 569.4169462696807,
+          "cacheWrite": 579.2479966289904
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 1.9733096609430143,
+          "input": 1.1866547500954012,
+          "output": 0.7866549108476135,
+          "reasoning": 0.5427368701412603,
+          "answer": 0.24391804070635303,
+          "nonCacheInput": 0.047228405896136576,
+          "cacheRead": 0.5652371768671622,
+          "cacheWrite": 0.574189167332102
         },
         "intelligenceIndexTokenCounts": {
           "input": 1249003347,
           "output": 100068169,
           "reasoning": 87397784,
           "answer": 12670385
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 31466.196433904537,
+          "reasoning": 21709.474805650414,
+          "answer": 9756.721628254125
+        },
+        "intelligenceIndexTimePerTask": 371.03663770971986
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 51.991,
@@ -58723,7 +60015,10 @@
           "timeToFirstAnswerTokenSeconds": 1.434
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 43.177,
@@ -58806,14 +60101,33 @@
           "input": 834.1656904756285,
           "output": 2918.3805500000003,
           "reasoning": 2626.2547250000002,
-          "answer": 292.125825
+          "answer": 292.125825,
+          "nonCacheInput": 87.46856,
+          "cacheRead": 434.32935224124975,
+          "cacheWrite": 312.36777823437876
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 1.7972215258754352,
+          "input": 0.7744653411750283,
+          "output": 1.022756184700407,
+          "reasoning": 0.8116206279506174,
+          "answer": 0.21113555674978962,
+          "nonCacheInput": 0.04742450919381809,
+          "cacheRead": 0.4203530726567357,
+          "cacheWrite": 0.30668775932447445
         },
         "intelligenceIndexTokenCounts": {
           "input": 936131261,
           "output": 116735222,
           "reasoning": 105050189,
           "answer": 11685033
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 40910.24738801627,
+          "reasoning": 32464.825118024688,
+          "answer": 8445.422269991586
+        },
+        "intelligenceIndexTimePerTask": 414.27383112226835
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 58.962,
@@ -58896,14 +60210,33 @@
           "input": 834.1656904756285,
           "output": 2918.3805500000003,
           "reasoning": 2626.2547250000002,
-          "answer": 292.125825
+          "answer": 292.125825,
+          "nonCacheInput": 87.46856,
+          "cacheRead": 434.32935224124975,
+          "cacheWrite": 312.36777823437876
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 1.7972215258754352,
+          "input": 0.7744653411750283,
+          "output": 1.022756184700407,
+          "reasoning": 0.8116206279506174,
+          "answer": 0.21113555674978962,
+          "nonCacheInput": 0.04742450919381809,
+          "cacheRead": 0.4203530726567357,
+          "cacheWrite": 0.30668775932447445
         },
         "intelligenceIndexTokenCounts": {
           "input": 936131261,
           "output": 116735222,
           "reasoning": 105050189,
           "answer": 11685033
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 40910.24738801627,
+          "reasoning": 32464.825118024688,
+          "answer": 8445.422269991586
+        },
+        "intelligenceIndexTimePerTask": 414.27383112226835
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 58.962,
@@ -58982,7 +60315,10 @@
           "timeToFirstAnswerTokenSeconds": 1.272
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 52.793,
@@ -59065,14 +60401,33 @@
           "input": 186.08062774638807,
           "output": 946.7734500000001,
           "reasoning": 845.4071100000001,
-          "answer": 101.36634
+          "answer": 101.36634,
+          "nonCacheInput": 39.020075999999996,
+          "cacheRead": 66.70617060900973,
+          "cacheWrite": 80.35438113737835
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.41290380463528553,
+          "input": 0.17715751403584135,
+          "output": 0.23574629059944427,
+          "reasoning": 0.15747824339018823,
+          "answer": 0.07826804720925604,
+          "nonCacheInput": 0.021146087162555484,
+          "cacheRead": 0.07351996765137786,
+          "cacheWrite": 0.082491459221908
         },
         "intelligenceIndexTokenCounts": {
           "input": 256788429,
           "output": 63118230,
           "reasoning": 56360474,
           "answer": 6757756
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 15716.419373296281,
+          "reasoning": 10498.54955934588,
+          "answer": 5217.869813950402
+        },
+        "intelligenceIndexTimePerTask": 302.8699545691626
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 52.006,
@@ -59151,7 +60506,10 @@
           "timeToFirstAnswerTokenSeconds": 1.162
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 47.941,
@@ -59230,7 +60588,10 @@
           "timeToFirstAnswerTokenSeconds": 1.101
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 47.601,
@@ -59313,14 +60674,33 @@
           "input": 404.68930913649876,
           "output": 2951.1625649999996,
           "reasoning": 2801.87598,
-          "answer": 149.286585
+          "answer": 149.286585,
+          "nonCacheInput": 41.495244,
+          "cacheRead": 205.4320787924784,
+          "cacheWrite": 157.76198634402036
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 1.1355620170084484,
+          "input": 0.38037126130138377,
+          "output": 0.7551907557070645,
+          "reasoning": 0.6509368361058735,
+          "answer": 0.10425391960119107,
+          "nonCacheInput": 0.021565057427932008,
+          "cacheRead": 0.19728787824191174,
+          "cacheWrite": 0.16151832563154006
         },
         "intelligenceIndexTokenCounts": {
           "input": 740675207,
           "output": 196744171,
           "reasoning": 186791732,
           "answer": 9952439
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 50346.050380470966,
+          "reasoning": 43395.789073724896,
+          "answer": 6950.261306746072
+        },
+        "intelligenceIndexTimePerTask": 589.4463507008242
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 65.793,
@@ -59399,7 +60779,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -59478,12 +60861,19 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 290663305,
           "output": 56381928,
           "reasoning": 49718294,
           "answer": 6663634
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 14702.902915951376,
+          "reasoning": 9633.2385576518,
+          "answer": 5069.664358299575
+        },
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -59606,14 +60996,33 @@
           "input": 83.71304509966612,
           "output": 525.9559499999999,
           "reasoning": 467.57593999999995,
-          "answer": 58.38001
+          "answer": 58.38001,
+          "nonCacheInput": 15.45992625,
+          "cacheRead": 13.379477905592655,
+          "cacheWrite": 54.873640944073465
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.19782530888396901,
+          "input": 0.07680142161376999,
+          "output": 0.12102388727019908,
+          "reasoning": 0.09048363429923885,
+          "answer": 0.030540252970960233,
+          "nonCacheInput": 0.008325149841769642,
+          "cacheRead": 0.013377148932709207,
+          "cacheWrite": 0.05509912283929114
         },
         "intelligenceIndexTokenCounts": {
           "input": 163302677,
           "output": 52595595,
           "reasoning": 46757594,
           "answer": 5838001
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 12102.388727019908,
+          "reasoning": 9048.363429923886,
+          "answer": 3054.0252970960228
+        },
+        "intelligenceIndexTimePerTask": 81.71682452124249
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 139.555,
@@ -59692,7 +61101,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -59771,7 +61183,10 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -59850,7 +61265,10 @@
           "timeToFirstAnswerTokenSeconds": 0.733
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 204.875,
@@ -59929,7 +61347,10 @@
           "timeToFirstAnswerTokenSeconds": 5.186
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 202.247,
@@ -60012,14 +61433,33 @@
           "input": 143.63810889320337,
           "output": 671.474508,
           "reasoning": 622.437984,
-          "answer": 49.036524
+          "answer": 49.036524,
+          "nonCacheInput": 23.72652,
+          "cacheRead": 47.59359145631074,
+          "cacheWrite": 72.31799743689264
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.29113642988035915,
+          "input": 0.133079967904319,
+          "output": 0.15805646197604017,
+          "reasoning": 0.1251654007402225,
+          "answer": 0.03289106123581768,
+          "nonCacheInput": 0.012854042745448995,
+          "cacheRead": 0.04905441960502928,
+          "cacheWrite": 0.0711715055538407
         },
         "intelligenceIndexTokenCounts": {
           "input": 285990216,
           "output": 55956209,
           "reasoning": 51869832,
           "answer": 4086377
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 13171.37183133668,
+          "reasoning": 10430.450061685207,
+          "answer": 2740.9217696514734
+        },
+        "intelligenceIndexTimePerTask": 90.92722408256678
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 139.909,
@@ -60102,14 +61542,33 @@
           "input": 143.63810889320337,
           "output": 671.474508,
           "reasoning": 622.437984,
-          "answer": 49.036524
+          "answer": 49.036524,
+          "nonCacheInput": 23.72652,
+          "cacheRead": 47.59359145631074,
+          "cacheWrite": 72.31799743689264
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.29113642988035915,
+          "input": 0.133079967904319,
+          "output": 0.15805646197604017,
+          "reasoning": 0.1251654007402225,
+          "answer": 0.03289106123581768,
+          "nonCacheInput": 0.012854042745448995,
+          "cacheRead": 0.04905441960502928,
+          "cacheWrite": 0.0711715055538407
         },
         "intelligenceIndexTokenCounts": {
           "input": 285990216,
           "output": 55956209,
           "reasoning": 51869832,
           "answer": 4086377
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 13171.37183133668,
+          "reasoning": 10430.450061685207,
+          "answer": 2740.9217696514734
+        },
+        "intelligenceIndexTimePerTask": 90.92722408256678
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 139.909,
@@ -60192,14 +61651,33 @@
           "input": 362.42750554516135,
           "output": 678.450555,
           "reasoning": 564.408621,
-          "answer": 114.041934
+          "answer": 114.041934,
+          "nonCacheInput": 19.8340515,
+          "cacheRead": 127.94699032831538,
+          "cacheWrite": 214.64646371684594
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.585545242207561,
+          "input": 0.33594515287361043,
+          "output": 0.2496000893339504,
+          "reasoning": 0.16122540195542004,
+          "answer": 0.08837468737853037,
+          "nonCacheInput": 0.01089766676630774,
+          "cacheRead": 0.12138763995520149,
+          "cacheWrite": 0.20365984615210125
         },
         "intelligenceIndexTokenCounts": {
           "input": 1009300279,
           "output": 75383395,
           "reasoning": 62712069,
           "answer": 12671326
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 27733.34325932782,
+          "reasoning": 17913.933550602225,
+          "answer": 9819.409708725596
+        },
+        "intelligenceIndexTimePerTask": 168.8079428465304
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 238.219,
@@ -60278,7 +61756,10 @@
           "timeToFirstAnswerTokenSeconds": 9.498
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 233.877,
@@ -60357,7 +61838,10 @@
           "timeToFirstAnswerTokenSeconds": 0.745
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 223.085,
@@ -60446,12 +61930,19 @@
           "timeToFirstAnswerTokenSeconds": 74.735
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 168410463,
           "output": 60178727,
           "reasoning": 56916694,
           "answer": 3262033
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 11101.68761216075,
+          "reasoning": 9087.24968718294,
+          "answer": 2014.437924977808
+        },
+        "intelligenceIndexTimePerTask": 109.17292689547322
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 97.5,
@@ -60540,7 +62031,10 @@
           "timeToFirstAnswerTokenSeconds": 0.72
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 105.258,
@@ -60629,7 +62123,10 @@
           "timeToFirstAnswerTokenSeconds": 14.54
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 106.574,
@@ -60708,7 +62205,10 @@
           "timeToFirstAnswerTokenSeconds": 53.861
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 99.108,
@@ -60791,14 +62291,33 @@
           "input": 121.45829705343488,
           "output": 973.9703069999999,
           "reasoning": 952.0490295,
-          "answer": 21.9212775
+          "answer": 21.9212775,
+          "nonCacheInput": 8.81514675,
+          "cacheRead": 45.74112432739613,
+          "cacheWrite": 66.90202597603874
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.45222268374819774,
+          "input": 0.10067613100720277,
+          "output": 0.35154655274099506,
+          "reasoning": 0.3300396390286433,
+          "answer": 0.02150691371235167,
+          "nonCacheInput": 0.0047302123966912225,
+          "cacheRead": 0.03869381381677307,
+          "cacheWrite": 0.05725210479373846
         },
         "intelligenceIndexTokenCounts": {
           "input": 710837888,
           "output": 216437846,
           "reasoning": 211566451,
           "answer": 4871395
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 78121.45616466556,
+          "reasoning": 73342.14200636519,
+          "answer": 4779.31415830037
+        },
+        "intelligenceIndexTimePerTask": 476.8381408701979
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 170.59,
@@ -60877,7 +62396,10 @@
           "timeToFirstAnswerTokenSeconds": 6.823
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 181.011,
@@ -60956,7 +62478,10 @@
           "timeToFirstAnswerTokenSeconds": 0.608
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 166.923,
@@ -61035,12 +62560,19 @@
           "timeToFirstAnswerTokenSeconds": 2.619
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 1092774545,
           "output": 181993479,
           "reasoning": 174869960,
           "answer": 7123519
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 70686.83297032781,
+          "reasoning": 63493.96998069814,
+          "answer": 7192.862989629673
+        },
+        "intelligenceIndexTimePerTask": 413.1165596123853
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 175.767,
@@ -61119,7 +62651,10 @@
           "timeToFirstAnswerTokenSeconds": 0.535
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 170.084,
@@ -61198,7 +62733,10 @@
           "timeToFirstAnswerTokenSeconds": 3.152
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 177.646,
@@ -61281,14 +62819,33 @@
           "input": 490.3601730456113,
           "output": 1641.4052100000001,
           "reasoning": 1552.897455,
-          "answer": 88.507755
+          "answer": 88.507755,
+          "nonCacheInput": 29.68895,
+          "cacheRead": 157.96204493937654,
+          "cacheWrite": 302.7091781062348
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.8868298551068886,
+          "input": 0.397021492182344,
+          "output": 0.48980836292454466,
+          "reasoning": 0.41763290874324654,
+          "answer": 0.07217545418129814,
+          "nonCacheInput": 0.01585308402087614,
+          "cacheRead": 0.1295218243162152,
+          "cacheWrite": 0.2516465838452526
         },
         "intelligenceIndexTokenCounts": {
           "input": 764807431,
           "output": 109427014,
           "reasoning": 103526497,
           "answer": 5900517
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 32653.89086163631,
+          "reasoning": 27842.193916216434,
+          "answer": 4811.696945419875
+        },
+        "intelligenceIndexTimePerTask": 193.2233473115993
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 160.921,
@@ -61367,7 +62924,10 @@
           "timeToFirstAnswerTokenSeconds": 0.632
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 111.736,
@@ -61446,7 +63006,10 @@
           "timeToFirstAnswerTokenSeconds": 1.156
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 109.994,
@@ -61529,14 +63092,33 @@
           "input": 490.3601730456113,
           "output": 1641.4052100000001,
           "reasoning": 1552.897455,
-          "answer": 88.507755
+          "answer": 88.507755,
+          "nonCacheInput": 29.68895,
+          "cacheRead": 157.96204493937654,
+          "cacheWrite": 302.7091781062348
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.8868298551068886,
+          "input": 0.397021492182344,
+          "output": 0.48980836292454466,
+          "reasoning": 0.41763290874324654,
+          "answer": 0.07217545418129814,
+          "nonCacheInput": 0.01585308402087614,
+          "cacheRead": 0.1295218243162152,
+          "cacheWrite": 0.2516465838452526
         },
         "intelligenceIndexTokenCounts": {
           "input": 764807431,
           "output": 109427014,
           "reasoning": 103526497,
           "answer": 5900517
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 32653.89086163631,
+          "reasoning": 27842.193916216434,
+          "answer": 4811.696945419875
+        },
+        "intelligenceIndexTimePerTask": 193.2233473115993
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 160.921,
@@ -61615,7 +63197,10 @@
           "timeToFirstAnswerTokenSeconds": 0.632
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 111.736,
@@ -61694,7 +63279,10 @@
           "timeToFirstAnswerTokenSeconds": 1.156
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCostPerTask": null,
+        "intelligenceIndexTokenCounts": null,
+        "intelligenceIndexOutputTokensPerTask": null,
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 109.994,
@@ -61777,14 +63365,33 @@
           "input": 608.8605932109801,
           "output": 2169.05208,
           "reasoning": 2037.2752500000001,
-          "answer": 131.77683
+          "answer": 131.77683,
+          "nonCacheInput": 62.47511,
+          "cacheRead": 134.5888774210022,
+          "cacheWrite": 411.7966057899779
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.9924637781010264,
+          "input": 0.5105294976772461,
+          "output": 0.4819342804237804,
+          "reasoning": 0.37475954041009674,
+          "answer": 0.10717474001368364,
+          "nonCacheInput": 0.0318362333929463,
+          "cacheRead": 0.11809864721018444,
+          "cacheWrite": 0.3605946170741154
         },
         "intelligenceIndexTokenCounts": {
           "input": 364032098,
           "output": 72301736,
           "reasoning": 67909175,
           "answer": 4392561
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 16064.476014126014,
+          "reasoning": 12491.98468033656,
+          "answer": 3572.4913337894545
+        },
+        "intelligenceIndexTimePerTask": 215.4170709639913
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 72.007,
@@ -61867,14 +63474,33 @@
           "input": 171.33830994095118,
           "output": 203.89188000000001,
           "reasoning": 138.69840000000002,
-          "answer": 65.19348
+          "answer": 65.19348,
+          "nonCacheInput": 59.498810000000006,
+          "cacheRead": 22.541079451005423,
+          "cacheWrite": 89.29842048994576
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.21087234510039837,
+          "input": 0.14667007372905344,
+          "output": 0.06420227137134495,
+          "reasoning": 0.016734277970007316,
+          "answer": 0.047467993401337644,
+          "nonCacheInput": 0.032056295655332655,
+          "cacheRead": 0.023604847262240054,
+          "cacheWrite": 0.09100893081148073
         },
         "intelligenceIndexTokenCounts": {
           "input": 74841605,
           "output": 6796396,
           "reasoning": 4623280,
           "answer": 2173116
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 2140.075712378165,
+          "reasoning": 557.8092656669105,
+          "answer": 1582.2664467112545
+        },
+        "intelligenceIndexTimePerTask": 35.7373118659338
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 65.675,
@@ -61957,14 +63583,33 @@
           "input": 434.27267062719454,
           "output": 1284.88881,
           "reasoning": 1166.03919,
-          "answer": 118.84961999999999
+          "answer": 118.84961999999999,
+          "nonCacheInput": 62.498355,
+          "cacheRead": 86.94431826364506,
+          "cacheWrite": 284.82999736354947
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.668057792071965,
+          "input": 0.36576396776180237,
+          "output": 0.30229382431016266,
+          "reasoning": 0.20798050125698342,
+          "answer": 0.09431332305317924,
+          "nonCacheInput": 0.03167666193854673,
+          "cacheRead": 0.07872952598782859,
+          "cacheWrite": 0.2553577798354271
         },
         "intelligenceIndexTokenCounts": {
           "input": 243354307,
           "output": 42829627,
           "reasoning": 38867973,
           "answer": 3961654
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 10076.460810338755,
+          "reasoning": 6932.683375232781,
+          "answer": 3143.7774351059743
+        },
+        "intelligenceIndexTimePerTask": 131.9407010486616
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 66.314,
@@ -62047,14 +63692,33 @@
           "input": 144.982501232046,
           "output": 66.12606,
           "reasoning": 0,
-          "answer": 66.12606
+          "answer": 66.12606,
+          "nonCacheInput": 59.49731,
+          "cacheRead": 18.47954875199489,
+          "cacheWrite": 67.0056424800511
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.17101364725394147,
+          "input": 0.1234252969522245,
+          "output": 0.047588350301716965,
+          "reasoning": 0,
+          "answer": 0.047588350301716965,
+          "nonCacheInput": 0.0320902418121363,
+          "cacheRead": 0.019850490369912262,
+          "cacheWrite": 0.07148456477017594
         },
         "intelligenceIndexTokenCounts": {
           "input": 62259688,
           "output": 2204202,
           "reasoning": 0,
           "answer": 2204202
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 1586.2783433905659,
+          "reasoning": 0,
+          "answer": 1586.2783433905659
+        },
+        "intelligenceIndexTimePerTask": 26.0847271554913
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 66.722,
@@ -62137,14 +63801,33 @@
           "input": 296.7807258905204,
           "output": 638.9867700000001,
           "reasoning": 540.2006700000001,
-          "answer": 98.7861
+          "answer": 98.7861,
+          "nonCacheInput": 61.61127,
+          "cacheRead": 50.9530699010533,
+          "cacheWrite": 184.21638598946708
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.4061167899400016,
+          "input": 0.2521440877981879,
+          "output": 0.1539727021418136,
+          "reasoning": 0.07859751210021937,
+          "answer": 0.07537519004159425,
+          "nonCacheInput": 0.03226918379648743,
+          "cacheRead": 0.047958578958377754,
+          "cacheWrite": 0.17191632504332277
         },
         "intelligenceIndexTokenCounts": {
           "input": 151071671,
           "output": 21299559,
           "reasoning": 18006689,
           "answer": 3292870
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 5132.423404727121,
+          "reasoning": 2619.9170700073123,
+          "answer": 2512.506334719809
+        },
+        "intelligenceIndexTimePerTask": 80.13540241265662
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 67.823,
@@ -62227,14 +63910,33 @@
           "input": 608.8605932109801,
           "output": 2169.05208,
           "reasoning": 2037.2752500000001,
-          "answer": 131.77683
+          "answer": 131.77683,
+          "nonCacheInput": 62.47511,
+          "cacheRead": 134.5888774210022,
+          "cacheWrite": 411.7966057899779
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.9924637781010264,
+          "input": 0.5105294976772461,
+          "output": 0.4819342804237804,
+          "reasoning": 0.37475954041009674,
+          "answer": 0.10717474001368364,
+          "nonCacheInput": 0.0318362333929463,
+          "cacheRead": 0.11809864721018444,
+          "cacheWrite": 0.3605946170741154
         },
         "intelligenceIndexTokenCounts": {
           "input": 364032098,
           "output": 72301736,
           "reasoning": 67909175,
           "answer": 4392561
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 16064.476014126014,
+          "reasoning": 12491.98468033656,
+          "answer": 3572.4913337894545
+        },
+        "intelligenceIndexTimePerTask": 215.4170709639913
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 72.007,
@@ -62317,14 +64019,33 @@
           "input": 171.33830994095118,
           "output": 203.89188000000001,
           "reasoning": 138.69840000000002,
-          "answer": 65.19348
+          "answer": 65.19348,
+          "nonCacheInput": 59.498810000000006,
+          "cacheRead": 22.541079451005423,
+          "cacheWrite": 89.29842048994576
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.21087234510039837,
+          "input": 0.14667007372905344,
+          "output": 0.06420227137134495,
+          "reasoning": 0.016734277970007316,
+          "answer": 0.047467993401337644,
+          "nonCacheInput": 0.032056295655332655,
+          "cacheRead": 0.023604847262240054,
+          "cacheWrite": 0.09100893081148073
         },
         "intelligenceIndexTokenCounts": {
           "input": 74841605,
           "output": 6796396,
           "reasoning": 4623280,
           "answer": 2173116
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 2140.075712378165,
+          "reasoning": 557.8092656669105,
+          "answer": 1582.2664467112545
+        },
+        "intelligenceIndexTimePerTask": 35.7373118659338
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 65.675,
@@ -62407,14 +64128,33 @@
           "input": 434.27267062719454,
           "output": 1284.88881,
           "reasoning": 1166.03919,
-          "answer": 118.84961999999999
+          "answer": 118.84961999999999,
+          "nonCacheInput": 62.498355,
+          "cacheRead": 86.94431826364506,
+          "cacheWrite": 284.82999736354947
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.668057792071965,
+          "input": 0.36576396776180237,
+          "output": 0.30229382431016266,
+          "reasoning": 0.20798050125698342,
+          "answer": 0.09431332305317924,
+          "nonCacheInput": 0.03167666193854673,
+          "cacheRead": 0.07872952598782859,
+          "cacheWrite": 0.2553577798354271
         },
         "intelligenceIndexTokenCounts": {
           "input": 243354307,
           "output": 42829627,
           "reasoning": 38867973,
           "answer": 3961654
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 10076.460810338755,
+          "reasoning": 6932.683375232781,
+          "answer": 3143.7774351059743
+        },
+        "intelligenceIndexTimePerTask": 131.9407010486616
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 66.314,
@@ -62497,14 +64237,33 @@
           "input": 144.982501232046,
           "output": 66.12606,
           "reasoning": 0,
-          "answer": 66.12606
+          "answer": 66.12606,
+          "nonCacheInput": 59.49731,
+          "cacheRead": 18.47954875199489,
+          "cacheWrite": 67.0056424800511
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.17101364725394147,
+          "input": 0.1234252969522245,
+          "output": 0.047588350301716965,
+          "reasoning": 0,
+          "answer": 0.047588350301716965,
+          "nonCacheInput": 0.0320902418121363,
+          "cacheRead": 0.019850490369912262,
+          "cacheWrite": 0.07148456477017594
         },
         "intelligenceIndexTokenCounts": {
           "input": 62259688,
           "output": 2204202,
           "reasoning": 0,
           "answer": 2204202
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 1586.2783433905659,
+          "reasoning": 0,
+          "answer": 1586.2783433905659
+        },
+        "intelligenceIndexTimePerTask": 26.0847271554913
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 66.722,
@@ -62587,14 +64346,33 @@
           "input": 296.7807258905204,
           "output": 638.9867700000001,
           "reasoning": 540.2006700000001,
-          "answer": 98.7861
+          "answer": 98.7861,
+          "nonCacheInput": 61.61127,
+          "cacheRead": 50.9530699010533,
+          "cacheWrite": 184.21638598946708
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.4061167899400016,
+          "input": 0.2521440877981879,
+          "output": 0.1539727021418136,
+          "reasoning": 0.07859751210021937,
+          "answer": 0.07537519004159425,
+          "nonCacheInput": 0.03226918379648743,
+          "cacheRead": 0.047958578958377754,
+          "cacheWrite": 0.17191632504332277
         },
         "intelligenceIndexTokenCounts": {
           "input": 151071671,
           "output": 21299559,
           "reasoning": 18006689,
           "answer": 3292870
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 5132.423404727121,
+          "reasoning": 2619.9170700073123,
+          "answer": 2512.506334719809
+        },
+        "intelligenceIndexTimePerTask": 80.13540241265662
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 67.823,
@@ -62673,12 +64451,19 @@
           "timeToFirstAnswerTokenSeconds": 65.08
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 735104000,
           "output": 125011185,
           "reasoning": 119164889,
           "answer": 5846296
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 18912.005257449488,
+          "reasoning": 13905.516109347798,
+          "answer": 5006.489148101688
+        },
+        "intelligenceIndexTimePerTask": 81.96375050806363
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 233.833,
@@ -62757,12 +64542,19 @@
           "timeToFirstAnswerTokenSeconds": 0.544
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 178574058,
           "output": 2357378,
           "reasoning": 0,
           "answer": 2357378
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 2110.1426382861237,
+          "reasoning": 0,
+          "answer": 2110.1426382861237
+        },
+        "intelligenceIndexTimePerTask": 10.810329008681329
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 196.79,
@@ -62841,12 +64633,19 @@
           "timeToFirstAnswerTokenSeconds": 6.418
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 275954649,
           "output": 37034644,
           "reasoning": 32869193,
           "answer": 4165451
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 8118.088141888398,
+          "reasoning": 4666.87842578119,
+          "answer": 3451.2097161072084
+        },
+        "intelligenceIndexTimePerTask": 39.56081991405704
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 208.969,
@@ -62925,12 +64724,19 @@
           "timeToFirstAnswerTokenSeconds": 31.286
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 451473364,
           "output": 66735431,
           "reasoning": 61793495,
           "answer": 4941936
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 12492.303981970428,
+          "reasoning": 8415.780006763747,
+          "answer": 4076.5239752066805
+        },
+        "intelligenceIndexTimePerTask": 59.56462167968972
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 221.548,
@@ -63009,12 +64815,19 @@
           "timeToFirstAnswerTokenSeconds": 1.585
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 125428616,
           "output": 12479860,
           "reasoning": 9679021,
           "answer": 2800839
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 3662.8758063762502,
+          "reasoning": 1360.6066676234122,
+          "answer": 2302.269138752838
+        },
+        "intelligenceIndexTimePerTask": 18.006303620417373
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 201.304,
@@ -63093,12 +64906,19 @@
           "timeToFirstAnswerTokenSeconds": 1.074
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 109194342,
           "output": 6971397,
           "reasoning": 4830848,
           "answer": 2140549
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 2297.945408709607,
+          "reasoning": 600.3001600205865,
+          "answer": 1697.6452486890205
+        },
+        "intelligenceIndexTimePerTask": 11.9541002817606
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 209.242,
@@ -63177,12 +64997,19 @@
           "timeToFirstAnswerTokenSeconds": 65.08
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 735104000,
           "output": 125011185,
           "reasoning": 119164889,
           "answer": 5846296
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 18912.005257449488,
+          "reasoning": 13905.516109347798,
+          "answer": 5006.489148101688
+        },
+        "intelligenceIndexTimePerTask": 81.96375050806363
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 233.833,
@@ -63261,12 +65088,19 @@
           "timeToFirstAnswerTokenSeconds": 0.544
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 178574058,
           "output": 2357378,
           "reasoning": 0,
           "answer": 2357378
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 2110.1426382861237,
+          "reasoning": 0,
+          "answer": 2110.1426382861237
+        },
+        "intelligenceIndexTimePerTask": 10.810329008681329
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 196.79,
@@ -63345,12 +65179,19 @@
           "timeToFirstAnswerTokenSeconds": 6.418
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 275954649,
           "output": 37034644,
           "reasoning": 32869193,
           "answer": 4165451
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 8118.088141888398,
+          "reasoning": 4666.87842578119,
+          "answer": 3451.2097161072084
+        },
+        "intelligenceIndexTimePerTask": 39.56081991405704
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 208.969,
@@ -63429,12 +65270,19 @@
           "timeToFirstAnswerTokenSeconds": 31.286
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 451473364,
           "output": 66735431,
           "reasoning": 61793495,
           "answer": 4941936
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 12492.303981970428,
+          "reasoning": 8415.780006763747,
+          "answer": 4076.5239752066805
+        },
+        "intelligenceIndexTimePerTask": 59.56462167968972
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 221.548,
@@ -63513,12 +65361,19 @@
           "timeToFirstAnswerTokenSeconds": 1.585
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 125428616,
           "output": 12479860,
           "reasoning": 9679021,
           "answer": 2800839
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 3662.8758063762502,
+          "reasoning": 1360.6066676234122,
+          "answer": 2302.269138752838
+        },
+        "intelligenceIndexTimePerTask": 18.006303620417373
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 201.304,
@@ -63597,12 +65452,19 @@
           "timeToFirstAnswerTokenSeconds": 1.074
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 109194342,
           "output": 6971397,
           "reasoning": 4830848,
           "answer": 2140549
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 2297.945408709607,
+          "reasoning": 600.3001600205865,
+          "answer": 1697.6452486890205
+        },
+        "intelligenceIndexTimePerTask": 11.9541002817606
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 209.242,
@@ -63685,14 +65547,33 @@
           "input": 721.6095335690973,
           "output": 2102.57166,
           "reasoning": 1903.65387,
-          "answer": 198.91779
+          "answer": 198.91779,
+          "nonCacheInput": 60.973839999999996,
+          "cacheRead": 470.423742407035,
+          "cacheWrite": 190.21195116206226
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 1.0373301565994435,
+          "input": 0.5769395891879086,
+          "output": 0.4603905674115349,
+          "reasoning": 0.3022853845225849,
+          "answer": 0.15810518288894992,
+          "nonCacheInput": 0.032056685117526525,
+          "cacheRead": 0.37980914031185004,
+          "cacheWrite": 0.165073763758532
         },
         "intelligenceIndexTokenCounts": {
           "input": 983476165,
           "output": 70085722,
           "reasoning": 63455129,
           "answer": 6630593
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 15346.352247051163,
+          "reasoning": 10076.179484086164,
+          "answer": 5270.172762964999
+        },
+        "intelligenceIndexTimePerTask": 208.4226212537749
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 85.381,
@@ -63771,12 +65652,19 @@
           "timeToFirstAnswerTokenSeconds": 26.691
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 530833840,
           "output": 35398293,
           "reasoning": 29807525,
           "answer": 5590768
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 9940.5564010649,
+          "reasoning": 5548.763499075077,
+          "answer": 4391.792901989824
+        },
+        "intelligenceIndexTimePerTask": 144.62050732090484
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 71.097,
@@ -63855,12 +65743,19 @@
           "timeToFirstAnswerTokenSeconds": 10.187
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 340868286,
           "output": 21248736,
           "reasoning": 16679685,
           "answer": 4569051
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 6690.308555147785,
+          "reasoning": 3187.2678935872605,
+          "answer": 3503.0406615605248
+        },
+        "intelligenceIndexTimePerTask": 100.85774175448924
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 68.735,
@@ -63939,12 +65834,19 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 109764766,
           "output": 2648394,
           "reasoning": 0,
           "answer": 2648394
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 2073.895225376513,
+          "reasoning": 0,
+          "answer": 2073.895225376513
+        },
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -64023,12 +65925,19 @@
           "timeToFirstAnswerTokenSeconds": 4.41
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 186750881,
           "output": 11976871,
           "reasoning": 8440916,
           "answer": 3535955
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 4202.72143690891,
+          "reasoning": 1524.2649481908861,
+          "answer": 2678.4564887180236
+        },
+        "intelligenceIndexTimePerTask": 69.50808222818401
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 64.601,
@@ -64107,12 +66016,19 @@
           "timeToFirstAnswerTokenSeconds": 2.228
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 93508215,
           "output": 6584353,
           "reasoning": 4022472,
           "answer": 2561881
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 2507.7537132556436,
+          "reasoning": 616.3583607974504,
+          "answer": 1891.395352458193
+        },
+        "intelligenceIndexTimePerTask": 39.440733763441145
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 70.397,
@@ -64195,14 +66111,33 @@
           "input": 721.6095335690973,
           "output": 2102.57166,
           "reasoning": 1903.65387,
-          "answer": 198.91779
+          "answer": 198.91779,
+          "nonCacheInput": 60.973839999999996,
+          "cacheRead": 470.423742407035,
+          "cacheWrite": 190.21195116206226
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 1.0373301565994435,
+          "input": 0.5769395891879086,
+          "output": 0.4603905674115349,
+          "reasoning": 0.3022853845225849,
+          "answer": 0.15810518288894992,
+          "nonCacheInput": 0.032056685117526525,
+          "cacheRead": 0.37980914031185004,
+          "cacheWrite": 0.165073763758532
         },
         "intelligenceIndexTokenCounts": {
           "input": 983476165,
           "output": 70085722,
           "reasoning": 63455129,
           "answer": 6630593
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 15346.352247051163,
+          "reasoning": 10076.179484086164,
+          "answer": 5270.172762964999
+        },
+        "intelligenceIndexTimePerTask": 208.4226212537749
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 85.381,
@@ -64281,12 +66216,19 @@
           "timeToFirstAnswerTokenSeconds": 26.691
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 530833840,
           "output": 35398293,
           "reasoning": 29807525,
           "answer": 5590768
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 9940.5564010649,
+          "reasoning": 5548.763499075077,
+          "answer": 4391.792901989824
+        },
+        "intelligenceIndexTimePerTask": 144.62050732090484
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 71.097,
@@ -64365,12 +66307,19 @@
           "timeToFirstAnswerTokenSeconds": 10.187
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 340868286,
           "output": 21248736,
           "reasoning": 16679685,
           "answer": 4569051
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 6690.308555147785,
+          "reasoning": 3187.2678935872605,
+          "answer": 3503.0406615605248
+        },
+        "intelligenceIndexTimePerTask": 100.85774175448924
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 68.735,
@@ -64449,12 +66398,19 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 109764766,
           "output": 2648394,
           "reasoning": 0,
           "answer": 2648394
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 2073.895225376513,
+          "reasoning": 0,
+          "answer": 2073.895225376513
+        },
+        "intelligenceIndexTimePerTask": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -64533,12 +66489,19 @@
           "timeToFirstAnswerTokenSeconds": 4.41
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 186750881,
           "output": 11976871,
           "reasoning": 8440916,
           "answer": 3535955
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 4202.72143690891,
+          "reasoning": 1524.2649481908861,
+          "answer": 2678.4564887180236
+        },
+        "intelligenceIndexTimePerTask": 69.50808222818401
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 64.601,
@@ -64617,12 +66580,19 @@
           "timeToFirstAnswerTokenSeconds": 2.228
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 93508215,
           "output": 6584353,
           "reasoning": 4022472,
           "answer": 2561881
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 2507.7537132556436,
+          "reasoning": 616.3583607974504,
+          "answer": 1891.395352458193
+        },
+        "intelligenceIndexTimePerTask": 39.440733763441145
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 70.397,
@@ -64705,14 +66675,33 @@
           "input": 321.30323671871633,
           "output": 1432.639785,
           "reasoning": 1340.054355,
-          "answer": 92.58543
+          "answer": 92.58543,
+          "nonCacheInput": 48.7876975,
+          "cacheRead": 187.56417023098118,
+          "cacheWrite": 84.95136898773518
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.5544595173072254,
+          "input": 0.26391258942341755,
+          "output": 0.29054692788380787,
+          "reasoning": 0.21275887641723704,
+          "answer": 0.07778805146657078,
+          "nonCacheInput": 0.01888942270065116,
+          "cacheRead": 0.16534451881188975,
+          "cacheWrite": 0.07967864791087664
         },
         "intelligenceIndexTokenCounts": {
           "input": 796956198,
           "output": 95509319,
           "reasoning": 89336957,
           "answer": 6172362
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 19369.795192253852,
+          "reasoning": 14183.925094482469,
+          "answer": 5185.870097771384
+        },
+        "intelligenceIndexTimePerTask": 132.09091661966525
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 165.987,
@@ -64795,14 +66784,33 @@
           "input": 71.57601076963076,
           "output": 89.075805,
           "reasoning": 56.383559999999996,
-          "answer": 32.692245
+          "answer": 32.692245,
+          "nonCacheInput": 29.5821375,
+          "cacheRead": 24.058445530901672,
+          "cacheWrite": 17.935427738729086
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.10115788470701273,
+          "input": 0.06728209497870424,
+          "output": 0.0338757897283085,
+          "reasoning": 0.008767694531921923,
+          "answer": 0.025108095196386584,
+          "nonCacheInput": 0.015938583592072394,
+          "cacheRead": 0.032446751897624686,
+          "cacheWrite": 0.018896759489007157
         },
         "intelligenceIndexTokenCounts": {
           "input": 113805974,
           "output": 5938387,
           "reasoning": 3758904,
           "answer": 2179483
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 2258.385981887234,
+          "reasoning": 584.512968794795,
+          "answer": 1673.8730130924387
+        },
+        "intelligenceIndexTimePerTask": 19.623479187190053
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 127.307,
@@ -64885,14 +66893,33 @@
           "input": 194.7244721059758,
           "output": 545.48832,
           "reasoning": 466.70544,
-          "answer": 78.78288
+          "answer": 78.78288,
+          "nonCacheInput": 32.62652,
+          "cacheRead": 103.67821584948038,
+          "cacheWrite": 58.419736256495426
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.3272368361728899,
+          "input": 0.1617008978584035,
+          "output": 0.16553593831448635,
+          "reasoning": 0.1023817943539,
+          "answer": 0.06315414396058631,
+          "nonCacheInput": 0.016205361093234495,
+          "cacheRead": 0.09158455803983181,
+          "cacheWrite": 0.05391097872533722
         },
         "intelligenceIndexTokenCounts": {
           "input": 446457787,
           "output": 36365888,
           "reasoning": 31113696,
           "answer": 5252192
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 11035.729220965757,
+          "reasoning": 6825.452956926667,
+          "answer": 4210.27626403909
+        },
+        "intelligenceIndexTimePerTask": 85.103601174293
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 129.553,
@@ -64971,12 +66998,19 @@
           "timeToFirstAnswerTokenSeconds": 0.693
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 139284468,
           "output": 2575228,
           "reasoning": 0,
           "answer": 2575228
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 2153.9411612854274,
+          "reasoning": 0,
+          "answer": 2153.9411612854274
+        },
+        "intelligenceIndexTimePerTask": 18.27258031116766
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 112.729,
@@ -65059,14 +67093,33 @@
           "input": 141.2463456390539,
           "output": 354.52754999999996,
           "reasoning": 288.50906999999995,
-          "answer": 66.01848000000001
+          "answer": 66.01848000000001,
+          "nonCacheInput": 29.7497325,
+          "cacheRead": 66.69734206399531,
+          "cacheWrite": 44.79927107505862
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.23590588524864192,
+          "input": 0.11983105412350942,
+          "output": 0.11607483112513248,
+          "reasoning": 0.06341885989600403,
+          "answer": 0.052655971229128434,
+          "nonCacheInput": 0.015998302207231706,
+          "cacheRead": 0.06146348802679035,
+          "cacheWrite": 0.04236926388948736
         },
         "intelligenceIndexTokenCounts": {
           "input": 293025028,
           "output": 23635170,
           "reasoning": 19233938,
           "answer": 4401232
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 7738.32207500883,
+          "reasoning": 4227.923993066935,
+          "answer": 3510.3980819418957
+        },
+        "intelligenceIndexTimePerTask": 65.27036304466336
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 118.71,
@@ -65149,14 +67202,33 @@
           "input": 83.88736707940758,
           "output": 156.34035,
           "reasoning": 112.251045,
-          "answer": 44.089305
+          "answer": 44.089305,
+          "nonCacheInput": 29.5973875,
+          "cacheRead": 27.96191509092108,
+          "cacheWrite": 26.328064488486504
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.1276399207309507,
+          "input": 0.07110362412176216,
+          "output": 0.05653629660918855,
+          "reasoning": 0.021642154342575264,
+          "answer": 0.03489414226661329,
+          "nonCacheInput": 0.01596181809968082,
+          "cacheRead": 0.029107833264009123,
+          "cacheWrite": 0.026033972758072215
         },
         "intelligenceIndexTokenCounts": {
           "input": 132111596,
           "output": 10422690,
           "reasoning": 7483403,
           "answer": 2939287
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 3769.086440612571,
+          "reasoning": 1442.8102895050176,
+          "answer": 2326.2761511075532
+        },
+        "intelligenceIndexTimePerTask": 31.82836880582011
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 123.851,
@@ -65239,14 +67311,33 @@
           "input": 321.30323671871633,
           "output": 1432.639785,
           "reasoning": 1340.054355,
-          "answer": 92.58543
+          "answer": 92.58543,
+          "nonCacheInput": 48.7876975,
+          "cacheRead": 187.56417023098118,
+          "cacheWrite": 84.95136898773518
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.5544595173072254,
+          "input": 0.26391258942341755,
+          "output": 0.29054692788380787,
+          "reasoning": 0.21275887641723704,
+          "answer": 0.07778805146657078,
+          "nonCacheInput": 0.01888942270065116,
+          "cacheRead": 0.16534451881188975,
+          "cacheWrite": 0.07967864791087664
         },
         "intelligenceIndexTokenCounts": {
           "input": 796956198,
           "output": 95509319,
           "reasoning": 89336957,
           "answer": 6172362
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 19369.795192253852,
+          "reasoning": 14183.925094482469,
+          "answer": 5185.870097771384
+        },
+        "intelligenceIndexTimePerTask": 132.09091661966525
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 165.987,
@@ -65329,14 +67420,33 @@
           "input": 71.57601076963076,
           "output": 89.075805,
           "reasoning": 56.383559999999996,
-          "answer": 32.692245
+          "answer": 32.692245,
+          "nonCacheInput": 29.5821375,
+          "cacheRead": 24.058445530901672,
+          "cacheWrite": 17.935427738729086
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.10115788470701273,
+          "input": 0.06728209497870424,
+          "output": 0.0338757897283085,
+          "reasoning": 0.008767694531921923,
+          "answer": 0.025108095196386584,
+          "nonCacheInput": 0.015938583592072394,
+          "cacheRead": 0.032446751897624686,
+          "cacheWrite": 0.018896759489007157
         },
         "intelligenceIndexTokenCounts": {
           "input": 113805974,
           "output": 5938387,
           "reasoning": 3758904,
           "answer": 2179483
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 2258.385981887234,
+          "reasoning": 584.512968794795,
+          "answer": 1673.8730130924387
+        },
+        "intelligenceIndexTimePerTask": 19.623479187190053
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 127.307,
@@ -65419,14 +67529,33 @@
           "input": 194.7244721059758,
           "output": 545.48832,
           "reasoning": 466.70544,
-          "answer": 78.78288
+          "answer": 78.78288,
+          "nonCacheInput": 32.62652,
+          "cacheRead": 103.67821584948038,
+          "cacheWrite": 58.419736256495426
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.3272368361728899,
+          "input": 0.1617008978584035,
+          "output": 0.16553593831448635,
+          "reasoning": 0.1023817943539,
+          "answer": 0.06315414396058631,
+          "nonCacheInput": 0.016205361093234495,
+          "cacheRead": 0.09158455803983181,
+          "cacheWrite": 0.05391097872533722
         },
         "intelligenceIndexTokenCounts": {
           "input": 446457787,
           "output": 36365888,
           "reasoning": 31113696,
           "answer": 5252192
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 11035.729220965757,
+          "reasoning": 6825.452956926667,
+          "answer": 4210.27626403909
+        },
+        "intelligenceIndexTimePerTask": 85.103601174293
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 129.553,
@@ -65505,12 +67634,19 @@
           "timeToFirstAnswerTokenSeconds": 0.693
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 139284468,
           "output": 2575228,
           "reasoning": 0,
           "answer": 2575228
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 2153.9411612854274,
+          "reasoning": 0,
+          "answer": 2153.9411612854274
+        },
+        "intelligenceIndexTimePerTask": 18.27258031116766
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 112.729,
@@ -65593,14 +67729,33 @@
           "input": 141.2463456390539,
           "output": 354.52754999999996,
           "reasoning": 288.50906999999995,
-          "answer": 66.01848000000001
+          "answer": 66.01848000000001,
+          "nonCacheInput": 29.7497325,
+          "cacheRead": 66.69734206399531,
+          "cacheWrite": 44.79927107505862
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.23590588524864192,
+          "input": 0.11983105412350942,
+          "output": 0.11607483112513248,
+          "reasoning": 0.06341885989600403,
+          "answer": 0.052655971229128434,
+          "nonCacheInput": 0.015998302207231706,
+          "cacheRead": 0.06146348802679035,
+          "cacheWrite": 0.04236926388948736
         },
         "intelligenceIndexTokenCounts": {
           "input": 293025028,
           "output": 23635170,
           "reasoning": 19233938,
           "answer": 4401232
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 7738.32207500883,
+          "reasoning": 4227.923993066935,
+          "answer": 3510.3980819418957
+        },
+        "intelligenceIndexTimePerTask": 65.27036304466336
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 118.71,
@@ -65683,14 +67838,33 @@
           "input": 83.88736707940758,
           "output": 156.34035,
           "reasoning": 112.251045,
-          "answer": 44.089305
+          "answer": 44.089305,
+          "nonCacheInput": 29.5973875,
+          "cacheRead": 27.96191509092108,
+          "cacheWrite": 26.328064488486504
+        },
+        "intelligenceIndexCostPerTask": {
+          "total": 0.1276399207309507,
+          "input": 0.07110362412176216,
+          "output": 0.05653629660918855,
+          "reasoning": 0.021642154342575264,
+          "answer": 0.03489414226661329,
+          "nonCacheInput": 0.01596181809968082,
+          "cacheRead": 0.029107833264009123,
+          "cacheWrite": 0.026033972758072215
         },
         "intelligenceIndexTokenCounts": {
           "input": 132111596,
           "output": 10422690,
           "reasoning": 7483403,
           "answer": 2939287
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 3769.086440612571,
+          "reasoning": 1442.8102895050176,
+          "answer": 2326.2761511075532
+        },
+        "intelligenceIndexTimePerTask": 31.82836880582011
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 123.851,
@@ -65769,12 +67943,19 @@
           "timeToFirstAnswerTokenSeconds": 49.503
         },
         "intelligenceIndexCost": null,
+        "intelligenceIndexCostPerTask": null,
         "intelligenceIndexTokenCounts": {
           "input": 501197711,
           "output": 103697294,
           "reasoning": 97627244,
           "answer": 6070050
-        }
+        },
+        "intelligenceIndexOutputTokensPerTask": {
+          "output": 17716.081293998985,
+          "reasoning": 12650.406068977589,
+          "answer": 5065.675225021396
+        },
+        "intelligenceIndexTimePerTask": 338.3804718881364
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 46.117,

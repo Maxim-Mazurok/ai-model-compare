@@ -45,60 +45,15 @@ function roundedCost(value: number) {
   return Number(value.toFixed(6));
 }
 
+function roundedOptionalCost(value: number | null | undefined) {
+  return typeof value === "number" && Number.isFinite(value) ? roundedCost(value) : null;
+}
+
 export function taskCostBreakdown(variant: ModelVariant): AaIntelligenceIndexCost | null {
-  const counts = variant.model?.intelligenceIndexTokenCounts;
-  const inputPrice = variant.pricing.input;
-  const outputPrice = variant.pricing.output;
-  const inputTokens = counts?.input;
-  const answerTokens = counts?.answer;
-  const reasoningTokens = counts?.reasoning;
-  const outputTokens =
-    counts?.output ??
-    (typeof answerTokens === "number" &&
-    Number.isFinite(answerTokens) &&
-    typeof reasoningTokens === "number" &&
-    Number.isFinite(reasoningTokens)
-      ? answerTokens + reasoningTokens
-      : null);
-
+  const artificialAnalysisCostPerTask = variant.model?.intelligenceIndexCostPerTask;
+  const artificialAnalysisTotal = artificialAnalysisCostPerTask?.total;
   if (
-    typeof inputTokens === "number" &&
-    Number.isFinite(inputTokens) &&
-    inputTokens >= 0 &&
-    typeof outputTokens === "number" &&
-    Number.isFinite(outputTokens) &&
-    outputTokens >= 0 &&
-    typeof inputPrice === "number" &&
-    Number.isFinite(inputPrice) &&
-    inputPrice >= 0 &&
-    typeof outputPrice === "number" &&
-    Number.isFinite(outputPrice) &&
-    outputPrice >= 0
-  ) {
-    const input = (inputTokens / 1_000_000) * inputPrice;
-    const output = (outputTokens / 1_000_000) * outputPrice;
-    const total = input + output;
-    if (total > 0) {
-      return {
-        total: roundedCost(total),
-        input: roundedCost(input),
-        output: roundedCost(output),
-        reasoning:
-          typeof reasoningTokens === "number" && Number.isFinite(reasoningTokens)
-            ? roundedCost((reasoningTokens / 1_000_000) * outputPrice)
-            : null,
-        answer:
-          typeof answerTokens === "number" && Number.isFinite(answerTokens)
-            ? roundedCost((answerTokens / 1_000_000) * outputPrice)
-            : null
-      };
-    }
-  }
-
-  const artificialAnalysisCost = variant.model?.intelligenceIndexCost;
-  const artificialAnalysisTotal = artificialAnalysisCost?.total;
-  if (
-    artificialAnalysisCost &&
+    artificialAnalysisCostPerTask &&
     artificialAnalysisTotal !== null &&
     artificialAnalysisTotal !== undefined &&
     Number.isFinite(artificialAnalysisTotal) &&
@@ -106,22 +61,13 @@ export function taskCostBreakdown(variant: ModelVariant): AaIntelligenceIndexCos
   ) {
     return {
       total: roundedCost(artificialAnalysisTotal),
-      input:
-        artificialAnalysisCost.input === null || artificialAnalysisCost.input === undefined
-          ? null
-          : roundedCost(artificialAnalysisCost.input),
-      output:
-        artificialAnalysisCost.output === null || artificialAnalysisCost.output === undefined
-          ? null
-          : roundedCost(artificialAnalysisCost.output),
-      reasoning:
-        artificialAnalysisCost.reasoning === null || artificialAnalysisCost.reasoning === undefined
-          ? null
-          : roundedCost(artificialAnalysisCost.reasoning),
-      answer:
-        artificialAnalysisCost.answer === null || artificialAnalysisCost.answer === undefined
-          ? null
-          : roundedCost(artificialAnalysisCost.answer)
+      input: roundedOptionalCost(artificialAnalysisCostPerTask.input),
+      output: roundedOptionalCost(artificialAnalysisCostPerTask.output),
+      reasoning: roundedOptionalCost(artificialAnalysisCostPerTask.reasoning),
+      answer: roundedOptionalCost(artificialAnalysisCostPerTask.answer),
+      nonCacheInput: roundedOptionalCost(artificialAnalysisCostPerTask.nonCacheInput),
+      cacheRead: roundedOptionalCost(artificialAnalysisCostPerTask.cacheRead),
+      cacheWrite: roundedOptionalCost(artificialAnalysisCostPerTask.cacheWrite)
     };
   }
   return null;
@@ -131,27 +77,13 @@ export function taskCost(variant: ModelVariant) {
   return taskCostBreakdown(variant)?.total ?? null;
 }
 
-function intelligenceIndexOutputTokens(variant: ModelVariant) {
-  const counts = variant.model?.intelligenceIndexTokenCounts;
-  if (!counts) return null;
-  const outputTokens = counts.output ?? (counts.answer ?? 0) + (counts.reasoning ?? 0);
-  return outputTokens > 0 && Number.isFinite(outputTokens) ? outputTokens : null;
-}
-
 export function taskCompletionSeconds(variant: ModelVariant) {
-  const outputTokens = intelligenceIndexOutputTokens(variant);
-  const outputTokensPerSecond = variant.effectivePerformance.outputTokensPerSecond;
-  if (
-    outputTokens === null ||
-    outputTokensPerSecond === null ||
-    outputTokensPerSecond === undefined ||
-    !Number.isFinite(outputTokensPerSecond) ||
-    outputTokensPerSecond <= 0
-  ) {
-    return null;
-  }
-
-  return Number((outputTokens / outputTokensPerSecond).toFixed(3));
+  const artificialAnalysisTimePerTask = variant.model?.intelligenceIndexTimePerTask;
+  return typeof artificialAnalysisTimePerTask === "number" &&
+    Number.isFinite(artificialAnalysisTimePerTask) &&
+    artificialAnalysisTimePerTask > 0
+    ? artificialAnalysisTimePerTask
+    : null;
 }
 
 export function comparisonSpeedValue(variant: ModelVariant, costMode: CostMode) {

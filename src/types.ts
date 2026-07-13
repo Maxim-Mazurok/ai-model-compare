@@ -19,10 +19,19 @@ export type AaIntelligenceIndexCost = {
   output: number | null;
   reasoning: number | null;
   answer: number | null;
+  nonCacheInput?: number | null;
+  cacheRead?: number | null;
+  cacheWrite?: number | null;
 };
 
 export type AaIntelligenceIndexTokenCounts = {
   input: number | null;
+  output: number | null;
+  reasoning: number | null;
+  answer: number | null;
+};
+
+export type AaIntelligenceIndexOutputTokensPerTask = {
   output: number | null;
   reasoning: number | null;
   answer: number | null;
@@ -48,7 +57,10 @@ export type AaModel = {
     timeToFirstAnswerTokenSeconds: number | null;
   };
   intelligenceIndexCost?: AaIntelligenceIndexCost | null;
+  intelligenceIndexCostPerTask?: AaIntelligenceIndexCost | null;
   intelligenceIndexTokenCounts?: AaIntelligenceIndexTokenCounts | null;
+  intelligenceIndexOutputTokensPerTask?: AaIntelligenceIndexOutputTokensPerTask | null;
+  intelligenceIndexTimePerTask?: number | null;
 };
 
 export type ModelVariant = {

@@ -32,9 +32,12 @@ async function main() {
   const [routeConfig, profileConfig, artificialAnalysis] = await Promise.all([
     readJson(routeConfigPath),
     readJson(profileConfigPath),
-    getArtificialAnalysisData({ forceRefresh: args.refreshAa, previousPayload })
+    getArtificialAnalysisData({ allowStaleArtificialAnalysis: args.allowStaleArtificialAnalysis, previousPayload })
   ]);
-  const websiteModels = await getArtificialAnalysisWebsiteModels({ forceRefresh: args.refreshAa, previousPayload });
+  const websiteModels = await getArtificialAnalysisWebsiteModels({
+    allowStaleArtificialAnalysis: args.allowStaleArtificialAnalysis,
+    previousPayload
+  });
   const aaModels = mergeWebsiteModelData(artificialAnalysis.models, websiteModels.models);
 
   const metricKeys = Array.from(
@@ -92,44 +95,40 @@ async function main() {
   log(`Done in ${formatDuration(Date.now() - startedAt)}`);
 }
 
-async function getArtificialAnalysisData({ forceRefresh, previousPayload }) {
-  if (forceRefresh && process.env.ARTIFICIAL_ANALYSIS_API_KEY) {
+async function getArtificialAnalysisData({ allowStaleArtificialAnalysis, previousPayload }) {
+  if (process.env.ARTIFICIAL_ANALYSIS_API_KEY) {
     try {
       return await fetchArtificialAnalysis();
     } catch (error) {
-      if (args.strict) throw error;
       log(`Artificial Analysis refresh failed: ${error instanceof Error ? error.message : String(error)}`);
+      if (!allowStaleArtificialAnalysis) {
+        throw new Error("Live Artificial Analysis data is required. Retry after the service recovers or pass --allow-stale-aa to explicitly use stale data.");
+      }
     }
-  } else if (forceRefresh) {
-    log("Artificial Analysis refresh requested but ARTIFICIAL_ANALYSIS_API_KEY is not set");
+  } else if (!allowStaleArtificialAnalysis) {
+    throw new Error("ARTIFICIAL_ANALYSIS_API_KEY is required. Pass --allow-stale-aa only when an explicitly stale benchmark dataset is acceptable.");
   }
 
   const cached = await readCache();
   if (cached) {
     return {
       fetchedAt: cached.fetchedAt,
-      source: forceRefresh ? "stale-cache" : "cache",
-      warning: forceRefresh ? "Live Artificial Analysis refresh was unavailable; using local cache." : null,
+      source: "stale-cache",
+      warning: "Using local Artificial Analysis cache because --allow-stale-aa was explicitly requested.",
       promptOptions: cached.payload?.prompt_options ?? null,
       models: normalizeAaPayload(cached.payload)
     };
   }
 
-  if (process.env.ARTIFICIAL_ANALYSIS_API_KEY) {
-    try {
-      return await fetchArtificialAnalysis();
-    } catch (error) {
-      if (args.strict) throw error;
-      log(`Artificial Analysis live fetch failed: ${error instanceof Error ? error.message : String(error)}`);
-    }
-  }
-
   const previous = previousArtificialAnalysis(previousPayload);
   if (previous) {
-    return previous;
+    return {
+      ...previous,
+      warning: "Using benchmark data embedded in the previous static payload because --allow-stale-aa was explicitly requested."
+    };
   }
 
-  throw new Error("No Artificial Analysis API key, local cache, or previous static payload is available.");
+  throw new Error("No Artificial Analysis data is available. Set ARTIFICIAL_ANALYSIS_API_KEY or pass --allow-stale-aa with a local cache or previous static payload.");
 }
 
 async function fetchArtificialAnalysis() {
@@ -168,45 +167,41 @@ async function readCache() {
   }
 }
 
-async function getArtificialAnalysisWebsiteModels({ forceRefresh, previousPayload }) {
-  if (forceRefresh) {
-    try {
-      return await fetchArtificialAnalysisWebsiteModels();
-    } catch (error) {
-      log(`Artificial Analysis website model refresh failed: ${error instanceof Error ? error.message : String(error)}`);
-    }
-  }
-
-  const cached = await readWebsiteModelsCache();
-  if (cached) {
-    return {
-      fetchedAt: cached.fetchedAt,
-      source: forceRefresh ? "stale-cache" : "cache",
-      warning: forceRefresh ? "Live Artificial Analysis website model refresh was unavailable; using local cache." : null,
-      models: normalizeWebsiteModels(cached.models)
-    };
-  }
-
+async function getArtificialAnalysisWebsiteModels({ allowStaleArtificialAnalysis, previousPayload }) {
   try {
     return await fetchArtificialAnalysisWebsiteModels();
   } catch (error) {
-    log(`Artificial Analysis website model fetch failed: ${error instanceof Error ? error.message : String(error)}`);
+    log(`Artificial Analysis website model refresh failed: ${error instanceof Error ? error.message : String(error)}`);
   }
 
-  const previousModels = previousArtificialAnalysisWebsiteModels(previousPayload);
-  if (previousModels.length) {
-    return {
-      fetchedAt: previousPayload.artificialAnalysis?.websiteModels?.fetchedAt ?? previousPayload.generatedAt ?? new Date(0).toISOString(),
-      source: "previous-static",
-      warning: "Live Artificial Analysis website model data was unavailable; using models embedded in the previous static payload.",
-      models: previousModels
-    };
+  if (allowStaleArtificialAnalysis) {
+    const cached = await readWebsiteModelsCache();
+    if (cached) {
+      return {
+        fetchedAt: cached.fetchedAt,
+        source: "stale-cache",
+        warning: "Using local Artificial Analysis website cache because --allow-stale-aa was explicitly requested.",
+        models: normalizeWebsiteModels(cached.models)
+      };
+    }
+  }
+
+  if (allowStaleArtificialAnalysis) {
+    const previousModels = previousArtificialAnalysisWebsiteModels(previousPayload);
+    if (previousModels.length) {
+      return {
+        fetchedAt: previousPayload.artificialAnalysis?.websiteModels?.fetchedAt ?? previousPayload.generatedAt ?? new Date(0).toISOString(),
+        source: "previous-static",
+        warning: "Using website model data embedded in the previous static payload because --allow-stale-aa was explicitly requested.",
+        models: previousModels
+      };
+    }
   }
 
   return {
     fetchedAt: null,
     source: "unavailable",
-    warning: "Artificial Analysis website model data was unavailable; task cost may fall back to token cost.",
+    warning: "Live Artificial Analysis website model data was unavailable; task cost may fall back to token cost.",
     models: []
   };
 }
@@ -242,7 +237,10 @@ async function readWebsiteModelsCache() {
 
 function parseArtificialAnalysisWebsiteModels(html) {
   const flightData = decodeNextFlightData(html);
-  const arrays = extractJsonArraysAfterMarker(flightData, '"defaultData":');
+  const arrays = [
+    ...extractJsonArraysAfterMarker(flightData, '"initialModels":'),
+    ...extractJsonArraysAfterMarker(flightData, '"defaultData":')
+  ];
   const modelArray = arrays
     .filter((value) => Array.isArray(value))
     .sort((a, b) => scoreWebsiteModelArray(b) - scoreWebsiteModelArray(a))[0];
@@ -332,8 +330,12 @@ function scoreWebsiteModelArray(models) {
       (model.id ? 1 : 0) +
       (model.slug ? 1 : 0) +
       (model.name ? 1 : 0) +
-      (model.intelligence_index_cost ? 5 : 0) +
-      (model.intelligence_index_token_counts ? 5 : 0)
+      (model.intelligence_index_cost || model.intelligenceIndexCost ? 5 : 0) +
+      (model.intelligence_index_token_counts ||
+      model.intelligenceIndexTokenCounts ||
+      model.canonicalIntelligenceIndexTokenCount
+        ? 5
+        : 0)
     );
   }, models.length);
 }
@@ -350,7 +352,9 @@ function normalizeWebsiteModel(model) {
     slug: cleanText(model.slug),
     intelligenceIndexCost: normalizeIntelligenceIndexCost(model.intelligence_index_cost ?? model.intelligenceIndexCost),
     intelligenceIndexTokenCounts: normalizeIntelligenceIndexTokenCounts(
-      model.intelligence_index_token_counts ?? model.intelligenceIndexTokenCounts
+      model.intelligence_index_token_counts ??
+        model.intelligenceIndexTokenCounts ??
+        model.canonicalIntelligenceIndexTokenCount
     )
   };
 }
@@ -719,26 +723,23 @@ async function readOptionalJson(filePath) {
 function parseArgs(argv) {
   const parsed = {
     output: null,
-    refreshAa: false,
-    strict: false,
+    allowStaleArtificialAnalysis: false,
     quiet: false
   };
 
   for (let index = 0; index < argv.length; index += 1) {
     const arg = argv[index];
-    if (arg === "--refresh-aa") parsed.refreshAa = true;
-    else if (arg === "--strict") parsed.strict = true;
+    if (arg === "--allow-stale-aa") parsed.allowStaleArtificialAnalysis = true;
     else if (arg === "--quiet") parsed.quiet = true;
     else if (arg === "--output") parsed.output = argv[++index];
     else if (arg.startsWith("--output=")) parsed.output = arg.slice("--output=".length);
     else if (arg === "--help" || arg === "-h") {
-      console.log(`Usage: node scripts/build-static-data.mjs [--refresh-aa] [--strict] [--quiet] [--output PATH]
+      console.log(`Usage: node scripts/build-static-data.mjs [--allow-stale-aa] [--quiet] [--output PATH]
 
 Builds the checked-in static payload used by the GitHub Pages app.
 
 Options:
-  --refresh-aa      Try to refresh Artificial Analysis with ARTIFICIAL_ANALYSIS_API_KEY.
-  --strict          Fail instead of falling back when live Artificial Analysis refresh fails.
+  --allow-stale-aa  Explicitly allow the local cache or previous static payload when live Artificial Analysis data is unavailable.
   --output PATH     Write to a custom output path. Default: public/data/models.json.
 `);
       process.exit(0);

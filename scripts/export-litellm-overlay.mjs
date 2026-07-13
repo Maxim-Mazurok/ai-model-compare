@@ -89,59 +89,46 @@ async function loadArtificialAnalysisModels() {
   const staticPayload = await readOptionalJson(staticPayloadPath);
   const staticModels = previousArtificialAnalysisModels(staticPayload);
 
-  if (args.refreshAa && process.env.ARTIFICIAL_ANALYSIS_API_KEY) {
+  if (process.env.ARTIFICIAL_ANALYSIS_API_KEY) {
     try {
-      log("Fetching Artificial Analysis live data");
-      const response = await fetch(AA_URL, {
-        headers: {
-          "x-api-key": process.env.ARTIFICIAL_ANALYSIS_API_KEY
-        }
-      });
-      const text = await response.text();
-      if (!response.ok) throw new Error(`HTTP ${response.status}: ${text.slice(0, 240)}`);
-      const payload = JSON.parse(text);
-      await fs.mkdir(path.dirname(args.aaCache), { recursive: true });
-      await fs.writeFile(args.aaCache, `${JSON.stringify({ fetchedAt: new Date().toISOString(), payload }, null, 2)}\n`, "utf8");
-      return mergeArtificialAnalysisModels(normalizeAaPayload(payload), staticModels);
+      return mergeArtificialAnalysisModels(await fetchArtificialAnalysisModels(), staticModels);
     } catch (error) {
-      if (args.strictAa) throw error;
       log(`Artificial Analysis live fetch failed: ${error instanceof Error ? error.message : String(error)}`);
+      if (!args.allowStaleArtificialAnalysis) {
+        throw new Error("Live Artificial Analysis data is required. Retry after the service recovers or pass --allow-stale-aa to explicitly use stale data.");
+      }
     }
+  } else if (!args.allowStaleArtificialAnalysis) {
+    throw new Error("ARTIFICIAL_ANALYSIS_API_KEY is required. Pass --allow-stale-aa only when an explicitly stale benchmark dataset is acceptable.");
   }
 
   const cached = await readOptionalJson(args.aaCache);
   if (cached?.payload) {
-    log(`Using Artificial Analysis cache at ${args.aaCache}`);
+    log(`Using Artificial Analysis cache at ${args.aaCache} because --allow-stale-aa was explicitly requested`);
     return mergeArtificialAnalysisModels(normalizeAaPayload(cached.payload), staticModels);
   }
 
-  if (process.env.ARTIFICIAL_ANALYSIS_API_KEY) {
-    try {
-      log("Fetching Artificial Analysis live data");
-      const response = await fetch(AA_URL, {
-        headers: {
-          "x-api-key": process.env.ARTIFICIAL_ANALYSIS_API_KEY
-        }
-      });
-      const text = await response.text();
-      if (!response.ok) throw new Error(`HTTP ${response.status}: ${text.slice(0, 240)}`);
-      return mergeArtificialAnalysisModels(normalizeAaPayload(JSON.parse(text)), staticModels);
-    } catch (error) {
-      if (args.strictAa) throw error;
-      log(`Artificial Analysis live fetch failed: ${error instanceof Error ? error.message : String(error)}`);
-    }
-  }
-
   if (staticModels.length) {
-    log("Using Artificial Analysis models embedded in public/data/models.json");
+    log("Using Artificial Analysis models embedded in public/data/models.json because --allow-stale-aa was explicitly requested");
     return staticModels;
   }
 
-  if (args.strictAa) {
-    throw new Error("No Artificial Analysis data found. Set ARTIFICIAL_ANALYSIS_API_KEY or provide --aa-cache.");
-  }
-  log("No Artificial Analysis data found; exported overlay will not include benchmarks.");
-  return [];
+  throw new Error("No Artificial Analysis data is available. Set ARTIFICIAL_ANALYSIS_API_KEY or pass --allow-stale-aa with a local cache or previous static payload.");
+}
+
+async function fetchArtificialAnalysisModels() {
+  log("Fetching Artificial Analysis live data");
+  const response = await fetch(AA_URL, {
+    headers: {
+      "x-api-key": process.env.ARTIFICIAL_ANALYSIS_API_KEY
+    }
+  });
+  const text = await response.text();
+  if (!response.ok) throw new Error(`HTTP ${response.status}: ${text.slice(0, 240)}`);
+  const payload = JSON.parse(text);
+  await fs.mkdir(path.dirname(args.aaCache), { recursive: true });
+  await fs.writeFile(args.aaCache, `${JSON.stringify({ fetchedAt: new Date().toISOString(), payload }, null, 2)}\n`, "utf8");
+  return normalizeAaPayload(payload);
 }
 
 async function readOptionalJson(filePath) {
@@ -501,8 +488,7 @@ function parseArgs(argv) {
     name: "Imported provider",
     provider: "Imported Provider",
     aaCache: defaultAaCachePath,
-    refreshAa: false,
-    strictAa: false,
+    allowStaleArtificialAnalysis: false,
     filter: null,
     exclude: null,
     quiet: false
@@ -520,8 +506,7 @@ function parseArgs(argv) {
     else if (arg.startsWith("--provider=")) parsed.provider = arg.slice("--provider=".length);
     else if (arg === "--aa-cache") parsed.aaCache = path.resolve(argv[++index]);
     else if (arg.startsWith("--aa-cache=")) parsed.aaCache = path.resolve(arg.slice("--aa-cache=".length));
-    else if (arg === "--refresh-aa") parsed.refreshAa = true;
-    else if (arg === "--strict-aa") parsed.strictAa = true;
+    else if (arg === "--allow-stale-aa") parsed.allowStaleArtificialAnalysis = true;
     else if (arg === "--filter") parsed.filter = new RegExp(argv[++index], "i");
     else if (arg.startsWith("--filter=")) parsed.filter = new RegExp(arg.slice("--filter=".length), "i");
     else if (arg === "--exclude") parsed.exclude = new RegExp(argv[++index], "i");
@@ -539,8 +524,7 @@ Options:
   --name NAME        Overlay label. Default: "Imported provider".
   --output PATH      Output JSON path. Default: local/provider-overlay.json.
   --aa-cache PATH    Artificial Analysis cache path. Default: .cache/artificial-analysis-llms.json.
-  --refresh-aa       Fetch fresh Artificial Analysis data when ARTIFICIAL_ANALYSIS_API_KEY is set.
-  --strict-aa        Fail when Artificial Analysis data is unavailable.
+  --allow-stale-aa   Explicitly allow the cache or static payload when live Artificial Analysis data is unavailable.
   --filter REGEX     Include matching model labels only.
   --exclude REGEX    Exclude matching model labels.
 
@@ -548,7 +532,7 @@ Environment:
   LITELLM_BEARER_TOKEN   Optional Bearer token.
   LITELLM_API_KEY        Optional x-api-key.
   LITELLM_COOKIE         Optional Cookie header.
-  ARTIFICIAL_ANALYSIS_API_KEY   Optional key for fresh AA benchmark matching.
+  ARTIFICIAL_ANALYSIS_API_KEY   Required for current AA benchmark matching.
 `);
       process.exit(0);
     } else {

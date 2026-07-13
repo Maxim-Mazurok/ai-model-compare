@@ -61,6 +61,8 @@ const PROVIDER_COLORS_STORAGE_KEY = "model-routes.provider-colors.v1";
 const MODELS_DATA_URL = `${import.meta.env.BASE_URL}data/models.json?v=${encodeURIComponent(__APP_RELEASE_ID__)}`;
 const RANGE_EPSILON = 0.0000001;
 const rangeFilterKeys = ["score", "price", "speed"] as const;
+const fallbackCostRangeKeys = ["price", "speed"] as const;
+const fallbackNumericRange = { min: 0, max: 1 };
 
 type RangeFilterKey = (typeof rangeFilterKeys)[number];
 type NumericRange = {
@@ -271,8 +273,17 @@ function constrainRange(range: NumericRange, domain: NumericDomain, changed: "mi
 function mergeRouteRanges(routeRanges: Partial<RangeFilters> | undefined, domains: RangeDomains) {
   const merged = rangesFromDomains(domains);
   if (!routeRanges) return merged;
+  const hasObsoleteFallbackCostRanges = fallbackCostRangeKeys.every((key) => {
+    const routeRange = routeRanges[key];
+    return (
+      routeRange &&
+      rangesAreClose(routeRange, fallbackNumericRange) &&
+      domains[key].max > fallbackNumericRange.max + RANGE_EPSILON
+    );
+  });
   for (const key of rangeFilterKeys) {
     const range = routeRanges[key];
+    if (hasObsoleteFallbackCostRanges && fallbackCostRangeKeys.includes(key as "price" | "speed")) continue;
     if (range) merged[key] = constrainRange(range, domains[key]);
   }
   return merged;
@@ -1305,15 +1316,15 @@ function App() {
 
   useEffect(() => {
     if (!payload || !profile || !routeHydrated) return;
-    setRangeFilters((existing) => {
-      const reconciled = reconcileRangeFilters(
+    const previousFilterDomains = previousFilterDomainsRef.current;
+    previousFilterDomainsRef.current = filterDomains;
+    setRangeFilters((existing) =>
+      reconcileRangeFilters(
         existing ?? rangesFromDomains(filterDomains),
         filterDomains,
-        previousFilterDomainsRef.current
-      );
-      previousFilterDomainsRef.current = filterDomains;
-      return reconciled;
-    });
+        previousFilterDomains
+      )
+    );
   }, [filterDomains, payload, profile, routeHydrated]);
 
   const providers = useMemo(() => {

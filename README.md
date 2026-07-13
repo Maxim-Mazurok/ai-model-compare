@@ -41,7 +41,7 @@ If a source fails and an older `config/model-routes.json` exists, the updater pr
 Optional updater env vars:
 
 - `GITHUB_TOKEN`: raises GitHub catalog/API rate limits. If unset, the updater tries `gh auth token` before unauthenticated GitHub requests.
-- `ARTIFICIAL_ANALYSIS_API_KEY`: lets `npm run build:data -- --refresh-aa` refresh Artificial Analysis benchmark data. Without it, the builder uses the local `.cache` file or the previously committed static payload.
+- `ARTIFICIAL_ANALYSIS_API_KEY`: required to build current Artificial Analysis benchmark data. The builder always fetches live data and fails rather than silently publishing stale benchmarks. For an explicitly offline or degraded run only, pass `--allow-stale-aa` to use the local cache or previous static payload.
 
 ## Provider Overlays
 
@@ -58,7 +58,7 @@ npm run export:overlay -- \
 
 `local/` is git-ignored. The exporter accepts `LITELLM_BEARER_TOKEN`, `LITELLM_API_KEY`, or `LITELLM_COOKIE` for private endpoints. Import the generated JSON from the app sidebar; overlays are stored in browser local storage and can be removed without touching committed data.
 
-For benchmark matching, the exporter uses `.cache/artificial-analysis-llms.json`, the committed static payload, or fresh Artificial Analysis data when `ARTIFICIAL_ANALYSIS_API_KEY` is set and `--refresh-aa` is passed. Use `--strict-aa` if an overlay export should fail instead of continuing without benchmark matches. A single imported model can carry multiple `benchmarks` entries when Artificial Analysis has separate reasoning, non-reasoning, or effort-mode rows; the app plots each benchmark mode separately. The app's footer diagnostic reports priced public and imported routes with no benchmark match; imported models with no public price route are not included in that benchmark-gap list.
+For benchmark matching, the exporter fetches fresh Artificial Analysis data when `ARTIFICIAL_ANALYSIS_API_KEY` is set and fails rather than silently exporting stale benchmark matches. For an explicitly offline or degraded run only, pass `--allow-stale-aa` to use `.cache/artificial-analysis-llms.json` or the committed static payload. A single imported model can carry multiple `benchmarks` entries when Artificial Analysis has separate reasoning, non-reasoning, or effort-mode rows; the app plots each benchmark mode separately. The app's footer diagnostic reports priced public and imported routes with no benchmark match; imported models with no public price route are not included in that benchmark-gap list.
 
 Overlay JSON shape:
 
@@ -90,10 +90,9 @@ The repository includes:
 
 Enable Pages in the GitHub repository settings and select **GitHub Actions** as the source. For a project page, the workflow sets Vite's `BASE_PATH` to `/<repo-name>/`; for a `*.github.io` user/org page, it uses `/`.
 
-Set either of these optional repository secrets if you want scheduled refreshes for gated sources:
+Set this repository secret for scheduled benchmark refreshes. The workflow fails instead of republishing prior benchmark data when it is not configured or the live Artificial Analysis request fails:
 
-- `ARTIFICIAL_ANALYSIS_API_KEY` (preferred)
-- `AA_API_KEY`
+- `ARTIFICIAL_ANALYSIS_API_KEY`
 
 ## Config Files
 

@@ -23,7 +23,7 @@ jobs:
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - run: npm run update:routes
-      - run: npm run build:data -- --refresh-aa
+      - run: npm run build:data
       - run: npm run build
       - name: Commit data changes
         run: |

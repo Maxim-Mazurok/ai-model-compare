@@ -1,6 +1,8 @@
 import fs from "node:fs/promises";
+import { webcrypto } from "node:crypto";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { gunzipSync } from "node:zlib";
 import vm from "node:vm";
 import dotenv from "dotenv";
 
@@ -201,7 +203,7 @@ async function getArtificialAnalysisWebsiteModels({ allowStaleArtificialAnalysis
   return {
     fetchedAt: null,
     source: "unavailable",
-    warning: "Live Artificial Analysis website model data was unavailable; task cost may fall back to token cost.",
+    warning: "Live Artificial Analysis website model data was unavailable; task cost coverage may be reduced.",
     models: []
   };
 }
@@ -215,7 +217,12 @@ async function fetchArtificialAnalysisWebsiteModels() {
   }
 
   const html = await response.text();
-  const models = parseArtificialAnalysisWebsiteModels(html);
+  const { initialModels, manifests } = parseArtificialAnalysisWebsitePage(html);
+  const manifestModelArrays = await Promise.all(manifests.map(fetchWebsiteManifestModels));
+  const models = [...manifestModelArrays, initialModels]
+    .filter((value) => Array.isArray(value))
+    .sort((first, second) => scoreWebsiteModelArray(second) - scoreWebsiteModelArray(first))[0];
+  if (!models?.length) throw new Error("Artificial Analysis models page did not provide model data.");
   const fetchedAt = new Date().toISOString();
   await fs.mkdir(path.dirname(websiteModelsCachePath), { recursive: true });
   await fs.writeFile(websiteModelsCachePath, `${JSON.stringify({ fetchedAt, models }, null, 2)}\n`, "utf8");
@@ -227,6 +234,52 @@ async function fetchArtificialAnalysisWebsiteModels() {
   };
 }
 
+async function fetchWebsiteManifestModels(manifest) {
+  const manifestUrl = new URL(manifest.path, AA_MODELS_PAGE_URL);
+  if (manifestUrl.origin !== new URL(AA_MODELS_PAGE_URL).origin) {
+    throw new Error(`Artificial Analysis manifest has an unexpected origin: ${manifestUrl.origin}`);
+  }
+
+  const response = await fetch(manifestUrl);
+  if (!response.ok) {
+    throw new Error(`Artificial Analysis model manifest returned ${response.status}.`);
+  }
+
+  const payload = manifest.key
+    ? await decryptWebsiteManifest(await response.arrayBuffer(), manifest.key)
+    : await response.json();
+  return Array.isArray(payload?.models) ? payload.models : [];
+}
+
+async function decryptWebsiteManifest(encryptedData, key) {
+  const keyBytes = bytesFromHex(key);
+  const digest = await webcrypto.subtle.digest("SHA-256", keyBytes);
+  const cryptoKey = await webcrypto.subtle.importKey(
+    "raw",
+    keyBytes,
+    { name: "AES-GCM" },
+    false,
+    ["decrypt"]
+  );
+  const decryptedData = await webcrypto.subtle.decrypt(
+    {
+      name: "AES-GCM",
+      iv: new Uint8Array(digest).slice(0, 12),
+      tagLength: 128
+    },
+    cryptoKey,
+    encryptedData
+  );
+  return JSON.parse(gunzipSync(Buffer.from(decryptedData)).toString("utf8"));
+}
+
+function bytesFromHex(value) {
+  if (!/^[\da-f]+$/i.test(value) || value.length % 2 !== 0) {
+    throw new Error("Artificial Analysis manifest key is not valid hexadecimal.");
+  }
+  return Uint8Array.from(value.match(/.{2}/g).map((bytePair) => Number.parseInt(bytePair, 16)));
+}
+
 async function readWebsiteModelsCache() {
   try {
     return JSON.parse(await fs.readFile(websiteModelsCachePath, "utf8"));
@@ -235,16 +288,25 @@ async function readWebsiteModelsCache() {
   }
 }
 
-function parseArtificialAnalysisWebsiteModels(html) {
+function parseArtificialAnalysisWebsitePage(html) {
   const flightData = decodeNextFlightData(html);
   const arrays = [
     ...extractJsonArraysAfterMarker(flightData, '"initialModels":'),
     ...extractJsonArraysAfterMarker(flightData, '"defaultData":')
   ];
-  const modelArray = arrays
+  const initialModels = arrays
     .filter((value) => Array.isArray(value))
-    .sort((a, b) => scoreWebsiteModelArray(b) - scoreWebsiteModelArray(a))[0];
-  return Array.isArray(modelArray) ? modelArray : [];
+    .sort((first, second) => scoreWebsiteModelArray(second) - scoreWebsiteModelArray(first))[0];
+  const manifests = extractJsonValuesAfterMarker(flightData, '"manifest":')
+    .filter((value) => isPlainObject(value) && cleanText(value.path))
+    .filter(
+      (manifest, index, values) =>
+        values.findIndex((candidate) => candidate.path === manifest.path && candidate.key === manifest.key) === index
+    );
+  return {
+    initialModels: Array.isArray(initialModels) ? initialModels : [],
+    manifests
+  };
 }
 
 function decodeNextFlightData(html) {
@@ -267,7 +329,11 @@ function decodeNextFlightData(html) {
 }
 
 function extractJsonArraysAfterMarker(value, marker) {
-  const arrays = [];
+  return extractJsonValuesAfterMarker(value, marker).filter(Array.isArray);
+}
+
+function extractJsonValuesAfterMarker(value, marker) {
+  const values = [];
   let searchFrom = 0;
   while (searchFrom < value.length) {
     const markerIndex = value.indexOf(marker, searchFrom);
@@ -276,7 +342,7 @@ function extractJsonArraysAfterMarker(value, marker) {
     const end = findJsonValueEnd(value, start);
     if (end !== -1) {
       try {
-        arrays.push(JSON.parse(value.slice(start, end)));
+        values.push(JSON.parse(value.slice(start, end)));
       } catch {
         // Ignore malformed or partial RSC values.
       }
@@ -285,7 +351,7 @@ function extractJsonArraysAfterMarker(value, marker) {
       searchFrom = start;
     }
   }
-  return arrays;
+  return values;
 }
 
 function findJsonValueEnd(value, start) {
@@ -396,7 +462,7 @@ function mergeWebsiteModelData(models, websiteModels) {
 function buildWebsiteModelLookup(models) {
   const lookup = new Map();
   for (const model of models) {
-    for (const key of [model.id, model.slug, model.name].flatMap(candidateKeys)) {
+    for (const key of exactModelKeys(model)) {
       if (!lookup.has(key)) lookup.set(key, model);
     }
   }
@@ -404,11 +470,19 @@ function buildWebsiteModelLookup(models) {
 }
 
 function findWebsiteModel(model, lookup) {
-  for (const key of [model.id, model.slug, model.name].flatMap(candidateKeys)) {
+  for (const key of exactModelKeys(model)) {
     const match = lookup.get(key);
     if (match) return match;
   }
   return null;
+}
+
+function exactModelKeys(model) {
+  return uniqueOrdered(
+    [model.id, model.slug, model.name]
+      .map((value) => cleanText(value).toLowerCase())
+      .filter(Boolean)
+  );
 }
 
 function previousArtificialAnalysis(previousPayload) {

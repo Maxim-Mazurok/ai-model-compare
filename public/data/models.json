@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-13T04:46:48.212Z",
+  "generatedAt": "2026-07-13T05:27:14.724Z",
   "artificialAnalysis": {
     "endpoint": "https://artificialanalysis.ai/api/v2/data/llms/models",
-    "fetchedAt": "2026-07-13T04:46:48.089Z",
+    "fetchedAt": "2026-07-13T05:27:14.411Z",
     "source": "live",
     "warning": null,
     "modelCount": 572,
@@ -12,10 +12,10 @@
     },
     "websiteModels": {
       "url": "https://artificialanalysis.ai/models",
-      "fetchedAt": "2026-07-13T04:46:48.190Z",
+      "fetchedAt": "2026-07-13T05:27:14.704Z",
       "source": "live",
       "warning": null,
-      "modelCount": 28
+      "modelCount": 572
     },
     "attribution": "Data from Artificial Analysis: https://artificialanalysis.ai/"
   },
@@ -388,19 +388,8 @@
           "timeToFirstTokenSeconds": 0.612,
           "timeToFirstAnswerTokenSeconds": 0.612
         },
-        "intelligenceIndexCost": {
-          "total": 563.5089486807195,
-          "input": 122.8408486807195,
-          "output": 440.66810000000004,
-          "reasoning": 402.01882500000005,
-          "answer": 38.649274999999996
-        },
-        "intelligenceIndexTokenCounts": {
-          "input": 290134058,
-          "output": 88133620,
-          "reasoning": 80403765,
-          "answer": 7729855
-        }
+        "intelligenceIndexCost": null,
+        "intelligenceIndexTokenCounts": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 98.02,
@@ -816,8 +805,19 @@
           "timeToFirstTokenSeconds": 21.315,
           "timeToFirstAnswerTokenSeconds": 21.315
         },
-        "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCost": {
+          "total": 3737.818042898671,
+          "input": 1236.1138178986712,
+          "output": 2501.704225,
+          "reasoning": 2184.9446,
+          "answer": 316.75962499999997
+        },
+        "intelligenceIndexTokenCounts": {
+          "input": 1249003347,
+          "output": 100068169,
+          "reasoning": 87397784,
+          "answer": 12670385
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 51.991,
@@ -1131,8 +1131,19 @@
           "timeToFirstTokenSeconds": 9.569,
           "timeToFirstAnswerTokenSeconds": 9.569
         },
-        "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCost": {
+          "total": 1132.8540777463882,
+          "input": 186.08062774638807,
+          "output": 946.7734500000001,
+          "reasoning": 845.4071100000001,
+          "answer": 101.36634
+        },
+        "intelligenceIndexTokenCounts": {
+          "input": 256788429,
+          "output": 63118230,
+          "reasoning": 56360474,
+          "answer": 6757756
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 52.006,
@@ -1359,8 +1370,19 @@
           "timeToFirstTokenSeconds": 81.438,
           "timeToFirstAnswerTokenSeconds": 81.438
         },
-        "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCost": {
+          "total": 3355.8518741364983,
+          "input": 404.68930913649876,
+          "output": 2951.1625649999996,
+          "reasoning": 2801.87598,
+          "answer": 149.286585
+        },
+        "intelligenceIndexTokenCounts": {
+          "input": 740675207,
+          "output": 196744171,
+          "reasoning": 186791732,
+          "answer": 9952439
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 65.793,
@@ -3266,8 +3288,19 @@
           "timeToFirstTokenSeconds": 0.18,
           "timeToFirstAnswerTokenSeconds": 11.395
         },
-        "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCost": {
+          "total": 0,
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "answer": 0
+        },
+        "intelligenceIndexTokenCounts": {
+          "input": 387602650,
+          "output": 63167025,
+          "reasoning": 56033578,
+          "answer": 7133447
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 178.331,
@@ -3385,8 +3418,19 @@
           "timeToFirstTokenSeconds": 0.18,
           "timeToFirstAnswerTokenSeconds": 11.395
         },
-        "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCost": {
+          "total": 0,
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "answer": 0
+        },
+        "intelligenceIndexTokenCounts": {
+          "input": 387602650,
+          "output": 63167025,
+          "reasoning": 56033578,
+          "answer": 7133447
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 178.331,
@@ -3866,8 +3910,19 @@
           "timeToFirstTokenSeconds": 0.18,
           "timeToFirstAnswerTokenSeconds": 11.395
         },
-        "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCost": {
+          "total": 0,
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "answer": 0
+        },
+        "intelligenceIndexTokenCounts": {
+          "input": 387602650,
+          "output": 63167025,
+          "reasoning": 56033578,
+          "answer": 7133447
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 178.331,
@@ -4466,8 +4521,19 @@
           "timeToFirstTokenSeconds": 0.18,
           "timeToFirstAnswerTokenSeconds": 11.395
         },
-        "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCost": {
+          "total": 0,
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "answer": 0
+        },
+        "intelligenceIndexTokenCounts": {
+          "input": 387602650,
+          "output": 63167025,
+          "reasoning": 56033578,
+          "answer": 7133447
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 178.331,
@@ -5942,8 +6008,19 @@
           "timeToFirstTokenSeconds": 0,
           "timeToFirstAnswerTokenSeconds": 0
         },
-        "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCost": {
+          "total": 415.907224975,
+          "input": 212.47310177500003,
+          "output": 203.4341232,
+          "reasoning": 181.4152718,
+          "answer": 22.0188514
+        },
+        "intelligenceIndexTokenCounts": {
+          "input": 126849613,
+          "output": 43283856,
+          "reasoning": 38598994,
+          "answer": 4684862
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -6404,8 +6481,19 @@
           "timeToFirstTokenSeconds": 0,
           "timeToFirstAnswerTokenSeconds": 0
         },
-        "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCost": {
+          "total": 137.78945643999998,
+          "input": 132.08877768999997,
+          "output": 5.70067875,
+          "reasoning": 0,
+          "answer": 5.70067875
+        },
+        "intelligenceIndexTokenCounts": {
+          "input": 110534542,
+          "output": 4560543,
+          "reasoning": 0,
+          "answer": 4560543
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -7893,7 +7981,12 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexTokenCounts": {
+          "input": 279080933,
+          "output": 62904844,
+          "reasoning": 56555734,
+          "answer": 6349110
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -9097,7 +9190,12 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexTokenCounts": {
+          "input": 279080933,
+          "output": 62904844,
+          "reasoning": 56555734,
+          "answer": 6349110
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -9792,8 +9890,19 @@
           "timeToFirstTokenSeconds": 0,
           "timeToFirstAnswerTokenSeconds": 0
         },
-        "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCost": {
+          "total": 21.71614493,
+          "input": 18.7785424,
+          "output": 2.93760253,
+          "reasoning": 0,
+          "answer": 2.93760253
+        },
+        "intelligenceIndexTokenCounts": {
+          "input": 46946356,
+          "output": 3300677,
+          "reasoning": 0,
+          "answer": 3300677
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -10248,8 +10357,19 @@
           "timeToFirstTokenSeconds": 0,
           "timeToFirstAnswerTokenSeconds": 0
         },
-        "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCost": {
+          "total": 137.78945643999998,
+          "input": 132.08877768999997,
+          "output": 5.70067875,
+          "reasoning": 0,
+          "answer": 5.70067875
+        },
+        "intelligenceIndexTokenCounts": {
+          "input": 110534542,
+          "output": 4560543,
+          "reasoning": 0,
+          "answer": 4560543
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -11223,19 +11343,8 @@
           "timeToFirstTokenSeconds": 0,
           "timeToFirstAnswerTokenSeconds": 0
         },
-        "intelligenceIndexCost": {
-          "total": 74.3126277163192,
-          "input": 8.879784436319195,
-          "output": 65.43284328,
-          "reasoning": 62.714646120000005,
-          "answer": 2.71819716
-        },
-        "intelligenceIndexTokenCounts": {
-          "input": 706433645,
-          "output": 233688726,
-          "reasoning": 223980879,
-          "answer": 9707847
-        }
+        "intelligenceIndexCost": null,
+        "intelligenceIndexTokenCounts": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -11716,19 +11825,8 @@
           "timeToFirstTokenSeconds": 0.912,
           "timeToFirstAnswerTokenSeconds": 0.912
         },
-        "intelligenceIndexCost": {
-          "total": 74.3126277163192,
-          "input": 8.879784436319195,
-          "output": 65.43284328,
-          "reasoning": 62.714646120000005,
-          "answer": 2.71819716
-        },
-        "intelligenceIndexTokenCounts": {
-          "input": 706433645,
-          "output": 233688726,
-          "reasoning": 223980879,
-          "answer": 9707847
-        }
+        "intelligenceIndexCost": null,
+        "intelligenceIndexTokenCounts": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 103.799,
@@ -11978,19 +12076,8 @@
           "timeToFirstTokenSeconds": 0,
           "timeToFirstAnswerTokenSeconds": 0
         },
-        "intelligenceIndexCost": {
-          "total": 74.3126277163192,
-          "input": 8.879784436319195,
-          "output": 65.43284328,
-          "reasoning": 62.714646120000005,
-          "answer": 2.71819716
-        },
-        "intelligenceIndexTokenCounts": {
-          "input": 706433645,
-          "output": 233688726,
-          "reasoning": 223980879,
-          "answer": 9707847
-        }
+        "intelligenceIndexCost": null,
+        "intelligenceIndexTokenCounts": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -12109,19 +12196,8 @@
           "timeToFirstTokenSeconds": 0.912,
           "timeToFirstAnswerTokenSeconds": 0.912
         },
-        "intelligenceIndexCost": {
-          "total": 74.3126277163192,
-          "input": 8.879784436319195,
-          "output": 65.43284328,
-          "reasoning": 62.714646120000005,
-          "answer": 2.71819716
-        },
-        "intelligenceIndexTokenCounts": {
-          "input": 706433645,
-          "output": 233688726,
-          "reasoning": 223980879,
-          "answer": 9707847
-        }
+        "intelligenceIndexCost": null,
+        "intelligenceIndexTokenCounts": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 103.799,
@@ -13095,19 +13171,8 @@
           "timeToFirstTokenSeconds": 1.056,
           "timeToFirstAnswerTokenSeconds": 35.043
         },
-        "intelligenceIndexCost": {
-          "total": 176.33920107780003,
-          "input": 15.6498609078,
-          "output": 160.68934017000004,
-          "reasoning": 153.45185715000002,
-          "answer": 7.23748302
-        },
-        "intelligenceIndexTokenCounts": {
-          "input": 360257045,
-          "output": 184700391,
-          "reasoning": 176381445,
-          "answer": 8318946
-        }
+        "intelligenceIndexCost": null,
+        "intelligenceIndexTokenCounts": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 58.612,
@@ -13588,19 +13653,8 @@
           "timeToFirstTokenSeconds": 1.186,
           "timeToFirstAnswerTokenSeconds": 1.186
         },
-        "intelligenceIndexCost": {
-          "total": 176.33920107780003,
-          "input": 15.6498609078,
-          "output": 160.68934017000004,
-          "reasoning": 153.45185715000002,
-          "answer": 7.23748302
-        },
-        "intelligenceIndexTokenCounts": {
-          "input": 360257045,
-          "output": 184700391,
-          "reasoning": 176381445,
-          "answer": 8318946
-        }
+        "intelligenceIndexCost": null,
+        "intelligenceIndexTokenCounts": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 65.06,
@@ -13850,19 +13904,8 @@
           "timeToFirstTokenSeconds": 1.056,
           "timeToFirstAnswerTokenSeconds": 35.043
         },
-        "intelligenceIndexCost": {
-          "total": 176.33920107780003,
-          "input": 15.6498609078,
-          "output": 160.68934017000004,
-          "reasoning": 153.45185715000002,
-          "answer": 7.23748302
-        },
-        "intelligenceIndexTokenCounts": {
-          "input": 360257045,
-          "output": 184700391,
-          "reasoning": 176381445,
-          "answer": 8318946
-        }
+        "intelligenceIndexCost": null,
+        "intelligenceIndexTokenCounts": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 58.612,
@@ -13981,19 +14024,8 @@
           "timeToFirstTokenSeconds": 1.186,
           "timeToFirstAnswerTokenSeconds": 1.186
         },
-        "intelligenceIndexCost": {
-          "total": 176.33920107780003,
-          "input": 15.6498609078,
-          "output": 160.68934017000004,
-          "reasoning": 153.45185715000002,
-          "answer": 7.23748302
-        },
-        "intelligenceIndexTokenCounts": {
-          "input": 360257045,
-          "output": 184700391,
-          "reasoning": 176381445,
-          "answer": 8318946
-        }
+        "intelligenceIndexCost": null,
+        "intelligenceIndexTokenCounts": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 65.06,
@@ -15304,8 +15336,19 @@
           "timeToFirstTokenSeconds": 0.604,
           "timeToFirstAnswerTokenSeconds": 0.604
         },
-        "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCost": {
+          "total": 74.66657720190258,
+          "input": 66.39131800190259,
+          "output": 8.2752592,
+          "reasoning": 0,
+          "answer": 8.2752592
+        },
+        "intelligenceIndexTokenCounts": {
+          "input": 425945208,
+          "output": 5172037,
+          "reasoning": 0,
+          "answer": 5172037
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 85.729,
@@ -15764,8 +15807,19 @@
           "timeToFirstTokenSeconds": 0.47,
           "timeToFirstAnswerTokenSeconds": 0.47
         },
-        "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCost": {
+          "total": 48.66022745977035,
+          "input": 45.18142985977035,
+          "output": 3.4787976,
+          "reasoning": 0,
+          "answer": 3.4787976
+        },
+        "intelligenceIndexTokenCounts": {
+          "input": 1115692544,
+          "output": 8696994,
+          "reasoning": 0,
+          "answer": 8696994
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 148.894,
@@ -20898,7 +20952,12 @@
           "timeToFirstAnswerTokenSeconds": 74.735
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexTokenCounts": {
+          "input": 168410463,
+          "output": 60178727,
+          "reasoning": 56916694,
+          "answer": 3262033
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 97.5,
@@ -25380,7 +25439,12 @@
           "timeToFirstAnswerTokenSeconds": 31.974
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexTokenCounts": {
+          "input": 176928737,
+          "output": 71887075,
+          "reasoning": 66352785,
+          "answer": 5534290
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 114.331,
@@ -30620,8 +30684,19 @@
           "timeToFirstTokenSeconds": 5.257,
           "timeToFirstAnswerTokenSeconds": 5.257
         },
-        "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCost": {
+          "total": 1095.4286040534348,
+          "input": 121.45829705343488,
+          "output": 973.9703069999999,
+          "reasoning": 952.0490295,
+          "answer": 21.9212775
+        },
+        "intelligenceIndexTokenCounts": {
+          "input": 710837888,
+          "output": 216437846,
+          "reasoning": 211566451,
+          "answer": 4871395
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 170.59,
@@ -31983,7 +32058,12 @@
           "timeToFirstAnswerTokenSeconds": 2.619
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexTokenCounts": {
+          "input": 1092774545,
+          "output": 181993479,
+          "reasoning": 174869960,
+          "answer": 7123519
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 175.767,
@@ -34213,8 +34293,19 @@
           "timeToFirstTokenSeconds": 103.971,
           "timeToFirstAnswerTokenSeconds": 103.971
         },
-        "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCost": {
+          "total": 2131.7653830456115,
+          "input": 490.3601730456113,
+          "output": 1641.4052100000001,
+          "reasoning": 1552.897455,
+          "answer": 88.507755
+        },
+        "intelligenceIndexTokenCounts": {
+          "input": 764807431,
+          "output": 109427014,
+          "reasoning": 103526497,
+          "answer": 5900517
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 160.921,
@@ -36403,8 +36494,19 @@
           "timeToFirstTokenSeconds": 75.491,
           "timeToFirstAnswerTokenSeconds": 75.491
         },
-        "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCost": {
+          "total": 813.0461276711862,
+          "input": 98.82370767118633,
+          "output": 714.2224199999999,
+          "reasoning": 668.35943,
+          "answer": 45.86299
+        },
+        "intelligenceIndexTokenCounts": {
+          "input": 224216622,
+          "output": 71422242,
+          "reasoning": 66835943,
+          "answer": 4586299
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 101.584,
@@ -39182,19 +39284,8 @@
           "timeToFirstTokenSeconds": 0.534,
           "timeToFirstAnswerTokenSeconds": 6.24
         },
-        "intelligenceIndexCost": {
-          "total": 96.276024,
-          "input": 43.8453252,
-          "output": 52.4306988,
-          "reasoning": 48.8940852,
-          "answer": 3.5366136
-        },
-        "intelligenceIndexTokenCounts": {
-          "input": 292302168,
-          "output": 87384498,
-          "reasoning": 81490142,
-          "answer": 5894356
-        }
+        "intelligenceIndexCost": null,
+        "intelligenceIndexTokenCounts": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 350.5,
@@ -39444,19 +39535,8 @@
           "timeToFirstTokenSeconds": 0.534,
           "timeToFirstAnswerTokenSeconds": 6.24
         },
-        "intelligenceIndexCost": {
-          "total": 96.276024,
-          "input": 43.8453252,
-          "output": 52.4306988,
-          "reasoning": 48.8940852,
-          "answer": 3.5366136
-        },
-        "intelligenceIndexTokenCounts": {
-          "input": 292302168,
-          "output": 87384498,
-          "reasoning": 81490142,
-          "answer": 5894356
-        }
+        "intelligenceIndexCost": null,
+        "intelligenceIndexTokenCounts": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 350.5,
@@ -47332,12 +47412,7 @@
           "timeToFirstAnswerTokenSeconds": 1.126
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": {
-          "input": 541446720,
-          "output": 165134126,
-          "reasoning": 158886993,
-          "answer": 6247133
-        }
+        "intelligenceIndexTokenCounts": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 46.454,
@@ -47582,12 +47657,7 @@
           "timeToFirstAnswerTokenSeconds": 1.126
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": {
-          "input": 541446720,
-          "output": 165134126,
-          "reasoning": 158886993,
-          "answer": 6247133
-        }
+        "intelligenceIndexTokenCounts": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 46.454,
@@ -48061,7 +48131,12 @@
           "timeToFirstAnswerTokenSeconds": 49.503
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexTokenCounts": {
+          "input": 501197711,
+          "output": 103697294,
+          "reasoning": 97627244,
+          "answer": 6070050
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 46.117,
@@ -48181,7 +48256,12 @@
           "timeToFirstAnswerTokenSeconds": 49.503
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexTokenCounts": {
+          "input": 501197711,
+          "output": 103697294,
+          "reasoning": 97627244,
+          "answer": 6070050
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 46.117,
@@ -49716,8 +49796,19 @@
           "timeToFirstTokenSeconds": 0.611,
           "timeToFirstAnswerTokenSeconds": 0.611
         },
-        "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCost": {
+          "total": 71.038521,
+          "input": 62.611368,
+          "output": 8.427153,
+          "reasoning": 0,
+          "answer": 8.427153
+        },
+        "intelligenceIndexTokenCounts": {
+          "input": 125222736,
+          "output": 5618102,
+          "reasoning": 0,
+          "answer": 5618102
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 62.116,
@@ -49836,8 +49927,19 @@
           "timeToFirstTokenSeconds": 0.611,
           "timeToFirstAnswerTokenSeconds": 0.611
         },
-        "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCost": {
+          "total": 71.038521,
+          "input": 62.611368,
+          "output": 8.427153,
+          "reasoning": 0,
+          "answer": 8.427153
+        },
+        "intelligenceIndexTokenCounts": {
+          "input": 125222736,
+          "output": 5618102,
+          "reasoning": 0,
+          "answer": 5618102
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 62.116,
@@ -53774,7 +53876,12 @@
           "timeToFirstAnswerTokenSeconds": 15.997
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexTokenCounts": {
+          "input": 25592872,
+          "output": 63154850,
+          "reasoning": 55530466,
+          "answer": 7624384
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 237.423,
@@ -55126,8 +55233,19 @@
           "timeToFirstTokenSeconds": 5.257,
           "timeToFirstAnswerTokenSeconds": 5.257
         },
-        "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCost": {
+          "total": 1095.4286040534348,
+          "input": 121.45829705343488,
+          "output": 973.9703069999999,
+          "reasoning": 952.0490295,
+          "answer": 21.9212775
+        },
+        "intelligenceIndexTokenCounts": {
+          "input": 710837888,
+          "output": 216437846,
+          "reasoning": 211566451,
+          "answer": 4871395
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 170.59,
@@ -55393,8 +55511,19 @@
           "timeToFirstTokenSeconds": 103.971,
           "timeToFirstAnswerTokenSeconds": 103.971
         },
-        "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCost": {
+          "total": 2131.7653830456115,
+          "input": 490.3601730456113,
+          "output": 1641.4052100000001,
+          "reasoning": 1552.897455,
+          "answer": 88.507755
+        },
+        "intelligenceIndexTokenCounts": {
+          "input": 764807431,
+          "output": 109427014,
+          "reasoning": 103526497,
+          "answer": 5900517
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 160.921,
@@ -55811,17 +55940,17 @@
           "timeToFirstAnswerTokenSeconds": 1.667
         },
         "intelligenceIndexCost": {
-          "total": 2777.91267321098,
-          "input": 608.8605932109801,
-          "output": 2169.05208,
-          "reasoning": 2037.2752500000001,
-          "answer": 131.77683
+          "total": 375.23018994095116,
+          "input": 171.33830994095118,
+          "output": 203.89188000000001,
+          "reasoning": 138.69840000000002,
+          "answer": 65.19348
         },
         "intelligenceIndexTokenCounts": {
-          "input": 364032098,
-          "output": 72301736,
-          "reasoning": 67909175,
-          "answer": 4392561
+          "input": 74841605,
+          "output": 6796396,
+          "reasoning": 4623280,
+          "answer": 2173116
         }
       },
       "effectivePerformance": {
@@ -55911,17 +56040,17 @@
           "timeToFirstAnswerTokenSeconds": 17.136
         },
         "intelligenceIndexCost": {
-          "total": 2777.91267321098,
-          "input": 608.8605932109801,
-          "output": 2169.05208,
-          "reasoning": 2037.2752500000001,
-          "answer": 131.77683
+          "total": 1719.1614806271946,
+          "input": 434.27267062719454,
+          "output": 1284.88881,
+          "reasoning": 1166.03919,
+          "answer": 118.84961999999999
         },
         "intelligenceIndexTokenCounts": {
-          "input": 364032098,
-          "output": 72301736,
-          "reasoning": 67909175,
-          "answer": 4392561
+          "input": 243354307,
+          "output": 42829627,
+          "reasoning": 38867973,
+          "answer": 3961654
         }
       },
       "effectivePerformance": {
@@ -56011,17 +56140,17 @@
           "timeToFirstAnswerTokenSeconds": 0.898
         },
         "intelligenceIndexCost": {
-          "total": 2777.91267321098,
-          "input": 608.8605932109801,
-          "output": 2169.05208,
-          "reasoning": 2037.2752500000001,
-          "answer": 131.77683
+          "total": 211.108561232046,
+          "input": 144.982501232046,
+          "output": 66.12606,
+          "reasoning": 0,
+          "answer": 66.12606
         },
         "intelligenceIndexTokenCounts": {
-          "input": 364032098,
-          "output": 72301736,
-          "reasoning": 67909175,
-          "answer": 4392561
+          "input": 62259688,
+          "output": 2204202,
+          "reasoning": 0,
+          "answer": 2204202
         }
       },
       "effectivePerformance": {
@@ -56111,17 +56240,17 @@
           "timeToFirstAnswerTokenSeconds": 4.463
         },
         "intelligenceIndexCost": {
-          "total": 2777.91267321098,
-          "input": 608.8605932109801,
-          "output": 2169.05208,
-          "reasoning": 2037.2752500000001,
-          "answer": 131.77683
+          "total": 935.7674958905204,
+          "input": 296.7807258905204,
+          "output": 638.9867700000001,
+          "reasoning": 540.2006700000001,
+          "answer": 98.7861
         },
         "intelligenceIndexTokenCounts": {
-          "input": 364032098,
-          "output": 72301736,
-          "reasoning": 67909175,
-          "answer": 4392561
+          "input": 151071671,
+          "output": 21299559,
+          "reasoning": 18006689,
+          "answer": 3292870
         }
       },
       "effectivePerformance": {
@@ -56306,10 +56435,10 @@
         },
         "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 735104000,
-          "output": 125011185,
-          "reasoning": 119164889,
-          "answer": 5846296
+          "input": 178574058,
+          "output": 2357378,
+          "reasoning": 0,
+          "answer": 2357378
         }
       },
       "effectivePerformance": {
@@ -56400,10 +56529,10 @@
         },
         "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 735104000,
-          "output": 125011185,
-          "reasoning": 119164889,
-          "answer": 5846296
+          "input": 275954649,
+          "output": 37034644,
+          "reasoning": 32869193,
+          "answer": 4165451
         }
       },
       "effectivePerformance": {
@@ -56494,10 +56623,10 @@
         },
         "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 735104000,
-          "output": 125011185,
-          "reasoning": 119164889,
-          "answer": 5846296
+          "input": 451473364,
+          "output": 66735431,
+          "reasoning": 61793495,
+          "answer": 4941936
         }
       },
       "effectivePerformance": {
@@ -56588,10 +56717,10 @@
         },
         "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 735104000,
-          "output": 125011185,
-          "reasoning": 119164889,
-          "answer": 5846296
+          "input": 125428616,
+          "output": 12479860,
+          "reasoning": 9679021,
+          "answer": 2800839
         }
       },
       "effectivePerformance": {
@@ -56682,10 +56811,10 @@
         },
         "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 735104000,
-          "output": 125011185,
-          "reasoning": 119164889,
-          "answer": 5846296
+          "input": 109194342,
+          "output": 6971397,
+          "reasoning": 4830848,
+          "answer": 2140549
         }
       },
       "effectivePerformance": {
@@ -56874,18 +57003,12 @@
           "timeToFirstTokenSeconds": 26.691,
           "timeToFirstAnswerTokenSeconds": 26.691
         },
-        "intelligenceIndexCost": {
-          "total": 2824.1811935690976,
-          "input": 721.6095335690973,
-          "output": 2102.57166,
-          "reasoning": 1903.65387,
-          "answer": 198.91779
-        },
+        "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 983476165,
-          "output": 70085722,
-          "reasoning": 63455129,
-          "answer": 6630593
+          "input": 530833840,
+          "output": 35398293,
+          "reasoning": 29807525,
+          "answer": 5590768
         }
       },
       "effectivePerformance": {
@@ -56974,18 +57097,12 @@
           "timeToFirstTokenSeconds": 10.187,
           "timeToFirstAnswerTokenSeconds": 10.187
         },
-        "intelligenceIndexCost": {
-          "total": 2824.1811935690976,
-          "input": 721.6095335690973,
-          "output": 2102.57166,
-          "reasoning": 1903.65387,
-          "answer": 198.91779
-        },
+        "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 983476165,
-          "output": 70085722,
-          "reasoning": 63455129,
-          "answer": 6630593
+          "input": 340868286,
+          "output": 21248736,
+          "reasoning": 16679685,
+          "answer": 4569051
         }
       },
       "effectivePerformance": {
@@ -57074,18 +57191,12 @@
           "timeToFirstTokenSeconds": 0,
           "timeToFirstAnswerTokenSeconds": 0
         },
-        "intelligenceIndexCost": {
-          "total": 2824.1811935690976,
-          "input": 721.6095335690973,
-          "output": 2102.57166,
-          "reasoning": 1903.65387,
-          "answer": 198.91779
-        },
+        "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 983476165,
-          "output": 70085722,
-          "reasoning": 63455129,
-          "answer": 6630593
+          "input": 109764766,
+          "output": 2648394,
+          "reasoning": 0,
+          "answer": 2648394
         }
       },
       "effectivePerformance": {
@@ -57174,18 +57285,12 @@
           "timeToFirstTokenSeconds": 4.41,
           "timeToFirstAnswerTokenSeconds": 4.41
         },
-        "intelligenceIndexCost": {
-          "total": 2824.1811935690976,
-          "input": 721.6095335690973,
-          "output": 2102.57166,
-          "reasoning": 1903.65387,
-          "answer": 198.91779
-        },
+        "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 983476165,
-          "output": 70085722,
-          "reasoning": 63455129,
-          "answer": 6630593
+          "input": 186750881,
+          "output": 11976871,
+          "reasoning": 8440916,
+          "answer": 3535955
         }
       },
       "effectivePerformance": {
@@ -57274,18 +57379,12 @@
           "timeToFirstTokenSeconds": 2.228,
           "timeToFirstAnswerTokenSeconds": 2.228
         },
-        "intelligenceIndexCost": {
-          "total": 2824.1811935690976,
-          "input": 721.6095335690973,
-          "output": 2102.57166,
-          "reasoning": 1903.65387,
-          "answer": 198.91779
-        },
+        "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 983476165,
-          "output": 70085722,
-          "reasoning": 63455129,
-          "answer": 6630593
+          "input": 93508215,
+          "output": 6584353,
+          "reasoning": 4022472,
+          "answer": 2561881
         }
       },
       "effectivePerformance": {
@@ -57475,17 +57574,17 @@
           "timeToFirstAnswerTokenSeconds": 1.285
         },
         "intelligenceIndexCost": {
-          "total": 1753.9430217187164,
-          "input": 321.30323671871633,
-          "output": 1432.639785,
-          "reasoning": 1340.054355,
-          "answer": 92.58543
+          "total": 160.65181576963076,
+          "input": 71.57601076963076,
+          "output": 89.075805,
+          "reasoning": 56.383559999999996,
+          "answer": 32.692245
         },
         "intelligenceIndexTokenCounts": {
-          "input": 796956198,
-          "output": 95509319,
-          "reasoning": 89336957,
-          "answer": 6172362
+          "input": 113805974,
+          "output": 5938387,
+          "reasoning": 3758904,
+          "answer": 2179483
         }
       },
       "effectivePerformance": {
@@ -57575,17 +57674,17 @@
           "timeToFirstAnswerTokenSeconds": 10.58
         },
         "intelligenceIndexCost": {
-          "total": 1753.9430217187164,
-          "input": 321.30323671871633,
-          "output": 1432.639785,
-          "reasoning": 1340.054355,
-          "answer": 92.58543
+          "total": 740.2127921059758,
+          "input": 194.7244721059758,
+          "output": 545.48832,
+          "reasoning": 466.70544,
+          "answer": 78.78288
         },
         "intelligenceIndexTokenCounts": {
-          "input": 796956198,
-          "output": 95509319,
-          "reasoning": 89336957,
-          "answer": 6172362
+          "input": 446457787,
+          "output": 36365888,
+          "reasoning": 31113696,
+          "answer": 5252192
         }
       },
       "effectivePerformance": {
@@ -57674,18 +57773,12 @@
           "timeToFirstTokenSeconds": 0.693,
           "timeToFirstAnswerTokenSeconds": 0.693
         },
-        "intelligenceIndexCost": {
-          "total": 1753.9430217187164,
-          "input": 321.30323671871633,
-          "output": 1432.639785,
-          "reasoning": 1340.054355,
-          "answer": 92.58543
-        },
+        "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 796956198,
-          "output": 95509319,
-          "reasoning": 89336957,
-          "answer": 6172362
+          "input": 139284468,
+          "output": 2575228,
+          "reasoning": 0,
+          "answer": 2575228
         }
       },
       "effectivePerformance": {
@@ -57775,17 +57868,17 @@
           "timeToFirstAnswerTokenSeconds": 2.049
         },
         "intelligenceIndexCost": {
-          "total": 1753.9430217187164,
-          "input": 321.30323671871633,
-          "output": 1432.639785,
-          "reasoning": 1340.054355,
-          "answer": 92.58543
+          "total": 495.7738956390539,
+          "input": 141.2463456390539,
+          "output": 354.52754999999996,
+          "reasoning": 288.50906999999995,
+          "answer": 66.01848000000001
         },
         "intelligenceIndexTokenCounts": {
-          "input": 796956198,
-          "output": 95509319,
-          "reasoning": 89336957,
-          "answer": 6172362
+          "input": 293025028,
+          "output": 23635170,
+          "reasoning": 19233938,
+          "answer": 4401232
         }
       },
       "effectivePerformance": {
@@ -57875,17 +57968,17 @@
           "timeToFirstAnswerTokenSeconds": 1.38
         },
         "intelligenceIndexCost": {
-          "total": 1753.9430217187164,
-          "input": 321.30323671871633,
-          "output": 1432.639785,
-          "reasoning": 1340.054355,
-          "answer": 92.58543
+          "total": 240.22771707940757,
+          "input": 83.88736707940758,
+          "output": 156.34035,
+          "reasoning": 112.251045,
+          "answer": 44.089305
         },
         "intelligenceIndexTokenCounts": {
-          "input": 796956198,
-          "output": 95509319,
-          "reasoning": 89336957,
-          "answer": 6172362
+          "input": 132111596,
+          "output": 10422690,
+          "reasoning": 7483403,
+          "answer": 2939287
         }
       },
       "effectivePerformance": {
@@ -58144,19 +58237,8 @@
           "timeToFirstTokenSeconds": 0.612,
           "timeToFirstAnswerTokenSeconds": 0.612
         },
-        "intelligenceIndexCost": {
-          "total": 563.5089486807195,
-          "input": 122.8408486807195,
-          "output": 440.66810000000004,
-          "reasoning": 402.01882500000005,
-          "answer": 38.649274999999996
-        },
-        "intelligenceIndexTokenCounts": {
-          "input": 290134058,
-          "output": 88133620,
-          "reasoning": 80403765,
-          "answer": 7729855
-        }
+        "intelligenceIndexCost": null,
+        "intelligenceIndexTokenCounts": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 98.02,
@@ -58550,8 +58632,19 @@
           "timeToFirstTokenSeconds": 21.315,
           "timeToFirstAnswerTokenSeconds": 21.315
         },
-        "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCost": {
+          "total": 3737.818042898671,
+          "input": 1236.1138178986712,
+          "output": 2501.704225,
+          "reasoning": 2184.9446,
+          "answer": 316.75962499999997
+        },
+        "intelligenceIndexTokenCounts": {
+          "input": 1249003347,
+          "output": 100068169,
+          "reasoning": 87397784,
+          "answer": 12670385
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 51.991,
@@ -58967,8 +59060,19 @@
           "timeToFirstTokenSeconds": 9.569,
           "timeToFirstAnswerTokenSeconds": 9.569
         },
-        "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCost": {
+          "total": 1132.8540777463882,
+          "input": 186.08062774638807,
+          "output": 946.7734500000001,
+          "reasoning": 845.4071100000001,
+          "answer": 101.36634
+        },
+        "intelligenceIndexTokenCounts": {
+          "input": 256788429,
+          "output": 63118230,
+          "reasoning": 56360474,
+          "answer": 6757756
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 52.006,
@@ -59204,8 +59308,19 @@
           "timeToFirstTokenSeconds": 81.438,
           "timeToFirstAnswerTokenSeconds": 81.438
         },
-        "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCost": {
+          "total": 3355.8518741364983,
+          "input": 404.68930913649876,
+          "output": 2951.1625649999996,
+          "reasoning": 2801.87598,
+          "answer": 149.286585
+        },
+        "intelligenceIndexTokenCounts": {
+          "input": 740675207,
+          "output": 196744171,
+          "reasoning": 186791732,
+          "answer": 9952439
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 65.793,
@@ -59363,7 +59478,12 @@
           "timeToFirstAnswerTokenSeconds": 0
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexTokenCounts": {
+          "input": 290663305,
+          "output": 56381928,
+          "reasoning": 49718294,
+          "answer": 6663634
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 0,
@@ -59481,8 +59601,19 @@
           "timeToFirstTokenSeconds": 17.583,
           "timeToFirstAnswerTokenSeconds": 17.583
         },
-        "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCost": {
+          "total": 609.6689950996661,
+          "input": 83.71304509966612,
+          "output": 525.9559499999999,
+          "reasoning": 467.57593999999995,
+          "answer": 58.38001
+        },
+        "intelligenceIndexTokenCounts": {
+          "input": 163302677,
+          "output": 52595595,
+          "reasoning": 46757594,
+          "answer": 5838001
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 139.555,
@@ -60146,19 +60277,8 @@
           "timeToFirstTokenSeconds": 9.498,
           "timeToFirstAnswerTokenSeconds": 9.498
         },
-        "intelligenceIndexCost": {
-          "total": 1040.8780605451614,
-          "input": 362.42750554516135,
-          "output": 678.450555,
-          "reasoning": 564.408621,
-          "answer": 114.041934
-        },
-        "intelligenceIndexTokenCounts": {
-          "input": 1009300279,
-          "output": 75383395,
-          "reasoning": 62712069,
-          "answer": 12671326
-        }
+        "intelligenceIndexCost": null,
+        "intelligenceIndexTokenCounts": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 233.877,
@@ -60236,19 +60356,8 @@
           "timeToFirstTokenSeconds": 0.745,
           "timeToFirstAnswerTokenSeconds": 0.745
         },
-        "intelligenceIndexCost": {
-          "total": 1040.8780605451614,
-          "input": 362.42750554516135,
-          "output": 678.450555,
-          "reasoning": 564.408621,
-          "answer": 114.041934
-        },
-        "intelligenceIndexTokenCounts": {
-          "input": 1009300279,
-          "output": 75383395,
-          "reasoning": 62712069,
-          "answer": 12671326
-        }
+        "intelligenceIndexCost": null,
+        "intelligenceIndexTokenCounts": null
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 223.085,
@@ -60337,7 +60446,12 @@
           "timeToFirstAnswerTokenSeconds": 74.735
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexTokenCounts": {
+          "input": 168410463,
+          "output": 60178727,
+          "reasoning": 56916694,
+          "answer": 3262033
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 97.5,
@@ -60672,8 +60786,19 @@
           "timeToFirstTokenSeconds": 5.257,
           "timeToFirstAnswerTokenSeconds": 5.257
         },
-        "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCost": {
+          "total": 1095.4286040534348,
+          "input": 121.45829705343488,
+          "output": 973.9703069999999,
+          "reasoning": 952.0490295,
+          "answer": 21.9212775
+        },
+        "intelligenceIndexTokenCounts": {
+          "input": 710837888,
+          "output": 216437846,
+          "reasoning": 211566451,
+          "answer": 4871395
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 170.59,
@@ -60910,7 +61035,12 @@
           "timeToFirstAnswerTokenSeconds": 2.619
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexTokenCounts": {
+          "input": 1092774545,
+          "output": 181993479,
+          "reasoning": 174869960,
+          "answer": 7123519
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 175.767,
@@ -61146,8 +61276,19 @@
           "timeToFirstTokenSeconds": 103.971,
           "timeToFirstAnswerTokenSeconds": 103.971
         },
-        "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCost": {
+          "total": 2131.7653830456115,
+          "input": 490.3601730456113,
+          "output": 1641.4052100000001,
+          "reasoning": 1552.897455,
+          "answer": 88.507755
+        },
+        "intelligenceIndexTokenCounts": {
+          "input": 764807431,
+          "output": 109427014,
+          "reasoning": 103526497,
+          "answer": 5900517
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 160.921,
@@ -61383,8 +61524,19 @@
           "timeToFirstTokenSeconds": 103.971,
           "timeToFirstAnswerTokenSeconds": 103.971
         },
-        "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexCost": {
+          "total": 2131.7653830456115,
+          "input": 490.3601730456113,
+          "output": 1641.4052100000001,
+          "reasoning": 1552.897455,
+          "answer": 88.507755
+        },
+        "intelligenceIndexTokenCounts": {
+          "input": 764807431,
+          "output": 109427014,
+          "reasoning": 103526497,
+          "answer": 5900517
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 160.921,
@@ -61711,17 +61863,17 @@
           "timeToFirstAnswerTokenSeconds": 1.667
         },
         "intelligenceIndexCost": {
-          "total": 2777.91267321098,
-          "input": 608.8605932109801,
-          "output": 2169.05208,
-          "reasoning": 2037.2752500000001,
-          "answer": 131.77683
+          "total": 375.23018994095116,
+          "input": 171.33830994095118,
+          "output": 203.89188000000001,
+          "reasoning": 138.69840000000002,
+          "answer": 65.19348
         },
         "intelligenceIndexTokenCounts": {
-          "input": 364032098,
-          "output": 72301736,
-          "reasoning": 67909175,
-          "answer": 4392561
+          "input": 74841605,
+          "output": 6796396,
+          "reasoning": 4623280,
+          "answer": 2173116
         }
       },
       "effectivePerformance": {
@@ -61801,17 +61953,17 @@
           "timeToFirstAnswerTokenSeconds": 17.136
         },
         "intelligenceIndexCost": {
-          "total": 2777.91267321098,
-          "input": 608.8605932109801,
-          "output": 2169.05208,
-          "reasoning": 2037.2752500000001,
-          "answer": 131.77683
+          "total": 1719.1614806271946,
+          "input": 434.27267062719454,
+          "output": 1284.88881,
+          "reasoning": 1166.03919,
+          "answer": 118.84961999999999
         },
         "intelligenceIndexTokenCounts": {
-          "input": 364032098,
-          "output": 72301736,
-          "reasoning": 67909175,
-          "answer": 4392561
+          "input": 243354307,
+          "output": 42829627,
+          "reasoning": 38867973,
+          "answer": 3961654
         }
       },
       "effectivePerformance": {
@@ -61891,17 +62043,17 @@
           "timeToFirstAnswerTokenSeconds": 0.898
         },
         "intelligenceIndexCost": {
-          "total": 2777.91267321098,
-          "input": 608.8605932109801,
-          "output": 2169.05208,
-          "reasoning": 2037.2752500000001,
-          "answer": 131.77683
+          "total": 211.108561232046,
+          "input": 144.982501232046,
+          "output": 66.12606,
+          "reasoning": 0,
+          "answer": 66.12606
         },
         "intelligenceIndexTokenCounts": {
-          "input": 364032098,
-          "output": 72301736,
-          "reasoning": 67909175,
-          "answer": 4392561
+          "input": 62259688,
+          "output": 2204202,
+          "reasoning": 0,
+          "answer": 2204202
         }
       },
       "effectivePerformance": {
@@ -61981,17 +62133,17 @@
           "timeToFirstAnswerTokenSeconds": 4.463
         },
         "intelligenceIndexCost": {
-          "total": 2777.91267321098,
-          "input": 608.8605932109801,
-          "output": 2169.05208,
-          "reasoning": 2037.2752500000001,
-          "answer": 131.77683
+          "total": 935.7674958905204,
+          "input": 296.7807258905204,
+          "output": 638.9867700000001,
+          "reasoning": 540.2006700000001,
+          "answer": 98.7861
         },
         "intelligenceIndexTokenCounts": {
-          "input": 364032098,
-          "output": 72301736,
-          "reasoning": 67909175,
-          "answer": 4392561
+          "input": 151071671,
+          "output": 21299559,
+          "reasoning": 18006689,
+          "answer": 3292870
         }
       },
       "effectivePerformance": {
@@ -62161,17 +62313,17 @@
           "timeToFirstAnswerTokenSeconds": 1.667
         },
         "intelligenceIndexCost": {
-          "total": 2777.91267321098,
-          "input": 608.8605932109801,
-          "output": 2169.05208,
-          "reasoning": 2037.2752500000001,
-          "answer": 131.77683
+          "total": 375.23018994095116,
+          "input": 171.33830994095118,
+          "output": 203.89188000000001,
+          "reasoning": 138.69840000000002,
+          "answer": 65.19348
         },
         "intelligenceIndexTokenCounts": {
-          "input": 364032098,
-          "output": 72301736,
-          "reasoning": 67909175,
-          "answer": 4392561
+          "input": 74841605,
+          "output": 6796396,
+          "reasoning": 4623280,
+          "answer": 2173116
         }
       },
       "effectivePerformance": {
@@ -62251,17 +62403,17 @@
           "timeToFirstAnswerTokenSeconds": 17.136
         },
         "intelligenceIndexCost": {
-          "total": 2777.91267321098,
-          "input": 608.8605932109801,
-          "output": 2169.05208,
-          "reasoning": 2037.2752500000001,
-          "answer": 131.77683
+          "total": 1719.1614806271946,
+          "input": 434.27267062719454,
+          "output": 1284.88881,
+          "reasoning": 1166.03919,
+          "answer": 118.84961999999999
         },
         "intelligenceIndexTokenCounts": {
-          "input": 364032098,
-          "output": 72301736,
-          "reasoning": 67909175,
-          "answer": 4392561
+          "input": 243354307,
+          "output": 42829627,
+          "reasoning": 38867973,
+          "answer": 3961654
         }
       },
       "effectivePerformance": {
@@ -62341,17 +62493,17 @@
           "timeToFirstAnswerTokenSeconds": 0.898
         },
         "intelligenceIndexCost": {
-          "total": 2777.91267321098,
-          "input": 608.8605932109801,
-          "output": 2169.05208,
-          "reasoning": 2037.2752500000001,
-          "answer": 131.77683
+          "total": 211.108561232046,
+          "input": 144.982501232046,
+          "output": 66.12606,
+          "reasoning": 0,
+          "answer": 66.12606
         },
         "intelligenceIndexTokenCounts": {
-          "input": 364032098,
-          "output": 72301736,
-          "reasoning": 67909175,
-          "answer": 4392561
+          "input": 62259688,
+          "output": 2204202,
+          "reasoning": 0,
+          "answer": 2204202
         }
       },
       "effectivePerformance": {
@@ -62431,17 +62583,17 @@
           "timeToFirstAnswerTokenSeconds": 4.463
         },
         "intelligenceIndexCost": {
-          "total": 2777.91267321098,
-          "input": 608.8605932109801,
-          "output": 2169.05208,
-          "reasoning": 2037.2752500000001,
-          "answer": 131.77683
+          "total": 935.7674958905204,
+          "input": 296.7807258905204,
+          "output": 638.9867700000001,
+          "reasoning": 540.2006700000001,
+          "answer": 98.7861
         },
         "intelligenceIndexTokenCounts": {
-          "input": 364032098,
-          "output": 72301736,
-          "reasoning": 67909175,
-          "answer": 4392561
+          "input": 151071671,
+          "output": 21299559,
+          "reasoning": 18006689,
+          "answer": 3292870
         }
       },
       "effectivePerformance": {
@@ -62606,10 +62758,10 @@
         },
         "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 735104000,
-          "output": 125011185,
-          "reasoning": 119164889,
-          "answer": 5846296
+          "input": 178574058,
+          "output": 2357378,
+          "reasoning": 0,
+          "answer": 2357378
         }
       },
       "effectivePerformance": {
@@ -62690,10 +62842,10 @@
         },
         "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 735104000,
-          "output": 125011185,
-          "reasoning": 119164889,
-          "answer": 5846296
+          "input": 275954649,
+          "output": 37034644,
+          "reasoning": 32869193,
+          "answer": 4165451
         }
       },
       "effectivePerformance": {
@@ -62774,10 +62926,10 @@
         },
         "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 735104000,
-          "output": 125011185,
-          "reasoning": 119164889,
-          "answer": 5846296
+          "input": 451473364,
+          "output": 66735431,
+          "reasoning": 61793495,
+          "answer": 4941936
         }
       },
       "effectivePerformance": {
@@ -62858,10 +63010,10 @@
         },
         "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 735104000,
-          "output": 125011185,
-          "reasoning": 119164889,
-          "answer": 5846296
+          "input": 125428616,
+          "output": 12479860,
+          "reasoning": 9679021,
+          "answer": 2800839
         }
       },
       "effectivePerformance": {
@@ -62942,10 +63094,10 @@
         },
         "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 735104000,
-          "output": 125011185,
-          "reasoning": 119164889,
-          "answer": 5846296
+          "input": 109194342,
+          "output": 6971397,
+          "reasoning": 4830848,
+          "answer": 2140549
         }
       },
       "effectivePerformance": {
@@ -63110,10 +63262,10 @@
         },
         "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 735104000,
-          "output": 125011185,
-          "reasoning": 119164889,
-          "answer": 5846296
+          "input": 178574058,
+          "output": 2357378,
+          "reasoning": 0,
+          "answer": 2357378
         }
       },
       "effectivePerformance": {
@@ -63194,10 +63346,10 @@
         },
         "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 735104000,
-          "output": 125011185,
-          "reasoning": 119164889,
-          "answer": 5846296
+          "input": 275954649,
+          "output": 37034644,
+          "reasoning": 32869193,
+          "answer": 4165451
         }
       },
       "effectivePerformance": {
@@ -63278,10 +63430,10 @@
         },
         "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 735104000,
-          "output": 125011185,
-          "reasoning": 119164889,
-          "answer": 5846296
+          "input": 451473364,
+          "output": 66735431,
+          "reasoning": 61793495,
+          "answer": 4941936
         }
       },
       "effectivePerformance": {
@@ -63362,10 +63514,10 @@
         },
         "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 735104000,
-          "output": 125011185,
-          "reasoning": 119164889,
-          "answer": 5846296
+          "input": 125428616,
+          "output": 12479860,
+          "reasoning": 9679021,
+          "answer": 2800839
         }
       },
       "effectivePerformance": {
@@ -63446,10 +63598,10 @@
         },
         "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 735104000,
-          "output": 125011185,
-          "reasoning": 119164889,
-          "answer": 5846296
+          "input": 109194342,
+          "output": 6971397,
+          "reasoning": 4830848,
+          "answer": 2140549
         }
       },
       "effectivePerformance": {
@@ -63618,18 +63770,12 @@
           "timeToFirstTokenSeconds": 26.691,
           "timeToFirstAnswerTokenSeconds": 26.691
         },
-        "intelligenceIndexCost": {
-          "total": 2824.1811935690976,
-          "input": 721.6095335690973,
-          "output": 2102.57166,
-          "reasoning": 1903.65387,
-          "answer": 198.91779
-        },
+        "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 983476165,
-          "output": 70085722,
-          "reasoning": 63455129,
-          "answer": 6630593
+          "input": 530833840,
+          "output": 35398293,
+          "reasoning": 29807525,
+          "answer": 5590768
         }
       },
       "effectivePerformance": {
@@ -63708,18 +63854,12 @@
           "timeToFirstTokenSeconds": 10.187,
           "timeToFirstAnswerTokenSeconds": 10.187
         },
-        "intelligenceIndexCost": {
-          "total": 2824.1811935690976,
-          "input": 721.6095335690973,
-          "output": 2102.57166,
-          "reasoning": 1903.65387,
-          "answer": 198.91779
-        },
+        "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 983476165,
-          "output": 70085722,
-          "reasoning": 63455129,
-          "answer": 6630593
+          "input": 340868286,
+          "output": 21248736,
+          "reasoning": 16679685,
+          "answer": 4569051
         }
       },
       "effectivePerformance": {
@@ -63798,18 +63938,12 @@
           "timeToFirstTokenSeconds": 0,
           "timeToFirstAnswerTokenSeconds": 0
         },
-        "intelligenceIndexCost": {
-          "total": 2824.1811935690976,
-          "input": 721.6095335690973,
-          "output": 2102.57166,
-          "reasoning": 1903.65387,
-          "answer": 198.91779
-        },
+        "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 983476165,
-          "output": 70085722,
-          "reasoning": 63455129,
-          "answer": 6630593
+          "input": 109764766,
+          "output": 2648394,
+          "reasoning": 0,
+          "answer": 2648394
         }
       },
       "effectivePerformance": {
@@ -63888,18 +64022,12 @@
           "timeToFirstTokenSeconds": 4.41,
           "timeToFirstAnswerTokenSeconds": 4.41
         },
-        "intelligenceIndexCost": {
-          "total": 2824.1811935690976,
-          "input": 721.6095335690973,
-          "output": 2102.57166,
-          "reasoning": 1903.65387,
-          "answer": 198.91779
-        },
+        "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 983476165,
-          "output": 70085722,
-          "reasoning": 63455129,
-          "answer": 6630593
+          "input": 186750881,
+          "output": 11976871,
+          "reasoning": 8440916,
+          "answer": 3535955
         }
       },
       "effectivePerformance": {
@@ -63978,18 +64106,12 @@
           "timeToFirstTokenSeconds": 2.228,
           "timeToFirstAnswerTokenSeconds": 2.228
         },
-        "intelligenceIndexCost": {
-          "total": 2824.1811935690976,
-          "input": 721.6095335690973,
-          "output": 2102.57166,
-          "reasoning": 1903.65387,
-          "answer": 198.91779
-        },
+        "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 983476165,
-          "output": 70085722,
-          "reasoning": 63455129,
-          "answer": 6630593
+          "input": 93508215,
+          "output": 6584353,
+          "reasoning": 4022472,
+          "answer": 2561881
         }
       },
       "effectivePerformance": {
@@ -64158,18 +64280,12 @@
           "timeToFirstTokenSeconds": 26.691,
           "timeToFirstAnswerTokenSeconds": 26.691
         },
-        "intelligenceIndexCost": {
-          "total": 2824.1811935690976,
-          "input": 721.6095335690973,
-          "output": 2102.57166,
-          "reasoning": 1903.65387,
-          "answer": 198.91779
-        },
+        "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 983476165,
-          "output": 70085722,
-          "reasoning": 63455129,
-          "answer": 6630593
+          "input": 530833840,
+          "output": 35398293,
+          "reasoning": 29807525,
+          "answer": 5590768
         }
       },
       "effectivePerformance": {
@@ -64248,18 +64364,12 @@
           "timeToFirstTokenSeconds": 10.187,
           "timeToFirstAnswerTokenSeconds": 10.187
         },
-        "intelligenceIndexCost": {
-          "total": 2824.1811935690976,
-          "input": 721.6095335690973,
-          "output": 2102.57166,
-          "reasoning": 1903.65387,
-          "answer": 198.91779
-        },
+        "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 983476165,
-          "output": 70085722,
-          "reasoning": 63455129,
-          "answer": 6630593
+          "input": 340868286,
+          "output": 21248736,
+          "reasoning": 16679685,
+          "answer": 4569051
         }
       },
       "effectivePerformance": {
@@ -64338,18 +64448,12 @@
           "timeToFirstTokenSeconds": 0,
           "timeToFirstAnswerTokenSeconds": 0
         },
-        "intelligenceIndexCost": {
-          "total": 2824.1811935690976,
-          "input": 721.6095335690973,
-          "output": 2102.57166,
-          "reasoning": 1903.65387,
-          "answer": 198.91779
-        },
+        "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 983476165,
-          "output": 70085722,
-          "reasoning": 63455129,
-          "answer": 6630593
+          "input": 109764766,
+          "output": 2648394,
+          "reasoning": 0,
+          "answer": 2648394
         }
       },
       "effectivePerformance": {
@@ -64428,18 +64532,12 @@
           "timeToFirstTokenSeconds": 4.41,
           "timeToFirstAnswerTokenSeconds": 4.41
         },
-        "intelligenceIndexCost": {
-          "total": 2824.1811935690976,
-          "input": 721.6095335690973,
-          "output": 2102.57166,
-          "reasoning": 1903.65387,
-          "answer": 198.91779
-        },
+        "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 983476165,
-          "output": 70085722,
-          "reasoning": 63455129,
-          "answer": 6630593
+          "input": 186750881,
+          "output": 11976871,
+          "reasoning": 8440916,
+          "answer": 3535955
         }
       },
       "effectivePerformance": {
@@ -64518,18 +64616,12 @@
           "timeToFirstTokenSeconds": 2.228,
           "timeToFirstAnswerTokenSeconds": 2.228
         },
-        "intelligenceIndexCost": {
-          "total": 2824.1811935690976,
-          "input": 721.6095335690973,
-          "output": 2102.57166,
-          "reasoning": 1903.65387,
-          "answer": 198.91779
-        },
+        "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 983476165,
-          "output": 70085722,
-          "reasoning": 63455129,
-          "answer": 6630593
+          "input": 93508215,
+          "output": 6584353,
+          "reasoning": 4022472,
+          "answer": 2561881
         }
       },
       "effectivePerformance": {
@@ -64699,17 +64791,17 @@
           "timeToFirstAnswerTokenSeconds": 1.285
         },
         "intelligenceIndexCost": {
-          "total": 1753.9430217187164,
-          "input": 321.30323671871633,
-          "output": 1432.639785,
-          "reasoning": 1340.054355,
-          "answer": 92.58543
+          "total": 160.65181576963076,
+          "input": 71.57601076963076,
+          "output": 89.075805,
+          "reasoning": 56.383559999999996,
+          "answer": 32.692245
         },
         "intelligenceIndexTokenCounts": {
-          "input": 796956198,
-          "output": 95509319,
-          "reasoning": 89336957,
-          "answer": 6172362
+          "input": 113805974,
+          "output": 5938387,
+          "reasoning": 3758904,
+          "answer": 2179483
         }
       },
       "effectivePerformance": {
@@ -64789,17 +64881,17 @@
           "timeToFirstAnswerTokenSeconds": 10.58
         },
         "intelligenceIndexCost": {
-          "total": 1753.9430217187164,
-          "input": 321.30323671871633,
-          "output": 1432.639785,
-          "reasoning": 1340.054355,
-          "answer": 92.58543
+          "total": 740.2127921059758,
+          "input": 194.7244721059758,
+          "output": 545.48832,
+          "reasoning": 466.70544,
+          "answer": 78.78288
         },
         "intelligenceIndexTokenCounts": {
-          "input": 796956198,
-          "output": 95509319,
-          "reasoning": 89336957,
-          "answer": 6172362
+          "input": 446457787,
+          "output": 36365888,
+          "reasoning": 31113696,
+          "answer": 5252192
         }
       },
       "effectivePerformance": {
@@ -64878,18 +64970,12 @@
           "timeToFirstTokenSeconds": 0.693,
           "timeToFirstAnswerTokenSeconds": 0.693
         },
-        "intelligenceIndexCost": {
-          "total": 1753.9430217187164,
-          "input": 321.30323671871633,
-          "output": 1432.639785,
-          "reasoning": 1340.054355,
-          "answer": 92.58543
-        },
+        "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 796956198,
-          "output": 95509319,
-          "reasoning": 89336957,
-          "answer": 6172362
+          "input": 139284468,
+          "output": 2575228,
+          "reasoning": 0,
+          "answer": 2575228
         }
       },
       "effectivePerformance": {
@@ -64969,17 +65055,17 @@
           "timeToFirstAnswerTokenSeconds": 2.049
         },
         "intelligenceIndexCost": {
-          "total": 1753.9430217187164,
-          "input": 321.30323671871633,
-          "output": 1432.639785,
-          "reasoning": 1340.054355,
-          "answer": 92.58543
+          "total": 495.7738956390539,
+          "input": 141.2463456390539,
+          "output": 354.52754999999996,
+          "reasoning": 288.50906999999995,
+          "answer": 66.01848000000001
         },
         "intelligenceIndexTokenCounts": {
-          "input": 796956198,
-          "output": 95509319,
-          "reasoning": 89336957,
-          "answer": 6172362
+          "input": 293025028,
+          "output": 23635170,
+          "reasoning": 19233938,
+          "answer": 4401232
         }
       },
       "effectivePerformance": {
@@ -65059,17 +65145,17 @@
           "timeToFirstAnswerTokenSeconds": 1.38
         },
         "intelligenceIndexCost": {
-          "total": 1753.9430217187164,
-          "input": 321.30323671871633,
-          "output": 1432.639785,
-          "reasoning": 1340.054355,
-          "answer": 92.58543
+          "total": 240.22771707940757,
+          "input": 83.88736707940758,
+          "output": 156.34035,
+          "reasoning": 112.251045,
+          "answer": 44.089305
         },
         "intelligenceIndexTokenCounts": {
-          "input": 796956198,
-          "output": 95509319,
-          "reasoning": 89336957,
-          "answer": 6172362
+          "input": 132111596,
+          "output": 10422690,
+          "reasoning": 7483403,
+          "answer": 2939287
         }
       },
       "effectivePerformance": {
@@ -65239,17 +65325,17 @@
           "timeToFirstAnswerTokenSeconds": 1.285
         },
         "intelligenceIndexCost": {
-          "total": 1753.9430217187164,
-          "input": 321.30323671871633,
-          "output": 1432.639785,
-          "reasoning": 1340.054355,
-          "answer": 92.58543
+          "total": 160.65181576963076,
+          "input": 71.57601076963076,
+          "output": 89.075805,
+          "reasoning": 56.383559999999996,
+          "answer": 32.692245
         },
         "intelligenceIndexTokenCounts": {
-          "input": 796956198,
-          "output": 95509319,
-          "reasoning": 89336957,
-          "answer": 6172362
+          "input": 113805974,
+          "output": 5938387,
+          "reasoning": 3758904,
+          "answer": 2179483
         }
       },
       "effectivePerformance": {
@@ -65329,17 +65415,17 @@
           "timeToFirstAnswerTokenSeconds": 10.58
         },
         "intelligenceIndexCost": {
-          "total": 1753.9430217187164,
-          "input": 321.30323671871633,
-          "output": 1432.639785,
-          "reasoning": 1340.054355,
-          "answer": 92.58543
+          "total": 740.2127921059758,
+          "input": 194.7244721059758,
+          "output": 545.48832,
+          "reasoning": 466.70544,
+          "answer": 78.78288
         },
         "intelligenceIndexTokenCounts": {
-          "input": 796956198,
-          "output": 95509319,
-          "reasoning": 89336957,
-          "answer": 6172362
+          "input": 446457787,
+          "output": 36365888,
+          "reasoning": 31113696,
+          "answer": 5252192
         }
       },
       "effectivePerformance": {
@@ -65418,18 +65504,12 @@
           "timeToFirstTokenSeconds": 0.693,
           "timeToFirstAnswerTokenSeconds": 0.693
         },
-        "intelligenceIndexCost": {
-          "total": 1753.9430217187164,
-          "input": 321.30323671871633,
-          "output": 1432.639785,
-          "reasoning": 1340.054355,
-          "answer": 92.58543
-        },
+        "intelligenceIndexCost": null,
         "intelligenceIndexTokenCounts": {
-          "input": 796956198,
-          "output": 95509319,
-          "reasoning": 89336957,
-          "answer": 6172362
+          "input": 139284468,
+          "output": 2575228,
+          "reasoning": 0,
+          "answer": 2575228
         }
       },
       "effectivePerformance": {
@@ -65509,17 +65589,17 @@
           "timeToFirstAnswerTokenSeconds": 2.049
         },
         "intelligenceIndexCost": {
-          "total": 1753.9430217187164,
-          "input": 321.30323671871633,
-          "output": 1432.639785,
-          "reasoning": 1340.054355,
-          "answer": 92.58543
+          "total": 495.7738956390539,
+          "input": 141.2463456390539,
+          "output": 354.52754999999996,
+          "reasoning": 288.50906999999995,
+          "answer": 66.01848000000001
         },
         "intelligenceIndexTokenCounts": {
-          "input": 796956198,
-          "output": 95509319,
-          "reasoning": 89336957,
-          "answer": 6172362
+          "input": 293025028,
+          "output": 23635170,
+          "reasoning": 19233938,
+          "answer": 4401232
         }
       },
       "effectivePerformance": {
@@ -65599,17 +65679,17 @@
           "timeToFirstAnswerTokenSeconds": 1.38
         },
         "intelligenceIndexCost": {
-          "total": 1753.9430217187164,
-          "input": 321.30323671871633,
-          "output": 1432.639785,
-          "reasoning": 1340.054355,
-          "answer": 92.58543
+          "total": 240.22771707940757,
+          "input": 83.88736707940758,
+          "output": 156.34035,
+          "reasoning": 112.251045,
+          "answer": 44.089305
         },
         "intelligenceIndexTokenCounts": {
-          "input": 796956198,
-          "output": 95509319,
-          "reasoning": 89336957,
-          "answer": 6172362
+          "input": 132111596,
+          "output": 10422690,
+          "reasoning": 7483403,
+          "answer": 2939287
         }
       },
       "effectivePerformance": {
@@ -65689,7 +65769,12 @@
           "timeToFirstAnswerTokenSeconds": 49.503
         },
         "intelligenceIndexCost": null,
-        "intelligenceIndexTokenCounts": null
+        "intelligenceIndexTokenCounts": {
+          "input": 501197711,
+          "output": 103697294,
+          "reasoning": 97627244,
+          "answer": 6070050
+        }
       },
       "effectivePerformance": {
         "outputTokensPerSecond": 46.117,

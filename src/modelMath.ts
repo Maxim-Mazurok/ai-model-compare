@@ -49,48 +49,82 @@ export function taskCostBreakdown(variant: ModelVariant): AaIntelligenceIndexCos
   const counts = variant.model?.intelligenceIndexTokenCounts;
   const inputPrice = variant.pricing.input;
   const outputPrice = variant.pricing.output;
+  const inputTokens = counts?.input;
+  const answerTokens = counts?.answer;
+  const reasoningTokens = counts?.reasoning;
+  const outputTokens =
+    counts?.output ??
+    (typeof answerTokens === "number" &&
+    Number.isFinite(answerTokens) &&
+    typeof reasoningTokens === "number" &&
+    Number.isFinite(reasoningTokens)
+      ? answerTokens + reasoningTokens
+      : null);
 
   if (
-    counts &&
-    inputPrice !== null &&
-    inputPrice !== undefined &&
-    outputPrice !== null &&
-    outputPrice !== undefined &&
+    typeof inputTokens === "number" &&
+    Number.isFinite(inputTokens) &&
+    inputTokens >= 0 &&
+    typeof outputTokens === "number" &&
+    Number.isFinite(outputTokens) &&
+    outputTokens >= 0 &&
+    typeof inputPrice === "number" &&
     Number.isFinite(inputPrice) &&
-    Number.isFinite(outputPrice)
+    inputPrice >= 0 &&
+    typeof outputPrice === "number" &&
+    Number.isFinite(outputPrice) &&
+    outputPrice >= 0
   ) {
-    const inputTokens = counts.input ?? 0;
-    const answerTokens = counts.answer ?? 0;
-    const reasoningTokens = counts.reasoning ?? 0;
-    const outputTokens = counts.output ?? answerTokens + reasoningTokens;
     const input = (inputTokens / 1_000_000) * inputPrice;
     const output = (outputTokens / 1_000_000) * outputPrice;
-    const answer = (answerTokens / 1_000_000) * outputPrice;
-    const reasoning = (reasoningTokens / 1_000_000) * outputPrice;
     const total = input + output;
-
     if (total > 0) {
       return {
         total: roundedCost(total),
         input: roundedCost(input),
         output: roundedCost(output),
-        reasoning: roundedCost(reasoning),
-        answer: roundedCost(answer)
+        reasoning:
+          typeof reasoningTokens === "number" && Number.isFinite(reasoningTokens)
+            ? roundedCost((reasoningTokens / 1_000_000) * outputPrice)
+            : null,
+        answer:
+          typeof answerTokens === "number" && Number.isFinite(answerTokens)
+            ? roundedCost((answerTokens / 1_000_000) * outputPrice)
+            : null
       };
     }
   }
 
-  const aaCost = variant.model?.intelligenceIndexCost;
-  if (!aaCost) return null;
-  const total = aaCost?.total;
-  if (total === null || total === undefined || !Number.isFinite(total) || total <= 0) return null;
-  return {
-    total: roundedCost(total),
-    input: aaCost.input === null || aaCost.input === undefined ? null : roundedCost(aaCost.input),
-    output: aaCost.output === null || aaCost.output === undefined ? null : roundedCost(aaCost.output),
-    reasoning: aaCost.reasoning === null || aaCost.reasoning === undefined ? null : roundedCost(aaCost.reasoning),
-    answer: aaCost.answer === null || aaCost.answer === undefined ? null : roundedCost(aaCost.answer)
-  };
+  const artificialAnalysisCost = variant.model?.intelligenceIndexCost;
+  const artificialAnalysisTotal = artificialAnalysisCost?.total;
+  if (
+    artificialAnalysisCost &&
+    artificialAnalysisTotal !== null &&
+    artificialAnalysisTotal !== undefined &&
+    Number.isFinite(artificialAnalysisTotal) &&
+    artificialAnalysisTotal > 0
+  ) {
+    return {
+      total: roundedCost(artificialAnalysisTotal),
+      input:
+        artificialAnalysisCost.input === null || artificialAnalysisCost.input === undefined
+          ? null
+          : roundedCost(artificialAnalysisCost.input),
+      output:
+        artificialAnalysisCost.output === null || artificialAnalysisCost.output === undefined
+          ? null
+          : roundedCost(artificialAnalysisCost.output),
+      reasoning:
+        artificialAnalysisCost.reasoning === null || artificialAnalysisCost.reasoning === undefined
+          ? null
+          : roundedCost(artificialAnalysisCost.reasoning),
+      answer:
+        artificialAnalysisCost.answer === null || artificialAnalysisCost.answer === undefined
+          ? null
+          : roundedCost(artificialAnalysisCost.answer)
+    };
+  }
+  return null;
 }
 
 export function taskCost(variant: ModelVariant) {

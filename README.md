@@ -41,7 +41,7 @@ If a source fails and an older `config/model-routes.json` exists, the updater pr
 Optional updater env vars:
 
 - `GITHUB_TOKEN`: raises GitHub catalog/API rate limits. If unset, the updater tries `gh auth token` before unauthenticated GitHub requests.
-- `ARTIFICIAL_ANALYSIS_API_KEY`: required to build current Artificial Analysis benchmark data. The builder always fetches live data and fails rather than silently publishing stale benchmarks. For an explicitly offline or degraded run only, pass `--allow-stale-aa` to use the local cache or previous static payload.
+- `ARTIFICIAL_ANALYSIS_API_KEY`: required to build current Artificial Analysis benchmark data. The builder combines the API response with the public models manifest for full Intelligence Index token counts and reported run costs. It always fetches live data and fails rather than silently publishing stale benchmarks. For an explicitly offline or degraded run only, pass `--allow-stale-aa` to use the local cache or previous static payload.
 
 ## Provider Overlays
 
@@ -98,7 +98,7 @@ Set this repository secret for scheduled benchmark refreshes. The workflow fails
 
 The app supports two comparison modes:
 
-- **Task cost** uses Artificial Analysis Intelligence Index token counts and calculates the cost to run that benchmark with each route's input and output prices. Speed in this mode is estimated as benchmark output tokens divided by each route's effective output tokens/sec, so it represents time to complete the benchmark rather than raw token throughput. This mode uses the Intelligence Index task cost for any selected score, so task profiles are hidden.
+- **Task cost** uses complete Artificial Analysis Intelligence Index input/output token counts with each route's published prices to calculate the full benchmark run cost. If complete counts are unavailable, it uses Artificial Analysis's reported full-run total; models with neither source are omitted. Reasoning configurations retain their own measured token counts. Speed in this mode is estimated as benchmark output tokens divided by each route's effective output tokens/sec, so it represents time to complete the benchmark rather than raw token throughput. This mode uses the Intelligence Index task cost for any selected score, so task profiles are hidden.
 - **Token cost** uses the editable token blend profiles below.
 
 Edit `config/task-profiles.json` to change token blend assumptions. The token cost model is:

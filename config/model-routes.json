@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-13T04:32:32.616Z",
+  "generatedAt": "2026-07-19T16:56:59.272Z",
   "generatedBy": "scripts/update-model-routes.mjs",
   "defaults": {
     "cachedInputMultiplier": 0.1
@@ -9,53 +9,58 @@
     {
       "id": "azure-foundry-global-standard",
       "url": "https://prices.azure.com/api/retail/prices",
-      "fetchedAt": "2026-07-13T04:33:09.546Z",
+      "fetchedAt": "2026-07-19T16:57:34.005Z",
       "status": "ok",
-      "count": 5511,
-      "durationMs": 36911
+      "count": 6087,
+      "durationMs": 34708
     },
     {
       "id": "claude-pricing",
       "url": "https://platform.claude.com/docs/en/about-claude/pricing.md",
-      "fetchedAt": "2026-07-13T04:32:32.931Z",
+      "fetchedAt": "2026-07-19T16:56:59.568Z",
       "status": "ok",
       "count": 11,
-      "durationMs": 300
+      "durationMs": 280
     },
     {
       "id": "codex-credit-value",
       "url": "https://help.openai.com/en/articles/20001147-codex-credits-for-students-terms-of-service",
-      "fetchedAt": "2026-07-13T04:32:38.710Z",
-      "status": "ok",
-      "count": null,
-      "durationMs": 6076
+      "fetchedAt": "2026-07-19T16:57:06.166Z",
+      "status": "error",
+      "warning": "codex-credit-value: Could not find a credits-to-dollar equivalence statement.",
+      "durationMs": 6870
     },
     {
       "id": "codex-rate-card",
       "url": "https://help.openai.com/en/articles/20001106-codex-rate-card",
-      "fetchedAt": "2026-07-13T04:32:34.214Z",
-      "status": "ok",
-      "count": 9,
-      "durationMs": 1583
+      "fetchedAt": "2026-07-19T16:57:21.146Z",
+      "status": "error",
+      "warning": "codex-rate-card: page.waitForSelector: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('table') to be visible\n",
+      "durationMs": 21857
     },
     {
       "id": "github-copilot-pricing",
       "url": "https://raw.githubusercontent.com/github/docs/main/data/tables/copilot/models-and-pricing.yml",
-      "fetchedAt": "2026-07-13T04:32:32.953Z",
+      "fetchedAt": "2026-07-19T16:56:59.640Z",
       "status": "ok",
       "count": 33,
-      "durationMs": 329
+      "durationMs": 362
     },
     {
       "id": "github-models-catalog",
       "url": "https://models.github.ai/catalog/models",
-      "fetchedAt": "2026-07-13T04:32:33.720Z",
+      "fetchedAt": "2026-07-19T16:56:59.612Z",
       "status": "ok",
       "count": 37,
-      "durationMs": 1101
+      "durationMs": 333
     }
   ],
-  "warnings": [],
+  "warnings": [
+    "codex-credit-value: Could not find a credits-to-dollar equivalence statement.",
+    "codex-rate-card: page.waitForSelector: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('table') to be visible\n",
+    "codex-rate-card: skipped Codex variants because the credit-to-dollar conversion source was unavailable.",
+    "codex-rate-card: preserved 9 existing Codex rate card variants because codex-rate-card, codex-credit-value could not be refreshed."
+  ],
   "variants": [
     {
       "id": "anthropic-claude-fable-5",
@@ -19389,6 +19394,2424 @@
       }
     },
     {
+      "id": "azure-foundry-gpt-5-6-luna-longco-std-2-0-2-9",
+      "label": "GPT-5.6 Luna LongCo Std",
+      "modelSlug": "gpt-5-6-luna-longco-std",
+      "provider": "Azure AI Foundry",
+      "route": "azure-foundry-global-standard",
+      "taskTags": [
+        "azure",
+        "foundry",
+        "global-standard",
+        "openai"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "standard",
+        "speed": "global-standard",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 2,
+        "cachedInput": 0.2,
+        "output": 9,
+        "unit": "usd_per_1m_tokens",
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 24 regions with identical rates."
+      },
+      "metadata": {
+        "regions": [
+          "australiaeast",
+          "brazilsouth",
+          "canadaeast",
+          "centralus",
+          "eastus",
+          "eastus2",
+          "francecentral",
+          "germanywestcentral",
+          "japaneast",
+          "koreacentral",
+          "northcentralus",
+          "norwayeast",
+          "polandcentral",
+          "southafricanorth",
+          "southcentralus",
+          "southindia",
+          "spaincentral",
+          "swedencentral",
+          "switzerlandnorth",
+          "uaenorth",
+          "uksouth",
+          "westeurope",
+          "westus",
+          "westus3"
+        ],
+        "locations": [
+          "AE North",
+          "AU East",
+          "BR South",
+          "CA East",
+          "CH North",
+          "DE West Central",
+          "ES Central",
+          "EU West",
+          "FR Central",
+          "IN South",
+          "JA East",
+          "KR Central",
+          "NO East",
+          "PL Central",
+          "SE Central",
+          "UK South",
+          "US Central",
+          "US East",
+          "US East 2",
+          "US North Central",
+          "US South Central",
+          "US West",
+          "US West 3",
+          "ZA North"
+        ],
+        "regionCount": 24,
+        "meters": [
+          {
+            "region": "brazilsouth",
+            "meterName": "5.6 luna LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "5.6 luna LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 9,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "5.6 luna LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "5.6 luna LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 9,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "5.6 luna LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "5.6 luna LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "5.6 luna LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "5.6 luna LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "5.6 luna LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 9,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "5.6 luna LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "5.6 luna LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "5.6 luna LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 9,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "5.6 luna LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 9,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "5.6 luna LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "5.6 luna LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southafricanorth",
+            "meterName": "5.6 luna LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southafricanorth",
+            "meterName": "5.6 luna LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southafricanorth",
+            "meterName": "5.6 luna LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 9,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "australiaeast",
+            "meterName": "5.6 luna LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "australiaeast",
+            "meterName": "5.6 luna LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "australiaeast",
+            "meterName": "5.6 luna LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 9,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "5.6 luna LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "5.6 luna LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 9,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "5.6 luna LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "5.6 luna LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "5.6 luna LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 9,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "5.6 luna LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "5.6 luna LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 9,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "5.6 luna LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "5.6 luna LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "5.6 luna LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "5.6 luna LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 9,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "5.6 luna LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "5.6 luna LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 9,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "5.6 luna LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "5.6 luna LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "5.6 luna LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 9,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "5.6 luna LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "5.6 luna LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "5.6 luna LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 luna LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 9,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "azure-foundry-gpt-5-6-luna-shortco-std-1-0-1-6",
+      "label": "GPT-5.6 Luna ShortCo Std",
+      "modelSlug": "gpt-5-6-luna-shortco-std",
+      "provider": "Azure AI Foundry",
+      "route": "azure-foundry-global-standard",
+      "taskTags": [
+        "azure",
+        "foundry",
+        "global-standard",
+        "openai"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "standard",
+        "speed": "global-standard",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 1,
+        "cachedInput": 0.1,
+        "output": 6,
+        "unit": "usd_per_1m_tokens",
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 24 regions with identical rates."
+      },
+      "metadata": {
+        "regions": [
+          "australiaeast",
+          "brazilsouth",
+          "canadaeast",
+          "centralus",
+          "eastus",
+          "eastus2",
+          "francecentral",
+          "germanywestcentral",
+          "japaneast",
+          "koreacentral",
+          "northcentralus",
+          "norwayeast",
+          "polandcentral",
+          "southafricanorth",
+          "southcentralus",
+          "southindia",
+          "spaincentral",
+          "swedencentral",
+          "switzerlandnorth",
+          "uaenorth",
+          "uksouth",
+          "westeurope",
+          "westus",
+          "westus3"
+        ],
+        "locations": [
+          "AE North",
+          "AU East",
+          "BR South",
+          "CA East",
+          "CH North",
+          "DE West Central",
+          "ES Central",
+          "EU West",
+          "FR Central",
+          "IN South",
+          "JA East",
+          "KR Central",
+          "NO East",
+          "PL Central",
+          "SE Central",
+          "UK South",
+          "US Central",
+          "US East",
+          "US East 2",
+          "US North Central",
+          "US South Central",
+          "US West",
+          "US West 3",
+          "ZA North"
+        ],
+        "regionCount": 24,
+        "meters": [
+          {
+            "region": "westeurope",
+            "meterName": "5.6 luna ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 6,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "5.6 luna ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "5.6 luna ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "5.6 luna ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "5.6 luna ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "5.6 luna ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 6,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "5.6 luna ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 6,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "5.6 luna ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "5.6 luna ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "5.6 luna ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "5.6 luna ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 6,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "5.6 luna ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "northcentralus",
+            "meterName": "5.6 luna ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "northcentralus",
+            "meterName": "5.6 luna ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 6,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "northcentralus",
+            "meterName": "5.6 luna ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "5.6 luna ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "5.6 luna ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 6,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "5.6 luna ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "5.6 luna ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "5.6 luna ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 6,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "5.6 luna ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "5.6 luna ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "5.6 luna ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 6,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "5.6 luna ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "5.6 luna ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 6,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "5.6 luna ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "5.6 luna ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "australiaeast",
+            "meterName": "5.6 luna ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "australiaeast",
+            "meterName": "5.6 luna ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 6,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "australiaeast",
+            "meterName": "5.6 luna ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "5.6 luna ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 6,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "5.6 luna ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "5.6 luna ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "5.6 luna ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "5.6 luna ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 6,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "5.6 luna ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southafricanorth",
+            "meterName": "5.6 luna ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southafricanorth",
+            "meterName": "5.6 luna ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southafricanorth",
+            "meterName": "5.6 luna ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 6,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "5.6 luna ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 luna ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 6,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "azure-foundry-gpt-5-6-sol-longco-std-10-1-45",
+      "label": "GPT-5.6 Sol LongCo Std",
+      "modelSlug": "gpt-5-6-sol-longco-std",
+      "provider": "Azure AI Foundry",
+      "route": "azure-foundry-global-standard",
+      "taskTags": [
+        "azure",
+        "foundry",
+        "global-standard",
+        "openai"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "standard",
+        "speed": "global-standard",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 10,
+        "cachedInput": 1,
+        "output": 45,
+        "unit": "usd_per_1m_tokens",
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 24 regions with identical rates."
+      },
+      "metadata": {
+        "regions": [
+          "australiaeast",
+          "brazilsouth",
+          "canadaeast",
+          "centralus",
+          "eastus",
+          "eastus2",
+          "francecentral",
+          "germanywestcentral",
+          "japaneast",
+          "koreacentral",
+          "northcentralus",
+          "norwayeast",
+          "polandcentral",
+          "southafricanorth",
+          "southcentralus",
+          "southindia",
+          "spaincentral",
+          "swedencentral",
+          "switzerlandnorth",
+          "uaenorth",
+          "uksouth",
+          "westeurope",
+          "westus",
+          "westus3"
+        ],
+        "locations": [
+          "AE North",
+          "AU East",
+          "BR South",
+          "CA East",
+          "CH North",
+          "DE West Central",
+          "ES Central",
+          "EU West",
+          "FR Central",
+          "IN South",
+          "JA East",
+          "KR Central",
+          "NO East",
+          "PL Central",
+          "SE Central",
+          "UK South",
+          "US Central",
+          "US East",
+          "US East 2",
+          "US North Central",
+          "US South Central",
+          "US West",
+          "US West 3",
+          "ZA North"
+        ],
+        "regionCount": 24,
+        "meters": [
+          {
+            "region": "centralus",
+            "meterName": "5.6 sol LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "5.6 sol LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 10,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "5.6 sol LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 45,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "uksouth",
+            "meterName": "5.6 sol LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 45,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "uksouth",
+            "meterName": "5.6 sol LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 10,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "uksouth",
+            "meterName": "5.6 sol LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southafricanorth",
+            "meterName": "5.6 sol LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 10,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southafricanorth",
+            "meterName": "5.6 sol LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 45,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southafricanorth",
+            "meterName": "5.6 sol LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southindia",
+            "meterName": "5.6 sol LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 10,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southindia",
+            "meterName": "5.6 sol LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southindia",
+            "meterName": "5.6 sol LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 45,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "5.6 sol LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 10,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "5.6 sol LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 45,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "5.6 sol LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westus",
+            "meterName": "5.6 sol LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 10,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westus",
+            "meterName": "5.6 sol LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 45,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westus",
+            "meterName": "5.6 sol LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "5.6 sol LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "5.6 sol LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 45,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "5.6 sol LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 10,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "5.6 sol LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 45,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "5.6 sol LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "5.6 sol LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 10,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "5.6 sol LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "5.6 sol LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 45,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "5.6 sol LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 10,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "5.6 sol LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 10,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "5.6 sol LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "5.6 sol LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 45,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "5.6 sol LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 10,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "5.6 sol LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "5.6 sol LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 45,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "5.6 sol LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 45,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "5.6 sol LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 10,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "5.6 sol LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "5.6 sol LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 10,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "5.6 sol LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 45,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "5.6 sol LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "5.6 sol LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 10,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "azure-foundry-gpt-5-6-sol-shortco-std-5-0-5-30",
+      "label": "GPT-5.6 Sol ShortCo Std",
+      "modelSlug": "gpt-5-6-sol-shortco-std",
+      "provider": "Azure AI Foundry",
+      "route": "azure-foundry-global-standard",
+      "taskTags": [
+        "azure",
+        "foundry",
+        "global-standard",
+        "openai"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "standard",
+        "speed": "global-standard",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 5,
+        "cachedInput": 0.5,
+        "output": 30,
+        "unit": "usd_per_1m_tokens",
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 24 regions with identical rates."
+      },
+      "metadata": {
+        "regions": [
+          "australiaeast",
+          "brazilsouth",
+          "canadaeast",
+          "centralus",
+          "eastus",
+          "eastus2",
+          "francecentral",
+          "germanywestcentral",
+          "japaneast",
+          "koreacentral",
+          "northcentralus",
+          "norwayeast",
+          "polandcentral",
+          "southafricanorth",
+          "southcentralus",
+          "southindia",
+          "spaincentral",
+          "swedencentral",
+          "switzerlandnorth",
+          "uaenorth",
+          "uksouth",
+          "westeurope",
+          "westus",
+          "westus3"
+        ],
+        "locations": [
+          "AE North",
+          "AU East",
+          "BR South",
+          "CA East",
+          "CH North",
+          "DE West Central",
+          "ES Central",
+          "EU West",
+          "FR Central",
+          "IN South",
+          "JA East",
+          "KR Central",
+          "NO East",
+          "PL Central",
+          "SE Central",
+          "UK South",
+          "US Central",
+          "US East",
+          "US East 2",
+          "US North Central",
+          "US South Central",
+          "US West",
+          "US West 3",
+          "ZA North"
+        ],
+        "regionCount": 24,
+        "meters": [
+          {
+            "region": "koreacentral",
+            "meterName": "5.6 sol ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "5.6 sol ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "5.6 sol ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "5.6 sol ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "5.6 sol ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "5.6 sol ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "5.6 sol ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "5.6 sol ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "5.6 sol ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "polandcentral",
+            "meterName": "5.6 sol ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "polandcentral",
+            "meterName": "5.6 sol ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "polandcentral",
+            "meterName": "5.6 sol ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "japaneast",
+            "meterName": "5.6 sol ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "japaneast",
+            "meterName": "5.6 sol ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "japaneast",
+            "meterName": "5.6 sol ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "uksouth",
+            "meterName": "5.6 sol ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "uksouth",
+            "meterName": "5.6 sol ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "uksouth",
+            "meterName": "5.6 sol ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "5.6 sol ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "5.6 sol ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "5.6 sol ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "5.6 sol ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "5.6 sol ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "5.6 sol ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "5.6 sol ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "5.6 sol ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "5.6 sol ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "5.6 sol ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "5.6 sol ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "5.6 sol ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "5.6 sol ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "5.6 sol ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "5.6 sol ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "5.6 sol ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "5.6 sol ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "5.6 sol ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southindia",
+            "meterName": "5.6 sol ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southindia",
+            "meterName": "5.6 sol ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southindia",
+            "meterName": "5.6 sol ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "5.6 sol ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 sol ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "azure-foundry-gpt-5-6-terra-longco-std-5-0-5-22-5",
+      "label": "GPT-5.6 Terra LongCo Std",
+      "modelSlug": "gpt-5-6-terra-longco-std",
+      "provider": "Azure AI Foundry",
+      "route": "azure-foundry-global-standard",
+      "taskTags": [
+        "azure",
+        "foundry",
+        "global-standard",
+        "openai"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "standard",
+        "speed": "global-standard",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 5,
+        "cachedInput": 0.5,
+        "output": 22.5,
+        "unit": "usd_per_1m_tokens",
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 24 regions with identical rates."
+      },
+      "metadata": {
+        "regions": [
+          "australiaeast",
+          "brazilsouth",
+          "canadaeast",
+          "centralus",
+          "eastus",
+          "eastus2",
+          "francecentral",
+          "germanywestcentral",
+          "japaneast",
+          "koreacentral",
+          "northcentralus",
+          "norwayeast",
+          "polandcentral",
+          "southafricanorth",
+          "southcentralus",
+          "southindia",
+          "spaincentral",
+          "swedencentral",
+          "switzerlandnorth",
+          "uaenorth",
+          "uksouth",
+          "westeurope",
+          "westus",
+          "westus3"
+        ],
+        "locations": [
+          "AE North",
+          "AU East",
+          "BR South",
+          "CA East",
+          "CH North",
+          "DE West Central",
+          "ES Central",
+          "EU West",
+          "FR Central",
+          "IN South",
+          "JA East",
+          "KR Central",
+          "NO East",
+          "PL Central",
+          "SE Central",
+          "UK South",
+          "US Central",
+          "US East",
+          "US East 2",
+          "US North Central",
+          "US South Central",
+          "US West",
+          "US West 3",
+          "ZA North"
+        ],
+        "regionCount": 24,
+        "meters": [
+          {
+            "region": "southindia",
+            "meterName": "5.6 terra LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 22.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southindia",
+            "meterName": "5.6 terra LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southindia",
+            "meterName": "5.6 terra LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "swedencentral",
+            "meterName": "5.6 terra LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 22.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "swedencentral",
+            "meterName": "5.6 terra LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "swedencentral",
+            "meterName": "5.6 terra LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "5.6 terra LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "5.6 terra LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "5.6 terra LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 22.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "uksouth",
+            "meterName": "5.6 terra LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "uksouth",
+            "meterName": "5.6 terra LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "uksouth",
+            "meterName": "5.6 terra LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 22.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "5.6 terra LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 22.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "5.6 terra LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "5.6 terra LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "japaneast",
+            "meterName": "5.6 terra LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "japaneast",
+            "meterName": "5.6 terra LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "japaneast",
+            "meterName": "5.6 terra LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 22.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "5.6 terra LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "5.6 terra LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 22.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "5.6 terra LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "5.6 terra LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 22.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "5.6 terra LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "5.6 terra LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "5.6 terra LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 22.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "5.6 terra LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "5.6 terra LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westus",
+            "meterName": "5.6 terra LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westus",
+            "meterName": "5.6 terra LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 22.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westus",
+            "meterName": "5.6 terra LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "5.6 terra LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 22.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "5.6 terra LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "5.6 terra LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "5.6 terra LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "5.6 terra LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 22.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "5.6 terra LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "australiaeast",
+            "meterName": "5.6 terra LongCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "australiaeast",
+            "meterName": "5.6 terra LongCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "australiaeast",
+            "meterName": "5.6 terra LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 22.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southafricanorth",
+            "meterName": "5.6 terra LongCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 terra LongCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 22.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "azure-foundry-gpt-5-6-terra-shortco-std-2-5-0-25-15",
+      "label": "GPT-5.6 Terra ShortCo Std",
+      "modelSlug": "gpt-5-6-terra-shortco-std",
+      "provider": "Azure AI Foundry",
+      "route": "azure-foundry-global-standard",
+      "taskTags": [
+        "azure",
+        "foundry",
+        "global-standard",
+        "openai"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "standard",
+        "speed": "global-standard",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 2.5,
+        "cachedInput": 0.25,
+        "output": 15,
+        "unit": "usd_per_1m_tokens",
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 24 regions with identical rates."
+      },
+      "metadata": {
+        "regions": [
+          "australiaeast",
+          "brazilsouth",
+          "canadaeast",
+          "centralus",
+          "eastus",
+          "eastus2",
+          "francecentral",
+          "germanywestcentral",
+          "japaneast",
+          "koreacentral",
+          "northcentralus",
+          "norwayeast",
+          "polandcentral",
+          "southafricanorth",
+          "southcentralus",
+          "southindia",
+          "spaincentral",
+          "swedencentral",
+          "switzerlandnorth",
+          "uaenorth",
+          "uksouth",
+          "westeurope",
+          "westus",
+          "westus3"
+        ],
+        "locations": [
+          "AE North",
+          "AU East",
+          "BR South",
+          "CA East",
+          "CH North",
+          "DE West Central",
+          "ES Central",
+          "EU West",
+          "FR Central",
+          "IN South",
+          "JA East",
+          "KR Central",
+          "NO East",
+          "PL Central",
+          "SE Central",
+          "UK South",
+          "US Central",
+          "US East",
+          "US East 2",
+          "US North Central",
+          "US South Central",
+          "US West",
+          "US West 3",
+          "ZA North"
+        ],
+        "regionCount": 24,
+        "meters": [
+          {
+            "region": "swedencentral",
+            "meterName": "5.6 terra ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "swedencentral",
+            "meterName": "5.6 terra ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "swedencentral",
+            "meterName": "5.6 terra ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "5.6 terra ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "5.6 terra ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "5.6 terra ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westus",
+            "meterName": "5.6 terra ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westus",
+            "meterName": "5.6 terra ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westus",
+            "meterName": "5.6 terra ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "5.6 terra ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "5.6 terra ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "5.6 terra ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "japaneast",
+            "meterName": "5.6 terra ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "japaneast",
+            "meterName": "5.6 terra ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "japaneast",
+            "meterName": "5.6 terra ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "5.6 terra ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "5.6 terra ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "5.6 terra ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "polandcentral",
+            "meterName": "5.6 terra ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "polandcentral",
+            "meterName": "5.6 terra ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "polandcentral",
+            "meterName": "5.6 terra ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "5.6 terra ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "5.6 terra ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "5.6 terra ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "5.6 terra ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "5.6 terra ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "5.6 terra ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southafricanorth",
+            "meterName": "5.6 terra ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southafricanorth",
+            "meterName": "5.6 terra ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "southafricanorth",
+            "meterName": "5.6 terra ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "5.6 terra ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "5.6 terra ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "5.6 terra ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "5.6 terra ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "5.6 terra ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "5.6 terra ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "5.6 terra ShortCo Opt Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Opt Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "5.6 terra ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "5.6 terra ShortCo Cd Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Cd Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "5.6 terra ShortCo Inp Std Gl 1M Tokens",
+            "skuName": "5.6 terra ShortCo Inp Std Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-07-01T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
       "id": "azure-foundry-gpt-5-1-25-0-125-10",
       "label": "GPT-5",
       "modelSlug": "gpt-5",
@@ -30743,7 +33166,10 @@
           "dollars": 100,
           "creditsPerDollar": 25,
           "dollarsPerCredit": 0.04
-        }
+        },
+        "preservedFromPriorRun": true,
+        "preservedAt": "2026-07-19T16:56:59.272Z",
+        "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
     {
@@ -30783,7 +33209,10 @@
           "dollars": 100,
           "creditsPerDollar": 25,
           "dollarsPerCredit": 0.04
-        }
+        },
+        "preservedFromPriorRun": true,
+        "preservedAt": "2026-07-19T16:56:59.272Z",
+        "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
     {
@@ -30823,7 +33252,10 @@
           "dollars": 100,
           "creditsPerDollar": 25,
           "dollarsPerCredit": 0.04
-        }
+        },
+        "preservedFromPriorRun": true,
+        "preservedAt": "2026-07-19T16:56:59.272Z",
+        "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
     {
@@ -30863,7 +33295,10 @@
           "dollars": 100,
           "creditsPerDollar": 25,
           "dollarsPerCredit": 0.04
-        }
+        },
+        "preservedFromPriorRun": true,
+        "preservedAt": "2026-07-19T16:56:59.272Z",
+        "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
     {
@@ -30903,7 +33338,10 @@
           "dollars": 100,
           "creditsPerDollar": 25,
           "dollarsPerCredit": 0.04
-        }
+        },
+        "preservedFromPriorRun": true,
+        "preservedAt": "2026-07-19T16:56:59.272Z",
+        "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
     {
@@ -30943,7 +33381,10 @@
           "dollars": 100,
           "creditsPerDollar": 25,
           "dollarsPerCredit": 0.04
-        }
+        },
+        "preservedFromPriorRun": true,
+        "preservedAt": "2026-07-19T16:56:59.272Z",
+        "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
     {
@@ -30983,7 +33424,10 @@
           "dollars": 100,
           "creditsPerDollar": 25,
           "dollarsPerCredit": 0.04
-        }
+        },
+        "preservedFromPriorRun": true,
+        "preservedAt": "2026-07-19T16:56:59.272Z",
+        "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
     {
@@ -31023,7 +33467,10 @@
           "dollars": 100,
           "creditsPerDollar": 25,
           "dollarsPerCredit": 0.04
-        }
+        },
+        "preservedFromPriorRun": true,
+        "preservedAt": "2026-07-19T16:56:59.272Z",
+        "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
     {
@@ -31063,7 +33510,10 @@
           "dollars": 100,
           "creditsPerDollar": 25,
           "dollarsPerCredit": 0.04
-        }
+        },
+        "preservedFromPriorRun": true,
+        "preservedAt": "2026-07-19T16:56:59.272Z",
+        "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
     {

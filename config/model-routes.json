@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-19T16:56:59.272Z",
+  "generatedAt": "2026-07-26T16:58:11.106Z",
   "generatedBy": "scripts/update-model-routes.mjs",
   "defaults": {
     "cachedInputMultiplier": 0.1
@@ -9,50 +9,50 @@
     {
       "id": "azure-foundry-global-standard",
       "url": "https://prices.azure.com/api/retail/prices",
-      "fetchedAt": "2026-07-19T16:57:34.005Z",
+      "fetchedAt": "2026-07-26T16:58:28.344Z",
       "status": "ok",
       "count": 6087,
-      "durationMs": 34708
+      "durationMs": 17199
     },
     {
       "id": "claude-pricing",
       "url": "https://platform.claude.com/docs/en/about-claude/pricing.md",
-      "fetchedAt": "2026-07-19T16:56:59.568Z",
+      "fetchedAt": "2026-07-26T16:58:11.390Z",
       "status": "ok",
-      "count": 11,
-      "durationMs": 280
+      "count": 12,
+      "durationMs": 255
     },
     {
       "id": "codex-credit-value",
       "url": "https://help.openai.com/en/articles/20001147-codex-credits-for-students-terms-of-service",
-      "fetchedAt": "2026-07-19T16:57:06.166Z",
+      "fetchedAt": "2026-07-26T16:58:17.443Z",
       "status": "error",
       "warning": "codex-credit-value: Could not find a credits-to-dollar equivalence statement.",
-      "durationMs": 6870
+      "durationMs": 6298
     },
     {
       "id": "codex-rate-card",
       "url": "https://help.openai.com/en/articles/20001106-codex-rate-card",
-      "fetchedAt": "2026-07-19T16:57:21.146Z",
+      "fetchedAt": "2026-07-26T16:58:32.416Z",
       "status": "error",
       "warning": "codex-rate-card: page.waitForSelector: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('table') to be visible\n",
-      "durationMs": 21857
+      "durationMs": 21280
     },
     {
       "id": "github-copilot-pricing",
       "url": "https://raw.githubusercontent.com/github/docs/main/data/tables/copilot/models-and-pricing.yml",
-      "fetchedAt": "2026-07-19T16:56:59.640Z",
+      "fetchedAt": "2026-07-26T16:58:11.380Z",
       "status": "ok",
-      "count": 33,
-      "durationMs": 362
+      "count": 35,
+      "durationMs": 260
     },
     {
       "id": "github-models-catalog",
       "url": "https://models.github.ai/catalog/models",
-      "fetchedAt": "2026-07-19T16:56:59.612Z",
+      "fetchedAt": "2026-07-26T16:58:11.454Z",
       "status": "ok",
       "count": 37,
-      "durationMs": 333
+      "durationMs": 335
     }
   ],
   "warnings": [
@@ -234,6 +234,34 @@
       "id": "anthropic-claude-opus-4-8",
       "label": "Claude Opus 4.8",
       "modelSlug": "claude-opus-4-8",
+      "provider": "Anthropic",
+      "route": "anthropic-api",
+      "taskTags": [
+        "anthropic",
+        "api",
+        "claude"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "high",
+        "speed": "standard",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 5,
+        "cachedInput": 0.5,
+        "output": 25,
+        "cacheWrite": 6.25,
+        "cacheWrite1h": 10,
+        "unit": "usd_per_1m_tokens",
+        "source": "Anthropic Claude pricing markdown table."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "anthropic-claude-opus-5",
+      "label": "Claude Opus 5",
+      "modelSlug": "claude-opus-5",
       "provider": "Anthropic",
       "route": "anthropic-api",
       "taskTags": [
@@ -33168,7 +33196,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-07-19T16:56:59.272Z",
+        "preservedAt": "2026-07-26T16:58:11.106Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33211,7 +33239,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-07-19T16:56:59.272Z",
+        "preservedAt": "2026-07-26T16:58:11.106Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33254,7 +33282,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-07-19T16:56:59.272Z",
+        "preservedAt": "2026-07-26T16:58:11.106Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33297,7 +33325,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-07-19T16:56:59.272Z",
+        "preservedAt": "2026-07-26T16:58:11.106Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33340,7 +33368,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-07-19T16:56:59.272Z",
+        "preservedAt": "2026-07-26T16:58:11.106Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33383,7 +33411,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-07-19T16:56:59.272Z",
+        "preservedAt": "2026-07-26T16:58:11.106Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33426,7 +33454,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-07-19T16:56:59.272Z",
+        "preservedAt": "2026-07-26T16:58:11.106Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33469,7 +33497,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-07-19T16:56:59.272Z",
+        "preservedAt": "2026-07-26T16:58:11.106Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33512,7 +33540,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-07-19T16:56:59.272Z",
+        "preservedAt": "2026-07-26T16:58:11.106Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33706,6 +33734,37 @@
       "id": "github-copilot-anthropic-claude-opus-4-8",
       "label": "Claude Opus 4.8",
       "modelSlug": "claude-opus-4-8",
+      "provider": "GitHub Copilot",
+      "route": "github-copilot",
+      "taskTags": [
+        "anthropic",
+        "coding",
+        "copilot",
+        "powerful"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "high",
+        "speed": "subscription",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 5,
+        "cachedInput": 0.5,
+        "output": 25,
+        "cacheWrite": 6.25,
+        "unit": "usd_per_1m_tokens",
+        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
+      },
+      "metadata": {
+        "releaseStatus": "GA",
+        "category": "Powerful"
+      }
+    },
+    {
+      "id": "github-copilot-anthropic-claude-opus-5",
+      "label": "Claude Opus 5",
+      "modelSlug": "claude-opus-5",
       "provider": "GitHub Copilot",
       "route": "github-copilot",
       "taskTags": [
@@ -34005,6 +34064,36 @@
       "metadata": {
         "releaseStatus": "GA",
         "category": "Lightweight"
+      }
+    },
+    {
+      "id": "github-copilot-google-gemini-3-6-flash",
+      "label": "Gemini 3.6 Flash",
+      "modelSlug": "gemini-3-6-flash",
+      "provider": "GitHub Copilot",
+      "route": "github-copilot",
+      "taskTags": [
+        "coding",
+        "copilot",
+        "google",
+        "versatile"
+      ],
+      "options": {
+        "reasoning": "standard",
+        "effort": "standard",
+        "speed": "subscription",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 1.5,
+        "cachedInput": 0.15,
+        "output": 7.5,
+        "unit": "usd_per_1m_tokens",
+        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
+      },
+      "metadata": {
+        "releaseStatus": "GA",
+        "category": "Versatile"
       }
     },
     {

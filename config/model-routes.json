@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-26T16:58:11.106Z",
+  "generatedAt": "2026-08-02T16:56:25.032Z",
   "generatedBy": "scripts/update-model-routes.mjs",
   "defaults": {
     "cachedInputMultiplier": 0.1
@@ -9,53 +9,54 @@
     {
       "id": "azure-foundry-global-standard",
       "url": "https://prices.azure.com/api/retail/prices",
-      "fetchedAt": "2026-07-26T16:58:28.344Z",
+      "fetchedAt": "2026-08-02T16:56:48.755Z",
       "status": "ok",
       "count": 6087,
-      "durationMs": 17199
+      "durationMs": 23689
     },
     {
       "id": "claude-pricing",
       "url": "https://platform.claude.com/docs/en/about-claude/pricing.md",
-      "fetchedAt": "2026-07-26T16:58:11.390Z",
+      "fetchedAt": "2026-08-02T16:56:25.287Z",
       "status": "ok",
       "count": 12,
-      "durationMs": 255
+      "durationMs": 230
     },
     {
       "id": "codex-credit-value",
       "url": "https://help.openai.com/en/articles/20001147-codex-credits-for-students-terms-of-service",
-      "fetchedAt": "2026-07-26T16:58:17.443Z",
+      "fetchedAt": "2026-08-02T16:56:30.623Z",
       "status": "error",
       "warning": "codex-credit-value: Could not find a credits-to-dollar equivalence statement.",
-      "durationMs": 6298
+      "durationMs": 5558
     },
     {
       "id": "codex-rate-card",
       "url": "https://help.openai.com/en/articles/20001106-codex-rate-card",
-      "fetchedAt": "2026-07-26T16:58:32.416Z",
+      "fetchedAt": "2026-08-02T16:56:45.593Z",
       "status": "error",
       "warning": "codex-rate-card: page.waitForSelector: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('table') to be visible\n",
-      "durationMs": 21280
+      "durationMs": 20535
     },
     {
       "id": "github-copilot-pricing",
       "url": "https://raw.githubusercontent.com/github/docs/main/data/tables/copilot/models-and-pricing.yml",
-      "fetchedAt": "2026-07-26T16:58:11.380Z",
+      "fetchedAt": "2026-08-02T16:56:25.273Z",
       "status": "ok",
       "count": 35,
-      "durationMs": 260
+      "durationMs": 229
     },
     {
       "id": "github-models-catalog",
       "url": "https://models.github.ai/catalog/models",
-      "fetchedAt": "2026-07-26T16:58:11.454Z",
-      "status": "ok",
-      "count": 37,
-      "durationMs": 335
+      "fetchedAt": "2026-08-02T16:56:25.667Z",
+      "status": "error",
+      "warning": "github-models-catalog: HTTP 410 after 1 attempts:: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}",
+      "durationMs": 623
     }
   ],
   "warnings": [
+    "github-models-catalog: HTTP 410 after 1 attempts:: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}",
     "codex-credit-value: Could not find a credits-to-dollar equivalence statement.",
     "codex-rate-card: page.waitForSelector: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('table') to be visible\n",
     "codex-rate-card: skipped Codex variants because the credit-to-dollar conversion source was unavailable.",
@@ -33196,7 +33197,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-07-26T16:58:11.106Z",
+        "preservedAt": "2026-08-02T16:56:25.032Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33239,7 +33240,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-07-26T16:58:11.106Z",
+        "preservedAt": "2026-08-02T16:56:25.032Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33282,7 +33283,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-07-26T16:58:11.106Z",
+        "preservedAt": "2026-08-02T16:56:25.032Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33325,7 +33326,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-07-26T16:58:11.106Z",
+        "preservedAt": "2026-08-02T16:56:25.032Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33368,7 +33369,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-07-26T16:58:11.106Z",
+        "preservedAt": "2026-08-02T16:56:25.032Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33411,7 +33412,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-07-26T16:58:11.106Z",
+        "preservedAt": "2026-08-02T16:56:25.032Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33454,7 +33455,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-07-26T16:58:11.106Z",
+        "preservedAt": "2026-08-02T16:56:25.032Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33497,7 +33498,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-07-26T16:58:11.106Z",
+        "preservedAt": "2026-08-02T16:56:25.032Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33540,7 +33541,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-07-26T16:58:11.106Z",
+        "preservedAt": "2026-08-02T16:56:25.032Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33917,66 +33918,6 @@
       }
     },
     {
-      "id": "github-copilot-google-gemini-2-5-pro",
-      "label": "Gemini 2.5 Pro",
-      "modelSlug": "gemini-2-5-pro",
-      "provider": "GitHub Copilot",
-      "route": "github-copilot",
-      "taskTags": [
-        "coding",
-        "copilot",
-        "google",
-        "powerful"
-      ],
-      "options": {
-        "reasoning": "standard",
-        "effort": "high",
-        "speed": "subscription",
-        "speedMultiplier": 1
-      },
-      "pricing": {
-        "input": 1.25,
-        "cachedInput": 0.125,
-        "output": 10,
-        "unit": "usd_per_1m_tokens",
-        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
-      },
-      "metadata": {
-        "releaseStatus": "GA",
-        "category": "Powerful"
-      }
-    },
-    {
-      "id": "github-copilot-google-gemini-3-flash",
-      "label": "Gemini 3 Flash",
-      "modelSlug": "gemini-3-flash",
-      "provider": "GitHub Copilot",
-      "route": "github-copilot",
-      "taskTags": [
-        "coding",
-        "copilot",
-        "google",
-        "lightweight"
-      ],
-      "options": {
-        "reasoning": "standard",
-        "effort": "standard",
-        "speed": "subscription",
-        "speedMultiplier": 1
-      },
-      "pricing": {
-        "input": 0.5,
-        "cachedInput": 0.05,
-        "output": 3,
-        "unit": "usd_per_1m_tokens",
-        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
-      },
-      "metadata": {
-        "releaseStatus": "Public preview",
-        "category": "Lightweight"
-      }
-    },
-    {
       "id": "github-copilot-google-gemini-3-1-pro",
       "label": "Gemini 3.1 Pro",
       "modelSlug": "gemini-3-1-pro",
@@ -34099,20 +34040,14 @@
     {
       "id": "github-copilot-openai-gpt-5-mini",
       "label": "GPT-5 mini",
-      "modelSlug": "openai-gpt-5-mini",
+      "modelSlug": "gpt-5-mini",
       "provider": "GitHub Copilot",
       "route": "github-copilot",
       "taskTags": [
-        "agents",
-        "agentsv2",
-        "azure-openai",
         "coding",
         "copilot",
         "lightweight",
-        "openai",
-        "reasoning",
-        "streaming",
-        "tool-calling"
+        "openai"
       ],
       "options": {
         "reasoning": "reasoning",
@@ -34129,11 +34064,7 @@
       },
       "metadata": {
         "releaseStatus": "GA",
-        "category": "Lightweight",
-        "githubModelsCatalogId": "openai/gpt-5-mini",
-        "githubModelsCatalogUrl": "https://github.com/marketplace/models/azure-openai/gpt-5-mini",
-        "contextWindow": 200000,
-        "maxOutputTokens": 100000
+        "category": "Lightweight"
       }
     },
     {
@@ -34365,9 +34296,9 @@
         "speedMultiplier": 1
       },
       "pricing": {
-        "input": 1,
-        "cachedInput": 0.1,
-        "output": 6,
+        "input": 0.2,
+        "cachedInput": 0.02,
+        "output": 1.2,
         "unit": "usd_per_1m_tokens",
         "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
       },
@@ -34395,9 +34326,9 @@
         "speedMultiplier": 1
       },
       "pricing": {
-        "input": 2,
-        "cachedInput": 0.2,
-        "output": 9,
+        "input": 0.4,
+        "cachedInput": 0.04,
+        "output": 1.8,
         "unit": "usd_per_1m_tokens",
         "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
       },
@@ -34485,9 +34416,9 @@
         "speedMultiplier": 1
       },
       "pricing": {
-        "input": 2.5,
-        "cachedInput": 0.25,
-        "output": 15,
+        "input": 2,
+        "cachedInput": 0.2,
+        "output": 12,
         "unit": "usd_per_1m_tokens",
         "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
       },
@@ -34515,9 +34446,69 @@
         "speedMultiplier": 1
       },
       "pricing": {
-        "input": 5,
+        "input": 4,
+        "cachedInput": 0.4,
+        "output": 18,
+        "unit": "usd_per_1m_tokens",
+        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
+      },
+      "metadata": {
+        "releaseStatus": "GA",
+        "category": "Versatile"
+      }
+    },
+    {
+      "id": "github-copilot-xai-grok-4-5",
+      "label": "Grok 4.5",
+      "modelSlug": "grok-4-5",
+      "provider": "GitHub Copilot",
+      "route": "github-copilot",
+      "taskTags": [
+        "coding",
+        "copilot",
+        "versatile",
+        "xai"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "standard",
+        "speed": "subscription",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 2,
         "cachedInput": 0.5,
-        "output": 22.5,
+        "output": 6,
+        "unit": "usd_per_1m_tokens",
+        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
+      },
+      "metadata": {
+        "releaseStatus": "GA",
+        "category": "Versatile"
+      }
+    },
+    {
+      "id": "github-copilot-xai-grok-4-5-2",
+      "label": "Grok 4.5",
+      "modelSlug": "grok-4-5",
+      "provider": "GitHub Copilot",
+      "route": "github-copilot",
+      "taskTags": [
+        "coding",
+        "copilot",
+        "versatile",
+        "xai"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "standard",
+        "speed": "subscription",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 4,
+        "cachedInput": 1,
+        "output": 12,
         "unit": "usd_per_1m_tokens",
         "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
       },

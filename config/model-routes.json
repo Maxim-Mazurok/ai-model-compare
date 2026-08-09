@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-02T16:56:25.032Z",
+  "generatedAt": "2026-08-09T16:32:03.795Z",
   "generatedBy": "scripts/update-model-routes.mjs",
   "defaults": {
     "cachedInputMultiplier": 0.1
@@ -9,50 +9,50 @@
     {
       "id": "azure-foundry-global-standard",
       "url": "https://prices.azure.com/api/retail/prices",
-      "fetchedAt": "2026-08-02T16:56:48.755Z",
+      "fetchedAt": "2026-08-09T16:32:35.962Z",
       "status": "ok",
       "count": 6087,
-      "durationMs": 23689
+      "durationMs": 32129
     },
     {
       "id": "claude-pricing",
       "url": "https://platform.claude.com/docs/en/about-claude/pricing.md",
-      "fetchedAt": "2026-08-02T16:56:25.287Z",
+      "fetchedAt": "2026-08-09T16:32:04.106Z",
       "status": "ok",
       "count": 12,
-      "durationMs": 230
+      "durationMs": 286
     },
     {
       "id": "codex-credit-value",
       "url": "https://help.openai.com/en/articles/20001147-codex-credits-for-students-terms-of-service",
-      "fetchedAt": "2026-08-02T16:56:30.623Z",
+      "fetchedAt": "2026-08-09T16:32:11.363Z",
       "status": "error",
       "warning": "codex-credit-value: Could not find a credits-to-dollar equivalence statement.",
-      "durationMs": 5558
+      "durationMs": 7531
     },
     {
       "id": "codex-rate-card",
       "url": "https://help.openai.com/en/articles/20001106-codex-rate-card",
-      "fetchedAt": "2026-08-02T16:56:45.593Z",
+      "fetchedAt": "2026-08-09T16:32:26.371Z",
       "status": "error",
       "warning": "codex-rate-card: page.waitForSelector: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('table') to be visible\n",
-      "durationMs": 20535
+      "durationMs": 22549
     },
     {
       "id": "github-copilot-pricing",
       "url": "https://raw.githubusercontent.com/github/docs/main/data/tables/copilot/models-and-pricing.yml",
-      "fetchedAt": "2026-08-02T16:56:25.273Z",
+      "fetchedAt": "2026-08-09T16:32:03.941Z",
       "status": "ok",
-      "count": 35,
-      "durationMs": 229
+      "count": 36,
+      "durationMs": 134
     },
     {
       "id": "github-models-catalog",
       "url": "https://models.github.ai/catalog/models",
-      "fetchedAt": "2026-08-02T16:56:25.667Z",
+      "fetchedAt": "2026-08-09T16:32:03.986Z",
       "status": "error",
       "warning": "github-models-catalog: HTTP 410 after 1 attempts:: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}",
-      "durationMs": 623
+      "durationMs": 179
     }
   ],
   "warnings": [
@@ -33197,7 +33197,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-08-02T16:56:25.032Z",
+        "preservedAt": "2026-08-09T16:32:03.795Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33240,7 +33240,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-08-02T16:56:25.032Z",
+        "preservedAt": "2026-08-09T16:32:03.795Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33283,7 +33283,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-08-02T16:56:25.032Z",
+        "preservedAt": "2026-08-09T16:32:03.795Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33326,7 +33326,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-08-02T16:56:25.032Z",
+        "preservedAt": "2026-08-09T16:32:03.795Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33369,7 +33369,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-08-02T16:56:25.032Z",
+        "preservedAt": "2026-08-09T16:32:03.795Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33412,7 +33412,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-08-02T16:56:25.032Z",
+        "preservedAt": "2026-08-09T16:32:03.795Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33455,7 +33455,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-08-02T16:56:25.032Z",
+        "preservedAt": "2026-08-09T16:32:03.795Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33498,7 +33498,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-08-02T16:56:25.032Z",
+        "preservedAt": "2026-08-09T16:32:03.795Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33541,7 +33541,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-08-02T16:56:25.032Z",
+        "preservedAt": "2026-08-09T16:32:03.795Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -34299,6 +34299,7 @@
         "input": 0.2,
         "cachedInput": 0.02,
         "output": 1.2,
+        "cacheWrite": 0.25,
         "unit": "usd_per_1m_tokens",
         "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
       },
@@ -34329,6 +34330,7 @@
         "input": 0.4,
         "cachedInput": 0.04,
         "output": 1.8,
+        "cacheWrite": 0.5,
         "unit": "usd_per_1m_tokens",
         "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
       },
@@ -34359,6 +34361,7 @@
         "input": 5,
         "cachedInput": 0.5,
         "output": 30,
+        "cacheWrite": 6.25,
         "unit": "usd_per_1m_tokens",
         "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
       },
@@ -34389,6 +34392,7 @@
         "input": 10,
         "cachedInput": 1,
         "output": 45,
+        "cacheWrite": 12.5,
         "unit": "usd_per_1m_tokens",
         "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
       },
@@ -34419,6 +34423,7 @@
         "input": 2,
         "cachedInput": 0.2,
         "output": 12,
+        "cacheWrite": 2.5,
         "unit": "usd_per_1m_tokens",
         "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
       },
@@ -34449,6 +34454,7 @@
         "input": 4,
         "cachedInput": 0.4,
         "output": 18,
+        "cacheWrite": 5,
         "unit": "usd_per_1m_tokens",
         "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
       },
@@ -34545,6 +34551,36 @@
       "metadata": {
         "releaseStatus": "GA",
         "category": "Versatile"
+      }
+    },
+    {
+      "id": "github-copilot-moonshot-ai-kimi-k3",
+      "label": "Kimi K3",
+      "modelSlug": "kimi-k3",
+      "provider": "GitHub Copilot",
+      "route": "github-copilot",
+      "taskTags": [
+        "coding",
+        "copilot",
+        "moonshot-ai",
+        "powerful"
+      ],
+      "options": {
+        "reasoning": "standard",
+        "effort": "high",
+        "speed": "subscription",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 3,
+        "cachedInput": 0.3,
+        "output": 15,
+        "unit": "usd_per_1m_tokens",
+        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
+      },
+      "metadata": {
+        "releaseStatus": "GA",
+        "category": "Powerful"
       }
     },
     {

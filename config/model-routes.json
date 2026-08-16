@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-09T16:32:03.795Z",
+  "generatedAt": "2026-08-16T16:21:13.409Z",
   "generatedBy": "scripts/update-model-routes.mjs",
   "defaults": {
     "cachedInputMultiplier": 0.1
@@ -9,50 +9,50 @@
     {
       "id": "azure-foundry-global-standard",
       "url": "https://prices.azure.com/api/retail/prices",
-      "fetchedAt": "2026-08-09T16:32:35.962Z",
+      "fetchedAt": "2026-08-16T16:21:33.943Z",
       "status": "ok",
       "count": 6087,
-      "durationMs": 32129
+      "durationMs": 20492
     },
     {
       "id": "claude-pricing",
       "url": "https://platform.claude.com/docs/en/about-claude/pricing.md",
-      "fetchedAt": "2026-08-09T16:32:04.106Z",
+      "fetchedAt": "2026-08-16T16:21:13.792Z",
       "status": "ok",
-      "count": 12,
-      "durationMs": 286
+      "count": 11,
+      "durationMs": 353
     },
     {
       "id": "codex-credit-value",
       "url": "https://help.openai.com/en/articles/20001147-codex-credits-for-students-terms-of-service",
-      "fetchedAt": "2026-08-09T16:32:11.363Z",
+      "fetchedAt": "2026-08-16T16:21:19.002Z",
       "status": "error",
       "warning": "codex-credit-value: Could not find a credits-to-dollar equivalence statement.",
-      "durationMs": 7531
+      "durationMs": 5552
     },
     {
       "id": "codex-rate-card",
       "url": "https://help.openai.com/en/articles/20001106-codex-rate-card",
-      "fetchedAt": "2026-08-09T16:32:26.371Z",
+      "fetchedAt": "2026-08-16T16:21:33.984Z",
       "status": "error",
       "warning": "codex-rate-card: page.waitForSelector: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('table') to be visible\n",
-      "durationMs": 22549
+      "durationMs": 20543
     },
     {
       "id": "github-copilot-pricing",
       "url": "https://raw.githubusercontent.com/github/docs/main/data/tables/copilot/models-and-pricing.yml",
-      "fetchedAt": "2026-08-09T16:32:03.941Z",
+      "fetchedAt": "2026-08-16T16:21:13.643Z",
       "status": "ok",
-      "count": 36,
-      "durationMs": 134
+      "count": 40,
+      "durationMs": 219
     },
     {
       "id": "github-models-catalog",
       "url": "https://models.github.ai/catalog/models",
-      "fetchedAt": "2026-08-09T16:32:03.986Z",
+      "fetchedAt": "2026-08-16T16:21:13.705Z",
       "status": "error",
       "warning": "github-models-catalog: HTTP 410 after 1 attempts:: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}",
-      "durationMs": 179
+      "durationMs": 282
     }
   ],
   "warnings": [
@@ -344,37 +344,9 @@
       "metadata": {}
     },
     {
-      "id": "anthropic-claude-sonnet-5-starting-september-1-2026",
-      "label": "Claude Sonnet 5 starting September 1, 2026",
-      "modelSlug": "claude-sonnet-5-starting-september-1-2026",
-      "provider": "Anthropic",
-      "route": "anthropic-api",
-      "taskTags": [
-        "anthropic",
-        "api",
-        "claude"
-      ],
-      "options": {
-        "reasoning": "reasoning",
-        "effort": "standard",
-        "speed": "standard",
-        "speedMultiplier": 1
-      },
-      "pricing": {
-        "input": 3,
-        "cachedInput": 0.3,
-        "output": 15,
-        "cacheWrite": 3.75,
-        "cacheWrite1h": 6,
-        "unit": "usd_per_1m_tokens",
-        "source": "Anthropic Claude pricing markdown table."
-      },
-      "metadata": {}
-    },
-    {
-      "id": "anthropic-claude-sonnet-5-through-august-31-2026",
-      "label": "Claude Sonnet 5 through August 31, 2026",
-      "modelSlug": "claude-sonnet-5-through-august-31-2026",
+      "id": "anthropic-claude-sonnet-5",
+      "label": "Claude Sonnet 5",
+      "modelSlug": "claude-sonnet-5",
       "provider": "Anthropic",
       "route": "anthropic-api",
       "taskTags": [
@@ -33197,7 +33169,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-08-09T16:32:03.795Z",
+        "preservedAt": "2026-08-16T16:21:13.409Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33240,7 +33212,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-08-09T16:32:03.795Z",
+        "preservedAt": "2026-08-16T16:21:13.409Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33283,7 +33255,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-08-09T16:32:03.795Z",
+        "preservedAt": "2026-08-16T16:21:13.409Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33326,7 +33298,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-08-09T16:32:03.795Z",
+        "preservedAt": "2026-08-16T16:21:13.409Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33369,7 +33341,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-08-09T16:32:03.795Z",
+        "preservedAt": "2026-08-16T16:21:13.409Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33412,7 +33384,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-08-09T16:32:03.795Z",
+        "preservedAt": "2026-08-16T16:21:13.409Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33455,7 +33427,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-08-09T16:32:03.795Z",
+        "preservedAt": "2026-08-16T16:21:13.409Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33498,7 +33470,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-08-09T16:32:03.795Z",
+        "preservedAt": "2026-08-16T16:21:13.409Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33541,7 +33513,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-08-09T16:32:03.795Z",
+        "preservedAt": "2026-08-16T16:21:13.409Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -33887,9 +33859,9 @@
       }
     },
     {
-      "id": "github-copilot-anthropic-claude-sonnet-5-sonnet-5-promo",
-      "label": "Claude Sonnet 5[^sonnet-5-promo]",
-      "modelSlug": "claude-sonnet-5-sonnet-5-promo",
+      "id": "github-copilot-anthropic-claude-sonnet-5",
+      "label": "Claude Sonnet 5",
+      "modelSlug": "claude-sonnet-5",
       "provider": "GitHub Copilot",
       "route": "github-copilot",
       "taskTags": [
@@ -34008,9 +33980,9 @@
       }
     },
     {
-      "id": "github-copilot-google-gemini-3-6-flash",
-      "label": "Gemini 3.6 Flash",
-      "modelSlug": "gemini-3-6-flash",
+      "id": "github-copilot-google-gemini-3-6-flash-gemini-flash-promo",
+      "label": "Gemini 3.6 Flash[^gemini-flash-promo]",
+      "modelSlug": "gemini-3-6-flash-gemini-flash-promo",
       "provider": "GitHub Copilot",
       "route": "github-copilot",
       "taskTags": [
@@ -34026,9 +33998,39 @@
         "speedMultiplier": 1
       },
       "pricing": {
-        "input": 1.5,
-        "cachedInput": 0.15,
-        "output": 7.5,
+        "input": 0.75,
+        "cachedInput": 0.075,
+        "output": 3.75,
+        "unit": "usd_per_1m_tokens",
+        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
+      },
+      "metadata": {
+        "releaseStatus": "GA",
+        "category": "Versatile"
+      }
+    },
+    {
+      "id": "github-copilot-google-gemini-3-7-flash-gemini-flash-promo",
+      "label": "Gemini 3.7 Flash[^gemini-flash-promo]",
+      "modelSlug": "gemini-3-7-flash-gemini-flash-promo",
+      "provider": "GitHub Copilot",
+      "route": "github-copilot",
+      "taskTags": [
+        "coding",
+        "copilot",
+        "google",
+        "versatile"
+      ],
+      "options": {
+        "reasoning": "standard",
+        "effort": "standard",
+        "speed": "subscription",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 0.75,
+        "cachedInput": 0.075,
+        "output": 3.75,
         "unit": "usd_per_1m_tokens",
         "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
       },
@@ -34524,6 +34526,66 @@
       }
     },
     {
+      "id": "github-copilot-xai-grok-4-6",
+      "label": "Grok 4.6",
+      "modelSlug": "grok-4-6",
+      "provider": "GitHub Copilot",
+      "route": "github-copilot",
+      "taskTags": [
+        "coding",
+        "copilot",
+        "versatile",
+        "xai"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "standard",
+        "speed": "subscription",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 2,
+        "cachedInput": 0.5,
+        "output": 6,
+        "unit": "usd_per_1m_tokens",
+        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
+      },
+      "metadata": {
+        "releaseStatus": "GA",
+        "category": "Versatile"
+      }
+    },
+    {
+      "id": "github-copilot-xai-grok-4-6-2",
+      "label": "Grok 4.6",
+      "modelSlug": "grok-4-6",
+      "provider": "GitHub Copilot",
+      "route": "github-copilot",
+      "taskTags": [
+        "coding",
+        "copilot",
+        "versatile",
+        "xai"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "standard",
+        "speed": "subscription",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 4,
+        "cachedInput": 1,
+        "output": 12,
+        "unit": "usd_per_1m_tokens",
+        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
+      },
+      "metadata": {
+        "releaseStatus": "GA",
+        "category": "Versatile"
+      }
+    },
+    {
       "id": "github-copilot-moonshot-ai-kimi-k2-7-code",
       "label": "Kimi K2.7 Code",
       "modelSlug": "kimi-k2-7-code",
@@ -34605,6 +34667,36 @@
         "input": 0.75,
         "cachedInput": 0.075,
         "output": 4.5,
+        "unit": "usd_per_1m_tokens",
+        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
+      },
+      "metadata": {
+        "releaseStatus": "GA",
+        "category": "Lightweight"
+      }
+    },
+    {
+      "id": "github-copilot-microsoft-mai-code-1-1-flash",
+      "label": "MAI-Code-1.1-Flash",
+      "modelSlug": "mai-code-1-1-flash",
+      "provider": "GitHub Copilot",
+      "route": "github-copilot",
+      "taskTags": [
+        "coding",
+        "copilot",
+        "lightweight",
+        "microsoft"
+      ],
+      "options": {
+        "reasoning": "standard",
+        "effort": "standard",
+        "speed": "subscription",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 0.2,
+        "cachedInput": 0.02,
+        "output": 1.2,
         "unit": "usd_per_1m_tokens",
         "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
       },

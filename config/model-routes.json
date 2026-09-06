@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-30T19:02:25.889Z",
+  "generatedAt": "2026-09-06T18:01:14.349Z",
   "generatedBy": "scripts/update-model-routes.mjs",
   "defaults": {
     "cachedInputMultiplier": 0.1
@@ -9,57 +9,59 @@
     {
       "id": "azure-foundry-global-standard",
       "url": "https://prices.azure.com/api/retail/prices",
-      "fetchedAt": "2026-08-30T19:02:46.241Z",
+      "fetchedAt": "2026-09-06T18:01:29.883Z",
       "status": "ok",
-      "count": 6637,
-      "durationMs": 20318
+      "count": 7687,
+      "durationMs": 15501
     },
     {
       "id": "claude-pricing",
       "url": "https://platform.claude.com/docs/en/about-claude/pricing.md",
-      "fetchedAt": "2026-08-30T19:02:26.166Z",
-      "status": "ok",
-      "count": 11,
-      "durationMs": 253
+      "fetchedAt": "2026-09-06T18:01:14.589Z",
+      "status": "error",
+      "warning": "claude-pricing: Could not find markdown table with headers: Model, Base Input Tokens, Cache Hits & Refreshes",
+      "durationMs": 217
     },
     {
       "id": "codex-credit-value",
       "url": "https://help.openai.com/en/articles/20001147-codex-credits-for-students-terms-of-service",
-      "fetchedAt": "2026-08-30T19:02:31.511Z",
+      "fetchedAt": "2026-09-06T18:01:19.999Z",
       "status": "error",
       "warning": "codex-credit-value: Could not find a credits-to-dollar equivalence statement.",
-      "durationMs": 5589
+      "durationMs": 5617
     },
     {
       "id": "codex-rate-card",
       "url": "https://help.openai.com/en/articles/20001106-codex-rate-card",
-      "fetchedAt": "2026-08-30T19:02:46.529Z",
+      "fetchedAt": "2026-09-06T18:01:35.027Z",
       "status": "error",
       "warning": "codex-rate-card: page.waitForSelector: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('table') to be visible\n",
-      "durationMs": 20614
+      "durationMs": 20653
     },
     {
       "id": "github-copilot-pricing",
       "url": "https://raw.githubusercontent.com/github/docs/main/data/tables/copilot/models-and-pricing.yml",
-      "fetchedAt": "2026-08-30T19:02:26.132Z",
+      "fetchedAt": "2026-09-06T18:01:14.561Z",
       "status": "ok",
-      "count": 40,
-      "durationMs": 231
+      "count": 38,
+      "durationMs": 202
     },
     {
       "id": "github-models-catalog",
       "url": "https://models.github.ai/catalog/models",
-      "fetchedAt": "2026-08-30T19:02:26.402Z",
+      "fetchedAt": "2026-09-06T18:01:14.603Z",
       "status": "error",
       "warning": "github-models-catalog: HTTP 410 after 1 attempts:: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}",
-      "durationMs": 502
+      "durationMs": 244
     }
   ],
   "warnings": [
+    "claude-pricing: Could not find markdown table with headers: Model, Base Input Tokens, Cache Hits & Refreshes",
     "github-models-catalog: HTTP 410 after 1 attempts:: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}",
     "codex-credit-value: Could not find a credits-to-dollar equivalence statement.",
     "codex-rate-card: page.waitForSelector: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('table') to be visible\n",
     "codex-rate-card: skipped Codex variants because the credit-to-dollar conversion source was unavailable.",
+    "claude-pricing: preserved 11 existing Claude pricing variants because claude-pricing could not be refreshed.",
     "codex-rate-card: preserved 9 existing Codex rate card variants because codex-rate-card, codex-credit-value could not be refreshed."
   ],
   "variants": [
@@ -89,7 +91,11 @@
         "unit": "usd_per_1m_tokens",
         "source": "Anthropic Claude pricing markdown table."
       },
-      "metadata": {}
+      "metadata": {
+        "preservedFromPriorRun": true,
+        "preservedAt": "2026-09-06T18:01:14.349Z",
+        "preservationReason": "claude-pricing could not be refreshed"
+      }
     },
     {
       "id": "anthropic-claude-haiku-4-5",
@@ -117,7 +123,11 @@
         "unit": "usd_per_1m_tokens",
         "source": "Anthropic Claude pricing markdown table."
       },
-      "metadata": {}
+      "metadata": {
+        "preservedFromPriorRun": true,
+        "preservedAt": "2026-09-06T18:01:14.349Z",
+        "preservationReason": "claude-pricing could not be refreshed"
+      }
     },
     {
       "id": "anthropic-claude-mythos-5-limited-availability",
@@ -145,7 +155,11 @@
         "unit": "usd_per_1m_tokens",
         "source": "Anthropic Claude pricing markdown table."
       },
-      "metadata": {}
+      "metadata": {
+        "preservedFromPriorRun": true,
+        "preservedAt": "2026-09-06T18:01:14.349Z",
+        "preservationReason": "claude-pricing could not be refreshed"
+      }
     },
     {
       "id": "anthropic-claude-opus-4-5",
@@ -173,7 +187,11 @@
         "unit": "usd_per_1m_tokens",
         "source": "Anthropic Claude pricing markdown table."
       },
-      "metadata": {}
+      "metadata": {
+        "preservedFromPriorRun": true,
+        "preservedAt": "2026-09-06T18:01:14.349Z",
+        "preservationReason": "claude-pricing could not be refreshed"
+      }
     },
     {
       "id": "anthropic-claude-opus-4-6",
@@ -201,7 +219,11 @@
         "unit": "usd_per_1m_tokens",
         "source": "Anthropic Claude pricing markdown table."
       },
-      "metadata": {}
+      "metadata": {
+        "preservedFromPriorRun": true,
+        "preservedAt": "2026-09-06T18:01:14.349Z",
+        "preservationReason": "claude-pricing could not be refreshed"
+      }
     },
     {
       "id": "anthropic-claude-opus-4-7",
@@ -229,7 +251,11 @@
         "unit": "usd_per_1m_tokens",
         "source": "Anthropic Claude pricing markdown table."
       },
-      "metadata": {}
+      "metadata": {
+        "preservedFromPriorRun": true,
+        "preservedAt": "2026-09-06T18:01:14.349Z",
+        "preservationReason": "claude-pricing could not be refreshed"
+      }
     },
     {
       "id": "anthropic-claude-opus-4-8",
@@ -257,7 +283,11 @@
         "unit": "usd_per_1m_tokens",
         "source": "Anthropic Claude pricing markdown table."
       },
-      "metadata": {}
+      "metadata": {
+        "preservedFromPriorRun": true,
+        "preservedAt": "2026-09-06T18:01:14.349Z",
+        "preservationReason": "claude-pricing could not be refreshed"
+      }
     },
     {
       "id": "anthropic-claude-opus-5",
@@ -285,7 +315,11 @@
         "unit": "usd_per_1m_tokens",
         "source": "Anthropic Claude pricing markdown table."
       },
-      "metadata": {}
+      "metadata": {
+        "preservedFromPriorRun": true,
+        "preservedAt": "2026-09-06T18:01:14.349Z",
+        "preservationReason": "claude-pricing could not be refreshed"
+      }
     },
     {
       "id": "anthropic-claude-sonnet-4-5",
@@ -313,7 +347,11 @@
         "unit": "usd_per_1m_tokens",
         "source": "Anthropic Claude pricing markdown table."
       },
-      "metadata": {}
+      "metadata": {
+        "preservedFromPriorRun": true,
+        "preservedAt": "2026-09-06T18:01:14.349Z",
+        "preservationReason": "claude-pricing could not be refreshed"
+      }
     },
     {
       "id": "anthropic-claude-sonnet-4-6",
@@ -341,7 +379,11 @@
         "unit": "usd_per_1m_tokens",
         "source": "Anthropic Claude pricing markdown table."
       },
-      "metadata": {}
+      "metadata": {
+        "preservedFromPriorRun": true,
+        "preservedAt": "2026-09-06T18:01:14.349Z",
+        "preservationReason": "claude-pricing could not be refreshed"
+      }
     },
     {
       "id": "anthropic-claude-sonnet-5",
@@ -369,7 +411,11 @@
         "unit": "usd_per_1m_tokens",
         "source": "Anthropic Claude pricing markdown table."
       },
-      "metadata": {}
+      "metadata": {
+        "preservedFromPriorRun": true,
+        "preservedAt": "2026-09-06T18:01:14.349Z",
+        "preservationReason": "claude-pricing could not be refreshed"
+      }
     },
     {
       "id": "azure-foundry-chat-latest-05052026-5-0-5-30",
@@ -23524,6 +23570,4866 @@
       }
     },
     {
+      "id": "azure-foundry-gpt-54-flex-1-25-1-25-7-5",
+      "label": "GPT-54 Flex",
+      "modelSlug": "gpt-54-flex",
+      "provider": "Azure AI Foundry",
+      "route": "azure-foundry-global-standard",
+      "taskTags": [
+        "azure",
+        "foundry",
+        "global-standard",
+        "openai"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "standard",
+        "speed": "global-standard",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 1.25,
+        "cachedInput": 1.25,
+        "output": 7.5,
+        "unit": "usd_per_1m_tokens",
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 25 regions with identical rates."
+      },
+      "metadata": {
+        "regions": [
+          "australiaeast",
+          "brazilsouth",
+          "canadaeast",
+          "centralus",
+          "eastus",
+          "eastus2",
+          "francecentral",
+          "germanywestcentral",
+          "japaneast",
+          "koreacentral",
+          "malaysiawest",
+          "northcentralus",
+          "norwayeast",
+          "polandcentral",
+          "southafricanorth",
+          "southcentralus",
+          "southindia",
+          "spaincentral",
+          "swedencentral",
+          "switzerlandnorth",
+          "uaenorth",
+          "uksouth",
+          "westeurope",
+          "westus",
+          "westus3"
+        ],
+        "locations": [
+          "AE North",
+          "AU East",
+          "BR South",
+          "CA East",
+          "CH North",
+          "DE West Central",
+          "ES Central",
+          "EU West",
+          "FR Central",
+          "IN South",
+          "JA East",
+          "KR Central",
+          "MY West",
+          "NO East",
+          "PL Central",
+          "SE Central",
+          "UK South",
+          "US Central",
+          "US East",
+          "US East 2",
+          "US North Central",
+          "US South Central",
+          "US West",
+          "US West 3",
+          "ZA North"
+        ],
+        "regionCount": 25,
+        "meters": [
+          {
+            "region": "norwayeast",
+            "meterName": "54 inp Flex Gl 1M Tokens",
+            "skuName": "54 inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "54 opt Flex Gl 1M Tokens",
+            "skuName": "54 opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 7.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "54 opt Flex Gl 1M Tokens",
+            "skuName": "54 opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 7.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "54 inp Flex Gl 1M Tokens",
+            "skuName": "54 inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "54 opt Flex Gl 1M Tokens",
+            "skuName": "54 opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 7.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "54 inp Flex Gl 1M Tokens",
+            "skuName": "54 inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uksouth",
+            "meterName": "54 opt Flex Gl 1M Tokens",
+            "skuName": "54 opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 7.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uksouth",
+            "meterName": "54 inp Flex Gl 1M Tokens",
+            "skuName": "54 inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "54 inp Flex Gl 1M Tokens",
+            "skuName": "54 inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "54 opt Flex Gl 1M Tokens",
+            "skuName": "54 opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 7.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "54 opt Flex Gl 1M Tokens",
+            "skuName": "54 opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 7.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "54 inp Flex Gl 1M Tokens",
+            "skuName": "54 inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "54 inp Flex Gl 1M Tokens",
+            "skuName": "54 inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "54 opt Flex Gl 1M Tokens",
+            "skuName": "54 opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 7.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "swedencentral",
+            "meterName": "54 inp Flex Gl 1M Tokens",
+            "skuName": "54 inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "swedencentral",
+            "meterName": "54 opt Flex Gl 1M Tokens",
+            "skuName": "54 opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 7.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "australiaeast",
+            "meterName": "54 opt Flex Gl 1M Tokens",
+            "skuName": "54 opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 7.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "australiaeast",
+            "meterName": "54 inp Flex Gl 1M Tokens",
+            "skuName": "54 inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "54 opt Flex Gl 1M Tokens",
+            "skuName": "54 opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 7.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "54 inp Flex Gl 1M Tokens",
+            "skuName": "54 inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "54 inp Flex Gl 1M Tokens",
+            "skuName": "54 inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "54 opt Flex Gl 1M Tokens",
+            "skuName": "54 opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 7.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "54 inp Flex Gl 1M Tokens",
+            "skuName": "54 inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "54 opt Flex Gl 1M Tokens",
+            "skuName": "54 opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 7.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southafricanorth",
+            "meterName": "54 opt Flex Gl 1M Tokens",
+            "skuName": "54 opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 7.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southafricanorth",
+            "meterName": "54 inp Flex Gl 1M Tokens",
+            "skuName": "54 inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southindia",
+            "meterName": "54 inp Flex Gl 1M Tokens",
+            "skuName": "54 inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southindia",
+            "meterName": "54 opt Flex Gl 1M Tokens",
+            "skuName": "54 opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 7.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "54 inp Flex Gl 1M Tokens",
+            "skuName": "54 inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "54 opt Flex Gl 1M Tokens",
+            "skuName": "54 opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 7.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westus",
+            "meterName": "54 inp Flex Gl 1M Tokens",
+            "skuName": "54 inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westus",
+            "meterName": "54 opt Flex Gl 1M Tokens",
+            "skuName": "54 opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 7.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "54 opt Flex Gl 1M Tokens",
+            "skuName": "54 opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 7.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "54 inp Flex Gl 1M Tokens",
+            "skuName": "54 inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "54 opt Flex Gl 1M Tokens",
+            "skuName": "54 opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 7.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "54 inp Flex Gl 1M Tokens",
+            "skuName": "54 inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "54 inp Flex Gl 1M Tokens",
+            "skuName": "54 inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "54 opt Flex Gl 1M Tokens",
+            "skuName": "54 opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 7.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "54 inp Flex Gl 1M Tokens",
+            "skuName": "54 inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "54 opt Flex Gl 1M Tokens",
+            "skuName": "54 opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 7.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "azure-foundry-gpt-54-longco-flex-2-5-0-25-11-25",
+      "label": "GPT-54 Longco Flex",
+      "modelSlug": "gpt-54-longco-flex",
+      "provider": "Azure AI Foundry",
+      "route": "azure-foundry-global-standard",
+      "taskTags": [
+        "azure",
+        "foundry",
+        "global-standard",
+        "openai"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "standard",
+        "speed": "global-standard",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 2.5,
+        "cachedInput": 0.25,
+        "output": 11.25,
+        "unit": "usd_per_1m_tokens",
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 25 regions with identical rates."
+      },
+      "metadata": {
+        "regions": [
+          "australiaeast",
+          "brazilsouth",
+          "canadaeast",
+          "centralus",
+          "eastus",
+          "eastus2",
+          "francecentral",
+          "germanywestcentral",
+          "japaneast",
+          "koreacentral",
+          "malaysiawest",
+          "northcentralus",
+          "norwayeast",
+          "polandcentral",
+          "southafricanorth",
+          "southcentralus",
+          "southindia",
+          "spaincentral",
+          "swedencentral",
+          "switzerlandnorth",
+          "uaenorth",
+          "uksouth",
+          "westeurope",
+          "westus",
+          "westus3"
+        ],
+        "locations": [
+          "AE North",
+          "AU East",
+          "BR South",
+          "CA East",
+          "CH North",
+          "DE West Central",
+          "ES Central",
+          "EU West",
+          "FR Central",
+          "IN South",
+          "JA East",
+          "KR Central",
+          "MY West",
+          "NO East",
+          "PL Central",
+          "SE Central",
+          "UK South",
+          "US Central",
+          "US East",
+          "US East 2",
+          "US North Central",
+          "US South Central",
+          "US West",
+          "US West 3",
+          "ZA North"
+        ],
+        "regionCount": 25,
+        "meters": [
+          {
+            "region": "malaysiawest",
+            "meterName": "54 longco inp Flex Gl 1M Tokens",
+            "skuName": "54 longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "54 longco cd inp Flex Gl 1M Tokens",
+            "skuName": "54 longco cd inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "54 longco opt Flex Gl 1M Tokens",
+            "skuName": "54 longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 11.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "54 longco cd inp Flex Gl 1M Tokens",
+            "skuName": "54 longco cd inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "54 longco opt Flex Gl 1M Tokens",
+            "skuName": "54 longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 11.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "54 longco inp Flex Gl 1M Tokens",
+            "skuName": "54 longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "54 longco opt Flex Gl 1M Tokens",
+            "skuName": "54 longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 11.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "54 longco cd inp Flex Gl 1M Tokens",
+            "skuName": "54 longco cd inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "54 longco inp Flex Gl 1M Tokens",
+            "skuName": "54 longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "54 longco inp Flex Gl 1M Tokens",
+            "skuName": "54 longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "54 longco cd inp Flex Gl 1M Tokens",
+            "skuName": "54 longco cd inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "54 longco opt Flex Gl 1M Tokens",
+            "skuName": "54 longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 11.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "54 longco cd inp Flex Gl 1M Tokens",
+            "skuName": "54 longco cd inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "54 longco opt Flex Gl 1M Tokens",
+            "skuName": "54 longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 11.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "54 longco inp Flex Gl 1M Tokens",
+            "skuName": "54 longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "swedencentral",
+            "meterName": "54 longco cd inp Flex Gl 1M Tokens",
+            "skuName": "54 longco cd inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "swedencentral",
+            "meterName": "54 longco opt Flex Gl 1M Tokens",
+            "skuName": "54 longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 11.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "swedencentral",
+            "meterName": "54 longco inp Flex Gl 1M Tokens",
+            "skuName": "54 longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "54 longco cd inp Flex Gl 1M Tokens",
+            "skuName": "54 longco cd inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "54 longco inp Flex Gl 1M Tokens",
+            "skuName": "54 longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "54 longco opt Flex Gl 1M Tokens",
+            "skuName": "54 longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 11.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "japaneast",
+            "meterName": "54 longco opt Flex Gl 1M Tokens",
+            "skuName": "54 longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 11.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "japaneast",
+            "meterName": "54 longco cd inp Flex Gl 1M Tokens",
+            "skuName": "54 longco cd inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "japaneast",
+            "meterName": "54 longco inp Flex Gl 1M Tokens",
+            "skuName": "54 longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "54 longco cd inp Flex Gl 1M Tokens",
+            "skuName": "54 longco cd inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "54 longco opt Flex Gl 1M Tokens",
+            "skuName": "54 longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 11.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "54 longco inp Flex Gl 1M Tokens",
+            "skuName": "54 longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "54 longco opt Flex Gl 1M Tokens",
+            "skuName": "54 longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 11.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "54 longco cd inp Flex Gl 1M Tokens",
+            "skuName": "54 longco cd inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "54 longco inp Flex Gl 1M Tokens",
+            "skuName": "54 longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "australiaeast",
+            "meterName": "54 longco cd inp Flex Gl 1M Tokens",
+            "skuName": "54 longco cd inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "australiaeast",
+            "meterName": "54 longco inp Flex Gl 1M Tokens",
+            "skuName": "54 longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "australiaeast",
+            "meterName": "54 longco opt Flex Gl 1M Tokens",
+            "skuName": "54 longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 11.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "54 longco inp Flex Gl 1M Tokens",
+            "skuName": "54 longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "54 longco cd inp Flex Gl 1M Tokens",
+            "skuName": "54 longco cd inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "54 longco opt Flex Gl 1M Tokens",
+            "skuName": "54 longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 11.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "54 longco inp Flex Gl 1M Tokens",
+            "skuName": "54 longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "54 longco opt Flex Gl 1M Tokens",
+            "skuName": "54 longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 11.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "54 longco cd inp Flex Gl 1M Tokens",
+            "skuName": "54 longco cd inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "54 longco opt Flex Gl 1M Tokens",
+            "skuName": "54 longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 11.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "azure-foundry-gpt-54-mini-flex-0-375-0-0375-2-25",
+      "label": "GPT-54 Mini Flex",
+      "modelSlug": "gpt-54-mini-flex",
+      "provider": "Azure AI Foundry",
+      "route": "azure-foundry-global-standard",
+      "taskTags": [
+        "azure",
+        "foundry",
+        "global-standard",
+        "openai"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "standard",
+        "speed": "global-standard",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 0.375,
+        "cachedInput": 0.0375,
+        "output": 2.25,
+        "unit": "usd_per_1m_tokens",
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 25 regions with identical rates."
+      },
+      "metadata": {
+        "regions": [
+          "australiaeast",
+          "brazilsouth",
+          "canadaeast",
+          "centralus",
+          "eastus",
+          "eastus2",
+          "francecentral",
+          "germanywestcentral",
+          "japaneast",
+          "koreacentral",
+          "malaysiawest",
+          "northcentralus",
+          "norwayeast",
+          "polandcentral",
+          "southafricanorth",
+          "southcentralus",
+          "southindia",
+          "spaincentral",
+          "swedencentral",
+          "switzerlandnorth",
+          "uaenorth",
+          "uksouth",
+          "westeurope",
+          "westus",
+          "westus3"
+        ],
+        "locations": [
+          "AE North",
+          "AU East",
+          "BR South",
+          "CA East",
+          "CH North",
+          "DE West Central",
+          "ES Central",
+          "EU West",
+          "FR Central",
+          "IN South",
+          "JA East",
+          "KR Central",
+          "MY West",
+          "NO East",
+          "PL Central",
+          "SE Central",
+          "UK South",
+          "US Central",
+          "US East",
+          "US East 2",
+          "US North Central",
+          "US South Central",
+          "US West",
+          "US West 3",
+          "ZA North"
+        ],
+        "regionCount": 25,
+        "meters": [
+          {
+            "region": "southcentralus",
+            "meterName": "54 mini Opt Flex Gl 1M Tokens",
+            "skuName": "54 mini Opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "54 mini Inp Flex Gl 1M Tokens",
+            "skuName": "54 mini Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.375,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "54 mini cd Inp Flex Gl 1M Tokens",
+            "skuName": "54 mini cd Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.0375,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "54 mini cd Inp Flex Gl 1M Tokens",
+            "skuName": "54 mini cd Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.0375,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "54 mini Opt Flex Gl 1M Tokens",
+            "skuName": "54 mini Opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "54 mini Inp Flex Gl 1M Tokens",
+            "skuName": "54 mini Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.375,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "polandcentral",
+            "meterName": "54 mini Opt Flex Gl 1M Tokens",
+            "skuName": "54 mini Opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "polandcentral",
+            "meterName": "54 mini Inp Flex Gl 1M Tokens",
+            "skuName": "54 mini Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.375,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "polandcentral",
+            "meterName": "54 mini cd Inp Flex Gl 1M Tokens",
+            "skuName": "54 mini cd Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.0375,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "54 mini Opt Flex Gl 1M Tokens",
+            "skuName": "54 mini Opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "54 mini Inp Flex Gl 1M Tokens",
+            "skuName": "54 mini Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.375,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "54 mini cd Inp Flex Gl 1M Tokens",
+            "skuName": "54 mini cd Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.0375,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "54 mini cd Inp Flex Gl 1M Tokens",
+            "skuName": "54 mini cd Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.0375,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "54 mini Inp Flex Gl 1M Tokens",
+            "skuName": "54 mini Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.375,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "54 mini Opt Flex Gl 1M Tokens",
+            "skuName": "54 mini Opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "54 mini cd Inp Flex Gl 1M Tokens",
+            "skuName": "54 mini cd Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.0375,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "54 mini Opt Flex Gl 1M Tokens",
+            "skuName": "54 mini Opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "54 mini Inp Flex Gl 1M Tokens",
+            "skuName": "54 mini Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.375,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "54 mini Opt Flex Gl 1M Tokens",
+            "skuName": "54 mini Opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "54 mini Inp Flex Gl 1M Tokens",
+            "skuName": "54 mini Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.375,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "54 mini cd Inp Flex Gl 1M Tokens",
+            "skuName": "54 mini cd Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.0375,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "54 mini cd Inp Flex Gl 1M Tokens",
+            "skuName": "54 mini cd Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.0375,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "54 mini Inp Flex Gl 1M Tokens",
+            "skuName": "54 mini Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.375,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "54 mini Opt Flex Gl 1M Tokens",
+            "skuName": "54 mini Opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "54 mini Opt Flex Gl 1M Tokens",
+            "skuName": "54 mini Opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "54 mini Inp Flex Gl 1M Tokens",
+            "skuName": "54 mini Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.375,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "54 mini cd Inp Flex Gl 1M Tokens",
+            "skuName": "54 mini cd Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.0375,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "54 mini Opt Flex Gl 1M Tokens",
+            "skuName": "54 mini Opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "54 mini Inp Flex Gl 1M Tokens",
+            "skuName": "54 mini Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.375,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "54 mini cd Inp Flex Gl 1M Tokens",
+            "skuName": "54 mini cd Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.0375,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "54 mini Inp Flex Gl 1M Tokens",
+            "skuName": "54 mini Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.375,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "54 mini cd Inp Flex Gl 1M Tokens",
+            "skuName": "54 mini cd Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.0375,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "54 mini Opt Flex Gl 1M Tokens",
+            "skuName": "54 mini Opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "northcentralus",
+            "meterName": "54 mini cd Inp Flex Gl 1M Tokens",
+            "skuName": "54 mini cd Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.0375,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "northcentralus",
+            "meterName": "54 mini Inp Flex Gl 1M Tokens",
+            "skuName": "54 mini Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.375,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "northcentralus",
+            "meterName": "54 mini Opt Flex Gl 1M Tokens",
+            "skuName": "54 mini Opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "54 mini Inp Flex Gl 1M Tokens",
+            "skuName": "54 mini Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.375,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "54 mini Opt Flex Gl 1M Tokens",
+            "skuName": "54 mini Opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "54 mini cd Inp Flex Gl 1M Tokens",
+            "skuName": "54 mini cd Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.0375,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "54 mini Opt Flex Gl 1M Tokens",
+            "skuName": "54 mini Opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "azure-foundry-gpt-54-nano-flex-0-1-0-01-0-625",
+      "label": "GPT-54 Nano Flex",
+      "modelSlug": "gpt-54-nano-flex",
+      "provider": "Azure AI Foundry",
+      "route": "azure-foundry-global-standard",
+      "taskTags": [
+        "azure",
+        "foundry",
+        "global-standard",
+        "openai"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "standard",
+        "speed": "global-standard",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 0.1,
+        "cachedInput": 0.01,
+        "output": 0.625,
+        "unit": "usd_per_1m_tokens",
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 25 regions with identical rates."
+      },
+      "metadata": {
+        "regions": [
+          "australiaeast",
+          "brazilsouth",
+          "canadaeast",
+          "centralus",
+          "eastus",
+          "eastus2",
+          "francecentral",
+          "germanywestcentral",
+          "japaneast",
+          "koreacentral",
+          "malaysiawest",
+          "northcentralus",
+          "norwayeast",
+          "polandcentral",
+          "southafricanorth",
+          "southcentralus",
+          "southindia",
+          "spaincentral",
+          "swedencentral",
+          "switzerlandnorth",
+          "uaenorth",
+          "uksouth",
+          "westeurope",
+          "westus",
+          "westus3"
+        ],
+        "locations": [
+          "AE North",
+          "AU East",
+          "BR South",
+          "CA East",
+          "CH North",
+          "DE West Central",
+          "ES Central",
+          "EU West",
+          "FR Central",
+          "IN South",
+          "JA East",
+          "KR Central",
+          "MY West",
+          "NO East",
+          "PL Central",
+          "SE Central",
+          "UK South",
+          "US Central",
+          "US East",
+          "US East 2",
+          "US North Central",
+          "US South Central",
+          "US West",
+          "US West 3",
+          "ZA North"
+        ],
+        "regionCount": 25,
+        "meters": [
+          {
+            "region": "uksouth",
+            "meterName": "54 nano Inp Flex Gl 1M Tokens",
+            "skuName": "54 nano Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uksouth",
+            "meterName": "54 nano cd Inp Flex Gl 1M Tokens",
+            "skuName": "54 nano cd Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uksouth",
+            "meterName": "54 nano Opt Flex Gl 1M Tokens",
+            "skuName": "54 nano Opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.625,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southindia",
+            "meterName": "54 nano Inp Flex Gl 1M Tokens",
+            "skuName": "54 nano Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southindia",
+            "meterName": "54 nano cd Inp Flex Gl 1M Tokens",
+            "skuName": "54 nano cd Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southindia",
+            "meterName": "54 nano Opt Flex Gl 1M Tokens",
+            "skuName": "54 nano Opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.625,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "54 nano cd Inp Flex Gl 1M Tokens",
+            "skuName": "54 nano cd Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "54 nano Inp Flex Gl 1M Tokens",
+            "skuName": "54 nano Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "54 nano Opt Flex Gl 1M Tokens",
+            "skuName": "54 nano Opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.625,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "54 nano cd Inp Flex Gl 1M Tokens",
+            "skuName": "54 nano cd Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "54 nano Opt Flex Gl 1M Tokens",
+            "skuName": "54 nano Opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.625,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "54 nano Inp Flex Gl 1M Tokens",
+            "skuName": "54 nano Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "54 nano Inp Flex Gl 1M Tokens",
+            "skuName": "54 nano Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "54 nano cd Inp Flex Gl 1M Tokens",
+            "skuName": "54 nano cd Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "54 nano Opt Flex Gl 1M Tokens",
+            "skuName": "54 nano Opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.625,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "54 nano cd Inp Flex Gl 1M Tokens",
+            "skuName": "54 nano cd Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "54 nano Inp Flex Gl 1M Tokens",
+            "skuName": "54 nano Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "54 nano Opt Flex Gl 1M Tokens",
+            "skuName": "54 nano Opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.625,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "54 nano Opt Flex Gl 1M Tokens",
+            "skuName": "54 nano Opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.625,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "54 nano cd Inp Flex Gl 1M Tokens",
+            "skuName": "54 nano cd Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "54 nano Inp Flex Gl 1M Tokens",
+            "skuName": "54 nano Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "54 nano cd Inp Flex Gl 1M Tokens",
+            "skuName": "54 nano cd Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "54 nano Inp Flex Gl 1M Tokens",
+            "skuName": "54 nano Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "54 nano Opt Flex Gl 1M Tokens",
+            "skuName": "54 nano Opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.625,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "54 nano Inp Flex Gl 1M Tokens",
+            "skuName": "54 nano Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "54 nano Opt Flex Gl 1M Tokens",
+            "skuName": "54 nano Opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.625,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "54 nano cd Inp Flex Gl 1M Tokens",
+            "skuName": "54 nano cd Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "54 nano Opt Flex Gl 1M Tokens",
+            "skuName": "54 nano Opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.625,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "54 nano cd Inp Flex Gl 1M Tokens",
+            "skuName": "54 nano cd Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "54 nano Inp Flex Gl 1M Tokens",
+            "skuName": "54 nano Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "54 nano Opt Flex Gl 1M Tokens",
+            "skuName": "54 nano Opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.625,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "54 nano Inp Flex Gl 1M Tokens",
+            "skuName": "54 nano Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "54 nano cd Inp Flex Gl 1M Tokens",
+            "skuName": "54 nano cd Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westus",
+            "meterName": "54 nano cd Inp Flex Gl 1M Tokens",
+            "skuName": "54 nano cd Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westus",
+            "meterName": "54 nano Inp Flex Gl 1M Tokens",
+            "skuName": "54 nano Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westus",
+            "meterName": "54 nano Opt Flex Gl 1M Tokens",
+            "skuName": "54 nano Opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.625,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "swedencentral",
+            "meterName": "54 nano cd Inp Flex Gl 1M Tokens",
+            "skuName": "54 nano cd Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "swedencentral",
+            "meterName": "54 nano Inp Flex Gl 1M Tokens",
+            "skuName": "54 nano Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "swedencentral",
+            "meterName": "54 nano Opt Flex Gl 1M Tokens",
+            "skuName": "54 nano Opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.625,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "japaneast",
+            "meterName": "54 nano cd Inp Flex Gl 1M Tokens",
+            "skuName": "54 nano cd Inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "azure-foundry-gpt-54-pro-flex-15-15-90",
+      "label": "GPT-54 Pro Flex",
+      "modelSlug": "gpt-54-pro-flex",
+      "provider": "Azure AI Foundry",
+      "route": "azure-foundry-global-standard",
+      "taskTags": [
+        "azure",
+        "foundry",
+        "global-standard",
+        "openai"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "high",
+        "speed": "global-standard",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 15,
+        "cachedInput": 15,
+        "output": 90,
+        "unit": "usd_per_1m_tokens",
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 25 regions with identical rates."
+      },
+      "metadata": {
+        "regions": [
+          "australiaeast",
+          "brazilsouth",
+          "canadaeast",
+          "centralus",
+          "eastus",
+          "eastus2",
+          "francecentral",
+          "germanywestcentral",
+          "japaneast",
+          "koreacentral",
+          "malaysiawest",
+          "northcentralus",
+          "norwayeast",
+          "polandcentral",
+          "southafricanorth",
+          "southcentralus",
+          "southindia",
+          "spaincentral",
+          "swedencentral",
+          "switzerlandnorth",
+          "uaenorth",
+          "uksouth",
+          "westeurope",
+          "westus",
+          "westus3"
+        ],
+        "locations": [
+          "AE North",
+          "AU East",
+          "BR South",
+          "CA East",
+          "CH North",
+          "DE West Central",
+          "ES Central",
+          "EU West",
+          "FR Central",
+          "IN South",
+          "JA East",
+          "KR Central",
+          "MY West",
+          "NO East",
+          "PL Central",
+          "SE Central",
+          "UK South",
+          "US Central",
+          "US East",
+          "US East 2",
+          "US North Central",
+          "US South Central",
+          "US West",
+          "US West 3",
+          "ZA North"
+        ],
+        "regionCount": 25,
+        "meters": [
+          {
+            "region": "uksouth",
+            "meterName": "54 pro inp Flex Gl 1M Tokens",
+            "skuName": "54 pro inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uksouth",
+            "meterName": "54 pro opt Flex Gl 1M Tokens",
+            "skuName": "54 pro opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 90,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "54 pro inp Flex Gl 1M Tokens",
+            "skuName": "54 pro inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "54 pro opt Flex Gl 1M Tokens",
+            "skuName": "54 pro opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 90,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "polandcentral",
+            "meterName": "54 pro inp Flex Gl 1M Tokens",
+            "skuName": "54 pro inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "polandcentral",
+            "meterName": "54 pro opt Flex Gl 1M Tokens",
+            "skuName": "54 pro opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 90,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "54 pro opt Flex Gl 1M Tokens",
+            "skuName": "54 pro opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 90,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "54 pro inp Flex Gl 1M Tokens",
+            "skuName": "54 pro inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "54 pro opt Flex Gl 1M Tokens",
+            "skuName": "54 pro opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 90,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "54 pro inp Flex Gl 1M Tokens",
+            "skuName": "54 pro inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "swedencentral",
+            "meterName": "54 pro inp Flex Gl 1M Tokens",
+            "skuName": "54 pro inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "swedencentral",
+            "meterName": "54 pro opt Flex Gl 1M Tokens",
+            "skuName": "54 pro opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 90,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "54 pro inp Flex Gl 1M Tokens",
+            "skuName": "54 pro inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "54 pro opt Flex Gl 1M Tokens",
+            "skuName": "54 pro opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 90,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "northcentralus",
+            "meterName": "54 pro opt Flex Gl 1M Tokens",
+            "skuName": "54 pro opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 90,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "northcentralus",
+            "meterName": "54 pro inp Flex Gl 1M Tokens",
+            "skuName": "54 pro inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "54 pro inp Flex Gl 1M Tokens",
+            "skuName": "54 pro inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "54 pro opt Flex Gl 1M Tokens",
+            "skuName": "54 pro opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 90,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "54 pro inp Flex Gl 1M Tokens",
+            "skuName": "54 pro inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "54 pro opt Flex Gl 1M Tokens",
+            "skuName": "54 pro opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 90,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "54 pro opt Flex Gl 1M Tokens",
+            "skuName": "54 pro opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 90,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "54 pro inp Flex Gl 1M Tokens",
+            "skuName": "54 pro inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "54 pro opt Flex Gl 1M Tokens",
+            "skuName": "54 pro opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 90,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "54 pro inp Flex Gl 1M Tokens",
+            "skuName": "54 pro inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "54 pro inp Flex Gl 1M Tokens",
+            "skuName": "54 pro inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "54 pro opt Flex Gl 1M Tokens",
+            "skuName": "54 pro opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 90,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southafricanorth",
+            "meterName": "54 pro opt Flex Gl 1M Tokens",
+            "skuName": "54 pro opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 90,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southafricanorth",
+            "meterName": "54 pro inp Flex Gl 1M Tokens",
+            "skuName": "54 pro inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "54 pro inp Flex Gl 1M Tokens",
+            "skuName": "54 pro inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "54 pro opt Flex Gl 1M Tokens",
+            "skuName": "54 pro opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 90,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "54 pro inp Flex Gl 1M Tokens",
+            "skuName": "54 pro inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "54 pro opt Flex Gl 1M Tokens",
+            "skuName": "54 pro opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 90,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "54 pro opt Flex Gl 1M Tokens",
+            "skuName": "54 pro opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 90,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "54 pro inp Flex Gl 1M Tokens",
+            "skuName": "54 pro inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "54 pro inp Flex Gl 1M Tokens",
+            "skuName": "54 pro inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "54 pro opt Flex Gl 1M Tokens",
+            "skuName": "54 pro opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 90,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westus",
+            "meterName": "54 pro inp Flex Gl 1M Tokens",
+            "skuName": "54 pro inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westus",
+            "meterName": "54 pro opt Flex Gl 1M Tokens",
+            "skuName": "54 pro opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 90,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "54 pro opt Flex Gl 1M Tokens",
+            "skuName": "54 pro opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 90,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "54 pro inp Flex Gl 1M Tokens",
+            "skuName": "54 pro inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "azure-foundry-gpt-54-pro-longco-flex-30-30-135",
+      "label": "GPT-54 Pro Longco Flex",
+      "modelSlug": "gpt-54-pro-longco-flex",
+      "provider": "Azure AI Foundry",
+      "route": "azure-foundry-global-standard",
+      "taskTags": [
+        "azure",
+        "foundry",
+        "global-standard",
+        "openai"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "high",
+        "speed": "global-standard",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 30,
+        "cachedInput": 30,
+        "output": 135,
+        "unit": "usd_per_1m_tokens",
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 25 regions with identical rates."
+      },
+      "metadata": {
+        "regions": [
+          "australiaeast",
+          "brazilsouth",
+          "canadaeast",
+          "centralus",
+          "eastus",
+          "eastus2",
+          "francecentral",
+          "germanywestcentral",
+          "japaneast",
+          "koreacentral",
+          "malaysiawest",
+          "northcentralus",
+          "norwayeast",
+          "polandcentral",
+          "southafricanorth",
+          "southcentralus",
+          "southindia",
+          "spaincentral",
+          "swedencentral",
+          "switzerlandnorth",
+          "uaenorth",
+          "uksouth",
+          "westeurope",
+          "westus",
+          "westus3"
+        ],
+        "locations": [
+          "AE North",
+          "AU East",
+          "BR South",
+          "CA East",
+          "CH North",
+          "DE West Central",
+          "ES Central",
+          "EU West",
+          "FR Central",
+          "IN South",
+          "JA East",
+          "KR Central",
+          "MY West",
+          "NO East",
+          "PL Central",
+          "SE Central",
+          "UK South",
+          "US Central",
+          "US East",
+          "US East 2",
+          "US North Central",
+          "US South Central",
+          "US West",
+          "US West 3",
+          "ZA North"
+        ],
+        "regionCount": 25,
+        "meters": [
+          {
+            "region": "malaysiawest",
+            "meterName": "54 pro longco inp Flex Gl 1M Tokens",
+            "skuName": "54 pro longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "54 pro longco opt Flex Gl 1M Tokens",
+            "skuName": "54 pro longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 135,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "54 pro longco opt Flex Gl 1M Tokens",
+            "skuName": "54 pro longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 135,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "54 pro longco inp Flex Gl 1M Tokens",
+            "skuName": "54 pro longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "54 pro longco inp Flex Gl 1M Tokens",
+            "skuName": "54 pro longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "54 pro longco opt Flex Gl 1M Tokens",
+            "skuName": "54 pro longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 135,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "54 pro longco inp Flex Gl 1M Tokens",
+            "skuName": "54 pro longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "54 pro longco opt Flex Gl 1M Tokens",
+            "skuName": "54 pro longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 135,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "54 pro longco opt Flex Gl 1M Tokens",
+            "skuName": "54 pro longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 135,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "54 pro longco inp Flex Gl 1M Tokens",
+            "skuName": "54 pro longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "54 pro longco inp Flex Gl 1M Tokens",
+            "skuName": "54 pro longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "54 pro longco opt Flex Gl 1M Tokens",
+            "skuName": "54 pro longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 135,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westus",
+            "meterName": "54 pro longco inp Flex Gl 1M Tokens",
+            "skuName": "54 pro longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westus",
+            "meterName": "54 pro longco opt Flex Gl 1M Tokens",
+            "skuName": "54 pro longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 135,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "polandcentral",
+            "meterName": "54 pro longco inp Flex Gl 1M Tokens",
+            "skuName": "54 pro longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "polandcentral",
+            "meterName": "54 pro longco opt Flex Gl 1M Tokens",
+            "skuName": "54 pro longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 135,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "54 pro longco opt Flex Gl 1M Tokens",
+            "skuName": "54 pro longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 135,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "54 pro longco inp Flex Gl 1M Tokens",
+            "skuName": "54 pro longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "54 pro longco opt Flex Gl 1M Tokens",
+            "skuName": "54 pro longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 135,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "54 pro longco inp Flex Gl 1M Tokens",
+            "skuName": "54 pro longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "54 pro longco opt Flex Gl 1M Tokens",
+            "skuName": "54 pro longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 135,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "54 pro longco inp Flex Gl 1M Tokens",
+            "skuName": "54 pro longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southindia",
+            "meterName": "54 pro longco opt Flex Gl 1M Tokens",
+            "skuName": "54 pro longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 135,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southindia",
+            "meterName": "54 pro longco inp Flex Gl 1M Tokens",
+            "skuName": "54 pro longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "54 pro longco opt Flex Gl 1M Tokens",
+            "skuName": "54 pro longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 135,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "54 pro longco inp Flex Gl 1M Tokens",
+            "skuName": "54 pro longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "54 pro longco inp Flex Gl 1M Tokens",
+            "skuName": "54 pro longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "54 pro longco opt Flex Gl 1M Tokens",
+            "skuName": "54 pro longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 135,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "australiaeast",
+            "meterName": "54 pro longco inp Flex Gl 1M Tokens",
+            "skuName": "54 pro longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "australiaeast",
+            "meterName": "54 pro longco opt Flex Gl 1M Tokens",
+            "skuName": "54 pro longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 135,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "54 pro longco opt Flex Gl 1M Tokens",
+            "skuName": "54 pro longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 135,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "54 pro longco inp Flex Gl 1M Tokens",
+            "skuName": "54 pro longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "54 pro longco opt Flex Gl 1M Tokens",
+            "skuName": "54 pro longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 135,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "54 pro longco inp Flex Gl 1M Tokens",
+            "skuName": "54 pro longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "japaneast",
+            "meterName": "54 pro longco inp Flex Gl 1M Tokens",
+            "skuName": "54 pro longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "japaneast",
+            "meterName": "54 pro longco opt Flex Gl 1M Tokens",
+            "skuName": "54 pro longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 135,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southafricanorth",
+            "meterName": "54 pro longco inp Flex Gl 1M Tokens",
+            "skuName": "54 pro longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southafricanorth",
+            "meterName": "54 pro longco opt Flex Gl 1M Tokens",
+            "skuName": "54 pro longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 135,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "northcentralus",
+            "meterName": "54 pro longco opt Flex Gl 1M Tokens",
+            "skuName": "54 pro longco opt Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 135,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "northcentralus",
+            "meterName": "54 pro longco inp Flex Gl 1M Tokens",
+            "skuName": "54 pro longco inp Flex Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 30,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "azure-foundry-gpt-56luna-loco-fl-0-2-0-02-0-9",
+      "label": "GPT-56luna LoCo Fl",
+      "modelSlug": "gpt-56luna-loco-fl",
+      "provider": "Azure AI Foundry",
+      "route": "azure-foundry-global-standard",
+      "taskTags": [
+        "azure",
+        "foundry",
+        "global-standard",
+        "openai"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "standard",
+        "speed": "global-standard",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 0.2,
+        "cachedInput": 0.02,
+        "output": 0.9,
+        "unit": "usd_per_1m_tokens",
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 25 regions with identical rates."
+      },
+      "metadata": {
+        "regions": [
+          "australiaeast",
+          "brazilsouth",
+          "canadaeast",
+          "centralus",
+          "eastus",
+          "eastus2",
+          "francecentral",
+          "germanywestcentral",
+          "japaneast",
+          "koreacentral",
+          "malaysiawest",
+          "northcentralus",
+          "norwayeast",
+          "polandcentral",
+          "southafricanorth",
+          "southcentralus",
+          "southindia",
+          "spaincentral",
+          "swedencentral",
+          "switzerlandnorth",
+          "uaenorth",
+          "uksouth",
+          "westeurope",
+          "westus",
+          "westus3"
+        ],
+        "locations": [
+          "AE North",
+          "AU East",
+          "BR South",
+          "CA East",
+          "CH North",
+          "DE West Central",
+          "ES Central",
+          "EU West",
+          "FR Central",
+          "IN South",
+          "JA East",
+          "KR Central",
+          "MY West",
+          "NO East",
+          "PL Central",
+          "SE Central",
+          "UK South",
+          "US Central",
+          "US East",
+          "US East 2",
+          "US North Central",
+          "US South Central",
+          "US West",
+          "US West 3",
+          "ZA North"
+        ],
+        "regionCount": 25,
+        "meters": [
+          {
+            "region": "koreacentral",
+            "meterName": "56luna LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.02,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "56luna LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.9,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "56luna LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "56luna LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.02,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "56luna LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "56luna LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.9,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "japaneast",
+            "meterName": "56luna LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.9,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "japaneast",
+            "meterName": "56luna LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.02,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "japaneast",
+            "meterName": "56luna LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "56luna LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "56luna LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.02,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "56luna LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.9,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "56luna LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "56luna LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.02,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "56luna LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.9,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "56luna LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.9,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "56luna LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.02,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "56luna LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "56luna LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.02,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "56luna LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.9,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "56luna LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "56luna LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.02,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "56luna LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.9,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "56luna LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "56luna LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.9,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "56luna LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "56luna LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.02,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "56luna LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "56luna LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.02,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "56luna LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.9,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "56luna LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.9,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "56luna LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "56luna LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.02,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southafricanorth",
+            "meterName": "56luna LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.02,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southafricanorth",
+            "meterName": "56luna LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southafricanorth",
+            "meterName": "56luna LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.9,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "polandcentral",
+            "meterName": "56luna LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.02,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "polandcentral",
+            "meterName": "56luna LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.9,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "polandcentral",
+            "meterName": "56luna LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "australiaeast",
+            "meterName": "56luna LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56luna LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "azure-foundry-gpt-56luna-shco-fl-0-1-0-01-0-6",
+      "label": "GPT-56luna ShCo Fl",
+      "modelSlug": "gpt-56luna-shco-fl",
+      "provider": "Azure AI Foundry",
+      "route": "azure-foundry-global-standard",
+      "taskTags": [
+        "azure",
+        "foundry",
+        "global-standard",
+        "openai"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "standard",
+        "speed": "global-standard",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 0.1,
+        "cachedInput": 0.01,
+        "output": 0.6,
+        "unit": "usd_per_1m_tokens",
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 25 regions with identical rates."
+      },
+      "metadata": {
+        "regions": [
+          "australiaeast",
+          "brazilsouth",
+          "canadaeast",
+          "centralus",
+          "eastus",
+          "eastus2",
+          "francecentral",
+          "germanywestcentral",
+          "japaneast",
+          "koreacentral",
+          "malaysiawest",
+          "northcentralus",
+          "norwayeast",
+          "polandcentral",
+          "southafricanorth",
+          "southcentralus",
+          "southindia",
+          "spaincentral",
+          "swedencentral",
+          "switzerlandnorth",
+          "uaenorth",
+          "uksouth",
+          "westeurope",
+          "westus",
+          "westus3"
+        ],
+        "locations": [
+          "AE North",
+          "AU East",
+          "BR South",
+          "CA East",
+          "CH North",
+          "DE West Central",
+          "ES Central",
+          "EU West",
+          "FR Central",
+          "IN South",
+          "JA East",
+          "KR Central",
+          "MY West",
+          "NO East",
+          "PL Central",
+          "SE Central",
+          "UK South",
+          "US Central",
+          "US East",
+          "US East 2",
+          "US North Central",
+          "US South Central",
+          "US West",
+          "US West 3",
+          "ZA North"
+        ],
+        "regionCount": 25,
+        "meters": [
+          {
+            "region": "australiaeast",
+            "meterName": "56luna ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.6,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "australiaeast",
+            "meterName": "56luna ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "australiaeast",
+            "meterName": "56luna ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "56luna ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "56luna ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.6,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "56luna ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "56luna ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "56luna ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.6,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "56luna ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "56luna ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "56luna ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "56luna ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.6,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uksouth",
+            "meterName": "56luna ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uksouth",
+            "meterName": "56luna ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uksouth",
+            "meterName": "56luna ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.6,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "56luna ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "56luna ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "56luna ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.6,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "56luna ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "56luna ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "56luna ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.6,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "japaneast",
+            "meterName": "56luna ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.6,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "japaneast",
+            "meterName": "56luna ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "japaneast",
+            "meterName": "56luna ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "56luna ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.6,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "56luna ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "56luna ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "polandcentral",
+            "meterName": "56luna ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "polandcentral",
+            "meterName": "56luna ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.6,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "polandcentral",
+            "meterName": "56luna ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "56luna ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "56luna ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.6,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "56luna ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "56luna ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.6,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "56luna ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "56luna ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "56luna ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.6,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "56luna ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "56luna ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "56luna ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56luna ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.01,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "azure-foundry-gpt-56sol-loco-fl-5-0-5-22-5",
+      "label": "GPT-56sol LoCo Fl",
+      "modelSlug": "gpt-56sol-loco-fl",
+      "provider": "Azure AI Foundry",
+      "route": "azure-foundry-global-standard",
+      "taskTags": [
+        "azure",
+        "foundry",
+        "global-standard",
+        "openai"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "standard",
+        "speed": "global-standard",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 5,
+        "cachedInput": 0.5,
+        "output": 22.5,
+        "unit": "usd_per_1m_tokens",
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 25 regions with identical rates."
+      },
+      "metadata": {
+        "regions": [
+          "australiaeast",
+          "brazilsouth",
+          "canadaeast",
+          "centralus",
+          "eastus",
+          "eastus2",
+          "francecentral",
+          "germanywestcentral",
+          "japaneast",
+          "koreacentral",
+          "malaysiawest",
+          "northcentralus",
+          "norwayeast",
+          "polandcentral",
+          "southafricanorth",
+          "southcentralus",
+          "southindia",
+          "spaincentral",
+          "swedencentral",
+          "switzerlandnorth",
+          "uaenorth",
+          "uksouth",
+          "westeurope",
+          "westus",
+          "westus3"
+        ],
+        "locations": [
+          "AE North",
+          "AU East",
+          "BR South",
+          "CA East",
+          "CH North",
+          "DE West Central",
+          "ES Central",
+          "EU West",
+          "FR Central",
+          "IN South",
+          "JA East",
+          "KR Central",
+          "MY West",
+          "NO East",
+          "PL Central",
+          "SE Central",
+          "UK South",
+          "US Central",
+          "US East",
+          "US East 2",
+          "US North Central",
+          "US South Central",
+          "US West",
+          "US West 3",
+          "ZA North"
+        ],
+        "regionCount": 25,
+        "meters": [
+          {
+            "region": "uaenorth",
+            "meterName": "56sol LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "56sol LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 22.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "56sol LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "56sol LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "56sol LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 22.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "56sol LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "56sol LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "56sol LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "56sol LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 22.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "polandcentral",
+            "meterName": "56sol LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "polandcentral",
+            "meterName": "56sol LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "polandcentral",
+            "meterName": "56sol LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 22.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "swedencentral",
+            "meterName": "56sol LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "swedencentral",
+            "meterName": "56sol LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "swedencentral",
+            "meterName": "56sol LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 22.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "northcentralus",
+            "meterName": "56sol LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 22.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "northcentralus",
+            "meterName": "56sol LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "northcentralus",
+            "meterName": "56sol LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "56sol LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "56sol LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "56sol LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 22.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southindia",
+            "meterName": "56sol LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 22.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southindia",
+            "meterName": "56sol LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southindia",
+            "meterName": "56sol LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "56sol LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 22.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "56sol LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westus3",
+            "meterName": "56sol LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "56sol LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "56sol LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "56sol LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 22.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "japaneast",
+            "meterName": "56sol LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "japaneast",
+            "meterName": "56sol LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 22.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "japaneast",
+            "meterName": "56sol LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "56sol LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 22.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "56sol LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "spaincentral",
+            "meterName": "56sol LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "56sol LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "56sol LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "56sol LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 22.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "australiaeast",
+            "meterName": "56sol LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56sol LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "azure-foundry-gpt-56sol-shco-fl-2-5-0-25-15",
+      "label": "GPT-56sol ShCo Fl",
+      "modelSlug": "gpt-56sol-shco-fl",
+      "provider": "Azure AI Foundry",
+      "route": "azure-foundry-global-standard",
+      "taskTags": [
+        "azure",
+        "foundry",
+        "global-standard",
+        "openai"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "standard",
+        "speed": "global-standard",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 2.5,
+        "cachedInput": 0.25,
+        "output": 15,
+        "unit": "usd_per_1m_tokens",
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 25 regions with identical rates."
+      },
+      "metadata": {
+        "regions": [
+          "australiaeast",
+          "brazilsouth",
+          "canadaeast",
+          "centralus",
+          "eastus",
+          "eastus2",
+          "francecentral",
+          "germanywestcentral",
+          "japaneast",
+          "koreacentral",
+          "malaysiawest",
+          "northcentralus",
+          "norwayeast",
+          "polandcentral",
+          "southafricanorth",
+          "southcentralus",
+          "southindia",
+          "spaincentral",
+          "swedencentral",
+          "switzerlandnorth",
+          "uaenorth",
+          "uksouth",
+          "westeurope",
+          "westus",
+          "westus3"
+        ],
+        "locations": [
+          "AE North",
+          "AU East",
+          "BR South",
+          "CA East",
+          "CH North",
+          "DE West Central",
+          "ES Central",
+          "EU West",
+          "FR Central",
+          "IN South",
+          "JA East",
+          "KR Central",
+          "MY West",
+          "NO East",
+          "PL Central",
+          "SE Central",
+          "UK South",
+          "US Central",
+          "US East",
+          "US East 2",
+          "US North Central",
+          "US South Central",
+          "US West",
+          "US West 3",
+          "ZA North"
+        ],
+        "regionCount": 25,
+        "meters": [
+          {
+            "region": "brazilsouth",
+            "meterName": "56sol ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "56sol ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "56sol ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "56sol ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "56sol ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "56sol ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "56sol ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "56sol ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "56sol ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "polandcentral",
+            "meterName": "56sol ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "polandcentral",
+            "meterName": "56sol ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "polandcentral",
+            "meterName": "56sol ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "56sol ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "56sol ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "56sol ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "56sol ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "56sol ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "56sol ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "56sol ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "56sol ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "56sol ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "56sol ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "56sol ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "56sol ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uksouth",
+            "meterName": "56sol ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uksouth",
+            "meterName": "56sol ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uksouth",
+            "meterName": "56sol ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "56sol ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "56sol ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "56sol ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "australiaeast",
+            "meterName": "56sol ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "australiaeast",
+            "meterName": "56sol ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "australiaeast",
+            "meterName": "56sol ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "56sol ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "56sol ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "56sol ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southindia",
+            "meterName": "56sol ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southindia",
+            "meterName": "56sol ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2.5,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southindia",
+            "meterName": "56sol ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 15,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "francecentral",
+            "meterName": "56sol ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56sol ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.25,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "azure-foundry-gpt-56terra-loco-fl-2-0-2-9",
+      "label": "GPT-56terra LoCo Fl",
+      "modelSlug": "gpt-56terra-loco-fl",
+      "provider": "Azure AI Foundry",
+      "route": "azure-foundry-global-standard",
+      "taskTags": [
+        "azure",
+        "foundry",
+        "global-standard",
+        "openai"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "standard",
+        "speed": "global-standard",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 2,
+        "cachedInput": 0.2,
+        "output": 9,
+        "unit": "usd_per_1m_tokens",
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 25 regions with identical rates."
+      },
+      "metadata": {
+        "regions": [
+          "australiaeast",
+          "brazilsouth",
+          "canadaeast",
+          "centralus",
+          "eastus",
+          "eastus2",
+          "francecentral",
+          "germanywestcentral",
+          "japaneast",
+          "koreacentral",
+          "malaysiawest",
+          "northcentralus",
+          "norwayeast",
+          "polandcentral",
+          "southafricanorth",
+          "southcentralus",
+          "southindia",
+          "spaincentral",
+          "swedencentral",
+          "switzerlandnorth",
+          "uaenorth",
+          "uksouth",
+          "westeurope",
+          "westus",
+          "westus3"
+        ],
+        "locations": [
+          "AE North",
+          "AU East",
+          "BR South",
+          "CA East",
+          "CH North",
+          "DE West Central",
+          "ES Central",
+          "EU West",
+          "FR Central",
+          "IN South",
+          "JA East",
+          "KR Central",
+          "MY West",
+          "NO East",
+          "PL Central",
+          "SE Central",
+          "UK South",
+          "US Central",
+          "US East",
+          "US East 2",
+          "US North Central",
+          "US South Central",
+          "US West",
+          "US West 3",
+          "ZA North"
+        ],
+        "regionCount": 25,
+        "meters": [
+          {
+            "region": "westeurope",
+            "meterName": "56terra LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "56terra LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "56terra LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 9,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "56terra LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 9,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "56terra LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "56terra LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "swedencentral",
+            "meterName": "56terra LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "swedencentral",
+            "meterName": "56terra LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "swedencentral",
+            "meterName": "56terra LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 9,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southafricanorth",
+            "meterName": "56terra LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 9,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southafricanorth",
+            "meterName": "56terra LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southafricanorth",
+            "meterName": "56terra LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uksouth",
+            "meterName": "56terra LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uksouth",
+            "meterName": "56terra LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uksouth",
+            "meterName": "56terra LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 9,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "56terra LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "56terra LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "56terra LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 9,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "56terra LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "56terra LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 9,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "koreacentral",
+            "meterName": "56terra LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "56terra LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 9,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "56terra LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "56terra LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "northcentralus",
+            "meterName": "56terra LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 9,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "northcentralus",
+            "meterName": "56terra LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "northcentralus",
+            "meterName": "56terra LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westus",
+            "meterName": "56terra LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westus",
+            "meterName": "56terra LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 9,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westus",
+            "meterName": "56terra LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "56terra LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "56terra LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "germanywestcentral",
+            "meterName": "56terra LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 9,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "56terra LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "56terra LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "56terra LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 9,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "56terra LoCo Inp Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "56terra LoCo Opt Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 9,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus",
+            "meterName": "56terra LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "japaneast",
+            "meterName": "56terra LoCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56terra LoCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.2,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "azure-foundry-gpt-56terra-shco-fl-1-0-1-6",
+      "label": "GPT-56terra ShCo Fl",
+      "modelSlug": "gpt-56terra-shco-fl",
+      "provider": "Azure AI Foundry",
+      "route": "azure-foundry-global-standard",
+      "taskTags": [
+        "azure",
+        "foundry",
+        "global-standard",
+        "openai"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "standard",
+        "speed": "global-standard",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 1,
+        "cachedInput": 0.1,
+        "output": 6,
+        "unit": "usd_per_1m_tokens",
+        "source": "Azure Retail Prices API Foundry Models Global Standard PAYG token meters; 25 regions with identical rates."
+      },
+      "metadata": {
+        "regions": [
+          "australiaeast",
+          "brazilsouth",
+          "canadaeast",
+          "centralus",
+          "eastus",
+          "eastus2",
+          "francecentral",
+          "germanywestcentral",
+          "japaneast",
+          "koreacentral",
+          "malaysiawest",
+          "northcentralus",
+          "norwayeast",
+          "polandcentral",
+          "southafricanorth",
+          "southcentralus",
+          "southindia",
+          "spaincentral",
+          "swedencentral",
+          "switzerlandnorth",
+          "uaenorth",
+          "uksouth",
+          "westeurope",
+          "westus",
+          "westus3"
+        ],
+        "locations": [
+          "AE North",
+          "AU East",
+          "BR South",
+          "CA East",
+          "CH North",
+          "DE West Central",
+          "ES Central",
+          "EU West",
+          "FR Central",
+          "IN South",
+          "JA East",
+          "KR Central",
+          "MY West",
+          "NO East",
+          "PL Central",
+          "SE Central",
+          "UK South",
+          "US Central",
+          "US East",
+          "US East 2",
+          "US North Central",
+          "US South Central",
+          "US West",
+          "US West 3",
+          "ZA North"
+        ],
+        "regionCount": 25,
+        "meters": [
+          {
+            "region": "australiaeast",
+            "meterName": "56terra ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "australiaeast",
+            "meterName": "56terra ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "australiaeast",
+            "meterName": "56terra ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 6,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "56terra ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "56terra ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "malaysiawest",
+            "meterName": "56terra ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 6,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "56terra ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "56terra ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southcentralus",
+            "meterName": "56terra ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 6,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "56terra ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "56terra ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "westeurope",
+            "meterName": "56terra ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 6,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "56terra ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "56terra ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 6,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "switzerlandnorth",
+            "meterName": "56terra ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "56terra ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "56terra ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 6,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uaenorth",
+            "meterName": "56terra ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southindia",
+            "meterName": "56terra ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 6,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southindia",
+            "meterName": "56terra ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "southindia",
+            "meterName": "56terra ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "56terra ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 6,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "56terra ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "brazilsouth",
+            "meterName": "56terra ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "56terra ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "56terra ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "eastus2",
+            "meterName": "56terra ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 6,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "56terra ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "56terra ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 6,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "canadaeast",
+            "meterName": "56terra ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uksouth",
+            "meterName": "56terra ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uksouth",
+            "meterName": "56terra ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "uksouth",
+            "meterName": "56terra ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 6,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "56terra ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "56terra ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "centralus",
+            "meterName": "56terra ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 6,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "56terra ShCo Opt Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Opt Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 6,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "56terra ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "norwayeast",
+            "meterName": "56terra ShCo Cd Inp Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Cd Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 0.1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          },
+          {
+            "region": "polandcentral",
+            "meterName": "56terra ShCo Inp Fl Gl 1M Tokens",
+            "skuName": "56terra ShCo Inp Fl Gl",
+            "unitOfMeasure": "1M",
+            "retailPrice": 1,
+            "effectiveStartDate": "2026-09-01T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
       "id": "azure-foundry-gpt-oss-120b-0-15-0-15-0-6",
       "label": "GPT-oss 120B",
       "modelSlug": "gpt-oss-120b",
@@ -35933,7 +40839,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-08-30T19:02:25.889Z",
+        "preservedAt": "2026-09-06T18:01:14.349Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -35976,7 +40882,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-08-30T19:02:25.889Z",
+        "preservedAt": "2026-09-06T18:01:14.349Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -36019,7 +40925,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-08-30T19:02:25.889Z",
+        "preservedAt": "2026-09-06T18:01:14.349Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -36062,7 +40968,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-08-30T19:02:25.889Z",
+        "preservedAt": "2026-09-06T18:01:14.349Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -36105,7 +41011,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-08-30T19:02:25.889Z",
+        "preservedAt": "2026-09-06T18:01:14.349Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -36148,7 +41054,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-08-30T19:02:25.889Z",
+        "preservedAt": "2026-09-06T18:01:14.349Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -36191,7 +41097,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-08-30T19:02:25.889Z",
+        "preservedAt": "2026-09-06T18:01:14.349Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -36234,7 +41140,7 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-08-30T19:02:25.889Z",
+        "preservedAt": "2026-09-06T18:01:14.349Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
       }
     },
@@ -36277,8 +41183,39 @@
           "dollarsPerCredit": 0.04
         },
         "preservedFromPriorRun": true,
-        "preservedAt": "2026-08-30T19:02:25.889Z",
+        "preservedAt": "2026-09-06T18:01:14.349Z",
         "preservationReason": "codex-rate-card, codex-credit-value could not be refreshed"
+      }
+    },
+    {
+      "id": "github-copilot-anthropic-claude-fable-5-1",
+      "label": "Claude Fable 5.1",
+      "modelSlug": "claude-fable-5-1",
+      "provider": "GitHub Copilot",
+      "route": "github-copilot",
+      "taskTags": [
+        "anthropic",
+        "coding",
+        "copilot",
+        "powerful"
+      ],
+      "options": {
+        "reasoning": "standard",
+        "effort": "high",
+        "speed": "subscription",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 10,
+        "cachedInput": 0.25,
+        "output": 50,
+        "cacheWrite": 12.5,
+        "unit": "usd_per_1m_tokens",
+        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
+      },
+      "metadata": {
+        "releaseStatus": "GA",
+        "category": "Powerful"
       }
     },
     {
@@ -36341,68 +41278,6 @@
       "metadata": {
         "releaseStatus": "GA",
         "category": "Versatile"
-      }
-    },
-    {
-      "id": "github-copilot-anthropic-claude-opus-4-5",
-      "label": "Claude Opus 4.5",
-      "modelSlug": "claude-opus-4-5",
-      "provider": "GitHub Copilot",
-      "route": "github-copilot",
-      "taskTags": [
-        "anthropic",
-        "coding",
-        "copilot",
-        "powerful"
-      ],
-      "options": {
-        "reasoning": "reasoning",
-        "effort": "high",
-        "speed": "subscription",
-        "speedMultiplier": 1
-      },
-      "pricing": {
-        "input": 5,
-        "cachedInput": 0.5,
-        "output": 25,
-        "cacheWrite": 6.25,
-        "unit": "usd_per_1m_tokens",
-        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
-      },
-      "metadata": {
-        "releaseStatus": "GA",
-        "category": "Powerful"
-      }
-    },
-    {
-      "id": "github-copilot-anthropic-claude-opus-4-6",
-      "label": "Claude Opus 4.6",
-      "modelSlug": "claude-opus-4-6",
-      "provider": "GitHub Copilot",
-      "route": "github-copilot",
-      "taskTags": [
-        "anthropic",
-        "coding",
-        "copilot",
-        "powerful"
-      ],
-      "options": {
-        "reasoning": "reasoning",
-        "effort": "high",
-        "speed": "subscription",
-        "speedMultiplier": 1
-      },
-      "pricing": {
-        "input": 5,
-        "cachedInput": 0.5,
-        "output": 25,
-        "cacheWrite": 6.25,
-        "unit": "usd_per_1m_tokens",
-        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
-      },
-      "metadata": {
-        "releaseStatus": "GA",
-        "category": "Powerful"
       }
     },
     {
@@ -36530,37 +41405,6 @@
       }
     },
     {
-      "id": "github-copilot-anthropic-claude-sonnet-4-5",
-      "label": "Claude Sonnet 4.5",
-      "modelSlug": "claude-sonnet-4-5",
-      "provider": "GitHub Copilot",
-      "route": "github-copilot",
-      "taskTags": [
-        "anthropic",
-        "coding",
-        "copilot",
-        "versatile"
-      ],
-      "options": {
-        "reasoning": "reasoning",
-        "effort": "standard",
-        "speed": "subscription",
-        "speedMultiplier": 1
-      },
-      "pricing": {
-        "input": 3,
-        "cachedInput": 0.3,
-        "output": 15,
-        "cacheWrite": 3.75,
-        "unit": "usd_per_1m_tokens",
-        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
-      },
-      "metadata": {
-        "releaseStatus": "GA",
-        "category": "Versatile"
-      }
-    },
-    {
       "id": "github-copilot-anthropic-claude-sonnet-4-6",
       "label": "Claude Sonnet 4.6",
       "modelSlug": "claude-sonnet-4-6",
@@ -36654,66 +41498,6 @@
       }
     },
     {
-      "id": "github-copilot-google-gemini-3-1-pro",
-      "label": "Gemini 3.1 Pro",
-      "modelSlug": "gemini-3-1-pro",
-      "provider": "GitHub Copilot",
-      "route": "github-copilot",
-      "taskTags": [
-        "coding",
-        "copilot",
-        "google",
-        "powerful"
-      ],
-      "options": {
-        "reasoning": "standard",
-        "effort": "high",
-        "speed": "subscription",
-        "speedMultiplier": 1
-      },
-      "pricing": {
-        "input": 2,
-        "cachedInput": 0.2,
-        "output": 12,
-        "unit": "usd_per_1m_tokens",
-        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
-      },
-      "metadata": {
-        "releaseStatus": "Public preview",
-        "category": "Powerful"
-      }
-    },
-    {
-      "id": "github-copilot-google-gemini-3-1-pro-2",
-      "label": "Gemini 3.1 Pro",
-      "modelSlug": "gemini-3-1-pro",
-      "provider": "GitHub Copilot",
-      "route": "github-copilot",
-      "taskTags": [
-        "coding",
-        "copilot",
-        "google",
-        "powerful"
-      ],
-      "options": {
-        "reasoning": "standard",
-        "effort": "high",
-        "speed": "subscription",
-        "speedMultiplier": 1
-      },
-      "pricing": {
-        "input": 4,
-        "cachedInput": 0.4,
-        "output": 18,
-        "unit": "usd_per_1m_tokens",
-        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
-      },
-      "metadata": {
-        "releaseStatus": "Public preview",
-        "category": "Powerful"
-      }
-    },
-    {
       "id": "github-copilot-google-gemini-3-5-flash",
       "label": "Gemini 3.5 Flash",
       "modelSlug": "gemini-3-5-flash",
@@ -36777,6 +41561,36 @@
       "id": "github-copilot-google-gemini-3-7-flash-gemini-flash-promo",
       "label": "Gemini 3.7 Flash[^gemini-flash-promo]",
       "modelSlug": "gemini-3-7-flash-gemini-flash-promo",
+      "provider": "GitHub Copilot",
+      "route": "github-copilot",
+      "taskTags": [
+        "coding",
+        "copilot",
+        "google",
+        "versatile"
+      ],
+      "options": {
+        "reasoning": "standard",
+        "effort": "standard",
+        "speed": "subscription",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 0.75,
+        "cachedInput": 0.075,
+        "output": 3.75,
+        "unit": "usd_per_1m_tokens",
+        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
+      },
+      "metadata": {
+        "releaseStatus": "GA",
+        "category": "Versatile"
+      }
+    },
+    {
+      "id": "github-copilot-google-gemini-3-8-flash-gemini-flash-promo",
+      "label": "Gemini 3.8 Flash[^gemini-flash-promo]",
+      "modelSlug": "gemini-3-8-flash-gemini-flash-promo",
       "provider": "GitHub Copilot",
       "route": "github-copilot",
       "taskTags": [
@@ -37106,40 +41920,9 @@
       }
     },
     {
-      "id": "github-copilot-openai-gpt-5-6-sol-gpt-56-sol-promo",
-      "label": "GPT-5.6 Sol[^gpt-56-sol-promo]",
-      "modelSlug": "gpt-5-6-sol-gpt-56-sol-promo",
-      "provider": "GitHub Copilot",
-      "route": "github-copilot",
-      "taskTags": [
-        "coding",
-        "copilot",
-        "openai",
-        "powerful"
-      ],
-      "options": {
-        "reasoning": "reasoning",
-        "effort": "high",
-        "speed": "subscription",
-        "speedMultiplier": 1
-      },
-      "pricing": {
-        "input": 2,
-        "cachedInput": 0.2,
-        "output": 10,
-        "cacheWrite": 2.5,
-        "unit": "usd_per_1m_tokens",
-        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
-      },
-      "metadata": {
-        "releaseStatus": "GA",
-        "category": "Powerful"
-      }
-    },
-    {
-      "id": "github-copilot-openai-gpt-5-6-sol-gpt-56-sol-promo-2",
-      "label": "GPT-5.6 Sol[^gpt-56-sol-promo]",
-      "modelSlug": "gpt-5-6-sol-gpt-56-sol-promo",
+      "id": "github-copilot-openai-gpt-5-6-sol",
+      "label": "GPT-5.6 Sol",
+      "modelSlug": "gpt-5-6-sol",
       "provider": "GitHub Copilot",
       "route": "github-copilot",
       "taskTags": [
@@ -37157,8 +41940,39 @@
       "pricing": {
         "input": 4,
         "cachedInput": 0.4,
-        "output": 15,
+        "output": 20,
         "cacheWrite": 5,
+        "unit": "usd_per_1m_tokens",
+        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
+      },
+      "metadata": {
+        "releaseStatus": "GA",
+        "category": "Powerful"
+      }
+    },
+    {
+      "id": "github-copilot-openai-gpt-5-6-sol-2",
+      "label": "GPT-5.6 Sol",
+      "modelSlug": "gpt-5-6-sol",
+      "provider": "GitHub Copilot",
+      "route": "github-copilot",
+      "taskTags": [
+        "coding",
+        "copilot",
+        "openai",
+        "powerful"
+      ],
+      "options": {
+        "reasoning": "reasoning",
+        "effort": "high",
+        "speed": "subscription",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 8,
+        "cachedInput": 0.8,
+        "output": 30,
+        "cacheWrite": 10,
         "unit": "usd_per_1m_tokens",
         "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
       },
@@ -37227,6 +42041,68 @@
       "metadata": {
         "releaseStatus": "GA",
         "category": "Versatile"
+      }
+    },
+    {
+      "id": "github-copilot-openai-gpt-6-astra",
+      "label": "GPT-6 Astra",
+      "modelSlug": "gpt-6-astra",
+      "provider": "GitHub Copilot",
+      "route": "github-copilot",
+      "taskTags": [
+        "coding",
+        "copilot",
+        "openai",
+        "powerful"
+      ],
+      "options": {
+        "reasoning": "standard",
+        "effort": "high",
+        "speed": "subscription",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 10,
+        "cachedInput": 1,
+        "output": 50,
+        "cacheWrite": 12.5,
+        "unit": "usd_per_1m_tokens",
+        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
+      },
+      "metadata": {
+        "releaseStatus": "GA",
+        "category": "Powerful"
+      }
+    },
+    {
+      "id": "github-copilot-openai-gpt-6-astra-2",
+      "label": "GPT-6 Astra",
+      "modelSlug": "gpt-6-astra",
+      "provider": "GitHub Copilot",
+      "route": "github-copilot",
+      "taskTags": [
+        "coding",
+        "copilot",
+        "openai",
+        "powerful"
+      ],
+      "options": {
+        "reasoning": "standard",
+        "effort": "high",
+        "speed": "subscription",
+        "speedMultiplier": 1
+      },
+      "pricing": {
+        "input": 20,
+        "cachedInput": 2,
+        "output": 75,
+        "cacheWrite": 25,
+        "unit": "usd_per_1m_tokens",
+        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
+      },
+      "metadata": {
+        "releaseStatus": "GA",
+        "category": "Powerful"
       }
     },
     {
@@ -37467,36 +42343,6 @@
       "metadata": {
         "releaseStatus": "GA",
         "category": "Lightweight"
-      }
-    },
-    {
-      "id": "github-copilot-github-raptor-mini",
-      "label": "Raptor mini",
-      "modelSlug": "raptor-mini",
-      "provider": "GitHub Copilot",
-      "route": "github-copilot",
-      "taskTags": [
-        "coding",
-        "copilot",
-        "github",
-        "versatile"
-      ],
-      "options": {
-        "reasoning": "standard",
-        "effort": "standard",
-        "speed": "subscription",
-        "speedMultiplier": 1
-      },
-      "pricing": {
-        "input": 0.25,
-        "cachedInput": 0.025,
-        "output": 2,
-        "unit": "usd_per_1m_tokens",
-        "source": "GitHub docs models-and-pricing.yml, enriched with GitHub Models Catalog API when matched."
-      },
-      "metadata": {
-        "releaseStatus": "GA",
-        "category": "Versatile"
       }
     }
   ]
